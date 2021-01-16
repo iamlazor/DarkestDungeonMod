@@ -117,6 +117,7 @@ public class TheDefault extends CustomPlayer {
         retVal.add(attackAddersKiss.ID);
         retVal.add(attackRake.ID);
         retVal.add(attackPunish.ID);
+        retVal.add(attackPoisonTest.ID);
         //retVal.add(DefaultSecondMagicNumberSkill.ID);
 
         logger.info("Finished loading starter Deck Strings");

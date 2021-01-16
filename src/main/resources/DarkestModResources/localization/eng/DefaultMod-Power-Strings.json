@@ -31,6 +31,15 @@
                 ]
         },
 
+        "DarkestMod:PowerBlight": {
+                "NAME": "Blight",
+                "DESCRIPTIONS": [
+                        "At the End of your turn, deal #b damage",
+                        " enemy.",
+                        " enemies."
+                ]
+        },
+
         "DarkestMod:PowerStress": {
         "NAME": "Stress",
         "DESCRIPTIONS": [

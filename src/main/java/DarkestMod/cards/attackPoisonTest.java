@@ -2,6 +2,7 @@ package DarkestMod.cards;
 
 import DarkestMod.DefaultMod;
 import DarkestMod.characters.TheDefault;
+import DarkestMod.powers.powerBlight;
 import DarkestMod.powers.powerStress;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -41,7 +42,7 @@ public class attackPoisonTest extends AbstractDynamicCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
 
         AbstractDungeon.actionManager.addToBottom(
-                new ApplyPowerAction(m, p, new PoisonPower(m, p, this.magicNumber), this.magicNumber));
+                new ApplyPowerAction(m, p, new powerBlight(m, p, this.magicNumber), this.magicNumber));
 
         AbstractDungeon.actionManager.addToBottom(
                 new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.POISON));
