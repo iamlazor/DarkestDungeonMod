@@ -38,7 +38,7 @@ public class BleedLoseHPAction extends AbstractGameAction {
                     if (this.target.isDying);
                     }
 
-                AbstractPower p = this.target.getPower("Bleed");
+                AbstractPower p = this.target.getPower("PowerBleed");
                 if (p != null) {
                     --p.amount;
                     if (p.amount == 0) {

@@ -1,5 +1,6 @@
 package DarkestMod.cards;
 
+import DarkestMod.powers.powerBlight;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -53,7 +54,7 @@ public class attackAddersKiss extends AbstractDynamicCard {
     public attackAddersKiss() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseDamage = DAMAGE;
-        baseMagicNumber =3;
+        baseMagicNumber = 3;
         magicNumber = baseMagicNumber;
 
     }
@@ -63,7 +64,7 @@ public class attackAddersKiss extends AbstractDynamicCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
 
         AbstractDungeon.actionManager.addToBottom(
-                new ApplyPowerAction(m, p, new PoisonPower(m, p, this.magicNumber), this.magicNumber));
+                new ApplyPowerAction(m, p, new powerBlight(m, p, this.magicNumber), this.magicNumber));
 
         AbstractDungeon.actionManager.addToBottom(
                 new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.POISON));

@@ -37,7 +37,7 @@ public class BlightLoseHPAction extends AbstractGameAction {
                     if (this.target.isDying) ;
                 }
 
-                AbstractPower p = this.target.getPower("Blight");
+                AbstractPower p = this.target.getPower("PowerBlight");
                 if (p != null) {
                     --p.amount;
                     if (p.amount == 0) {

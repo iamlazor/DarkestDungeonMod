@@ -33,7 +33,7 @@ public class attackPoisonTest extends AbstractDynamicCard {
     public attackPoisonTest() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseDamage = DAMAGE;
-        baseMagicNumber = 4;
+        baseMagicNumber = 5;
         magicNumber = baseMagicNumber;
         defaultSecondMagicNumber = defaultBaseSecondMagicNumber = STRESS_GEN;
     }
