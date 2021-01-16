@@ -17,7 +17,6 @@ public class AfflictedAction extends AbstractGameAction {
         this.actionType = ActionType.CARD_MANIPULATION;
         this.startDuration = Settings.FAST_MODE ? Settings.ACTION_DUR_FAST : 0.5F;
         this.duration = this.startDuration;
-
     }
     public void update() {
         if (this.duration == this.startDuration) {

@@ -50,6 +50,7 @@ public class attackPoisonTest extends AbstractDynamicCard {
         AbstractDungeon.actionManager.addToBottom(
                 new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new powerStress(AbstractDungeon.player, defaultSecondMagicNumber),defaultSecondMagicNumber));
 
+
     }
 
     @Override

@@ -2,6 +2,7 @@ package DarkestMod.actions;
 
 import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
@@ -46,12 +47,13 @@ public class BlightLoseHPAction extends AbstractGameAction {
                         p.updateDescription();
                     }
                 }
-
                 if (AbstractDungeon.getCurrRoom().monsters.areMonstersBasicallyDead()) {
                     AbstractDungeon.actionManager.clearPostCombatActions();
                 }
 
                 this.addToTop(new WaitAction(0.1F));
+
+
             }
         }
     }

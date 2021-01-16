@@ -15,9 +15,11 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 
 
 import static DarkestMod.DefaultMod.makePowerPath;
+
 
 public class powerStress extends AbstractPower implements CloneablePowerInterface {
 
@@ -27,6 +29,7 @@ public class powerStress extends AbstractPower implements CloneablePowerInterfac
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
     private int basePower;
+    public static final int REDUCTION_FACTOR = 3;
 
     private static final Texture tex84 = TextureLoader.getTexture(makePowerPath("stress_power84.png"));
     private static final Texture tex32 = TextureLoader.getTexture(makePowerPath("stress_power32.png"));
@@ -56,7 +59,7 @@ public class powerStress extends AbstractPower implements CloneablePowerInterfac
         this.updateDescription();
 
     }
-    public void atEndOfTurn(boolean isPlayer) {
+    public void atEndOfTurn(final boolean isPlayer) {
         if (!this.owner.isPlayer) {
             this.amount = this.basePower;
             this.updateDescription();
@@ -91,6 +94,7 @@ public class powerStress extends AbstractPower implements CloneablePowerInterfac
     public void stackPower(int stackAmount) {
         this.amount += stackAmount;
         this.basePower += stackAmount;
+
     }
 
     @Override
