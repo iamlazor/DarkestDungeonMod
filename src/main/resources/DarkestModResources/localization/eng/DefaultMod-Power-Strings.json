@@ -1,0 +1,51 @@
+{
+        "DarkestMod:CommonPower": {
+                "NAME": "Placeholder Power",
+                "DESCRIPTIONS": [
+                        "You applied #b",
+                        " keyword.",
+                        " keywords."
+                ]
+        },
+        "DarkestMod:RarePower": {
+                "NAME": "Placeholder Power",
+                "DESCRIPTIONS": [
+                        "At the start of your turn, TOUCH #b",
+                        " enemy.",
+                        " enemies."
+                ]
+        },
+        "DarkestMod:PowerAffliction": {
+                "NAME": "Bleed",
+                "DESCRIPTIONS": [
+                        "No chance for egress - will this be a massacre?"
+                ]
+        },
+
+        "DarkestMod:PowerBleed": {
+                "NAME": "Bleed",
+                "DESCRIPTIONS": [
+                        "At the End of your turn, Bleed #b",
+                        " enemy.",
+                        " enemies."
+                ]
+        },
+
+        "DarkestMod:PowerStress": {
+        "NAME": "Stress",
+        "DESCRIPTIONS": [
+                "Take Stress damage",
+                " enemy.",
+                " enemies."
+        ]
+},
+        "DarkestMod:PowerLight": {
+                "NAME": "Torch Light",
+                "DESCRIPTIONS": [
+                        "Gain Light",
+                        " enemy.",
+                        " enemies."
+                ]
+        }
+
+}

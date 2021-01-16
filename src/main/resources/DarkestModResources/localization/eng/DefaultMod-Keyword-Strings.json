@@ -1,0 +1,49 @@
+[
+  {
+    "PROPER_NAME":"[#a0c704]Blight",
+      "NAMES": [
+        "Blight",
+        "blighted",
+        "blight"
+      ],
+      "DESCRIPTION": "[#a0c704]Blighted creatures lose HP at the start of their turn. Each turn, [#a0c704]Blight is reduced by #b1."
+    },
+  {
+    "PROPER_NAME":"[#b20000]Bleed",
+    "NAMES": [
+      "Bleed",
+      "bleeding",
+      "bleed"
+    ],
+    "DESCRIPTION": "[#b20000]Bleeding creatures lose HP at the start of their turn."
+  },
+  {
+    "PROPER_NAME":"Stress",
+    "NAMES": [
+      "Stress",
+      "Sanity",
+      "Sanity",
+      "stress"
+    ],
+    "DESCRIPTION": "Stress is another form of health, at 100 stress the player will become afflicted, at 200 they will suffer a heart attack."
+  },
+  {
+    "NAMES": [
+      "keyword",
+      "keywords"
+    ],
+    "DESCRIPTION": "Whenever you play a card, gain 1 dexterity this turn only."
+  },
+  {
+    "PROPER_NAME": "Multiword Keyword",
+    "NAMES": [
+      "Multiword Keyword",
+      "multiword_keyword",
+      "multiword_keywords",
+      "multikey",
+      "multikeyword"
+    ],
+    "DESCRIPTION": "Make sure the first element in the NAMES is the same as your PROPER_NAME. The rest is to match keywords like the single word keyword."
+  }
+]
+
