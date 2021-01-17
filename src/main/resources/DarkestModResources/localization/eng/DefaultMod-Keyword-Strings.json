@@ -1,4 +1,15 @@
 [
+
+  {
+    "PROPER_NAME":"[#FF7F50]Light",
+    "NAMES": [
+      "light",
+      "lit",
+      "Light Meter"
+    ],
+    "DESCRIPTION": "At the start of turn if the [#FF7F50]Light meter is +5 or greater gain 1 dexterity, if it is -5 or less gain 1 strength and 1 vulnerable. Each turn, [#FF7F50]Light is reduced by 1."
+  },
+
   {
     "PROPER_NAME":"[#a0c704]Blight",
       "NAMES": [

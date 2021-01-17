@@ -12,10 +12,7 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
-import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.megacrit.cardcrawl.powers.DexterityPower;
-import com.megacrit.cardcrawl.powers.LoseDexterityPower;
-import com.megacrit.cardcrawl.powers.VulnerablePower;
+import com.megacrit.cardcrawl.powers.*;
 
 import static DarkestMod.DefaultMod.makePowerPath;
 
@@ -27,8 +24,9 @@ public class powerLight extends AbstractPower implements CloneablePowerInterface
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
-    private static final int VULNERABLE = 20;
-    private static final int DEXTERITYAMT = 10;
+    private static final int VULNERABLE = 1;
+    private static final int DEXTERITYAMT = 1;
+    private static final int STRENGTH = 1;
 
     private static final Texture tex84 = TextureLoader.getTexture(makePowerPath("light_power84.png"));
     private static final Texture tex32 = TextureLoader.getTexture(makePowerPath("light_power32.png"));
@@ -49,7 +47,6 @@ public class powerLight extends AbstractPower implements CloneablePowerInterface
         if (this.amount == 0) {
         this.amount = -1;
     }
-
         this.type = PowerType.BUFF;
         this.isTurnBased = false;
 
@@ -71,6 +68,8 @@ public class powerLight extends AbstractPower implements CloneablePowerInterface
             this.flash();
             AbstractDungeon.actionManager.addToBottom(
                     new ApplyPowerAction(this.owner,this.owner,new VulnerablePower(this.owner,VULNERABLE,false),VULNERABLE));
+            AbstractDungeon.actionManager.addToBottom(
+                    new ApplyPowerAction(this.owner,this.owner,new StrengthPower(this.owner,STRENGTH),STRENGTH));
         }
 
     }
@@ -80,8 +79,9 @@ public class powerLight extends AbstractPower implements CloneablePowerInterface
         AbstractDungeon.actionManager.addToBottom(
                 new ReducePowerAction(this.owner, this.owner, POWER_ID, 1));
 
-        AbstractDungeon.actionManager.addToBottom(
-                new ReducePowerAction(this.owner,this.owner,new DexterityPower(this.owner,3),3));
+        //AbstractDungeon.actionManager.addToBottom(
+                //new ReducePowerAction(this.owner,this.owner,new DexterityPower(this.owner,3),3));
+
     }
 
 

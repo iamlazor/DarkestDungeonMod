@@ -110,15 +110,26 @@ public class TheDefault extends CustomPlayer {
         ArrayList<String> retVal = new ArrayList<>();
         
         logger.info("Begin loading starter Deck Strings");
-        
-        retVal.add(attackStrike_s.ID);
-        retVal.add(skillBlock_s.ID);
-        retVal.add(attackWickedHack.ID);
-        retVal.add(attackAddersKiss.ID);
-        retVal.add(attackRake.ID);
-        retVal.add(attackPunish.ID);
-        retVal.add(attackPoisonTest.ID);
-        //retVal.add(DefaultSecondMagicNumberSkill.ID);
+        //starters
+        retVal.add(skillProvisions.ID);
+        retVal.add(skillProvisions.ID);
+        retVal.add(skillProvisions.ID);;
+        retVal.add(skillProvisions.ID);
+        retVal.add(attackShovel.ID);
+        retVal.add(attackShovel.ID);
+        retVal.add(attackShovel.ID);
+        retVal.add(attackShovel.ID);
+        retVal.add(skillTorch.ID);
+
+
+        //tests
+        //retVal.add(attackWickedHack.ID);
+        //retVal.add(attackAddersKiss.ID);
+        //retVal.add(attackRake.ID);
+        //retVal.add(attackPunish.ID);
+
+       //retVal.add(attackPoisonTest.ID);
+       //retVal.add(DefaultSecondMagicNumberSkill.ID);
 
         logger.info("Finished loading starter Deck Strings");
 
@@ -128,14 +139,14 @@ public class TheDefault extends CustomPlayer {
     public ArrayList<String> getStartingRelics() {
         ArrayList<String> retVal = new ArrayList<>();
         
-        retVal.add(PlaceholderRelic.ID);
-        retVal.add(PlaceholderRelic2.ID);
-        retVal.add(DefaultClickableRelic.ID);
+        //retVal.add(PlaceholderRelic.ID);
+        //retVal.add(PlaceholderRelic2.ID);
+        //retVal.add(DefaultClickableRelic.ID);
         retVal.add(LightRelic.ID);
         
-        UnlockTracker.markRelicAsSeen(PlaceholderRelic.ID);
-        UnlockTracker.markRelicAsSeen(PlaceholderRelic2.ID);
-        UnlockTracker.markRelicAsSeen(DefaultClickableRelic.ID);
+        //UnlockTracker.markRelicAsSeen(PlaceholderRelic.ID);
+        //UnlockTracker.markRelicAsSeen(PlaceholderRelic2.ID);
+        //UnlockTracker.markRelicAsSeen(DefaultClickableRelic.ID);
         UnlockTracker.markRelicAsSeen(LightRelic.ID);
         
         return retVal;

@@ -429,6 +429,8 @@ public class DefaultMod implements
         BaseMod.addCard(new attackStrike_s());
         BaseMod.addCard(new skillBlock_s());
         BaseMod.addCard(new attackPoisonTest());
+        BaseMod.addCard(new attackShovel());
+        BaseMod.addCard(new skillProvisions());
 
         //power
 
@@ -454,10 +456,13 @@ public class DefaultMod implements
         BaseMod.addCard(new attackSniperShot());
         BaseMod.addCard(new attackWickedHack());
         BaseMod.addCard(new DefaultAttackWithVariable());
+
+
+        //skill
+        BaseMod.addCard(new skillTorch());
+
+
         BaseMod.addCard(new DefaultSecondMagicNumberSkill());
-
-
-
         BaseMod.addCard(new DefaultCommonSkill());
         BaseMod.addCard(new DefaultCommonPower());
         BaseMod.addCard(new DefaultUncommonSkill());
@@ -475,6 +480,9 @@ public class DefaultMod implements
         //Starters
         UnlockTracker.unlockCard(attackStrike_s.ID);
         UnlockTracker.unlockCard(skillBlock_s.ID);
+        UnlockTracker.unlockCard(skillTorch.ID);
+        UnlockTracker.unlockCard(attackShovel.ID);
+        UnlockTracker.unlockCard(skillProvisions.ID);
 
         //Attacks
         UnlockTracker.unlockCard(attackAbyssalArtillery.ID);

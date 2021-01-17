@@ -1,4 +1,13 @@
 {
+  "DarkestMod:Provisions": {
+    "NAME": "Provisions",
+    "DESCRIPTION": "And apply !B! block"
+  },
+
+  "DarkestMod:skillTorch": {
+    "NAME": "Torch",
+    "DESCRIPTION": "And apply !B! block, and gain !M! darkestmod:Light"
+  },
 
   "DarkestMod:attackPoisonTest": {
     "NAME": "POISON",
@@ -93,6 +102,12 @@
     "NAME": "Sacrificial Stab",
     "DESCRIPTION": "Deal !D! damage."
   },
+
+  "DarkestMod:Shovel": {
+    "NAME": "Shovel",
+    "DESCRIPTION": "Deal !D! damage."
+  },
+
   "DarkestMod:Sniper Shot": {
     "NAME": "Sniper Shot",
     "DESCRIPTION": "Deal !D! damage."
