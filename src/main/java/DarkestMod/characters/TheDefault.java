@@ -111,22 +111,22 @@ public class TheDefault extends CustomPlayer {
         
         logger.info("Begin loading starter Deck Strings");
         //starters
+       // retVal.add(skillProvisions.ID);
+        //retVal.add(skillProvisions.ID);
+        //retVal.add(skillProvisions.ID);;
         retVal.add(skillProvisions.ID);
-        retVal.add(skillProvisions.ID);
-        retVal.add(skillProvisions.ID);;
-        retVal.add(skillProvisions.ID);
-        retVal.add(attackShovel.ID);
-        retVal.add(attackShovel.ID);
-        retVal.add(attackShovel.ID);
+       // retVal.add(attackShovel.ID);
+        //retVal.add(attackShovel.ID);
+        //retVal.add(attackShovel.ID);
         retVal.add(attackShovel.ID);
         retVal.add(skillTorch.ID);
 
 
         //tests
         //retVal.add(attackWickedHack.ID);
-        //retVal.add(attackAddersKiss.ID);
-        //retVal.add(attackRake.ID);
-        //retVal.add(attackPunish.ID);
+        retVal.add(attackAddersKiss.ID);
+        retVal.add(attackRake.ID);
+        retVal.add(attackPunish.ID);
 
        //retVal.add(attackPoisonTest.ID);
        //retVal.add(DefaultSecondMagicNumberSkill.ID);
