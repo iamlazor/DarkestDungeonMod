@@ -16,7 +16,7 @@
                 ]
         },
         "DarkestMod:PowerAffliction": {
-                "NAME": "Bleed",
+                "NAME": "Afflicted",
                 "DESCRIPTIONS": [
                         "No chance for egress - will this be a massacre?"
                 ]
@@ -51,7 +51,7 @@
         "DarkestMod:PowerLight": {
                 "NAME": "Torch Light",
                 "DESCRIPTIONS": [
-                        "Gain Light",
+                        "Gain #b Light",
                         " enemy.",
                         " enemies."
                 ]

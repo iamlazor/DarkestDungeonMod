@@ -35,7 +35,7 @@ public class attackPointBlankShot extends AbstractDynamicCard {
 
     public static final String ID = DefaultMod.makeID("Point Blank Shot"); // DefaultMod.makeID("attackNailStrike");
 
-    public static final String IMG = makeCardPath("Attack.png");// "public static final String IMG = makeCardPath("attackNailStrike.png");
+    public static final String IMG = makeCardPath("attackPointblankshot.png");// "public static final String IMG = makeCardPath("attackNailStrike.png");
     // This does mean that you will need to have an image with the same NAME as the card in your image folder for it to run correctly.
 
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
@@ -50,16 +50,16 @@ public class attackPointBlankShot extends AbstractDynamicCard {
     public static final CardColor COLOR = TheDefault.Enums.COLOR_GRAY;
 
     private static final int COST = 1;
-    private static final int UPGRADED_COST = 0;
 
-    private static final int DAMAGE = 7;
-    private static final int UPGRADE_PLUS_DMG = 2;
+    private static final int DAMAGE = 12;
+    private static final int UPGRADE_PLUS_DMG = 4;
 
     // STAT DECLARATION
 
     public attackPointBlankShot() { // public attackNailStrike() - This one and the one right under the imports are the most important ones, don't forget them
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseDamage = DAMAGE;
+        this.exhaust = true;
         this.tags.add(CardTags.STRIKE); //for strikes only. Tags for other grouped cards
     }
 
@@ -76,7 +76,6 @@ public class attackPointBlankShot extends AbstractDynamicCard {
         if (!upgraded) {
             upgradeName();
             upgradeDamage(UPGRADE_PLUS_DMG);
-            upgradeBaseCost(UPGRADED_COST);
             initializeDescription();
         }
     }

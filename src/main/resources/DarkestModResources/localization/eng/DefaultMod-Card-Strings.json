@@ -16,7 +16,7 @@
 
   "DarkestMod:Abyssal Artillery": {
     "NAME": "Abyssal Artillery",
-    "DESCRIPTION": "Deal !D! damage."
+    "DESCRIPTION": "Deal !D! damage. And lose !M! darkestmod:Light"
   },
 
   "DarkestMod:Adders Kiss": {
@@ -51,7 +51,7 @@
 
   "DarkestMod:Finale": {
     "NAME": "Finale",
-    "DESCRIPTION": "Deal !D! damage."
+    "DESCRIPTION": "Deal !D! damage. And Exhaust your hand"
   },
 
   "DarkestMod:Finish Him": {
@@ -59,9 +59,9 @@
     "DESCRIPTION": "Deal !D! damage."
   },
 
-  "DarkestMod:Hounds Rush": {
-    "NAME": "Hound's Rush",
-    "DESCRIPTION": "Deal !D! damage."
+  "DarkestMod:Hound's Harry": {
+    "NAME": "Hound's Harry",
+    "DESCRIPTION": "Deal !D! damage. And apply !M! Bleed to all enemies"
   },
 
   "DarkestMod:Incision": {
@@ -85,7 +85,7 @@
     },
   "DarkestMod:Point Blank Shot": {
     "NAME": "Point Blank Shot",
-    "DESCRIPTION": "Deal !D! damage."
+    "DESCRIPTION": "Deal !D! damage.Exhaust."
   },
 
   "DarkestMod:Punish": {

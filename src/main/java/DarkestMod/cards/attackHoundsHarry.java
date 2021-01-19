@@ -1,6 +1,8 @@
 package DarkestMod.cards;
 
+import DarkestMod.powers.powerBleed;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -11,7 +13,7 @@ import DarkestMod.characters.TheDefault;
 
 import static DarkestMod.DefaultMod.makeCardPath;
 
-public class attackHoundsRush extends AbstractDynamicCard {
+public class attackHoundsHarry extends AbstractDynamicCard {
 
     /*
      * "Hey, I wanna make a bunch of cards now." - You, probably.
@@ -33,13 +35,13 @@ public class attackHoundsRush extends AbstractDynamicCard {
 
     // TEXT DECLARATION
 
-    public static final String ID = DefaultMod.makeID("Hounds Rush"); // DefaultMod.makeID("attackNailStrike");
+    public static final String ID = DefaultMod.makeID("Hound's Harry"); // DefaultMod.makeID("attackNailStrike");
 
-    public static final String IMG = makeCardPath("Attack.png");// "public static final String IMG = makeCardPath("attackNailStrike.png");
+    public static final String IMG = makeCardPath("attackHoundsharry.png");// "public static final String IMG = makeCardPath("attackNailStrike.png");
     // This does mean that you will need to have an image with the same NAME as the card in your image folder for it to run correctly.
 
-    private static final CardRarity RARITY = CardRarity.COMMON;
-    private static final CardTarget TARGET = CardTarget.ENEMY;
+    private static final CardRarity RARITY = CardRarity.UNCOMMON;
+    private static final CardTarget TARGET = CardTarget.ALL_ENEMY;
 
     // /TEXT DECLARATION/
 
@@ -50,17 +52,17 @@ public class attackHoundsRush extends AbstractDynamicCard {
     public static final CardColor COLOR = TheDefault.Enums.COLOR_GRAY;
 
     private static final int COST = 1;
-    private static final int UPGRADED_COST = 0;
 
-    private static final int DAMAGE = 7;
+    private static final int DAMAGE = 5;
     private static final int UPGRADE_PLUS_DMG = 2;
 
     // STAT DECLARATION
 
-    public attackHoundsRush() { // public attackNailStrike() - This one and the one right under the imports are the most important ones, don't forget them
+    public attackHoundsHarry() { // public attackNailStrike() - This one and the one right under the imports are the most important ones, don't forget them
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseDamage = DAMAGE;
-        this.tags.add(CardTags.STRIKE); //for strikes only. Tags for other grouped cards
+        baseMagicNumber = 3;
+        magicNumber = baseMagicNumber;
     }
 
     // Actions the card should do.
@@ -68,6 +70,9 @@ public class attackHoundsRush extends AbstractDynamicCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(
                 new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
+
+        AbstractDungeon.actionManager.addToBottom(
+                new ApplyPowerAction(m, p, new powerBleed(m, p, this.magicNumber), this.magicNumber));
     }
 
     // Upgraded stats.
@@ -76,7 +81,6 @@ public class attackHoundsRush extends AbstractDynamicCard {
         if (!upgraded) {
             upgradeName();
             upgradeDamage(UPGRADE_PLUS_DMG);
-            upgradeBaseCost(UPGRADED_COST);
             initializeDescription();
         }
     }

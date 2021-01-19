@@ -1,6 +1,6 @@
 package DarkestMod.characters;
 
-import DarkestMod.relics.LightRelic;
+import DarkestMod.relics.*;
 import basemod.abstracts.CustomPlayer;
 import basemod.animations.SpriterAnimation;
 import com.badlogic.gdx.graphics.Color;
@@ -24,14 +24,12 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import DarkestMod.DefaultMod;
 import DarkestMod.cards.*;
-import DarkestMod.relics.DefaultClickableRelic;
-import DarkestMod.relics.PlaceholderRelic;
-import DarkestMod.relics.PlaceholderRelic2;
 
 import java.util.ArrayList;
 
 import static DarkestMod.DefaultMod.*;
 import static DarkestMod.characters.TheDefault.Enums.COLOR_GRAY;
+import static DarkestMod.relics.stressRelic.*;
 
 public class TheDefault extends CustomPlayer {
     public static final Logger logger = LogManager.getLogger(DefaultMod.class.getName());
@@ -111,22 +109,28 @@ public class TheDefault extends CustomPlayer {
         
         logger.info("Begin loading starter Deck Strings");
         //starters
-       // retVal.add(skillProvisions.ID);
+        // retVal.add(skillProvisions.ID);
         //retVal.add(skillProvisions.ID);
         //retVal.add(skillProvisions.ID);;
         retVal.add(skillProvisions.ID);
-       // retVal.add(attackShovel.ID);
+        // retVal.add(attackShovel.ID);
         //retVal.add(attackShovel.ID);
         //retVal.add(attackShovel.ID);
         retVal.add(attackShovel.ID);
         retVal.add(skillTorch.ID);
 
 
+
         //tests
         //retVal.add(attackWickedHack.ID);
-        retVal.add(attackAddersKiss.ID);
-        retVal.add(attackRake.ID);
-        retVal.add(attackPunish.ID);
+        //retVal.add(attackAddersKiss.ID);
+        //retVal.add(attackRake.ID);
+        //retVal.add(attackPunish.ID);
+        retVal.add(attackAbyssalArtillery.ID);
+        retVal.add(attackDazzlingLight.ID);
+        retVal.add(attackHoundsHarry.ID);
+        retVal.add(attackPointBlankShot.ID);
+        retVal.add(attackFinale.ID);
 
        //retVal.add(attackPoisonTest.ID);
        //retVal.add(DefaultSecondMagicNumberSkill.ID);
@@ -143,11 +147,13 @@ public class TheDefault extends CustomPlayer {
         //retVal.add(PlaceholderRelic2.ID);
         //retVal.add(DefaultClickableRelic.ID);
         retVal.add(LightRelic.ID);
+        retVal.add(stressRelic.ID);
         
         //UnlockTracker.markRelicAsSeen(PlaceholderRelic.ID);
         //UnlockTracker.markRelicAsSeen(PlaceholderRelic2.ID);
         //UnlockTracker.markRelicAsSeen(DefaultClickableRelic.ID);
         UnlockTracker.markRelicAsSeen(LightRelic.ID);
+        UnlockTracker.markRelicAsSeen(stressRelic.ID);
         
         return retVal;
     }

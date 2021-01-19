@@ -1,10 +1,16 @@
 {
-
+  "DarkestMod:StressRelic": {
+    "NAME": "Stress Builds.",
+    "FLAVOR": "The Stress overwhelms.",
+    "DESCRIPTIONS": [
+      "At the beginning of combat gain #b1 Stress ."
+    ]
+  },
   "DarkestMod:TorchLightRelic": {
     "NAME": "Torch Light Relic",
-    "FLAVOR": "The light protects.",
+    "FLAVOR": "The way is lit. The path is clear. We require only the strength to follow it.",
     "DESCRIPTIONS": [
-      "Gain #b1 Light ."
+      "At the beginning of combat gain #b1 Light ."
     ]
   },
   "DarkestMod:PlaceholderRelic": {

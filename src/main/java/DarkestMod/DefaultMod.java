@@ -393,6 +393,7 @@ public class DefaultMod implements
         BaseMod.addRelicToCustomPool(new BottledPlaceholderRelic(), TheDefault.Enums.COLOR_GRAY);
         BaseMod.addRelicToCustomPool(new DefaultClickableRelic(), TheDefault.Enums.COLOR_GRAY);
         BaseMod.addRelicToCustomPool(new LightRelic(), TheDefault.Enums.COLOR_GRAY);
+        BaseMod.addRelicToCustomPool(new stressRelic(), TheDefault.Enums.COLOR_GRAY);
 
         // This adds a relic to the Shared pool. Every character can find this relic.
         BaseMod.addRelic(new PlaceholderRelic2(), RelicType.SHARED);
@@ -444,7 +445,7 @@ public class DefaultMod implements
         BaseMod.addCard(new attackDazzlingLight());
         BaseMod.addCard(new attackFinale());
         BaseMod.addCard(new attackFinishHim());
-        BaseMod.addCard(new attackHoundsRush());
+        BaseMod.addCard(new attackHoundsHarry());
         BaseMod.addCard(new attackIncision());
         BaseMod.addCard(new attackLunge());
         BaseMod.addCard(new attackPierce());
@@ -494,7 +495,7 @@ public class DefaultMod implements
         UnlockTracker.unlockCard(attackDazzlingLight.ID);
         UnlockTracker.unlockCard(attackFinale.ID);
         UnlockTracker.unlockCard(attackFinishHim.ID);
-        UnlockTracker.unlockCard(attackHoundsRush.ID);
+        UnlockTracker.unlockCard(attackHoundsHarry.ID);
         UnlockTracker.unlockCard(attackIncision.ID);
         UnlockTracker.unlockCard(attackLunge.ID);
         UnlockTracker.unlockCard(attackPierce.ID);
@@ -510,7 +511,7 @@ public class DefaultMod implements
         //Defaults
 
         UnlockTracker.unlockCard(DefaultAttackWithVariable.ID);
-        UnlockTracker.unlockCard(DefaultSecondMagicNumberSkill.ID);;
+        UnlockTracker.unlockCard(DefaultSecondMagicNumberSkill.ID);
 
         UnlockTracker.unlockCard(DefaultCommonSkill.ID);
         UnlockTracker.unlockCard(DefaultCommonPower.ID);
