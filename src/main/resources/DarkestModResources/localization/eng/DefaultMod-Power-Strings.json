@@ -43,17 +43,16 @@
         "DarkestMod:PowerStress": {
         "NAME": "Stress",
         "DESCRIPTIONS": [
-                "Take Stress damage",
-                " enemy.",
-                " enemies."
+                "Current stress level is #b",
+                ". Become Afflcited at 100 and suffer a Heart attack at 200."
         ]
 },
         "DarkestMod:PowerLight": {
                 "NAME": "Torch Light",
                 "DESCRIPTIONS": [
-                        "Gain #b Light",
-                        " enemy.",
-                        " enemies."
+                        "Current Light level is #b",
+                        ". At + 7 gain + 1 Dexterity and at -7 1 Strength Vulnerable per turn."
+
                 ]
         }
 

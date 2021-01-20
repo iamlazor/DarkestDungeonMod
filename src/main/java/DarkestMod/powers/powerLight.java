@@ -40,16 +40,13 @@ public class powerLight extends AbstractPower implements CloneablePowerInterface
         if (this.amount >= 10) {
             this.amount = 10;
         }
+
         if (this.amount <= -10) {
             this.amount = -10;
         }
 
-        if (this.amount == 0) {
-        this.amount = -1;
-    }
         this.type = PowerType.BUFF;
         this.isTurnBased = false;
-
         this.canGoNegative = true;
 
         this.region128 = new TextureAtlas.AtlasRegion(tex84, 0, 0, 84, 84);
@@ -71,19 +68,15 @@ public class powerLight extends AbstractPower implements CloneablePowerInterface
             AbstractDungeon.actionManager.addToBottom(
                     new ApplyPowerAction(this.owner,this.owner,new StrengthPower(this.owner,STRENGTH),STRENGTH));
         }
-
     }
 
     public void atEndOfTurn( final boolean isPlayer) {
-        AbstractPlayer p = AbstractDungeon.player;
-        AbstractDungeon.actionManager.addToBottom(
-                new ReducePowerAction(this.owner, this.owner, POWER_ID, 1));
-
-        //AbstractDungeon.actionManager.addToBottom(
-                //new ReducePowerAction(this.owner,this.owner,new DexterityPower(this.owner,3),3));
-
-    }
-
+        if (this.owner.isPlayer && this.amount > -10) {
+            this.flash();
+            this.amount-= 1;
+            this.updateDescription();
+        }
+      }
 
         @Override
         public void updateDescription() {
@@ -98,9 +91,5 @@ public class powerLight extends AbstractPower implements CloneablePowerInterface
     public AbstractPower makeCopy() {
         return new powerLight(owner, amount);
     }
-
-
-
-
 
 }

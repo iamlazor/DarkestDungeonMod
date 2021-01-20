@@ -1,6 +1,8 @@
 package DarkestMod.cards;
 
+import DarkestMod.powers.powerLight;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -50,17 +52,19 @@ public class attackDazzlingLight extends AbstractDynamicCard {
     public static final CardColor COLOR = TheDefault.Enums.COLOR_GRAY;
 
     private static final int COST = 1;
-    private static final int UPGRADED_COST = 0;
 
-    private static final int DAMAGE = 7;
-    private static final int UPGRADE_PLUS_DMG = 2;
+    private static final int DAMAGE = 5;
+    private static final int UPGRADE_PLUS_DMG = 4;
+
+    private static final int LIGHT = 5;
+    private static final int UPGRADE_PLUS_Light = 2;
 
     // STAT DECLARATION
 
     public attackDazzlingLight() { // public attackNailStrike() - This one and the one right under the imports are the most important ones, don't forget them
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseDamage = DAMAGE;
-        this.tags.add(CardTags.STRIKE); //for strikes only. Tags for other grouped cards
+        magicNumber = baseMagicNumber = LIGHT;
     }
 
     // Actions the card should do.
@@ -68,6 +72,9 @@ public class attackDazzlingLight extends AbstractDynamicCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(
                 new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
+
+        AbstractDungeon.actionManager.addToBottom(
+                new ApplyPowerAction(AbstractDungeon.player,AbstractDungeon.player,new powerLight(AbstractDungeon.player, magicNumber), this.magicNumber));
     }
 
     // Upgraded stats.
@@ -76,7 +83,7 @@ public class attackDazzlingLight extends AbstractDynamicCard {
         if (!upgraded) {
             upgradeName();
             upgradeDamage(UPGRADE_PLUS_DMG);
-            upgradeBaseCost(UPGRADED_COST);
+            upgradeMagicNumber(UPGRADE_PLUS_Light);
             initializeDescription();
         }
     }
