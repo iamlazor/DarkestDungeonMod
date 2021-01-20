@@ -61,7 +61,7 @@
 
   "DarkestMod:Hound's Harry": {
     "NAME": "Hound's Harry",
-    "DESCRIPTION": "Deal !D! damage. And apply !M! Bleed to all enemies"
+    "DESCRIPTION": "Deal !D! damage. And apply !M! darkestmod:Bleed to all enemies"
   },
 
   "DarkestMod:Incision": {
@@ -85,7 +85,7 @@
     },
   "DarkestMod:Point Blank Shot": {
     "NAME": "Point Blank Shot",
-    "DESCRIPTION": "Deal !D! damage.Exhaust."
+    "DESCRIPTION": "Deal !D! damage. Exhaust."
   },
 
   "DarkestMod:Punish": {

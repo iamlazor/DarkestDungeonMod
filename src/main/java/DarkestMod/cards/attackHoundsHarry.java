@@ -2,14 +2,20 @@ package DarkestMod.cards;
 
 import DarkestMod.powers.powerBleed;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import DarkestMod.DefaultMod;
 import DarkestMod.characters.TheDefault;
+import com.megacrit.cardcrawl.vfx.combat.BiteEffect;
+import com.megacrit.cardcrawl.vfx.combat.LightningEffect;
+
+import java.util.Iterator;
 
 import static DarkestMod.DefaultMod.makeCardPath;
 
@@ -68,20 +74,35 @@ public class attackHoundsHarry extends AbstractDynamicCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(
-                new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
+
+        Iterator var3 = AbstractDungeon.getCurrRoom().monsters.monsters.iterator();
+
+        AbstractMonster mo;
+        while (var3.hasNext()) {
+            mo = (AbstractMonster) var3.next();
+            if (!mo.isDeadOrEscaped()) {
+                this.addToBot(new VFXAction(new BiteEffect(mo.drawX, mo.drawY), 0.05F));
+            }
+        }
 
         AbstractDungeon.actionManager.addToBottom(
-                new ApplyPowerAction(m, p, new powerBleed(m, p, this.magicNumber), this.magicNumber));
-    }
+                new DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
+        var3 = AbstractDungeon.getCurrRoom().monsters.monsters.iterator();
 
-    // Upgraded stats.
-    @Override
-    public void upgrade() {
-        if (!upgraded) {
-            upgradeName();
-            upgradeDamage(UPGRADE_PLUS_DMG);
-            initializeDescription();
+        while (var3.hasNext()) {
+            mo = (AbstractMonster) var3.next();
+            AbstractDungeon.actionManager.addToBottom(
+                    new ApplyPowerAction(mo, p, new powerBleed(mo, p, this.magicNumber), this.magicNumber));
         }
     }
-}
+
+        // Upgraded stats.
+        @Override
+        public void upgrade() {
+            if (!upgraded) {
+                upgradeName();
+                upgradeDamage(UPGRADE_PLUS_DMG);
+                initializeDescription();
+            }
+        }
+    }
