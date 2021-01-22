@@ -434,6 +434,7 @@ public class DefaultMod implements
         BaseMod.addCard(new skillProvisions());
 
         //power
+        BaseMod.addCard(new powerJester());
 
         //Attack
         BaseMod.addCard(new attackAbyssalArtillery());
@@ -485,6 +486,9 @@ public class DefaultMod implements
         UnlockTracker.unlockCard(attackShovel.ID);
         UnlockTracker.unlockCard(skillProvisions.ID);
 
+        //Power
+        UnlockTracker.unlockCard(powerJester.ID);
+
         //Attacks
         UnlockTracker.unlockCard(attackAbyssalArtillery.ID);
         UnlockTracker.unlockCard(attackAddersKiss.ID);
@@ -507,6 +511,8 @@ public class DefaultMod implements
         UnlockTracker.unlockCard(attackSniperShot.ID);
         UnlockTracker.unlockCard(attackWickedHack.ID);
         UnlockTracker.unlockCard(attackPoisonTest.ID);
+
+
 
         //Defaults
 

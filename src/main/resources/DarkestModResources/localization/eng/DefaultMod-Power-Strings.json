@@ -7,6 +7,16 @@
                         " keywords."
                 ]
         },
+
+
+        "DarkestMod:JesterPower": {
+                "NAME": "Jester",
+                "DESCRIPTIONS": [
+                        "All incoming stress is reduced by 1.",
+                        " keyword."
+                ]
+        },
+
         "DarkestMod:RarePower": {
                 "NAME": "Placeholder Power",
                 "DESCRIPTIONS": [
@@ -18,7 +28,8 @@
         "DarkestMod:PowerAffliction": {
                 "NAME": "Afflicted",
                 "DESCRIPTIONS": [
-                        "No chance for egress - will this be a massacre?"
+                        "No chance for egress - will this be a massacre?",
+                        " keyword."
                 ]
         },
 

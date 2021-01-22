@@ -118,15 +118,23 @@
     "DESCRIPTION": "Deal !D! damage to all enemies."
   },
 
-  "DarkestMod:attackStrike_s": {
-      "NAME": "DD Strike",
-      "DESCRIPTION": "Deal !D! damage."
+  "DarkestMod:Jester": {
+      "NAME": "Jester",
+      "DESCRIPTION": "Reduce stress by 8 and all incoming stress is reduced by 1."
   },
 
   "DarkestMod:skillBlock_s": {
     "NAME": "DD Defend",
     "DESCRIPTION": "Gain !B! block."
   },
+
+
+
+  "DarkestMod:attackStrike_s": {
+    "NAME": "Jester",
+    "DESCRIPTION": "Reduce current stress by 8 and all incoming stress is reduced by 1."
+  },
+
 
   "DarkestMod:DefaultCommonAttack": {
     "NAME": "Strike",

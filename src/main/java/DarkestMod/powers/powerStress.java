@@ -6,16 +6,11 @@ import DarkestMod.util.TextureLoader;
 import basemod.interfaces.CloneablePowerInterface;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
-import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 
 
 import static DarkestMod.DefaultMod.makePowerPath;
@@ -84,7 +79,12 @@ public class powerStress extends AbstractPower implements CloneablePowerInterfac
     }
 
     public int onAttacked(DamageInfo info, int damageAmount) {
-        if (damageAmount < this.owner.currentHealth && damageAmount > 0 && info.owner != null) {
+        if  (owner.hasPower(JesterPower.POWER_ID) && damageAmount < this.owner.currentHealth && damageAmount > 0 && info.owner != null) {
+            this.flash();
+            this.amount += damageAmount -=1 ;
+            this.updateDescription();
+        } else if
+        (damageAmount < this.owner.currentHealth && damageAmount > 0 && info.owner != null) {
             this.flash();
             this.amount += damageAmount;
             this.updateDescription();

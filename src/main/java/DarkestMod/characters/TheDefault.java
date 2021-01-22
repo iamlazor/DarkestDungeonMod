@@ -131,6 +131,7 @@ public class TheDefault extends CustomPlayer {
         retVal.add(attackHoundsHarry.ID);
         retVal.add(attackPointBlankShot.ID);
         retVal.add(attackFinale.ID);
+        retVal.add(powerJester.ID);
 
        //retVal.add(attackPoisonTest.ID);
        //retVal.add(DefaultSecondMagicNumberSkill.ID);
