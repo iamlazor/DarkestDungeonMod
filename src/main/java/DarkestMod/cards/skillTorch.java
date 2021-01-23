@@ -13,7 +13,7 @@ import static DarkestMod.DefaultMod.makeCardPath;
 
 public class skillTorch extends AbstractDynamicCard {
 
-        public static final String ID = DefaultMod.makeID("skillTorch");
+        public static final String ID = DefaultMod.makeID("Torch");
         public static final String IMG = makeCardPath("skillTorch.png");
 
         private static final CardRarity RARITY = CardRarity.BASIC;

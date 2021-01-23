@@ -427,11 +427,9 @@ public class DefaultMod implements
         // when generating card rewards/shop screen items.
 
         //Starters
-        BaseMod.addCard(new attackStrike_s());
-        BaseMod.addCard(new skillBlock_s());
-        BaseMod.addCard(new attackPoisonTest());
         BaseMod.addCard(new attackShovel());
         BaseMod.addCard(new skillProvisions());
+        BaseMod.addCard(new skillTorch());
 
         //power
         BaseMod.addCard(new powerJester());
@@ -457,13 +455,44 @@ public class DefaultMod implements
         BaseMod.addCard(new attackSacrificialStab());
         BaseMod.addCard(new attackSniperShot());
         BaseMod.addCard(new attackWickedHack());
-        BaseMod.addCard(new DefaultAttackWithVariable());
+
 
 
         //skill
-        BaseMod.addCard(new skillTorch());
+        BaseMod.addCard(new skillAbsolution());
+        BaseMod.addCard(new skillBarbaricYawp());
+        BaseMod.addCard(new skillBeastBile());
+        BaseMod.addCard(new skillBolster());
+        BaseMod.addCard(new skillDefender());
+        BaseMod.addCard(new skillDivineComfort());
+        BaseMod.addCard(new skillDuelistsAdvance());
+        BaseMod.addCard(new skillFesteringVapours());
+        BaseMod.addCard(new skillFlashingDaggers());
+        BaseMod.addCard(new skillGetDown());
+        BaseMod.addCard(new skillGuardDog());
+        BaseMod.addCard(new skillIllumination());
+        BaseMod.addCard(new skillInspiringCry());
+        BaseMod.addCard(new skillJudgement());
+        BaseMod.addCard(new skillMarkForDeath());
+        BaseMod.addCard(new skillPlagueGrenade());
+        BaseMod.addCard(new skillProtectMe());
+        BaseMod.addCard(new skillRainOfSorrows());
+        BaseMod.addCard(new skillRedeem());
+        BaseMod.addCard(new skillSerpentSway());
+        BaseMod.addCard(new skillSnipersMark());
+        BaseMod.addCard(new skillSolemnity());
+        BaseMod.addCard(new skillTargetWhistle());
+        BaseMod.addCard(new skillTrackingShot());
+        BaseMod.addCard(new skillWeakeningCurse());
+        BaseMod.addCard(new skillWithstand());
+        BaseMod.addCard(new skillZealousAccusation());
 
 
+        //Defaults & Tests
+        BaseMod.addCard(new attackPoisonTest());
+        BaseMod.addCard(new DefaultAttackWithVariable());
+        BaseMod.addCard(new attackStrike_s());
+        BaseMod.addCard(new skillBlock_s());
         BaseMod.addCard(new DefaultSecondMagicNumberSkill());
         BaseMod.addCard(new DefaultCommonSkill());
         BaseMod.addCard(new DefaultCommonPower());
@@ -510,21 +539,47 @@ public class DefaultMod implements
         UnlockTracker.unlockCard(attackSacrificialStab.ID);
         UnlockTracker.unlockCard(attackSniperShot.ID);
         UnlockTracker.unlockCard(attackWickedHack.ID);
+
+
+
+        //Skills
+        UnlockTracker.unlockCard(skillAbsolution.ID);
+        UnlockTracker.unlockCard(skillBarbaricYawp.ID);
+        UnlockTracker.unlockCard(skillBeastBile.ID);
+        UnlockTracker.unlockCard(skillBolster.ID);
+        UnlockTracker.unlockCard(skillDefender.ID);
+        UnlockTracker.unlockCard(skillDivineComfort.ID);
+        UnlockTracker.unlockCard(skillDuelistsAdvance.ID);
+        UnlockTracker.unlockCard(skillFesteringVapours.ID);
+        UnlockTracker.unlockCard(skillFlashingDaggers.ID);
+        UnlockTracker.unlockCard(skillGetDown.ID);
+        UnlockTracker.unlockCard(skillGuardDog.ID);
+        UnlockTracker.unlockCard(skillIllumination.ID);
+        UnlockTracker.unlockCard(skillInspiringCry.ID);
+        UnlockTracker.unlockCard(skillJudgement.ID);
+        UnlockTracker.unlockCard(skillMarkForDeath.ID);
+        UnlockTracker.unlockCard(skillPlagueGrenade.ID);
+        UnlockTracker.unlockCard(skillProtectMe.ID);
+        UnlockTracker.unlockCard(skillRainOfSorrows.ID);
+        UnlockTracker.unlockCard(skillRedeem.ID);
+        UnlockTracker.unlockCard(skillSerpentSway.ID);
+        UnlockTracker.unlockCard(skillSnipersMark.ID);
+        UnlockTracker.unlockCard(skillSolemnity.ID);
+        UnlockTracker.unlockCard(skillTargetWhistle.ID);
+        UnlockTracker.unlockCard(skillTrackingShot.ID);
+        UnlockTracker.unlockCard(skillWeakeningCurse.ID);
+        UnlockTracker.unlockCard(skillWithstand.ID);
+        UnlockTracker.unlockCard(skillZealousAccusation.ID);
+
+
+        //Defaults & Tests
         UnlockTracker.unlockCard(attackPoisonTest.ID);
-
-
-
-        //Defaults
-
         UnlockTracker.unlockCard(DefaultAttackWithVariable.ID);
         UnlockTracker.unlockCard(DefaultSecondMagicNumberSkill.ID);
-
         UnlockTracker.unlockCard(DefaultCommonSkill.ID);
         UnlockTracker.unlockCard(DefaultCommonPower.ID);
-
         UnlockTracker.unlockCard(DefaultUncommonSkill.ID);
         UnlockTracker.unlockCard(DefaultUncommonPower.ID);
-
         UnlockTracker.unlockCard(DefaultRareSkill.ID);
         UnlockTracker.unlockCard(DefaultRarePower.ID);
         UnlockTracker.unlockCard(OrbSkill.ID);

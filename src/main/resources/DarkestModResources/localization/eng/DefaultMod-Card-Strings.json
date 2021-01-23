@@ -1,12 +1,148 @@
 {
+  "DarkestMod:Absolution": {
+    "NAME": "Absolution",
+    "DESCRIPTION": "Apply !B! block"
+  },
+
+  "DarkestMod:Barbaric YAWP": {
+    "NAME": "Barbaric YAWP",
+    "DESCRIPTION": "Apply !B! block"
+  },
+
+  "DarkestMod:Beast Bile": {
+    "NAME": "Beast Bile",
+    "DESCRIPTION": "Apply !B! block"
+  },
+
+  "DarkestMod:Bolster": {
+    "NAME": "Bolster",
+    "DESCRIPTION": "Apply !B! block"
+  },
+
+  "DarkestMod:Defender": {
+    "NAME": "Defender",
+    "DESCRIPTION": "Apply !B! block"
+  },
+  "DarkestMod:Divine Comfort": {
+    "NAME": "Divine Comfort",
+    "DESCRIPTION": "Apply !B! block"
+  },
+
+  "DarkestMod:Duelists Advance": {
+    "NAME": "Duelists Advance",
+    "DESCRIPTION": "Apply !B! block"
+  },
+
+  "DarkestMod:Festering Vapours": {
+    "NAME": "Festering Vapours",
+    "DESCRIPTION": "Apply !B! block"
+  },
+
+  "DarkestMod:Flashing Daggers": {
+    "NAME": "Flashing Daggers",
+    "DESCRIPTION": "Apply !B! block"
+  },
+
+  "DarkestMod:Get Down": {
+    "NAME": "Provisions",
+    "DESCRIPTION": "Apply !B! block"
+  },
+
+  "DarkestMod:Guard Dog": {
+    "NAME": "Guard Dog",
+    "DESCRIPTION": "Apply !B! block"
+  },
+
+  "DarkestMod:Illumination": {
+    "NAME": "Illumination",
+    "DESCRIPTION": "Apply !B! block"
+  },
+
+  "DarkestMod:Inspiring Cry": {
+    "NAME": "Inspiring Cry",
+    "DESCRIPTION": "Apply !B! block"
+  },
+
+
+  "DarkestMod:Judgement": {
+    "NAME": "Judgement",
+    "DESCRIPTION": "Apply !B! block"
+  },
+
+  "DarkestMod:Mark For Death": {
+    "NAME": "Mark For Death",
+    "DESCRIPTION": "Apply !B! block"
+  },
+
+  "DarkestMod:Plague Grenade": {
+    "NAME": "Plague Grenade",
+    "DESCRIPTION": "Apply !B! block"
+  },
+
+  "DarkestMod:Protect Me": {
+    "NAME": "Protect Me",
+    "DESCRIPTION": "Apply !B! block"
+  },
+
+
   "DarkestMod:Provisions": {
     "NAME": "Provisions",
     "DESCRIPTION": "Apply !B! block"
   },
 
-  "DarkestMod:skillTorch": {
+  "DarkestMod:Rain of Sorrows": {
+    "NAME": "Rain of Sorrows",
+    "DESCRIPTION": "Apply !B! block"
+  },
+
+  "DarkestMod:Redeem": {
+    "NAME": "Redeem",
+    "DESCRIPTION": "Apply !B! block"
+  },
+
+  "DarkestMod:Serpent Sway": {
+    "NAME": "Serpent Sway",
+    "DESCRIPTION": "Apply !B! block"
+  },
+
+  "DarkestMod:Snipers Mark": {
+    "NAME": "Snipers Mark",
+    "DESCRIPTION": "Apply !B! block"
+  },
+
+  "DarkestMod:Solemnity": {
+    "NAME": "Solemnity",
+    "DESCRIPTION": "Apply !B! block"
+  },
+
+  "DarkestMod:Target Whistle": {
+    "NAME": "Target Whistle",
+    "DESCRIPTION": "Apply !B! block"
+  },
+
+  "DarkestMod:Torch": {
     "NAME": "Torch",
     "DESCRIPTION": "And apply !B! block, and gain !M! darkestmod:Light"
+  },
+
+  "DarkestMod:Tracking Shot": {
+    "NAME": "Tracking Shot",
+    "DESCRIPTION": "Apply !B! block"
+  },
+
+  "DarkestMod:Weakening Curse": {
+    "NAME": "Weakening Curse",
+    "DESCRIPTION": "Apply !B! block"
+  },
+
+  "DarkestMod:Withstand": {
+    "NAME": "Withstand",
+    "DESCRIPTION": "Apply !B! block"
+  },
+
+  "DarkestMod:Zealous Accusation": {
+    "NAME": "Zealous Accusation",
+    "DESCRIPTION": "Apply !B! block"
   },
 
   "DarkestMod:attackPoisonTest": {
