@@ -126,12 +126,17 @@ public class TheDefault extends CustomPlayer {
         //retVal.add(attackAddersKiss.ID);
         //retVal.add(attackRake.ID);
         //retVal.add(attackPunish.ID);
-        retVal.add(attackAbyssalArtillery.ID);
-        retVal.add(attackDazzlingLight.ID);
-        retVal.add(attackHoundsHarry.ID);
-        retVal.add(attackPointBlankShot.ID);
-        retVal.add(attackFinale.ID);
+        //retVal.add(attackAbyssalArtillery.ID);
+        //retVal.add(attackDazzlingLight.ID);
+        //retVal.add(attackHoundsHarry.ID);
+        //retVal.add(attackPointBlankShot.ID);
+       // retVal.add(attackFinale.ID);
+        retVal.add(skillBeastBile.ID);
+        retVal.add(skillAbsolution.ID);
         retVal.add(powerJester.ID);
+        retVal.add(skillRainOfSorrows.ID);
+        retVal.add(skillRedeem.ID);
+        retVal.add(skillDivineComfort.ID);
 
        //retVal.add(attackPoisonTest.ID);
        //retVal.add(DefaultSecondMagicNumberSkill.ID);

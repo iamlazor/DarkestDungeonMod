@@ -1,7 +1,7 @@
 {
   "DarkestMod:Absolution": {
     "NAME": "Absolution",
-    "DESCRIPTION": "Apply !B! block"
+    "DESCRIPTION": "Heal for !M! and remove 8 darkestmod:Stress. Exhaust."
   },
 
   "DarkestMod:Barbaric YAWP": {
@@ -11,7 +11,7 @@
 
   "DarkestMod:Beast Bile": {
     "NAME": "Beast Bile",
-    "DESCRIPTION": "Apply !B! block"
+    "DESCRIPTION": "Apply !M! darkestmod:Blight and take !M! darkestmod:Stress"
   },
 
   "DarkestMod:Bolster": {
@@ -25,7 +25,7 @@
   },
   "DarkestMod:Divine Comfort": {
     "NAME": "Divine Comfort",
-    "DESCRIPTION": "Apply !B! block"
+    "DESCRIPTION": "Heal yourself and all enemies for !M! "
   },
 
   "DarkestMod:Duelists Advance": {
@@ -92,12 +92,12 @@
 
   "DarkestMod:Rain of Sorrows": {
     "NAME": "Rain of Sorrows",
-    "DESCRIPTION": "Apply !B! block"
+    "DESCRIPTION": "Apply !M! darkestmod:Bleed and 2 Vulnerable to all"
   },
 
   "DarkestMod:Redeem": {
     "NAME": "Redeem",
-    "DESCRIPTION": "Apply !B! block"
+    "DESCRIPTION": "Can only be played when below 40% Max HP. Heal for !M!"
   },
 
   "DarkestMod:Serpent Sway": {
