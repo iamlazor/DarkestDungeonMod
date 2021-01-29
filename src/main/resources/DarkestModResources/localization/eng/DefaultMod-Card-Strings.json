@@ -21,7 +21,7 @@
 
   "DarkestMod:Defender": {
     "NAME": "Defender",
-    "DESCRIPTION": "Apply !B! block"
+    "DESCRIPTION": "Apply !B! block this turn and !M! block next turn"
   },
   "DarkestMod:Divine Comfort": {
     "NAME": "Divine Comfort",
@@ -44,8 +44,8 @@
   },
 
   "DarkestMod:Get Down": {
-    "NAME": "Provisions",
-    "DESCRIPTION": "Apply !B! block"
+    "NAME": "Get Down",
+    "DESCRIPTION": "Discard 1 card and Draw !M! cards"
   },
 
   "DarkestMod:Guard Dog": {
@@ -81,7 +81,7 @@
 
   "DarkestMod:Protect Me": {
     "NAME": "Protect Me",
-    "DESCRIPTION": "Apply !B! block"
+    "DESCRIPTION": "Apply !B! block and take !M! darkestmod:Stress "
   },
 
 
@@ -107,7 +107,7 @@
 
   "DarkestMod:Snipers Mark": {
     "NAME": "Snipers Mark",
-    "DESCRIPTION": "Apply !B! block"
+    "DESCRIPTION": "Apply Marked to an enemy"
   },
 
   "DarkestMod:Solemnity": {

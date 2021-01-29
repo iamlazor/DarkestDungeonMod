@@ -1,6 +1,7 @@
 package DarkestMod.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -9,6 +10,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import DarkestMod.DefaultMod;
 import DarkestMod.characters.TheDefault;
+import com.megacrit.cardcrawl.powers.NextTurnBlockPower;
 
 import static DarkestMod.DefaultMod.makeCardPath;
 
@@ -50,17 +52,16 @@ public class skillDefender extends AbstractDynamicCard {
     private static final CardType TYPE = CardType.SKILL;
     public static final CardColor COLOR = TheDefault.Enums.COLOR_GRAY;
 
-    private static final int COST = 1;
-    private static final int UPGRADED_COST = 0;
+    private static final int COST = 2;
 
     private static final int BLOCK = 7;
-    private static final int UPGRADE_PLUS_DMG = 2;
-
+    private static final int SECONDBLOCK = 3;
     // STAT DECLARATION
 
     public skillDefender() { // public attackNailStrike() - This one and the one right under the imports are the most important ones, don't forget them
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseBlock = BLOCK;
+        magicNumber = baseMagicNumber = SECONDBLOCK;
 
     }
 
@@ -69,6 +70,8 @@ public class skillDefender extends AbstractDynamicCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(
                 new GainBlockAction(p, p, this.block));
+        AbstractDungeon.actionManager.addToBottom(
+                new ApplyPowerAction(p, p, new NextTurnBlockPower(p, this.SECONDBLOCK), this.SECONDBLOCK));
     }
 
     // Upgraded stats.
@@ -76,8 +79,7 @@ public class skillDefender extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeDamage(UPGRADE_PLUS_DMG);
-            upgradeBaseCost(UPGRADED_COST);
+            this.upgradeMagicNumber(2);
             initializeDescription();
         }
     }

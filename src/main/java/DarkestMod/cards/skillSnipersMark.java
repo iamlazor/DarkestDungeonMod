@@ -1,6 +1,9 @@
 package DarkestMod.cards;
 
+import DarkestMod.powers.powerMarked;
+import DarkestMod.powers.powerStress;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -40,7 +43,7 @@ public class skillSnipersMark extends AbstractDynamicCard {
     // This does mean that you will need to have an image with the same NAME as the card in your image folder for it to run correctly.
 
     private static final CardRarity RARITY = CardRarity.BASIC;
-    private static final CardTarget TARGET = CardTarget.SELF;
+    private static final CardTarget TARGET = CardTarget.ENEMY;
 
     // /TEXT DECLARATION/
 
@@ -51,16 +54,17 @@ public class skillSnipersMark extends AbstractDynamicCard {
     public static final CardColor COLOR = TheDefault.Enums.COLOR_GRAY;
 
     private static final int COST = 1;
-    private static final int UPGRADED_COST = 0;
+    private static final int MARKED = 1;
 
-    private static final int BLOCK = 7;
-    private static final int UPGRADE_PLUS_DMG = 2;
 
     // STAT DECLARATION
 
+
+
+
     public skillSnipersMark() { // public attackNailStrike() - This one and the one right under the imports are the most important ones, don't forget them
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        baseBlock = BLOCK;
+        magicNumber = baseMagicNumber = MARKED;
 
     }
 
@@ -68,7 +72,7 @@ public class skillSnipersMark extends AbstractDynamicCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(
-                new GainBlockAction(p, p, this.block));
+                new ApplyPowerAction(m, AbstractDungeon.player, new powerMarked(m,magicNumber),magicNumber));
     }
 
     // Upgraded stats.
@@ -76,8 +80,6 @@ public class skillSnipersMark extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeDamage(UPGRADE_PLUS_DMG);
-            upgradeBaseCost(UPGRADED_COST);
             initializeDescription();
         }
     }

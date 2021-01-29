@@ -50,6 +50,13 @@
                         " enemies."
                 ]
         },
+        "DarkestMod:PowerMarked": {
+                "NAME": "Marked",
+                "DESCRIPTIONS": [
+                        "Upon next attack receive double damage",
+                        "Enemy."
+                ]
+        },
 
         "DarkestMod:PowerStress": {
         "NAME": "Stress",
