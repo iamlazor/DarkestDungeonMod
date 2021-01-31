@@ -39,7 +39,7 @@ public class skillAbsolution extends AbstractDynamicCard {
 
     public static final String ID = DefaultMod.makeID("Absolution"); // DefaultMod.makeID("attackNailStrike");
 
-    public static final String IMG = makeCardPath("Skill.png");// "public static final String IMG = makeCardPath("attackNailStrike.png");
+    public static final String IMG = makeCardPath("skillAbsolution.png");// "public static final String IMG = makeCardPath("attackNailStrike.png");
     // This does mean that you will need to have an image with the same NAME as the card in your image folder for it to run correctly.
 
     private static final CardRarity RARITY = CardRarity.RARE;
@@ -54,7 +54,7 @@ public class skillAbsolution extends AbstractDynamicCard {
     public static final CardColor COLOR = TheDefault.Enums.COLOR_GRAY;
 
     private static final int COST = 2;
-    private static final int UPGRADED_COST = 0;
+    private static final int UPGRADED_COST = 1;
 
     private static final int STRESS_GEN = -8;
     private static final int HEAL= 5;

@@ -53,8 +53,9 @@
         "DarkestMod:PowerMarked": {
                 "NAME": "Marked",
                 "DESCRIPTIONS": [
-                        "Upon next attack receive double damage",
-                        "Enemy."
+                        "[#550a8a]Marked Enemies take double damage from the next attack.",
+                        "1 stack of [#550a8a]Mark is removed at the end of turn.",
+                        "1 stack of [#550a8a]Mark is removed at the end of turn."
                 ]
         },
 

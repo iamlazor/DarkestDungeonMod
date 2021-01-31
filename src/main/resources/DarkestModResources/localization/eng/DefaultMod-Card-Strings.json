@@ -97,7 +97,7 @@
 
   "DarkestMod:Redeem": {
     "NAME": "Redeem",
-    "DESCRIPTION": "Can only be played when below 40% Max HP. Heal for !M!"
+    "DESCRIPTION": "Can only be played when below 40% Max HP. Heal for 25% of Max HP (!M!)"
   },
 
   "DarkestMod:Serpent Sway": {
@@ -107,7 +107,7 @@
 
   "DarkestMod:Snipers Mark": {
     "NAME": "Snipers Mark",
-    "DESCRIPTION": "Apply Marked to an enemy"
+    "DESCRIPTION": "Apply darkestmod:Marked to an enemy"
   },
 
   "DarkestMod:Solemnity": {

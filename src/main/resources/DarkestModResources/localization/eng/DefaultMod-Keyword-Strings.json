@@ -1,4 +1,14 @@
 [
+  {
+    "PROPER_NAME":"[#800080]Marked",
+    "NAMES": [
+      "Marked",
+      "marked",
+      "Mark",
+      "mark"
+    ],
+    "DESCRIPTION": "[#800080]Marked Enemies take double damage from the next attack. 1 stack of [#800080]Mark is removed at the end of turn"
+  },
 
   {
     "PROPER_NAME":"[#FF7F50]Light",

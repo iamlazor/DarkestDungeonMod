@@ -26,8 +26,8 @@ public class powerMarked extends AbstractPower implements CloneablePowerInterfac
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
-    private static final Texture tex84 = TextureLoader.getTexture(makePowerPath("stress_power84.png"));
-    private static final Texture tex32 = TextureLoader.getTexture(makePowerPath("stress_power32.png"));
+    private static final Texture tex84 = TextureLoader.getTexture(makePowerPath("marked_power84.png"));
+    private static final Texture tex32 = TextureLoader.getTexture(makePowerPath("marked_power32.png"));
 
     public powerMarked(AbstractCreature owner, int amount){
         this.name = NAME;
@@ -68,6 +68,15 @@ public class powerMarked extends AbstractPower implements CloneablePowerInterfac
                   new ReducePowerAction(this.owner, this.owner, "PowerMarked", 1));
       }
         return damageAmount;
+    }
+
+    @Override
+    public void updateDescription() {
+        if (this.owner != null && !this.owner.isPlayer) {
+            this.description = DESCRIPTIONS[2] + this.amount + DESCRIPTIONS[1];
+        } else {
+            this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
+        }
     }
 
 

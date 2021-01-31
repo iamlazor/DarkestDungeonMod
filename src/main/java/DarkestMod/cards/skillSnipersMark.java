@@ -39,7 +39,7 @@ public class skillSnipersMark extends AbstractDynamicCard {
 
     public static final String ID = DefaultMod.makeID("Snipers Mark"); // DefaultMod.makeID("attackNailStrike");
 
-    public static final String IMG = makeCardPath("Skill.png");// "public static final String IMG = makeCardPath("attackNailStrike.png");
+    public static final String IMG = makeCardPath("skillSnipersMark.png");// "public static final String IMG = makeCardPath("attackNailStrike.png");
     // This does mean that you will need to have an image with the same NAME as the card in your image folder for it to run correctly.
 
     private static final CardRarity RARITY = CardRarity.BASIC;

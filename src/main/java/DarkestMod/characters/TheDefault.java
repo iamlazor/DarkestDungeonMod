@@ -111,12 +111,12 @@ public class TheDefault extends CustomPlayer {
         //starters
         retVal.add(skillProvisions.ID);
         retVal.add(skillProvisions.ID);
-        retVal.add(skillProvisions.ID);;
-        retVal.add(skillProvisions.ID);
+        //retVal.add(skillProvisions.ID);;
+        //retVal.add(skillProvisions.ID);
         retVal.add(attackShovel.ID);
         retVal.add(attackShovel.ID);
-        retVal.add(attackShovel.ID);
-        retVal.add(attackShovel.ID);
+        //retVal.add(attackShovel.ID);
+        //retVal.add(attackShovel.ID);
         retVal.add(skillTorch.ID);
 
 
@@ -134,7 +134,7 @@ public class TheDefault extends CustomPlayer {
         //retVal.add(skillBeastBile.ID);
         //retVal.add(skillAbsolution.ID);
         retVal.add(skillGetDown.ID);
-        retVal.add(powerJester.ID);
+        //retVal.add(powerJester.ID);
         retVal.add(skillProtectMe.ID);
         retVal.add(skillDefender.ID);
         retVal.add(skillSnipersMark.ID);
@@ -164,7 +164,7 @@ public class TheDefault extends CustomPlayer {
         //UnlockTracker.markRelicAsSeen(DefaultClickableRelic.ID);
         UnlockTracker.markRelicAsSeen(LightRelic.ID);
         UnlockTracker.markRelicAsSeen(stressRelic.ID);
-        
+
         return retVal;
     }
     
