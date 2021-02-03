@@ -4,6 +4,7 @@ import DarkestMod.cards.AbstractDefaultCard;
 import DarkestMod.patches.CardTagEnum;
 import com.badlogic.gdx.Gdx;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.Settings;
@@ -21,14 +22,11 @@ public class AfflictedAction extends AbstractGameAction {
     public void update() {
         if (this.duration == this.startDuration) {
             for (int i = 0; i < this.amount; ++i) {
-                AbstractCard c = AbstractDungeon.returnTrulyRandomCardInCombat().makeStatEquivalentCopy();
-                UnlockTracker.markCardAsSeen(c.cardID);
-                if (c.type != AbstractCard.CardType.CURSE && c.type != AbstractCard.CardType.STATUS && (c.hasTag(CardTagEnum.AFFLICTION))){
-                                                          //c.hasTag(AbstractCard.CardTags.STRIKE)) this.tags.add(CardTags.STRIKE) this.tags.add(CardTagEnum.AFFLICTION){
-                    c.upgrade();
-                }
+                AbstractCard card = AbstractDungeon.returnTrulyRandomCardInCombat(AbstractCard.CardType.POWER).makeCopy();
+                this.addToBot(new MakeTempCardInHandAction(card));
 
-                AbstractDungeon.player.drawPile.addToBottom(c);
+
+
             }
 
             this.duration -= Gdx.graphics.getDeltaTime();

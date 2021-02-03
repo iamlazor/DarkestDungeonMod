@@ -2,6 +2,7 @@ package DarkestMod.characters;
 
 import DarkestMod.relics.*;
 import basemod.abstracts.CustomPlayer;
+import basemod.animations.SpineAnimation;
 import basemod.animations.SpriterAnimation;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
@@ -72,9 +73,9 @@ public class TheDefault extends CustomPlayer {
     public TheDefault(String name, PlayerClass setClass) {
         super(name, setClass, orbTextures,
                 "DarkestModResources/images/char/defaultCharacter/orb/vfx.png", null,
-                new SpriterAnimation(
-                        "DarkestModResources/images/char/defaultCharacter/Spriter/theDefaultAnimation.scml"));
-        
+                new SpineAnimation(
+                        "DarkestModResources/images/char/defaultCharacter/skeleton.atlas", "DarkestModResources/images/char/defaultCharacter/skeleton.json", 1f));
+
         
         initializeClass(null,
                 
@@ -88,7 +89,7 @@ public class TheDefault extends CustomPlayer {
                 THE_DEFAULT_SKELETON_ATLAS,
                 THE_DEFAULT_SKELETON_JSON,
                 1.0f);
-        AnimationState.TrackEntry e = state.setAnimation(0, "animation", true);
+        AnimationState.TrackEntry e = state.setAnimation(0, "Idle_1", true);
         e.setTime(e.getEndTime() * MathUtils.random());
         
         
@@ -124,7 +125,7 @@ public class TheDefault extends CustomPlayer {
         //tests
         //retVal.add(attackWickedHack.ID);
         //retVal.add(attackAddersKiss.ID);
-        //retVal.add(attackRake.ID);
+        retVal.add(attackRake.ID);
         //retVal.add(attackPunish.ID);
         //retVal.add(attackAbyssalArtillery.ID);
         //retVal.add(attackDazzlingLight.ID);

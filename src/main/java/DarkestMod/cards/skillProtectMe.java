@@ -83,7 +83,6 @@ public class skillProtectMe extends AbstractDynamicCard {
         if (!upgraded) {
             upgradeName();
             upgradeBaseCost(UPGRADED_COST);
-            this.upgradeMagicNumber(-2);
             initializeDescription();
         }
     }

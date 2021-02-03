@@ -1,5 +1,6 @@
 package DarkestMod.cards;
 
+import DarkestMod.patches.CardTagEnum;
 import DarkestMod.powers.powerBlight;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
@@ -56,6 +57,7 @@ public class attackAddersKiss extends AbstractDynamicCard {
         baseDamage = DAMAGE;
         baseMagicNumber = 3;
         magicNumber = baseMagicNumber;
+        this.tags.add(CardTagEnum.AFFLICTION);
 
     }
 

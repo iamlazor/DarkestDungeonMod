@@ -61,7 +61,8 @@ public class attackChop extends AbstractDynamicCard {
     public attackChop() { // public attackNailStrike() - This one and the one right under the imports are the most important ones, don't forget them
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseDamage = DAMAGE;
-        this.tags.add(CardTagEnum.AFFLICTION); //for strikes only. Tags for other grouped cards
+        this.tags.add(CardTagEnum.AFFLICTION);
+        //for strikes only. Tags for other grouped cards
     }
 
     // Actions the card should do.

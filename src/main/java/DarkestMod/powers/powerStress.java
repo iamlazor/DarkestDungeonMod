@@ -94,7 +94,6 @@ public class powerStress extends AbstractPower implements CloneablePowerInterfac
     public void stackPower(int stackAmount) {
         this.amount += stackAmount;
         this.basePower += stackAmount;
-
     }
 
     @Override

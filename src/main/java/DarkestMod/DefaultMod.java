@@ -117,7 +117,6 @@ public class DefaultMod implements
     private static final String SKILL_DEFAULT_GRAY_PORTRAIT = "DarkestModResources/images/1024/bg_skill_default_gray.png";
     private static final String POWER_DEFAULT_GRAY_PORTRAIT = "DarkestModResources/images/1024/bg_power_default_gray.png";
     private static final String ENERGY_ORB_DEFAULT_GRAY_PORTRAIT = "DarkestModResources/images/1024/card_default_gray_orb.png";
-
     // Character assets
     private static final String THE_DEFAULT_BUTTON = "DarkestModResources/images/charSelect/DDcharacterButton.png";
     private static final String THE_DEFAULT_PORTRAIT = "DarkestModResources/images/charSelect/DDCharacterPortraitBG.jpg";
@@ -489,18 +488,19 @@ public class DefaultMod implements
 
 
         //Defaults & Tests
-        BaseMod.addCard(new attackPoisonTest());
-        BaseMod.addCard(new DefaultAttackWithVariable());
-        BaseMod.addCard(new attackStrike_s());
-        BaseMod.addCard(new skillBlock_s());
-        BaseMod.addCard(new DefaultSecondMagicNumberSkill());
-        BaseMod.addCard(new DefaultCommonSkill());
-        BaseMod.addCard(new DefaultCommonPower());
-        BaseMod.addCard(new DefaultUncommonSkill());
+        // BaseMod.addCard(new attackPoisonTest());
+        //BaseMod.addCard(new DefaultAttackWithVariable());
+        //BaseMod.addCard(new attackStrike_s());
+        //BaseMod.addCard(new skillBlock_s());
+
+        //BaseMod.addCard(new DefaultSecondMagicNumberSkill());
+        //BaseMod.addCard(new DefaultCommonSkill());
+        //BaseMod.addCard(new DefaultCommonPower());
+        //BaseMod.addCard(new DefaultUncommonSkill());
         BaseMod.addCard(new DefaultUncommonPower());
-        BaseMod.addCard(new DefaultRareSkill());
+        //BaseMod.addCard(new DefaultRareSkill());
         BaseMod.addCard(new DefaultRarePower());
-        BaseMod.addCard(new OrbSkill());
+        //BaseMod.addCard(new OrbSkill());
 
 
         logger.info("Making sure the cards are unlocked.");
@@ -509,8 +509,7 @@ public class DefaultMod implements
         // before playing your mod.
 
         //Starters
-        UnlockTracker.unlockCard(attackStrike_s.ID);
-        UnlockTracker.unlockCard(skillBlock_s.ID);
+
         UnlockTracker.unlockCard(skillTorch.ID);
         UnlockTracker.unlockCard(attackShovel.ID);
         UnlockTracker.unlockCard(skillProvisions.ID);
@@ -573,16 +572,18 @@ public class DefaultMod implements
 
 
         //Defaults & Tests
-        UnlockTracker.unlockCard(attackPoisonTest.ID);
-        UnlockTracker.unlockCard(DefaultAttackWithVariable.ID);
-        UnlockTracker.unlockCard(DefaultSecondMagicNumberSkill.ID);
-        UnlockTracker.unlockCard(DefaultCommonSkill.ID);
-        UnlockTracker.unlockCard(DefaultCommonPower.ID);
-        UnlockTracker.unlockCard(DefaultUncommonSkill.ID);
+        // UnlockTracker.unlockCard(attackStrike_s.ID);
+        // UnlockTracker.unlockCard(skillBlock_s.ID);
+        // UnlockTracker.unlockCard(attackPoisonTest.ID);
+        // UnlockTracker.unlockCard(DefaultAttackWithVariable.ID);
+        // UnlockTracker.unlockCard(DefaultSecondMagicNumberSkill.ID);
+        // UnlockTracker.unlockCard(DefaultCommonSkill.ID);
+        // UnlockTracker.unlockCard(DefaultCommonPower.ID);
+        // UnlockTracker.unlockCard(DefaultUncommonSkill.ID);
         UnlockTracker.unlockCard(DefaultUncommonPower.ID);
-        UnlockTracker.unlockCard(DefaultRareSkill.ID);
+        // UnlockTracker.unlockCard(DefaultRareSkill.ID);
         UnlockTracker.unlockCard(DefaultRarePower.ID);
-        UnlockTracker.unlockCard(OrbSkill.ID);
+        // UnlockTracker.unlockCard(OrbSkill.ID);
         logger.info("========================= /Cards Added/ =========================");
     }
 

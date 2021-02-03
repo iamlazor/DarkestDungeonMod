@@ -1,5 +1,6 @@
 package DarkestMod.cards;
 
+import DarkestMod.patches.CardTagEnum;
 import DarkestMod.powers.powerLight;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -65,6 +66,8 @@ public class attackDazzlingLight extends AbstractDynamicCard {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseDamage = DAMAGE;
         magicNumber = baseMagicNumber = LIGHT;
+
+        this.tags.add(CardTagEnum.AFFLICTION);
     }
 
     // Actions the card should do.

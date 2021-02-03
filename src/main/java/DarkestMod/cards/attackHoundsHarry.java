@@ -1,5 +1,6 @@
 package DarkestMod.cards;
 
+import DarkestMod.patches.CardTagEnum;
 import DarkestMod.powers.powerBleed;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
@@ -69,6 +70,8 @@ public class attackHoundsHarry extends AbstractDynamicCard {
         baseDamage = DAMAGE;
         baseMagicNumber = 3;
         magicNumber = baseMagicNumber;
+
+        this.tags.add(CardTagEnum.AFFLICTION);
     }
 
     // Actions the card should do.
