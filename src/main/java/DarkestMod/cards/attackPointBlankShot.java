@@ -60,7 +60,6 @@ public class attackPointBlankShot extends AbstractDynamicCard {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseDamage = DAMAGE;
         this.exhaust = true;
-        this.tags.add(CardTags.STRIKE); //for strikes only. Tags for other grouped cards
     }
 
     // Actions the card should do.

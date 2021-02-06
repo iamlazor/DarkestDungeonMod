@@ -1,12 +1,19 @@
 
 skeleton.png
-size: 2048,512
+size: 2048,1024
 format: RGBA8888
 filter: Linear,Linear
 repeat: none
-highwayman
+crusader
   rotate: false
   xy: 1, 1
+  size: 679, 549
+  orig: 679, 549
+  offset: 0, 0
+  index: -1
+highwayman
+  rotate: false
+  xy: 1, 552
   size: 1110, 288
   orig: 1110, 288
   offset: 0, 0

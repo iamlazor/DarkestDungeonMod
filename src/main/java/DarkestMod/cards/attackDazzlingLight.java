@@ -66,8 +66,6 @@ public class attackDazzlingLight extends AbstractDynamicCard {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseDamage = DAMAGE;
         magicNumber = baseMagicNumber = LIGHT;
-
-        this.tags.add(CardTagEnum.AFFLICTION);
     }
 
     // Actions the card should do.

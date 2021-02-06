@@ -6,11 +6,14 @@ import DarkestMod.util.TextureLoader;
 import basemod.interfaces.CloneablePowerInterface;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.powers.StrengthPower;
 
 
 import static DarkestMod.DefaultMod.makePowerPath;
@@ -55,17 +58,18 @@ public class powerStress extends AbstractPower implements CloneablePowerInterfac
 
     }
     public void atEndOfTurn(final boolean isPlayer) {
-        if (!this.owner.isPlayer) {
             this.amount = this.basePower;
             this.updateDescription();
+
+        if (this.amount >= 100 && !owner.hasPower(powerAffliction.POWER_ID)) { //makes it a do once
+            this.flash();
+            AbstractDungeon.actionManager.addToBottom(
+                    new ApplyPowerAction(this.owner,this.owner,new powerAffliction(this.owner,1),1));
         }
     }
 
     public void atStartOfTurn() {
-        if (this.amount >= 100) {
-            this.flash();
-            this.addToBot(new AfflictedAction(1));
-        }
+
     }
 
 

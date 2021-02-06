@@ -13,7 +13,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 
 public class AfflictedAction extends AbstractGameAction {
-    public AfflictedAction(int amount) {
+    public AfflictedAction(AbstractCreature owner, int amount) {
         this.setValues(this.target, this.source, amount);
         this.actionType = ActionType.CARD_MANIPULATION;
         this.startDuration = Settings.FAST_MODE ? Settings.ACTION_DUR_FAST : 0.5F;
@@ -22,10 +22,8 @@ public class AfflictedAction extends AbstractGameAction {
     public void update() {
         if (this.duration == this.startDuration) {
             for (int i = 0; i < this.amount; ++i) {
-                AbstractCard card = AbstractDungeon.returnTrulyRandomCardInCombat(AbstractCard.CardType.POWER).makeCopy();
+                AbstractCard card = AbstractDungeon.returnTrulyRandomCardInCombat(AbstractCard.CardType.SKILL).makeCopy();
                 this.addToBot(new MakeTempCardInHandAction(card));
-
-
 
             }
 

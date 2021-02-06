@@ -50,7 +50,7 @@ public class TheDefault extends CustomPlayer {
     public static final int MAX_HP = 75;
     public static final int STARTING_GOLD = 99;
     public static final int CARD_DRAW = 9;
-    public static final int ORB_SLOTS = 3;
+    public static final int ORB_SLOTS = 0;
     
     private static final String ID = makeID("DefaultCharacter");
     private static final CharacterStrings characterStrings = CardCrawlGame.languagePack.getCharacterString(ID);
@@ -123,6 +123,7 @@ public class TheDefault extends CustomPlayer {
 
 
         //tests
+        //retVal.add(AfflictionTemp.ID);
         //retVal.add(attackWickedHack.ID);
         //retVal.add(attackAddersKiss.ID);
         retVal.add(attackRake.ID);
@@ -134,13 +135,13 @@ public class TheDefault extends CustomPlayer {
        // retVal.add(attackFinale.ID);
         //retVal.add(skillBeastBile.ID);
         //retVal.add(skillAbsolution.ID);
-        retVal.add(skillGetDown.ID);
+        //retVal.add(skillGetDown.ID);
         //retVal.add(powerJester.ID);
-        retVal.add(skillProtectMe.ID);
-        retVal.add(skillDefender.ID);
-        retVal.add(skillSnipersMark.ID);
+        //retVal.add(skillProtectMe.ID);
+        //retVal.add(skillDefender.ID);
+        //retVal.add(skillSnipersMark.ID);
         //retVal.add(skillRainOfSorrows.ID);
-       // retVal.add(skillRedeem.ID);
+        //retVal.add(skillRedeem.ID);
         //retVal.add(skillDivineComfort.ID);
 
        //retVal.add(attackPoisonTest.ID);

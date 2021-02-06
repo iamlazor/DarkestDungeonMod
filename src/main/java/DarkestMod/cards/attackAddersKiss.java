@@ -57,7 +57,6 @@ public class attackAddersKiss extends AbstractDynamicCard {
         baseDamage = DAMAGE;
         baseMagicNumber = 3;
         magicNumber = baseMagicNumber;
-        this.tags.add(CardTagEnum.AFFLICTION);
 
     }
 

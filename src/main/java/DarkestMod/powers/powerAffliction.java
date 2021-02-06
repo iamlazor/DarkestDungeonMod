@@ -1,12 +1,22 @@
 package DarkestMod.powers;
 
 import DarkestMod.DefaultMod;
+import DarkestMod.cards.AfflictionTemp;
+import DarkestMod.cards.afflictParanoid;
+import DarkestMod.cards.attackChop;
+import DarkestMod.patches.CardTagEnum;
 import DarkestMod.util.TextureLoader;
 import basemod.interfaces.CloneablePowerInterface;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
+import com.evacipated.cardcrawl.mod.stslib.actions.common.FetchAction;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
+import com.megacrit.cardcrawl.actions.utility.UseCardAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.tempCards.Shiv;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 
@@ -37,7 +47,24 @@ public class powerAffliction extends AbstractPower implements CloneablePowerInte
 
         this.updateDescription();
         }
+                //new FetchAction(AbstractDungeon.player.discardPile, (card -> card.hasTag(CardTagEnum.AFFLICTION)), this.amount));
 
+    public void atStartOfTurn() {
+
+        int random = AbstractDungeon.miscRng.random(0, 99);
+
+        if (this.amount == 1 && random >=  50) {
+            this.flash();
+            this.addToBot(
+                    new MakeTempCardInHandAction(new AfflictionTemp(), 1));
+            //this.amount -= 1;
+        } else {
+           if (this.amount == 1 && random < 49);
+            this.flash();
+            this.addToBot(
+                    new MakeTempCardInHandAction(new afflictParanoid(), 1));
+        }
+    }
 
     @Override
     public void updateDescription() {

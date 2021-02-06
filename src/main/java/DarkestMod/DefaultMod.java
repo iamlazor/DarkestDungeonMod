@@ -488,6 +488,7 @@ public class DefaultMod implements
 
 
         //Defaults & Tests
+        BaseMod.addCard(new AfflictionTemp());
         // BaseMod.addCard(new attackPoisonTest());
         //BaseMod.addCard(new DefaultAttackWithVariable());
         //BaseMod.addCard(new attackStrike_s());
@@ -572,6 +573,7 @@ public class DefaultMod implements
 
 
         //Defaults & Tests
+        UnlockTracker.unlockCard(AfflictionTemp.ID);
         // UnlockTracker.unlockCard(attackStrike_s.ID);
         // UnlockTracker.unlockCard(skillBlock_s.ID);
         // UnlockTracker.unlockCard(attackPoisonTest.ID);
