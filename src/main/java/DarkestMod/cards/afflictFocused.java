@@ -16,9 +16,9 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static DarkestMod.DefaultMod.makeCardPath;
 
-public class AfflictionTemp extends AbstractDynamicCard {
+public class afflictFocused extends AbstractDynamicCard {
 
-    public static final String ID = DefaultMod.makeID("AfflictionTemp");
+    public static final String ID = "Focused";
     public static final String IMG = makeCardPath("Skill.png");
 
     private static final CardRarity RARITY = CardRarity.SPECIAL;
@@ -30,7 +30,7 @@ public class AfflictionTemp extends AbstractDynamicCard {
     private static final int BLOCK = 5;
     private static final int UPGRADE_PLUS_BLOCK = 3;
 
-    public AfflictionTemp() {
+    public afflictFocused() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseBlock = BLOCK;
         this.exhaust = true;

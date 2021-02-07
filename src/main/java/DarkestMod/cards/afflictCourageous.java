@@ -16,21 +16,21 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static DarkestMod.DefaultMod.makeCardPath;
 
-public class AfflictionTemp extends AbstractDynamicCard {
+public class afflictCourageous extends AbstractDynamicCard {
 
-    public static final String ID = DefaultMod.makeID("AfflictionTemp");
+    public static final String ID = "Courageous";
     public static final String IMG = makeCardPath("Skill.png");
 
     private static final CardRarity RARITY = CardRarity.SPECIAL;
     private static final CardTarget TARGET = CardTarget.SELF;
-    private static final CardType TYPE = CardType.STATUS;
+    private static final CardType TYPE = CardType.CURSE;
     public static final CardColor COLOR = TheDefault.Enums.COLOR_GRAY;
 
     private static final int COST = -2;
     private static final int BLOCK = 5;
     private static final int UPGRADE_PLUS_BLOCK = 3;
 
-    public AfflictionTemp() {
+    public afflictCourageous() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseBlock = BLOCK;
         this.exhaust = true;

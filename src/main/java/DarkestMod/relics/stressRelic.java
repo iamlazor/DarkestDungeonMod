@@ -37,14 +37,17 @@ public class stressRelic extends CustomRelic {
 
     @Override
     public void atBattleStart() {
+
         flash();
         AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new powerStress(AbstractDungeon.player, counter), counter));
         AbstractDungeon.actionManager.addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
     }
 
     public int onAttacked(DamageInfo info, int damageAmount) {
-         this.counter += damageAmount;
-         return damageAmount;
+        if (info.type == DamageInfo.DamageType.NORMAL) {
+            this.counter += damageAmount;
+         }
+        return damageAmount;
     }
 
 

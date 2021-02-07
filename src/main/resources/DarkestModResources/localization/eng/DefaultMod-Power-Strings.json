@@ -33,6 +33,16 @@
                 ]
         },
 
+        "DarkestMod:HeartAttack": {
+                "NAME": "Deaths Door",
+                "DESCRIPTIONS": [
+                        "Stress Causes an Heart Attack and fall to 1 health",
+                        " keyword."
+                ]
+        },
+
+
+
         "DarkestMod:PowerBleed": {
                 "NAME": "Bleed",
                 "DESCRIPTIONS": [

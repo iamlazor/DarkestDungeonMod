@@ -19,7 +19,7 @@ import static DarkestMod.DefaultMod.makeCardPath;
 
 public class afflictParanoid extends AbstractDynamicCard {
 
-    public static final String ID = DefaultMod.makeID(DefaultCommonSkill.class.getSimpleName());
+    public static final String ID = DefaultMod.makeID("Paranoid");
     public static final String IMG = makeCardPath("Skill.png");
 
     private static final CardRarity RARITY = CardRarity.SPECIAL;

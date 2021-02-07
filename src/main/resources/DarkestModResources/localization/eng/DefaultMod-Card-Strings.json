@@ -259,12 +259,71 @@
       "DESCRIPTION": "Reduce stress by 8 and all incoming stress is reduced by 1."
   },
 
-  "DarkestMod:skillBlock_s": {
-    "NAME": "DD Defend",
-    "DESCRIPTION": "Gain !B! block."
+  "DarkestMod:AfflictionTemp": {
+    "NAME": "Afflict Test card",
+    "DESCRIPTION": "Unplayable.  At the end of turn Gain !B! block and then Exhaust."
+  },
+
+  "DarkestMod:Abusive": {
+    "NAME": "Abusive",
+    "DESCRIPTION": "Unplayable.  At the end of turn become Confused and then Exhaust."
+  },
+
+  "DarkestMod:Fearful": {
+    "NAME": "Fearful",
+    "DESCRIPTION": "Unplayable.  At the end of turn become Confused and then Exhaust."
   },
 
 
+  "DarkestMod:Hopeless": {
+    "NAME": "Hopeless",
+    "DESCRIPTION": "Unplayable.  At the end of turn become Confused and then Exhaust."
+  },
+
+  "DarkestMod:Irrational": {
+    "NAME": "Irrational",
+    "DESCRIPTION": "Unplayable.  At the end of turn become Confused and then Exhaust."
+  },
+
+  "DarkestMod:Paranoid": {
+    "NAME": "Paranoid",
+    "DESCRIPTION": "Unplayable.  At the end of turn become Confused and then Exhaust."
+  },
+
+  "DarkestMod:Masochistic": {
+    "NAME": "Masochistic",
+    "DESCRIPTION": "Unplayable.  At the end of turn become Confused and then Exhaust."
+  },
+
+  "DarkestMod:Selfish": {
+    "NAME": "Selfish",
+    "DESCRIPTION": "Unplayable.  At the end of turn become Confused and then Exhaust."
+  },
+
+  "DarkestMod:Courageous": {
+    "NAME": "Courageous",
+    "DESCRIPTION": "Unplayable.  At the end of turn become Confused and then Exhaust."
+  },
+
+  "DarkestMod:Focused": {
+    "NAME": "Paranoid",
+    "DESCRIPTION": "Unplayable.  At the end of turn become Confused and then Exhaust."
+  },
+
+  "DarkestMod:Powerfuul": {
+    "NAME": "Paranoid",
+    "DESCRIPTION": "Unplayable.  At the end of turn become Confused and then Exhaust."
+  },
+
+  "DarkestMod:Stalwart": {
+    "NAME": "Stalwart",
+    "DESCRIPTION": "Unplayable.  At the end of turn become Confused and then Exhaust."
+  },
+
+  "DarkestMod:Vigorous": {
+    "NAME": "Vigorous",
+    "DESCRIPTION": "Unplayable.  At the end of turn become Confused and then Exhaust."
+  },
 
   "DarkestMod:attackStrike_s": {
     "NAME": "Jester",

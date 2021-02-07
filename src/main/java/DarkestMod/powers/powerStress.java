@@ -61,10 +61,15 @@ public class powerStress extends AbstractPower implements CloneablePowerInterfac
             this.amount = this.basePower;
             this.updateDescription();
 
-        if (this.amount >= 100 && !owner.hasPower(powerAffliction.POWER_ID)) { //makes it a do once
+        if (this.amount >= 100 && this.amount <= 200 && !owner.hasPower(powerAffliction.POWER_ID)) { //makes it a do once
             this.flash();
             AbstractDungeon.actionManager.addToBottom(
                     new ApplyPowerAction(this.owner,this.owner,new powerAffliction(this.owner,1),1));
+        }
+        if (this.amount >= 200 && !owner.hasPower(powerHeartAttack.POWER_ID)) {
+            this.flash();
+            AbstractDungeon.actionManager.addToBottom(
+                    new ApplyPowerAction(this.owner,this.owner,new powerHeartAttack(this.owner, this.owner),1));
         }
     }
 
