@@ -4,12 +4,11 @@ import DarkestMod.DefaultMod;
 import DarkestMod.characters.TheDefault;
 import basemod.abstracts.AbstractCardModifier;
 import basemod.helpers.BaseModCardTags;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.ExhaustAction;
-import com.megacrit.cardcrawl.actions.common.GainBlockAction;
+import com.megacrit.cardcrawl.actions.common.*;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardQueueItem;
+import com.megacrit.cardcrawl.cards.curses.Normality;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -27,12 +26,10 @@ public class afflictHopeless extends AbstractDynamicCard {
     public static final CardColor COLOR = TheDefault.Enums.COLOR_GRAY;
 
     private static final int COST = -2;
-    private static final int BLOCK = 5;
     private static final int UPGRADE_PLUS_BLOCK = 3;
 
     public afflictHopeless() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        baseBlock = BLOCK;
         this.exhaust = true;
     }
 
@@ -40,7 +37,8 @@ public class afflictHopeless extends AbstractDynamicCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         if (this.dontTriggerOnUseCard) {
-            AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, block));
+            AbstractDungeon.actionManager.addToBottom(
+                    new MakeTempCardInDrawPileAction(new Normality(), 5,true, true));
         }
     }
 
@@ -54,7 +52,6 @@ public class afflictHopeless extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeBlock(UPGRADE_PLUS_BLOCK);
             initializeDescription();
         }
     }

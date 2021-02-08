@@ -58,8 +58,7 @@ public class powerStress extends AbstractPower implements CloneablePowerInterfac
 
     }
     public void atEndOfTurn(final boolean isPlayer) {
-            this.amount = this.basePower;
-            this.updateDescription();
+
 
         if (this.amount >= 100 && this.amount <= 200 && !owner.hasPower(powerAffliction.POWER_ID)) { //makes it a do once
             this.flash();
@@ -109,5 +108,7 @@ public class powerStress extends AbstractPower implements CloneablePowerInterfac
         public AbstractPower makeCopy() {
             return new powerStress(owner, amount);
         }
+
+
 
 }

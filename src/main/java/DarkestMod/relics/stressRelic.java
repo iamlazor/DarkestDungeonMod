@@ -2,7 +2,6 @@ package DarkestMod.relics;
 
 import DarkestMod.DefaultMod;
 import DarkestMod.cards.*;
-import DarkestMod.powers.JesterPower;
 import DarkestMod.powers.powerStress;
 import DarkestMod.util.TextureLoader;
 import basemod.abstracts.CustomRelic;
@@ -15,6 +14,8 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.rooms.AbstractRoom;
+import com.megacrit.cardcrawl.rooms.MonsterRoomBoss;
 
 import static DarkestMod.DefaultMod.makeRelicOutlinePath;
 import static DarkestMod.DefaultMod.makeRelicPath;
@@ -31,17 +32,16 @@ public class stressRelic extends CustomRelic {
     public stressRelic() {
         super(ID, IMG, OUTLINE, RelicTier.COMMON, LandingSound.FLAT);
         this.counter = 1;
-
     }
-
 
     @Override
     public void atBattleStart() {
-
         flash();
         AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new powerStress(AbstractDungeon.player, counter), counter));
         AbstractDungeon.actionManager.addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
-    }
+
+        }
+
 
     public int onAttacked(DamageInfo info, int damageAmount) {
         if (info.type == DamageInfo.DamageType.NORMAL) {
@@ -50,6 +50,12 @@ public class stressRelic extends CustomRelic {
         return damageAmount;
     }
 
+    @Override
+    public void onVictory() {
+        if (AbstractDungeon.getCurrRoom() instanceof MonsterRoomBoss) {
+            this.counter = 1;
+        }
+    }
 
     public void onUseCard(AbstractCard card, UseCardAction action) {
      if (card.cardID.equals(skillProtectMe.ID)){
@@ -63,7 +69,6 @@ public class stressRelic extends CustomRelic {
          this.counter -= 8;
      }
     }
-
 
 
         @Override

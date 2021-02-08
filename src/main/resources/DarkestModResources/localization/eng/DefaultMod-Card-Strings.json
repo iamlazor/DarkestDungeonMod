@@ -266,7 +266,7 @@
 
   "DarkestMod:Abusive": {
     "NAME": "Abusive",
-    "DESCRIPTION": "Unplayable.  At the end of turn become Confused and then Exhaust."
+    "DESCRIPTION": "Unplayable.  You cannot gain Block from cards for 3 turns.Exhaust."
   },
 
   "DarkestMod:Fearful": {
@@ -277,7 +277,7 @@
 
   "DarkestMod:Hopeless": {
     "NAME": "Hopeless",
-    "DESCRIPTION": "Unplayable.  At the end of turn become Confused and then Exhaust."
+    "DESCRIPTION": "Unplayable.  At the end of turn shuffle 5 Normalities into the deck then Exhaust."
   },
 
   "DarkestMod:Irrational": {
@@ -292,7 +292,7 @@
 
   "DarkestMod:Masochistic": {
     "NAME": "Masochistic",
-    "DESCRIPTION": "Unplayable.  At the end of turn become Confused and then Exhaust."
+    "DESCRIPTION": "Unplayable. At the end of turn apply 99 vulnerable to the player and then Exhaust."
   },
 
   "DarkestMod:Selfish": {

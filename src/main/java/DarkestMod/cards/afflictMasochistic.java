@@ -13,6 +13,7 @@ import com.megacrit.cardcrawl.cards.CardQueueItem;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.VulnerablePower;
 
 import static DarkestMod.DefaultMod.makeCardPath;
 
@@ -27,12 +28,9 @@ public class afflictMasochistic extends AbstractDynamicCard {
     public static final CardColor COLOR = TheDefault.Enums.COLOR_GRAY;
 
     private static final int COST = -2;
-    private static final int BLOCK = 5;
-    private static final int UPGRADE_PLUS_BLOCK = 3;
 
     public afflictMasochistic() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        baseBlock = BLOCK;
         this.exhaust = true;
     }
 
@@ -40,7 +38,7 @@ public class afflictMasochistic extends AbstractDynamicCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         if (this.dontTriggerOnUseCard) {
-            AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, block));
+            new ApplyPowerAction(p,p,new VulnerablePower(p,99,false),99);
         }
     }
 
@@ -54,7 +52,6 @@ public class afflictMasochistic extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeBlock(UPGRADE_PLUS_BLOCK);
             initializeDescription();
         }
     }
