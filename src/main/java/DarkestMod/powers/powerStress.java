@@ -1,7 +1,6 @@
 package DarkestMod.powers;
 
 import DarkestMod.DefaultMod;
-import DarkestMod.actions.AfflictedAction;
 import DarkestMod.util.TextureLoader;
 import basemod.interfaces.CloneablePowerInterface;
 import com.badlogic.gdx.graphics.Texture;
@@ -13,7 +12,6 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.megacrit.cardcrawl.powers.StrengthPower;
 
 
 import static DarkestMod.DefaultMod.makePowerPath;
@@ -68,7 +66,7 @@ public class powerStress extends AbstractPower implements CloneablePowerInterfac
         if (this.amount >= 200 && !owner.hasPower(powerHeartAttack.POWER_ID)) {
             this.flash();
             AbstractDungeon.actionManager.addToBottom(
-                    new ApplyPowerAction(this.owner,this.owner,new powerHeartAttack(this.owner, this.owner),1));
+                    new ApplyPowerAction(this.owner,this.owner,new powerHeartAttack(this.owner, this.owner, amount),1));
         }
     }
 

@@ -489,6 +489,17 @@ public class DefaultMod implements
 
         //Defaults & Tests
         BaseMod.addCard(new AfflictionTemp());
+        BaseMod.addCard(new afflictAbusive());
+        BaseMod.addCard(new afflictCourageous());
+        BaseMod.addCard(new afflictFearful());
+        BaseMod.addCard(new afflictFocused());
+        BaseMod.addCard(new afflictHopeless());
+        BaseMod.addCard(new afflictIrrational());
+        BaseMod.addCard(new afflictMasochistic());
+        BaseMod.addCard(new afflictParanoid());
+        BaseMod.addCard(new afflictSelfish());
+        BaseMod.addCard(new afflictStalwart());
+        BaseMod.addCard(new afflictVigorous());
         // BaseMod.addCard(new attackPoisonTest());
         //BaseMod.addCard(new DefaultAttackWithVariable());
         //BaseMod.addCard(new attackStrike_s());
@@ -574,6 +585,8 @@ public class DefaultMod implements
 
         //Defaults & Tests
         UnlockTracker.unlockCard(AfflictionTemp.ID);
+
+
         // UnlockTracker.unlockCard(attackStrike_s.ID);
         // UnlockTracker.unlockCard(skillBlock_s.ID);
         // UnlockTracker.unlockCard(attackPoisonTest.ID);

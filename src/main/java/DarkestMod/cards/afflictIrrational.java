@@ -13,13 +13,14 @@ import com.megacrit.cardcrawl.cards.CardQueueItem;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.HexPower;
 
 import static DarkestMod.DefaultMod.makeCardPath;
 
 public class afflictIrrational extends AbstractDynamicCard {
 
-    public static final String ID = "Irrational";
-    public static final String IMG = makeCardPath("Skill.png");
+    public static final String ID = DefaultMod.makeID("Irrational");
+    public static final String IMG = makeCardPath("irrational.png");
 
     private static final CardRarity RARITY = CardRarity.SPECIAL;
     private static final CardTarget TARGET = CardTarget.SELF;
@@ -40,7 +41,8 @@ public class afflictIrrational extends AbstractDynamicCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         if (this.dontTriggerOnUseCard) {
-            AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, block));
+            AbstractDungeon.actionManager.addToBottom(
+                new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new HexPower(AbstractDungeon.player, 1),1));
         }
     }
 

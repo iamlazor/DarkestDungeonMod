@@ -1,9 +1,7 @@
 package DarkestMod.powers;
 
 import DarkestMod.DefaultMod;
-import DarkestMod.cards.AfflictionTemp;
-import DarkestMod.cards.afflictParanoid;
-import DarkestMod.cards.attackChop;
+import DarkestMod.cards.*;
 import DarkestMod.patches.CardTagEnum;
 import DarkestMod.util.TextureLoader;
 import basemod.interfaces.CloneablePowerInterface;
@@ -54,19 +52,68 @@ public class powerAffliction extends AbstractPower implements CloneablePowerInte
 
         int random = AbstractDungeon.miscRng.random(0, 99);
 
-        if (this.amount == 1 && random >=  50) {
+        if (this.amount == 1 && random <= 11) {
             this.flash();
             this.addToBot(
-                    new MakeTempCardInHandAction(new AfflictionTemp(), 1));
+                    new MakeTempCardInHandAction(new afflictFearful(), 1));
             //this.amount -= 1;
-        } else {
-           if (this.amount == 1 && random < 49);
+        } else if (this.amount == 1 && random <= 23) {
             this.flash();
             this.addToBot(
                     new MakeTempCardInHandAction(new afflictParanoid(), 1));
-        }
-    }
+        } else if (this.amount == 1 && random <= 35) {
+            this.flash();
+            this.addToBot(
+                    new MakeTempCardInHandAction(new afflictSelfish(), 1));
+        } else if (this.amount == 1 && random <= 47) {
+            this.flash();
+            this.addToBot(
+                    new MakeTempCardInHandAction(new afflictMasochistic(), 1));
 
+        } else if (this.amount == 1 && random <= 59) {
+            this.flash();
+            this.addToBot(
+                    new MakeTempCardInHandAction(new afflictAbusive(), 1));
+
+        } else if (this.amount == 1 && random <= 70) {
+            this.flash();
+            this.addToBot(
+                    new MakeTempCardInHandAction(new afflictHopeless(), 1));
+
+        }else if (this.amount == 1 && random <= 83) {
+            this.flash();
+            this.addToBot(
+                    new MakeTempCardInHandAction(new afflictIrrational(), 1));
+        }
+        // Virtues
+        else if (this.amount == 1 && random <= 86) {
+            this.flash();
+            this.addToBot(
+                    new MakeTempCardInHandAction(new afflictStalwart(), 1));
+        }
+        else if (this.amount == 1 && random <= 89) {
+            this.flash();
+            this.addToBot(
+                    new MakeTempCardInHandAction(new afflictCourageous(), 1));
+        }
+        else if (this.amount == 1 && random <= 92
+        ) {
+            this.flash();
+            this.addToBot(
+                    new MakeTempCardInHandAction(new afflictFocused(), 1));
+        }
+        else if (this.amount == 1 && random <=95 ) {
+            this.flash();
+            this.addToBot(
+                    new MakeTempCardInHandAction(new afflictPowerful(), 1));
+        }
+        else if (this.amount == 1 && random <= 99) {
+            this.flash();
+            this.addToBot(
+                    new MakeTempCardInHandAction(new afflictVigorous(), 1));
+        }
+
+    }
     @Override
     public void updateDescription() {
         if (this.owner != null && !this.owner.isPlayer) {

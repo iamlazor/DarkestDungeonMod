@@ -7,6 +7,7 @@ import basemod.helpers.BaseModCardTags;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.ExhaustAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
+import com.megacrit.cardcrawl.actions.common.HealAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardQueueItem;
@@ -18,10 +19,10 @@ import static DarkestMod.DefaultMod.makeCardPath;
 
 public class afflictVigorous extends AbstractDynamicCard {
 
-    public static final String ID = "Vigorous";
-    public static final String IMG = makeCardPath("Skill.png");
+    public static final String ID = DefaultMod.makeID("Vigorous");
+    public static final String IMG = makeCardPath("vigorous.png");
 
-    private static final CardRarity RARITY = CardRarity.SPECIAL;
+    private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardType TYPE = CardType.STATUS;
     public static final CardColor COLOR = TheDefault.Enums.COLOR_GRAY;
@@ -40,7 +41,8 @@ public class afflictVigorous extends AbstractDynamicCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         if (this.dontTriggerOnUseCard) {
-            AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, block));
+            AbstractDungeon.actionManager.addToBottom(
+                    new HealAction(AbstractDungeon.player, AbstractDungeon.player, 50));
         }
     }
 

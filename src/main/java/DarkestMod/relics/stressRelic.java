@@ -63,10 +63,17 @@ public class stressRelic extends CustomRelic {
      } else if (card.cardID.equals(attackRake.ID)) {
             this.counter += 8;
         }
+     else if (card.cardID.equals(afflictFearful.ID)) {
+         this.counter += 20;
+     }
+
      else if (card.cardID.equals(powerJester.ID)) {
          this.counter -= 8;
      }     else if (card.cardID.equals(skillAbsolution.ID)) {
          this.counter -= 8;
+     }
+     else if (card.cardID.equals(afflictStalwart.ID)) {
+         this.counter -= 100;
      }
     }
 

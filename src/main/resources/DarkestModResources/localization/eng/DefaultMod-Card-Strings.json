@@ -271,7 +271,7 @@
 
   "DarkestMod:Fearful": {
     "NAME": "Fearful",
-    "DESCRIPTION": "Unplayable.  At the end of turn become Confused and then Exhaust."
+    "DESCRIPTION": "Unplayable.  At the end of turn get 3 Bleed, 3 Blight and 20 Stress then Exhaust."
   },
 
 
@@ -282,47 +282,47 @@
 
   "DarkestMod:Irrational": {
     "NAME": "Irrational",
-    "DESCRIPTION": "Unplayable.  At the end of turn become Confused and then Exhaust."
+    "DESCRIPTION": "Unplayable. Become Hexed. Exhaust."
   },
 
   "DarkestMod:Paranoid": {
     "NAME": "Paranoid",
-    "DESCRIPTION": "Unplayable.  At the end of turn become Confused and then Exhaust."
+    "DESCRIPTION": "Unplayable. Become Confused and then Exhaust."
   },
 
   "DarkestMod:Masochistic": {
     "NAME": "Masochistic",
-    "DESCRIPTION": "Unplayable. At the end of turn apply 99 vulnerable to the player and then Exhaust."
+    "DESCRIPTION": "Unplayable. Gain 99 vulnerable. Exhaust."
   },
 
   "DarkestMod:Selfish": {
     "NAME": "Selfish",
-    "DESCRIPTION": "Unplayable.  At the end of turn become Confused and then Exhaust."
+    "DESCRIPTION": "Unplayable. Lose 100 Gold. Exhaust."
   },
 
   "DarkestMod:Courageous": {
     "NAME": "Courageous",
-    "DESCRIPTION": "Unplayable.  At the end of turn become Confused and then Exhaust."
+    "DESCRIPTION": "Unplayable. Gain 3 Dexterity and 3 Artifact. Exhaust."
   },
 
   "DarkestMod:Focused": {
-    "NAME": "Paranoid",
-    "DESCRIPTION": "Unplayable.  At the end of turn become Confused and then Exhaust."
+    "NAME": "Focused",
+    "DESCRIPTION": "Unplayable. Gain 3 Intangible and then Exhaust."
   },
 
-  "DarkestMod:Powerfuul": {
-    "NAME": "Paranoid",
-    "DESCRIPTION": "Unplayable.  At the end of turn become Confused and then Exhaust."
+  "DarkestMod:Powerful": {
+    "NAME": "Powerful",
+    "DESCRIPTION": "Unplayable.  At the end of turn become Gain 5 Strength and then Exhaust."
   },
 
   "DarkestMod:Stalwart": {
     "NAME": "Stalwart",
-    "DESCRIPTION": "Unplayable.  At the end of turn become Confused and then Exhaust."
+    "DESCRIPTION": "Unplayable.  At the end of turn heal 100 stress and gain 20 Block. Exhaust."
   },
 
   "DarkestMod:Vigorous": {
     "NAME": "Vigorous",
-    "DESCRIPTION": "Unplayable.  At the end of turn become Confused and then Exhaust."
+    "DESCRIPTION": "Unplayable.  At the end of turn Heal for 50 and then Exhaust."
   },
 
   "DarkestMod:attackStrike_s": {

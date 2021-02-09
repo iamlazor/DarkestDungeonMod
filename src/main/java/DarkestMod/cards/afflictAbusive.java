@@ -20,8 +20,8 @@ import static DarkestMod.DefaultMod.makeCardPath;
 
 public class afflictAbusive extends AbstractDynamicCard {
 
-    public static final String ID = "Abusive";
-    public static final String IMG = makeCardPath("Skill.png");
+    public static final String ID = DefaultMod.makeID("Abusive");
+    public static final String IMG = makeCardPath("abusive.png");
 
     private static final CardRarity RARITY = CardRarity.SPECIAL;
     private static final CardTarget TARGET = CardTarget.SELF;
@@ -40,7 +40,8 @@ public class afflictAbusive extends AbstractDynamicCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         if (this.dontTriggerOnUseCard) {
-            new ApplyPowerAction(p,p,new NoBlockPower(p,3,false),3);
+            AbstractDungeon.actionManager.addToBottom(
+            new ApplyPowerAction(AbstractDungeon.player,AbstractDungeon.player,new NoBlockPower(AbstractDungeon.player,3,false),3));
         }
     }
 

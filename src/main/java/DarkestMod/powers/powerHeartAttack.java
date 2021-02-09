@@ -5,12 +5,9 @@ import DarkestMod.util.TextureLoader;
 import basemod.interfaces.CloneablePowerInterface;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 
@@ -30,7 +27,7 @@ public class powerHeartAttack extends AbstractPower implements CloneablePowerInt
 
 
 
-    public powerHeartAttack(AbstractCreature owner, AbstractCreature source) {
+    public powerHeartAttack(AbstractCreature owner, AbstractCreature source, int amount) {
         this.name = NAME;
         this.ID = POWER_ID;
 
@@ -71,6 +68,6 @@ public class powerHeartAttack extends AbstractPower implements CloneablePowerInt
 
     @Override
     public AbstractPower makeCopy() {
-        return new powerBleed(owner, source, amount);
+        return new powerHeartAttack(owner, source, amount);
     }
 }

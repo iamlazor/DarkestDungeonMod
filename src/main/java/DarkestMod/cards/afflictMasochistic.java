@@ -19,8 +19,8 @@ import static DarkestMod.DefaultMod.makeCardPath;
 
 public class afflictMasochistic extends AbstractDynamicCard {
 
-    public static final String ID = "Masochistic";
-    public static final String IMG = makeCardPath("Skill.png");
+    public static final String ID = DefaultMod.makeID("Masochistic");
+    public static final String IMG = makeCardPath("masochistic.png");
 
     private static final CardRarity RARITY = CardRarity.SPECIAL;
     private static final CardTarget TARGET = CardTarget.SELF;
@@ -38,7 +38,8 @@ public class afflictMasochistic extends AbstractDynamicCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         if (this.dontTriggerOnUseCard) {
-            new ApplyPowerAction(p,p,new VulnerablePower(p,99,false),99);
+            AbstractDungeon.actionManager.addToBottom(
+            new ApplyPowerAction(AbstractDungeon.player,AbstractDungeon.player,new VulnerablePower(AbstractDungeon.player,99,false),99));
         }
     }
 

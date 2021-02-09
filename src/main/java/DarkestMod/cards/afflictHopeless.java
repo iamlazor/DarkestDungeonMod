@@ -17,8 +17,8 @@ import static DarkestMod.DefaultMod.makeCardPath;
 
 public class afflictHopeless extends AbstractDynamicCard {
 
-    public static final String ID = "Hopeless";
-    public static final String IMG = makeCardPath("Skill.png");
+    public static final String ID = DefaultMod.makeID("Hopeless");
+    public static final String IMG = makeCardPath("hopeless.png");
 
     private static final CardRarity RARITY = CardRarity.SPECIAL;
     private static final CardTarget TARGET = CardTarget.SELF;

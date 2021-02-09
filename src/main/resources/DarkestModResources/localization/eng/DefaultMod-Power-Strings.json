@@ -8,6 +8,13 @@
                 ]
         },
 
+        "DarkestMod:NoHeal": {
+                "NAME": "Heal Block",
+                "DESCRIPTIONS": [
+                        "You can no longer heal.",
+                        " keyword."
+                ]
+        },
 
         "DarkestMod:JesterPower": {
                 "NAME": "Jester",
