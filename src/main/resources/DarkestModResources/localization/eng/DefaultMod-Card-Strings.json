@@ -4,6 +4,11 @@
     "DESCRIPTION": "Heal for !M! and remove 8 darkestmod:Stress. Exhaust."
   },
 
+  "DarkestMod:Antiques": {
+    "NAME": "Antiques",
+    "DESCRIPTION": "Gain 10 Gold. Exhaust"
+  },
+
   "DarkestMod:Barbaric YAWP": {
     "NAME": "Barbaric YAWP",
     "DESCRIPTION": "Apply !B! block"
@@ -130,6 +135,7 @@
     "DESCRIPTION": "Apply !B! block"
   },
 
+
   "DarkestMod:Weakening Curse": {
     "NAME": "Weakening Curse",
     "DESCRIPTION": "Apply !B! block"
@@ -195,6 +201,11 @@
     "DESCRIPTION": "Deal !D! damage."
   },
 
+  "DarkestMod:GrapeshotBlast": {
+    "NAME": "Grapeshot Blast",
+    "DESCRIPTION": "Deal !D! damage to all enemies. Exhaust"
+  },
+
   "DarkestMod:Hound's Harry": {
     "NAME": "Hound's Harry",
     "DESCRIPTION": "Deal !D! damage. And apply !M! darkestmod:Bleed to all enemies"
@@ -249,14 +260,58 @@
     "DESCRIPTION": "Deal !D! damage."
   },
 
+  "DarkestMod:ThrownDagger": {
+    "NAME": "Thrown Dagger",
+    "DESCRIPTION": "Deal !D! damage and !M! darkestmod:Bleed to the enemy. Exhaust"
+  },
+
   "DarkestMod:WickedHack": {
     "NAME": "Wicked Hack",
     "DESCRIPTION": "Deal !D! damage to all enemies."
   },
 
+  "DarkestMod:Abomination": {
+    "NAME": "Abomination",
+    "DESCRIPTION": "Even Turns gain 2 Temporary Strength. Odd Turns gain 2 Temporary Dexterity. And gain 2 stress each turn"
+  },
+  "DarkestMod:Antiquarian": {
+    "NAME": "Antiquarian",
+    "DESCRIPTION": "Gain 3 Frail and at the end of each turn add 1 Antique to your discard pile."
+  },
+
+  "DarkestMod:Crusader": {
+    "NAME": "Crusader",
+    "DESCRIPTION": "Every time you play and Attack, gain 3 Block"
+  },
+
+  "DarkestMod:Flagellant": {
+    "NAME": "Flagellant",
+    "DESCRIPTION": "Gain 3 Temporary Strength when below 50% HP"
+  },
+
+  "DarkestMod:GraveRobber": {
+    "NAME": "Grave Robber",
+    "DESCRIPTION": "Add a Thrown Dagger to the hand each turn"
+  },
+
+  "DarkestMod:Highwayman": {
+    "NAME": "Highwayman",
+    "DESCRIPTION": "At the start of each turn add !M! Grapeshot Blasts into your hand."
+  },
+
   "DarkestMod:Jester": {
       "NAME": "Jester",
       "DESCRIPTION": "Reduce stress by 8 and all incoming stress is reduced by 1."
+  },
+
+  "DarkestMod:Leper": {
+    "NAME": "Leper",
+    "DESCRIPTION": "At the start of turn gain 1 Strength for each Debuff."
+  },
+
+  "DarkestMod:ManAtArms": {
+    "NAME": "Man at Arms",
+    "DESCRIPTION": "Gain !M!  Plated Armor & !M! Counter."
   },
 
   "DarkestMod:AfflictionTemp": {
@@ -271,7 +326,7 @@
 
   "DarkestMod:Fearful": {
     "NAME": "Fearful",
-    "DESCRIPTION": "Unplayable.  At the end of turn get 3 Bleed, 3 Blight and 20 Stress then Exhaust."
+    "DESCRIPTION": "Unplayable.  At the end of turn get 3 Bleed, 3 Blight. Exhaust."
   },
 
 

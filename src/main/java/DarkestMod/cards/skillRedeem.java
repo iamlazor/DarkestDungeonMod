@@ -51,15 +51,16 @@ public class skillRedeem extends AbstractDynamicCard {
     public static final CardColor COLOR = TheDefault.Enums.COLOR_GRAY;
 
     private static final int HEAL_AMT = 12;
-    private static final int COST = 2;
+    private static final int COST = 3;
+    private static final int UPGRADED_COST = 2;
+
 
 
     // STAT DECLARATION
 
     public skillRedeem() { // public attackNailStrike() - This one and the one right under the imports are the most important ones, don't forget them
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-
-
+        this.tags.add(CardTags.HEALING);
 
     }
 
@@ -89,6 +90,7 @@ public class skillRedeem extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
+            this.upgradeBaseCost(UPGRADED_COST);
             initializeDescription();
         }
     }

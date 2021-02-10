@@ -123,6 +123,15 @@ public class TheDefault extends CustomPlayer {
 
 
         //tests
+        //retVal.add(powerManAtArms.ID);
+        //retVal.add(powerLeper.ID);
+        //retVal.add(powerGraveRobber.ID);
+        //retVal.add(powerFlagellant.ID);
+        //retVal.add(powerCrusader.ID);
+        //retVal.add(powerAbomination.ID);
+        //retVal.add(powerAntiquarian.ID);
+        //retVal.add(powerHighwayman.ID);
+
         //retVal.add(AfflictionTemp.ID);
         //retVal.add(attackWickedHack.ID);
         //retVal.add(attackAddersKiss.ID);

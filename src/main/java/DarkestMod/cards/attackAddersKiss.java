@@ -48,6 +48,7 @@ public class attackAddersKiss extends AbstractDynamicCard {
 
     private static final int DAMAGE = 5;
     private static final int UPGRADE_PLUS_DMG = 2;
+    private static final int UPGRADE_PLUS_BLIGHT = 4;
 
 
     // STAT DECLARATION
@@ -78,6 +79,7 @@ public class attackAddersKiss extends AbstractDynamicCard {
             this.upgradeName();
             this.upgradeDamage(UPGRADE_PLUS_DMG);
             this.upgradeBaseCost(UPGRADED_COST);
+            this.upgradeMagicNumber(UPGRADE_PLUS_BLIGHT);
             this.initializeDescription();
         }
     }

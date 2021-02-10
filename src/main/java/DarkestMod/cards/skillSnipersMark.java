@@ -55,11 +55,7 @@ public class skillSnipersMark extends AbstractDynamicCard {
 
     private static final int COST = 1;
     private static final int MARKED = 1;
-
-
-    // STAT DECLARATION
-
-
+    private static final int UPGRADED_COST = 0;
 
 
     public skillSnipersMark() { // public attackNailStrike() - This one and the one right under the imports are the most important ones, don't forget them
@@ -80,6 +76,8 @@ public class skillSnipersMark extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
+            this.isInnate = true;
+            this.upgradeBaseCost(UPGRADED_COST);
             initializeDescription();
         }
     }

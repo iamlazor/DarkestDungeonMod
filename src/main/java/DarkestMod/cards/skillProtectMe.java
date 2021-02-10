@@ -53,7 +53,7 @@ public class skillProtectMe extends AbstractDynamicCard {
     public static final CardColor COLOR = TheDefault.Enums.COLOR_GRAY;
 
     private static final int COST = 1;
-    private static final int UPGRADED_COST = 0;
+    private static final int UPGRADED_BLOCK = 3;
 
     private static final int BLOCK = 9;
     private static final int STRESS_GEN = 4;
@@ -82,7 +82,7 @@ public class skillProtectMe extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeBaseCost(UPGRADED_COST);
+            upgradeBlock(UPGRADED_BLOCK);
             initializeDescription();
         }
     }

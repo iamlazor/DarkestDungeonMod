@@ -62,6 +62,7 @@ public class attackHoundsHarry extends AbstractDynamicCard {
 
     private static final int DAMAGE = 5;
     private static final int UPGRADE_PLUS_DMG = 2;
+    private static final int UPGRADE_PLUS_BLEED = 2;
 
     // STAT DECLARATION
 
@@ -105,6 +106,7 @@ public class attackHoundsHarry extends AbstractDynamicCard {
             if (!upgraded) {
                 upgradeName();
                 upgradeDamage(UPGRADE_PLUS_DMG);
+                this.upgradeMagicNumber(UPGRADE_PLUS_BLEED);
                 initializeDescription();
             }
         }

@@ -43,9 +43,7 @@ public class afflictFearful extends AbstractDynamicCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         if (this.dontTriggerOnUseCard) {
-            AbstractDungeon.actionManager.addToBottom(
-                    new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new powerStress(AbstractDungeon.player,20),20));
-            AbstractDungeon.actionManager.addToBottom(
+           AbstractDungeon.actionManager.addToBottom(
                     new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new powerBlight(AbstractDungeon.player, AbstractDungeon.player, 3), 3));
             AbstractDungeon.actionManager.addToBottom(
                     new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new powerBleed(AbstractDungeon.player, AbstractDungeon.player, 3), 3));

@@ -57,14 +57,15 @@ public class skillDivineComfort extends AbstractDynamicCard {
     public static final CardColor COLOR = TheDefault.Enums.COLOR_GRAY;
 
     private static final int COST = 1;
-    private static final int UPGRADED_COST = 0;
     private static final int HEAL= 5;
+    private static final int UPGRADE_PLUS_HEAL= 3;
 
     // STAT DECLARATION
 
     public skillDivineComfort() { // public attackNailStrike() - This one and the one right under the imports are the most important ones, don't forget them
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         magicNumber = baseMagicNumber = HEAL;
+        this.tags.add(CardTags.HEALING);
 
     }
 
@@ -99,8 +100,7 @@ public class skillDivineComfort extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-
-            upgradeBaseCost(UPGRADED_COST);
+            this.upgradeMagicNumber(UPGRADE_PLUS_HEAL);
             initializeDescription();
         }
     }

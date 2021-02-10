@@ -39,7 +39,6 @@ public class powerAffliction extends AbstractPower implements CloneablePowerInte
         this.type = PowerType.DEBUFF;
         this.isTurnBased = false;
 
-
         this.region128 = new TextureAtlas.AtlasRegion(tex84, 0, 0, 84, 84);
         this.region48 = new TextureAtlas.AtlasRegion(tex32, 0, 0, 32, 32);
 

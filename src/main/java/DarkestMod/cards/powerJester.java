@@ -29,6 +29,7 @@ public class powerJester extends AbstractDynamicCard{
     public powerJester(){
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         magicNumber = baseMagicNumber = STRESS_GEN;
+
     }
 
     @Override
@@ -38,8 +39,6 @@ public class powerJester extends AbstractDynamicCard{
                 new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new powerStress(AbstractDungeon.player,magicNumber),magicNumber));
         AbstractDungeon.actionManager.addToBottom(
                 new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new JesterPower(AbstractDungeon.player, 0), 0));
-
-
     }
 
     @Override

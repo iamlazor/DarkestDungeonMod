@@ -58,6 +58,7 @@ public class skillAbsolution extends AbstractDynamicCard {
 
     private static final int STRESS_GEN = -8;
     private static final int HEAL= 5;
+    private static final int UPGRADE_PLUS_STRESS= -4;
 
     // STAT DECLARATION
 
@@ -88,6 +89,7 @@ public class skillAbsolution extends AbstractDynamicCard {
         if (!upgraded) {
             upgradeName();
             upgradeBaseCost(UPGRADED_COST);
+            this.upgradeDefaultSecondMagicNumber(UPGRADE_PLUS_STRESS);
             initializeDescription();
         }
     }

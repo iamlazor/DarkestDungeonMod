@@ -8,10 +8,50 @@
                 ]
         },
 
-        "DarkestMod:NoHeal": {
-                "NAME": "Heal Block",
+        "DarkestMod:AbomPower": {
+                "NAME": "Abomination",
                 "DESCRIPTIONS": [
-                        "You can no longer heal.",
+                        "Even Turns gain 2 Temporary Strength. Odd Turns gain 2 Temporary Dexterity. And gain 2 stress each turn.",
+                        " keyword."
+                ]
+        },
+
+        "DarkestMod:AntiqPower": {
+                "NAME": "Antiquarian",
+                "DESCRIPTIONS": [
+                        "At the end of each turn add 1 Antique to your discard pile.",
+                        " keyword."
+                ]
+        },
+
+        "DarkestMod:CrusaderPower": {
+                "NAME": "Crusader",
+                "DESCRIPTIONS": [
+                        "Every time you play and Attack, gain 3 Block.",
+                        " keyword."
+                ]
+        },
+
+        "DarkestMod:FlagPower": {
+                "NAME": "Flagellant",
+                "DESCRIPTIONS": [
+                        "Gain 3 Temporary Strength when below 50% HP.",
+                        " keyword."
+                ]
+        },
+
+        "DarkestMod:GrobberPower": {
+                "NAME": "Grave Robber",
+                "DESCRIPTIONS": [
+                        "At the start of turn add a Thrown Dagger to the hand",
+                        " keyword."
+                ]
+        },
+
+        "DarkestMod:HighwayPower": {
+                "NAME": "Highway Power",
+                "DESCRIPTIONS": [
+                        "At the start of turn add a Grapeshot to the hand.",
                         " keyword."
                 ]
         },
@@ -23,6 +63,15 @@
                         " keyword."
                 ]
         },
+
+        "DarkestMod:ManPower": {
+                "NAME": "Man at Arms",
+                "DESCRIPTIONS": [
+                        "Counter, whenever attacked deal damage back.",
+                        " keyword."
+                ]
+        },
+
 
         "DarkestMod:RarePower": {
                 "NAME": "Placeholder Power",

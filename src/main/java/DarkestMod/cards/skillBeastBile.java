@@ -54,9 +54,9 @@ public class skillBeastBile extends AbstractDynamicCard {
     public static final CardColor COLOR = TheDefault.Enums.COLOR_GRAY;
 
     private static final int COST = 1;
-    private static final int UPGRADED_COST = 0;
     private static final int STRESS_GEN = 8;
     private static final int BLIGHT= 8;
+    private static final int UPGRADE_PLUS_BLIGHT = 4;
 
 
 
@@ -89,7 +89,7 @@ public class skillBeastBile extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeBaseCost(UPGRADED_COST);
+            this.upgradeDefaultSecondMagicNumber(UPGRADE_PLUS_BLIGHT);
             initializeDescription();
         }
     }

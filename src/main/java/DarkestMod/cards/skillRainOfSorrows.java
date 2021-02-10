@@ -61,6 +61,7 @@ public class skillRainOfSorrows extends AbstractDynamicCard {
 
     private static final int COST = 2;
     private static final int UPGRADED_COST = 1;
+    private static final int UPGRADE_PLUS_BLEED = 2;
 
 
     // STAT DECLARATION
@@ -95,6 +96,7 @@ public class skillRainOfSorrows extends AbstractDynamicCard {
         if (!upgraded) {
             upgradeName();
             upgradeBaseCost(UPGRADED_COST);
+            this.upgradeMagicNumber(UPGRADE_PLUS_BLEED);
             initializeDescription();
         }
     }

@@ -30,7 +30,6 @@ public class afflictSelfish extends AbstractDynamicCard {
     public static final CardColor COLOR = TheDefault.Enums.COLOR_GRAY;
 
     private static final int COST = -2;
-    private static final int UPGRADE_PLUS_BLOCK = 3;
 
     public afflictSelfish() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);

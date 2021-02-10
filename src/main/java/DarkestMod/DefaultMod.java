@@ -431,7 +431,15 @@ public class DefaultMod implements
         BaseMod.addCard(new skillTorch());
 
         //power
+        BaseMod.addCard(new powerAbomination());
+        BaseMod.addCard(new powerAntiquarian());
+        BaseMod.addCard(new powerCrusader());
+        BaseMod.addCard(new powerFlagellant());
+        BaseMod.addCard(new powerGraveRobber());
+        BaseMod.addCard(new powerHighwayman());
         BaseMod.addCard(new powerJester());
+        BaseMod.addCard(new powerLeper());
+        BaseMod.addCard(new powerManAtArms());
 
         //Attack
         BaseMod.addCard(new attackAbyssalArtillery());
@@ -488,18 +496,18 @@ public class DefaultMod implements
 
 
         //Defaults & Tests
-        BaseMod.addCard(new AfflictionTemp());
-        BaseMod.addCard(new afflictAbusive());
-        BaseMod.addCard(new afflictCourageous());
-        BaseMod.addCard(new afflictFearful());
-        BaseMod.addCard(new afflictFocused());
-        BaseMod.addCard(new afflictHopeless());
-        BaseMod.addCard(new afflictIrrational());
-        BaseMod.addCard(new afflictMasochistic());
-        BaseMod.addCard(new afflictParanoid());
-        BaseMod.addCard(new afflictSelfish());
-        BaseMod.addCard(new afflictStalwart());
-        BaseMod.addCard(new afflictVigorous());
+        //BaseMod.addCard(new AfflictionTemp());
+        //BaseMod.addCard(new afflictAbusive());
+        //BaseMod.addCard(new afflictCourageous());
+        //BaseMod.addCard(new afflictFearful());
+        //BaseMod.addCard(new afflictFocused());
+        //BaseMod.addCard(new afflictHopeless());
+        //BaseMod.addCard(new afflictIrrational());
+        //BaseMod.addCard(new afflictMasochistic());
+        //BaseMod.addCard(new afflictParanoid());
+        //BaseMod.addCard(new afflictSelfish());
+        //BaseMod.addCard(new afflictStalwart());
+        //BaseMod.addCard(new afflictVigorous());
         // BaseMod.addCard(new attackPoisonTest());
         //BaseMod.addCard(new DefaultAttackWithVariable());
         //BaseMod.addCard(new attackStrike_s());
@@ -509,9 +517,9 @@ public class DefaultMod implements
         //BaseMod.addCard(new DefaultCommonSkill());
         //BaseMod.addCard(new DefaultCommonPower());
         //BaseMod.addCard(new DefaultUncommonSkill());
-        BaseMod.addCard(new DefaultUncommonPower());
+        //BaseMod.addCard(new DefaultUncommonPower());
         //BaseMod.addCard(new DefaultRareSkill());
-        BaseMod.addCard(new DefaultRarePower());
+        //BaseMod.addCard(new DefaultRarePower());
         //BaseMod.addCard(new OrbSkill());
 
 
@@ -527,7 +535,15 @@ public class DefaultMod implements
         UnlockTracker.unlockCard(skillProvisions.ID);
 
         //Power
+        UnlockTracker.unlockCard(powerAbomination.ID);
+        UnlockTracker.unlockCard(powerAntiquarian.ID);
+        UnlockTracker.unlockCard(powerCrusader.ID);
+        UnlockTracker.unlockCard(powerFlagellant.ID);
+        UnlockTracker.unlockCard(powerGraveRobber.ID);
+        UnlockTracker.unlockCard(powerHighwayman.ID);
         UnlockTracker.unlockCard(powerJester.ID);
+        UnlockTracker.unlockCard(powerLeper.ID);
+        UnlockTracker.unlockCard(powerManAtArms.ID);
 
         //Attacks
         UnlockTracker.unlockCard(attackAbyssalArtillery.ID);
@@ -584,9 +600,7 @@ public class DefaultMod implements
 
 
         //Defaults & Tests
-        UnlockTracker.unlockCard(AfflictionTemp.ID);
-
-
+        //UnlockTracker.unlockCard(AfflictionTemp.ID);
         // UnlockTracker.unlockCard(attackStrike_s.ID);
         // UnlockTracker.unlockCard(skillBlock_s.ID);
         // UnlockTracker.unlockCard(attackPoisonTest.ID);
@@ -595,9 +609,9 @@ public class DefaultMod implements
         // UnlockTracker.unlockCard(DefaultCommonSkill.ID);
         // UnlockTracker.unlockCard(DefaultCommonPower.ID);
         // UnlockTracker.unlockCard(DefaultUncommonSkill.ID);
-        UnlockTracker.unlockCard(DefaultUncommonPower.ID);
+        //UnlockTracker.unlockCard(DefaultUncommonPower.ID);
         // UnlockTracker.unlockCard(DefaultRareSkill.ID);
-        UnlockTracker.unlockCard(DefaultRarePower.ID);
+        //UnlockTracker.unlockCard(DefaultRarePower.ID);
         // UnlockTracker.unlockCard(OrbSkill.ID);
         logger.info("========================= /Cards Added/ =========================");
     }
