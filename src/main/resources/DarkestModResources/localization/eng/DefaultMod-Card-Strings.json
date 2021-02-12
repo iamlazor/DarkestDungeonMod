@@ -76,7 +76,7 @@
 
   "DarkestMod:Mark For Death": {
     "NAME": "Mark For Death",
-    "DESCRIPTION": "Apply !B! block"
+    "DESCRIPTION": "Apply !M! darkestmod:Marked to all enemies."
   },
 
   "DarkestMod:Plague Grenade": {
@@ -122,7 +122,7 @@
 
   "DarkestMod:Target Whistle": {
     "NAME": "Target Whistle",
-    "DESCRIPTION": "Apply !B! block"
+    "DESCRIPTION": "Apply darkestmod:Marked to an enemy, next turn draw 2 more cards"
   },
 
   "DarkestMod:Torch": {
@@ -138,7 +138,7 @@
 
   "DarkestMod:Weakening Curse": {
     "NAME": "Weakening Curse",
-    "DESCRIPTION": "Apply !B! block"
+    "DESCRIPTION": "Gain 5 stress and target enemy loses 2 Strength and is darkestmod:Marked. Exhaust. "
   },
 
   "DarkestMod:Withstand": {
@@ -183,7 +183,7 @@
 
   "DarkestMod:Collect Bounty": {
     "NAME": "Collect Bounty",
-    "DESCRIPTION": "Deal !D! damage."
+    "DESCRIPTION": "Deal !D! damage. If the enemy is darkestmod:Marked, gain 2 Energy and 2 Strength."
   },
 
   "DarkestMod:Dazzling Light": {

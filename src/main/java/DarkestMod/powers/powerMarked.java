@@ -29,12 +29,12 @@ public class powerMarked extends AbstractPower implements CloneablePowerInterfac
     private static final Texture tex84 = TextureLoader.getTexture(makePowerPath("marked_power84.png"));
     private static final Texture tex32 = TextureLoader.getTexture(makePowerPath("marked_power32.png"));
 
-    public powerMarked(AbstractCreature owner, int amount){
+    public powerMarked(AbstractCreature owner, AbstractCreature source, int amount){
         this.name = NAME;
         this.ID = "PowerMarked";
 
         this.owner = owner;
-
+        this.source = source;
         this.amount = amount;
         this.type = PowerType.DEBUFF;
         this.isTurnBased = false;
@@ -82,6 +82,6 @@ public class powerMarked extends AbstractPower implements CloneablePowerInterfac
 
     @Override
     public AbstractPower makeCopy() {
-        return new powerMarked(owner, amount);
+        return new powerMarked(owner,source, amount);
     }
 }

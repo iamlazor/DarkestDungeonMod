@@ -2,10 +2,10 @@ package DarkestMod.relics;
 
 import DarkestMod.DefaultMod;
 import DarkestMod.cards.*;
+import DarkestMod.powers.AbomPower;
 import DarkestMod.powers.powerStress;
 import DarkestMod.util.TextureLoader;
 import basemod.abstracts.CustomRelic;
-import basemod.interfaces.StartActSubscriber;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
@@ -14,7 +14,6 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.rooms.MonsterRoomBoss;
 
 import static DarkestMod.DefaultMod.makeRelicOutlinePath;
@@ -42,13 +41,19 @@ public class stressRelic extends CustomRelic {
 
         }
 
-
     public int onAttacked(DamageInfo info, int damageAmount) {
         if (info.type == DamageInfo.DamageType.NORMAL) {
             this.counter += damageAmount;
          }
         return damageAmount;
     }
+
+    public void atTurnStart() {
+        if (AbstractDungeon.player.hasPower(AbomPower.POWER_ID)) {
+            this.counter += 2;
+        }
+    }
+
 
     @Override
     public void onVictory() {
@@ -63,6 +68,9 @@ public class stressRelic extends CustomRelic {
      } else if (card.cardID.equals(attackRake.ID)) {
             this.counter += 8;
         }
+     else if (card.cardID.equals(skillWeakeningCurse.ID)) {
+         this.counter += 5;
+     }
      else if (card.cardID.equals(afflictFearful.ID)) {
          this.counter += 20;
      }

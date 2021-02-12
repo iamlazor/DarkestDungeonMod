@@ -2,6 +2,7 @@ package DarkestMod.cards;
 
 import DarkestMod.powers.AbomPower;
 import DarkestMod.powers.FlagPower;
+import DarkestMod.powers.powerStress;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -38,6 +39,7 @@ public class powerAbomination extends AbstractDynamicCard {
         AbstractDungeon.actionManager.addToBottom(
                 new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new AbomPower(AbstractDungeon.player, 1), 1));
     }
+
 
     @Override
     public void upgrade() {

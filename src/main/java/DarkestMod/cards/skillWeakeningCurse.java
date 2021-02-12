@@ -1,6 +1,9 @@
 package DarkestMod.cards;
 
+import DarkestMod.powers.powerMarked;
+import DarkestMod.powers.powerStress;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -9,6 +12,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import DarkestMod.DefaultMod;
 import DarkestMod.characters.TheDefault;
+import com.megacrit.cardcrawl.powers.StrengthPower;
 
 import static DarkestMod.DefaultMod.makeCardPath;
 
@@ -36,11 +40,12 @@ public class skillWeakeningCurse extends AbstractDynamicCard {
 
     public static final String ID = DefaultMod.makeID("Weakening Curse"); // DefaultMod.makeID("attackNailStrike");
 
-    public static final String IMG = makeCardPath("Skill.png");// "public static final String IMG = makeCardPath("attackNailStrike.png");
+    public static final String IMG = makeCardPath("skillWeakeningCurse" +
+            ".png");// "public static final String IMG = makeCardPath("attackNailStrike.png");
     // This does mean that you will need to have an image with the same NAME as the card in your image folder for it to run correctly.
 
-    private static final CardRarity RARITY = CardRarity.BASIC;
-    private static final CardTarget TARGET = CardTarget.SELF;
+    private static final CardRarity RARITY = CardRarity.UNCOMMON;
+    private static final CardTarget TARGET = CardTarget.ENEMY;
 
     // /TEXT DECLARATION/
 
@@ -51,24 +56,24 @@ public class skillWeakeningCurse extends AbstractDynamicCard {
     public static final CardColor COLOR = TheDefault.Enums.COLOR_GRAY;
 
     private static final int COST = 1;
-    private static final int UPGRADED_COST = 0;
-
-    private static final int BLOCK = 7;
-    private static final int UPGRADE_PLUS_DMG = 2;
 
     // STAT DECLARATION
 
-    public skillWeakeningCurse() { // public attackNailStrike() - This one and the one right under the imports are the most important ones, don't forget them
+    public skillWeakeningCurse() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        baseBlock = BLOCK;
-
+        this.exhaust = true;
     }
 
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(
-                new GainBlockAction(p, p, this.block));
+                new ApplyPowerAction(m, AbstractDungeon.player, new powerMarked(m,p,1),1));
+        AbstractDungeon.actionManager.addToBottom(
+             new ApplyPowerAction(m, p, new StrengthPower(m, -2), -2));
+
+        AbstractDungeon.actionManager.addToBottom(
+                new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new powerStress(AbstractDungeon.player,5),5));
     }
 
     // Upgraded stats.
@@ -76,8 +81,7 @@ public class skillWeakeningCurse extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeDamage(UPGRADE_PLUS_DMG);
-            upgradeBaseCost(UPGRADED_COST);
+            this.exhaust = false;
             initializeDescription();
         }
     }

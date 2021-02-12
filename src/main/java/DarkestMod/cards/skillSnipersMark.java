@@ -68,7 +68,7 @@ public class skillSnipersMark extends AbstractDynamicCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(
-                new ApplyPowerAction(m, AbstractDungeon.player, new powerMarked(m,magicNumber),magicNumber));
+                new ApplyPowerAction(m, AbstractDungeon.player, new powerMarked(m,p,magicNumber),magicNumber));
     }
 
     // Upgraded stats.

@@ -136,6 +136,8 @@ public class TheDefault extends CustomPlayer {
         //retVal.add(attackWickedHack.ID);
         //retVal.add(attackAddersKiss.ID);
         retVal.add(attackRake.ID);
+        //retVal.add(attackCollectBounty.ID);
+
         //retVal.add(attackPunish.ID);
         //retVal.add(attackAbyssalArtillery.ID);
         //retVal.add(attackDazzlingLight.ID);
@@ -149,6 +151,8 @@ public class TheDefault extends CustomPlayer {
         //retVal.add(skillProtectMe.ID);
         //retVal.add(skillDefender.ID);
         //retVal.add(skillSnipersMark.ID);
+        //retVal.add(skillWeakeningCurse.ID);
+        //retVal.add(skillTargetWhistle.ID);
         //retVal.add(skillRainOfSorrows.ID);
         //retVal.add(skillRedeem.ID);
         //retVal.add(skillDivineComfort.ID);
