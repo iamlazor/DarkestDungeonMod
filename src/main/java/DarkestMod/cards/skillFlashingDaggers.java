@@ -1,8 +1,11 @@
 package DarkestMod.cards;
 
+import DarkestMod.powers.GRobberPower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -51,16 +54,16 @@ public class skillFlashingDaggers extends AbstractDynamicCard {
     public static final CardColor COLOR = TheDefault.Enums.COLOR_GRAY;
 
     private static final int COST = 1;
-    private static final int UPGRADED_COST = 0;
 
-    private static final int BLOCK = 7;
-    private static final int UPGRADE_PLUS_DMG = 2;
+    private static final int CARD = 2;
+    private static final int UPGRADE_CARD = 1;
 
     // STAT DECLARATION
 
     public skillFlashingDaggers() { // public attackNailStrike() - This one and the one right under the imports are the most important ones, don't forget them
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        baseBlock = BLOCK;
+        magicNumber = baseMagicNumber = CARD;
+        this.cardsToPreview = new attackThrowndagger();
 
     }
 
@@ -68,7 +71,7 @@ public class skillFlashingDaggers extends AbstractDynamicCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(
-                new GainBlockAction(p, p, this.block));
+                new MakeTempCardInHandAction(new attackThrowndagger(), CARD));
     }
 
     // Upgraded stats.
@@ -76,8 +79,7 @@ public class skillFlashingDaggers extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeDamage(UPGRADE_PLUS_DMG);
-            upgradeBaseCost(UPGRADED_COST);
+            upgradeMagicNumber(UPGRADE_CARD);
             initializeDescription();
         }
     }

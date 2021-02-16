@@ -120,8 +120,6 @@ public class TheDefault extends CustomPlayer {
         //retVal.add(attackShovel.ID);
         retVal.add(skillTorch.ID);
 
-
-
         //tests
         //retVal.add(powerManAtArms.ID);
         //retVal.add(powerLeper.ID);
@@ -133,27 +131,31 @@ public class TheDefault extends CustomPlayer {
         //retVal.add(powerHighwayman.ID);
 
         //retVal.add(AfflictionTemp.ID);
-        //retVal.add(attackWickedHack.ID);
-        //retVal.add(attackAddersKiss.ID);
-        retVal.add(attackRake.ID);
-        //retVal.add(attackCollectBounty.ID);
-
         //retVal.add(attackPunish.ID);
+        //retVal.add(attackAddersKiss.ID);
+        //retVal.add(attackRake.ID);
+        //retVal.add(attackCollectBounty.ID);
+        //retVal.add(attackBlindfire.ID);
+        //retVal.add(attackFinishHim.ID);
+        //retVal.add(skillSnipersMark.ID);
+        //retVal.add(attackBreakthrough.ID);
         //retVal.add(attackAbyssalArtillery.ID);
         //retVal.add(attackDazzlingLight.ID);
         //retVal.add(attackHoundsHarry.ID);
         //retVal.add(attackPointBlankShot.ID);
-       // retVal.add(attackFinale.ID);
+        //retVal.add(attackFinale.ID);
         //retVal.add(skillBeastBile.ID);
         //retVal.add(skillAbsolution.ID);
         //retVal.add(skillGetDown.ID);
         //retVal.add(powerJester.ID);
         //retVal.add(skillProtectMe.ID);
         //retVal.add(skillDefender.ID);
-        //retVal.add(skillSnipersMark.ID);
+        //retVal.add(attackIncision.ID);
         //retVal.add(skillWeakeningCurse.ID);
         //retVal.add(skillTargetWhistle.ID);
         //retVal.add(skillRainOfSorrows.ID);
+        //retVal.add(skillFlashingDaggers.ID);
+        //retVal.add(skillSerpentSway.ID);
         //retVal.add(skillRedeem.ID);
         //retVal.add(skillDivineComfort.ID);
 

@@ -492,6 +492,7 @@ public class DefaultMod implements
         BaseMod.addCard(new skillTrackingShot());
         BaseMod.addCard(new skillWeakeningCurse());
         BaseMod.addCard(new skillWithstand());
+        BaseMod.addCard(new skillWyrdReconstruction());
         BaseMod.addCard(new skillZealousAccusation());
 
 
@@ -596,6 +597,7 @@ public class DefaultMod implements
         UnlockTracker.unlockCard(skillTrackingShot.ID);
         UnlockTracker.unlockCard(skillWeakeningCurse.ID);
         UnlockTracker.unlockCard(skillWithstand.ID);
+        UnlockTracker.unlockCard(skillWyrdReconstruction.ID);
         UnlockTracker.unlockCard(skillZealousAccusation.ID);
 
 

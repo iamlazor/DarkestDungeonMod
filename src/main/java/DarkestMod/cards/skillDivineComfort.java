@@ -45,7 +45,7 @@ public class skillDivineComfort extends AbstractDynamicCard {
     public static final String IMG = makeCardPath("skillDivineComfort.png");// "public static final String IMG = makeCardPath("attackNailStrike.png");
     // This does mean that you will need to have an image with the same NAME as the card in your image folder for it to run correctly.
 
-    private static final CardRarity RARITY = CardRarity.BASIC;
+    private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.ALL;
 
     // /TEXT DECLARATION/

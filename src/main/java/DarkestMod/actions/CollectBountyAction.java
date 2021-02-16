@@ -14,7 +14,7 @@ public class CollectBountyAction extends AbstractGameAction {
     private DamageInfo info;
 
     public CollectBountyAction(AbstractCreature target, DamageInfo info) {
-        this.actionType = com.megacrit.cardcrawl.actions.AbstractGameAction.ActionType.BLOCK;
+        this.actionType = ActionType.DAMAGE;
         this.target = target;
         this.info = info;
     }

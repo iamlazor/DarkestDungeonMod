@@ -1,15 +1,21 @@
 package DarkestMod.cards;
 
+import DarkestMod.actions.CollectBountyAction;
+import DarkestMod.actions.PunishAction;
 import DarkestMod.powers.powerBleed;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.unique.DoublePoisonAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import DarkestMod.DefaultMod;
 import DarkestMod.characters.TheDefault;
+
+import java.util.Iterator;
 
 import static DarkestMod.DefaultMod.makeCardPath;
 
@@ -54,29 +60,41 @@ public class attackPunish extends AbstractDynamicCard {
     private static final int COST = 2;
     private static final int UPGRADED_COST = 1;
 
-    private static final int DAMAGE = 1;
-    private static final int UPGRADE_PLUS_DMG = 1;
+    private static final int DAMAGE = 15;
+    private static final int UPGRADE_PLUS_DMG = 3;
 
     // STAT DECLARATION
 
     public attackPunish() { // public attackNailStrike() - This one and the one right under the imports are the most important ones, don't forget them
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseDamage = DAMAGE;
-        baseMagicNumber = 10;
-        magicNumber = baseMagicNumber;
+
     }
 
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(
-                new ApplyPowerAction(m, p, new powerBleed(m, p, this.magicNumber), this.magicNumber));
-
+                new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn) ));
         AbstractDungeon.actionManager.addToBottom(
-                new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HEAVY));
-
+                new PunishAction(m, p));
 
     }
+
+    public void triggerOnGlowCheck() {
+        this.glowColor = AbstractCard.BLUE_BORDER_GLOW_COLOR.cpy();
+        Iterator var1 = AbstractDungeon.getCurrRoom().monsters.monsters.iterator();
+
+        while(var1.hasNext()) {
+            AbstractMonster m = (AbstractMonster)var1.next();
+            if (!m.isDeadOrEscaped() && m.hasPower("PowerBleed")) {
+                this.glowColor = AbstractCard.GOLD_BORDER_GLOW_COLOR.cpy();
+                break;
+            }
+        }
+
+    }
+
 
     // Upgraded stats.
     @Override

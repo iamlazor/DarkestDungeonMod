@@ -1,13 +1,20 @@
 package DarkestMod.cards;
 
+import DarkestMod.actions.BreakthroughAction;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
+import com.megacrit.cardcrawl.actions.common.RemoveAllBlockAction;
+import com.megacrit.cardcrawl.actions.unique.WhirlwindAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import DarkestMod.DefaultMod;
 import DarkestMod.characters.TheDefault;
+
+import java.util.Iterator;
 
 import static DarkestMod.DefaultMod.makeCardPath;
 
@@ -38,8 +45,8 @@ public class attackBreakthrough extends AbstractDynamicCard {
     public static final String IMG = makeCardPath("Attack.png");// "public static final String IMG = makeCardPath("attackNailStrike.png");
     // This does mean that you will need to have an image with the same NAME as the card in your image folder for it to run correctly.
 
-    private static final CardRarity RARITY = CardRarity.COMMON;
-    private static final CardTarget TARGET = CardTarget.ENEMY;
+    private static final CardRarity RARITY = CardRarity.RARE;
+    private static final CardTarget TARGET = CardTarget.ALL_ENEMY;
 
     // /TEXT DECLARATION/
 
@@ -49,25 +56,30 @@ public class attackBreakthrough extends AbstractDynamicCard {
     private static final CardType TYPE = CardType.ATTACK;
     public static final CardColor COLOR = TheDefault.Enums.COLOR_GRAY;
 
-    private static final int COST = 1;
-    private static final int UPGRADED_COST = 0;
+    private static final int COST = -1;
 
-    private static final int DAMAGE = 7;
     private static final int UPGRADE_PLUS_DMG = 2;
 
     // STAT DECLARATION
 
     public attackBreakthrough() { // public attackNailStrike() - This one and the one right under the imports are the most important ones, don't forget them
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        baseDamage = DAMAGE;
-        this.tags.add(CardTags.STRIKE); //for strikes only. Tags for other grouped cards
+        this.baseDamage = 6;
+        this.isMultiDamage = true;
     }
 
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+        Iterator var3 = AbstractDungeon.getCurrRoom().monsters.monsters.iterator();
+        AbstractMonster mo;
+
+        while (var3.hasNext()) {
+            mo = (AbstractMonster) var3.next();
+            AbstractDungeon.actionManager.addToBottom(new RemoveAllBlockAction(mo, p));
+        }
         AbstractDungeon.actionManager.addToBottom(
-                new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
+                new BreakthroughAction(p, this.multiDamage, this.damageTypeForTurn, this.freeToPlayOnce, this.energyOnUse));
     }
 
     // Upgraded stats.
@@ -76,7 +88,6 @@ public class attackBreakthrough extends AbstractDynamicCard {
         if (!upgraded) {
             upgradeName();
             upgradeDamage(UPGRADE_PLUS_DMG);
-            upgradeBaseCost(UPGRADED_COST);
             initializeDescription();
         }
     }

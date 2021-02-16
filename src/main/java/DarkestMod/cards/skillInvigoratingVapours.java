@@ -12,7 +12,7 @@ import DarkestMod.characters.TheDefault;
 
 import static DarkestMod.DefaultMod.makeCardPath;
 
-public class skillBarbaricYawp extends AbstractDynamicCard {
+public class skillInvigoratingVapours extends AbstractDynamicCard {
 
     /*
      * "Hey, I wanna make a bunch of cards now." - You, probably.
@@ -34,12 +34,12 @@ public class skillBarbaricYawp extends AbstractDynamicCard {
 
     // TEXT DECLARATION
 
-    public static final String ID = DefaultMod.makeID("Barbaric YAWP"); // DefaultMod.makeID("attackNailStrike");
+    public static final String ID = DefaultMod.makeID("DefaultCommonSkill"); // DefaultMod.makeID("attackNailStrike");
 
     public static final String IMG = makeCardPath("Skill.png");// "public static final String IMG = makeCardPath("attackNailStrike.png");
     // This does mean that you will need to have an image with the same NAME as the card in your image folder for it to run correctly.
 
-    private static final CardRarity RARITY = CardRarity.UNCOMMON;
+    private static final CardRarity RARITY = CardRarity.BASIC;
     private static final CardTarget TARGET = CardTarget.SELF;
 
     // /TEXT DECLARATION/
@@ -58,7 +58,7 @@ public class skillBarbaricYawp extends AbstractDynamicCard {
 
     // STAT DECLARATION
 
-    public skillBarbaricYawp() { // public attackNailStrike() - This one and the one right under the imports are the most important ones, don't forget them
+    public skillInvigoratingVapours() { // public attackNailStrike() - This one and the one right under the imports are the most important ones, don't forget them
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseBlock = BLOCK;
 

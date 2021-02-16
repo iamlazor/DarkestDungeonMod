@@ -8,6 +8,8 @@ import basemod.interfaces.CloneablePowerInterface;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
+import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -31,7 +33,7 @@ public class powerBleed extends AbstractPower implements CloneablePowerInterface
 
     public powerBleed(AbstractCreature owner, AbstractCreature source, int bleedAmt) {
         this.name = NAME;
-        this.ID = Power_ID;
+        this.ID = "PowerBleed";
 
         this.owner = owner;
         this.source = source;
@@ -52,6 +54,14 @@ public class powerBleed extends AbstractPower implements CloneablePowerInterface
     public void atStartOfTurn() {
         if (AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT && !AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
             this.addToBot(new BleedLoseHPAction(this.owner, this.source, this.amount, AbstractGameAction.AttackEffect.FIRE)); // make an attack effect for bleed later
+            if (this.amount == 0) {
+                AbstractDungeon.actionManager.addToBottom(
+                        new RemoveSpecificPowerAction(this.owner, this.owner, "PowerBleed"));
+            } else {
+                this.flash();
+                AbstractDungeon.actionManager.addToBottom(
+                        new ReducePowerAction(this.owner, this.owner, "PowerBleed", 1));
+            }
         }
     }
     @Override

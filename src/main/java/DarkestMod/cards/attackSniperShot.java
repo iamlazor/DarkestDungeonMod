@@ -1,6 +1,8 @@
 package DarkestMod.cards;
 
+import DarkestMod.powers.powerMarked;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -50,9 +52,8 @@ public class attackSniperShot extends AbstractDynamicCard {
     public static final CardColor COLOR = TheDefault.Enums.COLOR_GRAY;
 
     private static final int COST = 1;
-    private static final int UPGRADED_COST = 0;
 
-    private static final int DAMAGE = 7;
+    private static final int DAMAGE = 4;
     private static final int UPGRADE_PLUS_DMG = 2;
 
     // STAT DECLARATION
@@ -68,6 +69,8 @@ public class attackSniperShot extends AbstractDynamicCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(
                 new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
+        AbstractDungeon.actionManager.addToBottom(
+                    new ApplyPowerAction(m, AbstractDungeon.player, new powerMarked(m,p, 1),1));
     }
 
     // Upgraded stats.
@@ -76,7 +79,6 @@ public class attackSniperShot extends AbstractDynamicCard {
         if (!upgraded) {
             upgradeName();
             upgradeDamage(UPGRADE_PLUS_DMG);
-            upgradeBaseCost(UPGRADED_COST);
             initializeDescription();
         }
     }

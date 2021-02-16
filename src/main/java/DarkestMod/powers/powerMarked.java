@@ -45,16 +45,6 @@ public class powerMarked extends AbstractPower implements CloneablePowerInterfac
         this.updateDescription();
     }
 
-    public void atEndOfRound() {
-            if (this.amount == 0) {
-                AbstractDungeon.actionManager.addToBottom(
-                        new RemoveSpecificPowerAction(this.owner, this.owner, "PowerMarked"));
-            } else {
-                  this.flash();
-                AbstractDungeon.actionManager.addToBottom(
-                        new ReducePowerAction(this.owner, this.owner, "PowerMarked", 1));
-            }
-        }
 
     public float atDamageReceive(float damage, DamageInfo.DamageType type, AbstractCard card) {
         return type == DamageInfo.DamageType.NORMAL ? damage * 2.0F : damage;

@@ -44,10 +44,11 @@ public class CrusaderPower extends AbstractPower implements CloneablePowerInterf
 
     @Override
     public void onUseCard(final AbstractCard card, final UseCardAction action) {
-        if (card.type == AbstractCard.CardType.ATTACK)
+        if (card.type == AbstractCard.CardType.ATTACK) {
             this.flash();
-        AbstractDungeon.actionManager.addToBottom(
-            new GainBlockAction(AbstractDungeon.player, this.amount));
+            AbstractDungeon.actionManager.addToBottom(
+                    new GainBlockAction(AbstractDungeon.player, this.amount));
+        }
     }
 
     @Override
