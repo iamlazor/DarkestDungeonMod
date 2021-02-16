@@ -40,7 +40,7 @@
 
   "DarkestMod:Festering Vapours": {
     "NAME": "Festering Vapours",
-    "DESCRIPTION": "Apply !B! block"
+    "DESCRIPTION": "Apply !M! darkestmod:blight and then trigger the darkestmod:blight damage"
   },
 
   "DarkestMod:Flashing Daggers": {
@@ -60,18 +60,28 @@
 
   "DarkestMod:Illumination": {
     "NAME": "Illumination",
-    "DESCRIPTION": "Apply !B! block"
+    "DESCRIPTION": "Apply !B! block. If the darkestmod:Light level is 3 or Higher gain an additional 7 block."
+  },
+
+  "DarkestMod:Invigorating Vapours": {
+    "NAME": "Invigorating Vapours",
+    "DESCRIPTION": "Draw 2 cards and then reduce a cards cost to 0"
   },
 
   "DarkestMod:Inspiring Cry": {
     "NAME": "Inspiring Cry",
-    "DESCRIPTION": "Apply !B! block"
+    "DESCRIPTION": "Remove !M! Stress and +5 darkestmod:Light."
   },
 
 
   "DarkestMod:Judgement": {
     "NAME": "Judgement",
     "DESCRIPTION": "Apply !B! block"
+  },
+
+  "DarkestMod:Noxious Blast": {
+    "NAME": "Noxious Blast",
+    "DESCRIPTION": "Trigger darkestmod:Blight !M! times"
   },
 
   "DarkestMod:Mark For Death": {
@@ -81,7 +91,7 @@
 
   "DarkestMod:Plague Grenade": {
     "NAME": "Plague Grenade",
-    "DESCRIPTION": "Apply !B! block"
+    "DESCRIPTION": "Trigger darkestmod:Blight"
   },
 
   "DarkestMod:Protect Me": {
@@ -168,7 +178,7 @@
 
   "DarkestMod:Adders Kiss": {
     "NAME": "Adder's Kiss",
-    "DESCRIPTION": "Deal !D! damage. And apply !M! darkestmod:Blight"
+    "DESCRIPTION": "Trigger darkestmod:Blight damage. And then apply !M! darkestmod:Blight"
   },
 
   "DarkestMod:Blindfire": {
@@ -235,11 +245,18 @@
       "NAME": "Pistol Shot",
       "DESCRIPTION": "Deal !D! damage."
     },
+
+
   "DarkestMod:Point Blank Shot": {
     "NAME": "Point Blank Shot",
     "DESCRIPTION": "Deal !D! damage. Exhaust."
   },
 
+  "DarkestMod:PoisonDart": {
+    "NAME": "Poison Dart",
+    "DESCRIPTION": "Deal !D! damage and apply !M! darkestmod:Blight."
+
+  },
   "DarkestMod:Punish": {
     "NAME": "Punish",
     "DESCRIPTION": "Deal !D! damage. And trigger the darkestmod:Bleed effect on the enemy"
@@ -252,7 +269,7 @@
 
   "DarkestMod:Sacrificial Stab": {
     "NAME": "Sacrificial Stab",
-    "DESCRIPTION": "Deal !D! damage."
+    "DESCRIPTION": "Deal !D! damage If darkestmod:Light level is -3 or less Deal additional 5."
   },
 
   "DarkestMod:Shovel": {
@@ -311,7 +328,7 @@
 
   "DarkestMod:Leper": {
     "NAME": "Leper",
-    "DESCRIPTION": "At the start of turn gain 1 Strength for each Debuff."
+    "DESCRIPTION": "At the start of turn gain 1 Strength for each darkestmod:Debuff ."
   },
 
   "DarkestMod:ManAtArms": {

@@ -7,7 +7,18 @@
       "Mark",
       "mark"
     ],
-    "DESCRIPTION": "[#800080]Marked Enemies take double damage from the next attack. 1 stack of [#800080]Mark is removed at the end of turn"
+    "DESCRIPTION": "[#800080]Marked Enemies take double damage from the next attack."
+  },
+
+  {
+    "PROPER_NAME":"Debuff",
+    "NAMES": [
+      "Debuff",
+      "debuff",
+      "debuff.",
+      "debuffs"
+    ],
+    "DESCRIPTION": "Debuffs include: Frail, Weak, Vulnerable, Bleed, Blight, Marked & Confused"
   },
 
   {
@@ -27,7 +38,7 @@
         "blighted",
         "blight"
       ],
-      "DESCRIPTION": "[#a0c704]Blighted creatures lose HP at the start of their turn. Each turn, [#a0c704]Blight is reduced by #b1."
+      "DESCRIPTION": "[#a0c704]Blighted targets lose HP when triggered."
     },
   {
     "PROPER_NAME":"[#b20000]Bleed",
@@ -36,7 +47,7 @@
       "bleeding",
       "bleed"
     ],
-    "DESCRIPTION": "[#b20000]Bleeding creatures lose HP at the start of their turn."
+    "DESCRIPTION": "[#b20000]Bleeding targets lose HP at the end of their turn. Bleed is reduced by 1 after."
   },
   {
     "PROPER_NAME":"Stress",

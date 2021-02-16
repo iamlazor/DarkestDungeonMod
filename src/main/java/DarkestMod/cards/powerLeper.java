@@ -1,5 +1,7 @@
 package DarkestMod.cards;
 
+import DarkestMod.powers.CrusaderPower;
+import DarkestMod.powers.LeperPower;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -17,7 +19,7 @@ public class powerLeper extends AbstractDynamicCard {
     public static final String ID = DefaultMod.makeID("Leper");
     public static final String IMG = makeCardPath("powerTheLeper.png");
 
-    private static final CardRarity RARITY = CardRarity.UNCOMMON;
+    private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardType TYPE = CardType.POWER;
     public static final CardColor COLOR = TheDefault.Enums.COLOR_GRAY;
@@ -33,8 +35,8 @@ public class powerLeper extends AbstractDynamicCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,
-                new CommonPower(p, p, magicNumber), magicNumber));
+        AbstractDungeon.actionManager.addToBottom
+                (new ApplyPowerAction(p, p, new LeperPower(p), 1));
     }
 
     @Override

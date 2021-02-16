@@ -51,19 +51,11 @@ public powerBlight(AbstractCreature owner, AbstractCreature source, int blightAm
     updateDescription();
 }
     @Override
-    public void atStartOfTurn() {
-        if (AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT && !AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
-            this.addToBot(new BlightLoseHPAction(this.owner, this.source, this.amount, AbstractGameAction.AttackEffect.POISON)); // make an attack effect for bleed later
-            if (this.amount == 0) {
-                AbstractDungeon.actionManager.addToBottom(
-                        new RemoveSpecificPowerAction(this.owner, this.owner, "PowerBlight"));
-            } else {
-                this.flash();
-                AbstractDungeon.actionManager.addToBottom(
-                        new ReducePowerAction(this.owner, this.owner, "PowerBlight", 1));
-            }
-        }
-    }
+    //public void atStartOfTurn() {
+        //if (AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT && !AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
+            //this.addToBot(new BlightLoseHPAction(this.owner, this.source, this.amount, AbstractGameAction.AttackEffect.POISON)); // make an attack effect for bleed later
+      //  }    }
+
     public void playApplyPowerSfx() {
         CardCrawlGame.sound.play("POWER_POISON", 0.05F);
     }

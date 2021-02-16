@@ -33,7 +33,7 @@ public class powerLight extends AbstractPower implements CloneablePowerInterface
 
     public powerLight(AbstractCreature owner, int lightAmount) {
         this.name = NAME;
-        this.ID = POWER_ID;
+        this.ID = "PowerLight";
 
         this.owner = owner;
         this.amount = lightAmount;

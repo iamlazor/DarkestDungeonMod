@@ -51,16 +51,13 @@ public class powerBleed extends AbstractPower implements CloneablePowerInterface
         updateDescription();
     }
     @Override
-    public void atStartOfTurn() {
+    public void atEndOfTurn(final boolean isPlayer) {
         if (AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT && !AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
             this.addToBot(new BleedLoseHPAction(this.owner, this.source, this.amount, AbstractGameAction.AttackEffect.FIRE)); // make an attack effect for bleed later
             if (this.amount == 0) {
                 AbstractDungeon.actionManager.addToBottom(
                         new RemoveSpecificPowerAction(this.owner, this.owner, "PowerBleed"));
-            } else {
-                this.flash();
-                AbstractDungeon.actionManager.addToBottom(
-                        new ReducePowerAction(this.owner, this.owner, "PowerBleed", 1));
+
             }
         }
     }

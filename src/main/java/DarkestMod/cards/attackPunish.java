@@ -1,12 +1,7 @@
 package DarkestMod.cards;
 
-import DarkestMod.actions.CollectBountyAction;
 import DarkestMod.actions.PunishAction;
-import DarkestMod.powers.powerBleed;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.actions.unique.DoublePoisonAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;

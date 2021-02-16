@@ -3,6 +3,7 @@ package DarkestMod.relics;
 import DarkestMod.DefaultMod;
 import DarkestMod.cards.*;
 import DarkestMod.powers.AbomPower;
+import DarkestMod.powers.JesterPower;
 import DarkestMod.powers.powerStress;
 import DarkestMod.util.TextureLoader;
 import basemod.abstracts.CustomRelic;
@@ -42,7 +43,10 @@ public class stressRelic extends CustomRelic {
         }
 
     public int onAttacked(DamageInfo info, int damageAmount) {
-        if (info.type == DamageInfo.DamageType.NORMAL) {
+        if (AbstractDungeon.player.hasPower(JesterPower.POWER_ID) && damageAmount < AbstractDungeon.player.currentHealth && damageAmount > 0 && info.owner != null && info.type == DamageInfo.DamageType.NORMAL){
+            this.counter += damageAmount --;
+
+    }   else if (damageAmount < AbstractDungeon.player.currentHealth && damageAmount > 0 && info.owner != null && info.type == DamageInfo.DamageType.NORMAL) {
             this.counter += damageAmount;
          }
         return damageAmount;
@@ -65,24 +69,35 @@ public class stressRelic extends CustomRelic {
     public void onUseCard(AbstractCard card, UseCardAction action) {
      if (card.cardID.equals(skillProtectMe.ID)){
          this.counter += 4;
-     } else if (card.cardID.equals(attackRake.ID)) {
+        }
+     else if (card.cardID.equals(attackRake.ID)) {
             this.counter += 8;
         }
      else if (card.cardID.equals(skillWeakeningCurse.ID)) {
          this.counter += 5;
-     }
+        }
+     else if (card.cardID.equals(skillBeastBile.ID)) {
+         this.counter += 8;
+        }
+     // stress relief
      else if (card.cardID.equals(afflictFearful.ID)) {
          this.counter += 20;
-     }
-
+        }
      else if (card.cardID.equals(powerJester.ID)) {
          this.counter -= 8;
-     }     else if (card.cardID.equals(skillAbsolution.ID)) {
+        }
+     else if (card.cardID.equals(skillAbsolution.ID)) {
          this.counter -= 8;
-     }
+        }
+     else if (!card.upgraded && card.cardID.equals(skillInspiringCry.ID)) {
+         this.counter -= 5;
+        }
+     else if (card.upgraded && card.cardID.equals(skillInspiringCry.ID)) {
+         this.counter -= 8;
+        }
      else if (card.cardID.equals(afflictStalwart.ID)) {
          this.counter -= 100;
-     }
+        }
     }
 
 

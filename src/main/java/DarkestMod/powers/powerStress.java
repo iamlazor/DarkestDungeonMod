@@ -45,7 +45,7 @@ public class powerStress extends AbstractPower implements CloneablePowerInterfac
         if (this.amount <= 0) {
             this.amount = 0;
         }
-        this.type = PowerType.DEBUFF;
+        this.type = PowerType.BUFF;
         this.isTurnBased = false;
 
 
@@ -85,12 +85,12 @@ public class powerStress extends AbstractPower implements CloneablePowerInterfac
     }
 
     public int onAttacked(DamageInfo info, int damageAmount) {
-        if  (owner.hasPower(JesterPower.POWER_ID) && damageAmount < this.owner.currentHealth && damageAmount > 0 && info.owner != null) {
+        if  (owner.hasPower(JesterPower.POWER_ID) && damageAmount < this.owner.currentHealth && damageAmount > 0 && info.owner != null && info.type == DamageInfo.DamageType.NORMAL) {
             this.flash();
             this.amount += damageAmount -=1 ;
             this.updateDescription();
         } else if
-        (damageAmount < this.owner.currentHealth && damageAmount > 0 && info.owner != null) {
+        (damageAmount < this.owner.currentHealth && damageAmount > 0 && info.owner != null && info.type == DamageInfo.DamageType.NORMAL) {
             this.flash();
             this.amount += damageAmount;
             this.updateDescription();

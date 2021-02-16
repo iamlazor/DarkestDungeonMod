@@ -1,9 +1,11 @@
 package DarkestMod.cards;
 
-import DarkestMod.powers.powerStress;
+import DarkestMod.actions.BlightTriggerAction;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.common.GainBlockAction;
+import com.megacrit.cardcrawl.actions.unique.DoublePoisonAction;
+import com.megacrit.cardcrawl.actions.unique.TriplePoisonAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -13,7 +15,7 @@ import DarkestMod.characters.TheDefault;
 
 import static DarkestMod.DefaultMod.makeCardPath;
 
-public class attackRake extends AbstractDynamicCard {
+public class skillNoxiousBlast extends AbstractDynamicCard {
 
     /*
      * "Hey, I wanna make a bunch of cards now." - You, probably.
@@ -35,12 +37,12 @@ public class attackRake extends AbstractDynamicCard {
 
     // TEXT DECLARATION
 
-    public static final String ID = DefaultMod.makeID("Rake"); // DefaultMod.makeID("attackNailStrike");
+    public static final String ID = DefaultMod.makeID("Noxious Blast"); // DefaultMod.makeID("attackNailStrike");
 
-    public static final String IMG = makeCardPath("attackRake.png");// "public static final String IMG = makeCardPath("attackNailStrike.png");
+    public static final String IMG = makeCardPath("Skill.png");// "public static final String IMG = makeCardPath("attackNailStrike.png");
     // This does mean that you will need to have an image with the same NAME as the card in your image folder for it to run correctly.
 
-    private static final CardRarity RARITY = CardRarity.COMMON;
+    private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.ENEMY;
 
     // /TEXT DECLARATION/
@@ -48,41 +50,43 @@ public class attackRake extends AbstractDynamicCard {
 
     // STAT DECLARATION
 
-    private static final CardType TYPE = CardType.ATTACK;
+    private static final CardType TYPE = CardType.SKILL;
     public static final CardColor COLOR = TheDefault.Enums.COLOR_GRAY;
 
     private static final int COST = 1;
+    private static final int UPGRADE_PLUS_BLIGHT = 1;
 
-    private static final int DAMAGE = 8;
-    private static final int UPGRADE_PLUS_DMG = 4;
-
-    private static final int STRESS_GEN = 8;
 
     // STAT DECLARATION
 
-    public attackRake() { // public attackNailStrike() - This one and the one right under the imports are the most important ones, don't forget them
+    public skillNoxiousBlast() { // public attackNailStrike() - This one and the one right under the imports are the most important ones, don't forget them
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        baseDamage = DAMAGE;
-        magicNumber = baseMagicNumber = STRESS_GEN;
+        baseMagicNumber = 2;
+        magicNumber = baseMagicNumber;
+
     }
 
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(
-                new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HEAVY));
-        
-        AbstractDungeon.actionManager.addToBottom(
-                new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new powerStress(AbstractDungeon.player,magicNumber),magicNumber));
+        if (!this.upgraded) {
+            AbstractDungeon.actionManager.addToBottom(new BlightTriggerAction(m, p));
+            AbstractDungeon.actionManager.addToBottom(new BlightTriggerAction(m, p));
+        } else {
+            AbstractDungeon.actionManager.addToBottom(new BlightTriggerAction(m, p));
+            AbstractDungeon.actionManager.addToBottom(new BlightTriggerAction(m, p));
+            AbstractDungeon.actionManager.addToBottom(new BlightTriggerAction(m, p));
+        }
 
     }
+
 
     // Upgraded stats.
     @Override
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeDamage(UPGRADE_PLUS_DMG);
+            this.upgradeMagicNumber(UPGRADE_PLUS_BLIGHT);
             initializeDescription();
         }
     }

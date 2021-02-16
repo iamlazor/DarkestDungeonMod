@@ -102,17 +102,17 @@
         "DarkestMod:PowerBleed": {
                 "NAME": "Bleed",
                 "DESCRIPTIONS": [
-                        "At the End of your turn, Bleed #b",
-                        " enemy.",
-                        " enemies."
+                        "At the Start of your turn, Bleed #b",
+                        " At the Start of your turn, Bleed #b",
+                        " Bleed is reduced by 1 each turn."
                 ]
         },
 
         "DarkestMod:PowerBlight": {
                 "NAME": "Blight",
                 "DESCRIPTIONS": [
-                        "At the End of your turn, deal #b damage",
-                        " enemy.",
+                        "[#a0c704]Blighted targets lose HP when triggered.",
+                        "[#a0c704]Blighted targets lose HP when triggered.",
                         " enemies."
                 ]
         },

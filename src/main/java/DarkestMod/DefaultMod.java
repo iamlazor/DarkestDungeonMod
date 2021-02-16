@@ -457,6 +457,7 @@ public class DefaultMod implements
         BaseMod.addCard(new attackPierce());
         BaseMod.addCard(new attackPistolShot());
         BaseMod.addCard(new attackPointBlankShot());
+        BaseMod.addCard(new attackPoisonDart());
         BaseMod.addCard(new attackPunish());
         BaseMod.addCard(new attackRake());
         BaseMod.addCard(new attackSacrificialStab());
@@ -478,9 +479,11 @@ public class DefaultMod implements
         BaseMod.addCard(new skillGetDown());
         BaseMod.addCard(new skillGuardDog());
         BaseMod.addCard(new skillIllumination());
+        BaseMod.addCard(new skillInvigoratingVapours());
         BaseMod.addCard(new skillInspiringCry());
         BaseMod.addCard(new skillJudgement());
         BaseMod.addCard(new skillMarkForDeath());
+        BaseMod.addCard(new skillNoxiousBlast());
         BaseMod.addCard(new skillPlagueGrenade());
         BaseMod.addCard(new skillProtectMe());
         BaseMod.addCard(new skillRainOfSorrows());
@@ -562,6 +565,7 @@ public class DefaultMod implements
         UnlockTracker.unlockCard(attackPierce.ID);
         UnlockTracker.unlockCard(attackPistolShot.ID);
         UnlockTracker.unlockCard(attackPointBlankShot.ID);
+        UnlockTracker.unlockCard(attackPoisonDart.ID);
         UnlockTracker.unlockCard(attackPunish.ID);
         UnlockTracker.unlockCard(attackRake.ID);
         UnlockTracker.unlockCard(attackSacrificialStab.ID);
@@ -583,9 +587,11 @@ public class DefaultMod implements
         UnlockTracker.unlockCard(skillGetDown.ID);
         UnlockTracker.unlockCard(skillGuardDog.ID);
         UnlockTracker.unlockCard(skillIllumination.ID);
+        UnlockTracker.unlockCard(skillInvigoratingVapours.ID);
         UnlockTracker.unlockCard(skillInspiringCry.ID);
         UnlockTracker.unlockCard(skillJudgement.ID);
         UnlockTracker.unlockCard(skillMarkForDeath.ID);
+        UnlockTracker.unlockCard(skillNoxiousBlast.ID);
         UnlockTracker.unlockCard(skillPlagueGrenade.ID);
         UnlockTracker.unlockCard(skillProtectMe.ID);
         UnlockTracker.unlockCard(skillRainOfSorrows.ID);

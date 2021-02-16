@@ -37,17 +37,7 @@ public class BlightLoseHPAction extends AbstractGameAction {
                     this.target.damage(new DamageInfo(this.source, this.amount, DamageInfo.DamageType.HP_LOSS));
                     if (this.target.isDying) ;
                 }
-
-                AbstractPower p = this.target.getPower("PowerBlight");
-                if (p != null) {
-                    --p.amount;
-                    if (p.amount == 0) {
-                        this.target.powers.remove(p);
-                    } else {
-                        p.updateDescription();
-                    }
-                }
-                if (AbstractDungeon.getCurrRoom().monsters.areMonstersBasicallyDead()) {
+            if (AbstractDungeon.getCurrRoom().monsters.areMonstersBasicallyDead()) {
                     AbstractDungeon.actionManager.clearPostCombatActions();
                 }
 

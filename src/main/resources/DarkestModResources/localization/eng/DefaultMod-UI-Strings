@@ -1,0 +1,9 @@
+{
+ "DarkestMod:Reduce":  {
+    "TEXT": [
+      "[#EFFAFF]Focus",
+      "Reduce selected cards' cost to 0."
+    ]
+  }
+
+}

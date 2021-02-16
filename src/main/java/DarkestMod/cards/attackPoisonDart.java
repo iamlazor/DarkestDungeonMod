@@ -1,6 +1,6 @@
 package DarkestMod.cards;
 
-import DarkestMod.powers.powerStress;
+import DarkestMod.powers.powerBlight;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
@@ -13,7 +13,7 @@ import DarkestMod.characters.TheDefault;
 
 import static DarkestMod.DefaultMod.makeCardPath;
 
-public class attackRake extends AbstractDynamicCard {
+public class attackPoisonDart extends AbstractDynamicCard {
 
     /*
      * "Hey, I wanna make a bunch of cards now." - You, probably.
@@ -35,9 +35,9 @@ public class attackRake extends AbstractDynamicCard {
 
     // TEXT DECLARATION
 
-    public static final String ID = DefaultMod.makeID("Rake"); // DefaultMod.makeID("attackNailStrike");
+    public static final String ID = DefaultMod.makeID("PoisonDart"); // DefaultMod.makeID("attackNailStrike");
 
-    public static final String IMG = makeCardPath("attackRake.png");// "public static final String IMG = makeCardPath("attackNailStrike.png");
+    public static final String IMG = makeCardPath("Attack.png");// "public static final String IMG = makeCardPath("attackNailStrike.png");
     // This does mean that you will need to have an image with the same NAME as the card in your image folder for it to run correctly.
 
     private static final CardRarity RARITY = CardRarity.COMMON;
@@ -53,28 +53,27 @@ public class attackRake extends AbstractDynamicCard {
 
     private static final int COST = 1;
 
-    private static final int DAMAGE = 8;
-    private static final int UPGRADE_PLUS_DMG = 4;
-
-    private static final int STRESS_GEN = 8;
+    private static final int DAMAGE = 4;
+    private static final int UPGRADE_PLUS_DMG = 2;
+    private static final int UPGRADE_PLUS_BLIGHT = 2;
 
     // STAT DECLARATION
 
-    public attackRake() { // public attackNailStrike() - This one and the one right under the imports are the most important ones, don't forget them
+    public attackPoisonDart() { // public attackNailStrike() - This one and the one right under the imports are the most important ones, don't forget them
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseDamage = DAMAGE;
-        magicNumber = baseMagicNumber = STRESS_GEN;
+        baseMagicNumber = 3;
+        magicNumber = baseMagicNumber;
     }
 
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(
-                new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HEAVY));
-        
-        AbstractDungeon.actionManager.addToBottom(
-                new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new powerStress(AbstractDungeon.player,magicNumber),magicNumber));
+                new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.POISON));
 
+        AbstractDungeon.actionManager.addToBottom(
+                new ApplyPowerAction(m, p, new powerBlight(m, p, this.magicNumber), this.magicNumber));
     }
 
     // Upgraded stats.
@@ -83,6 +82,7 @@ public class attackRake extends AbstractDynamicCard {
         if (!upgraded) {
             upgradeName();
             upgradeDamage(UPGRADE_PLUS_DMG);
+            this.upgradeMagicNumber(UPGRADE_PLUS_BLIGHT);
             initializeDescription();
         }
     }

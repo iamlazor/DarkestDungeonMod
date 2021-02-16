@@ -1,6 +1,6 @@
 package DarkestMod.cards;
 
-import DarkestMod.patches.CardTagEnum;
+import DarkestMod.actions.BlightTriggerAction;
 import DarkestMod.powers.powerBlight;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
@@ -8,7 +8,6 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.PoisonPower;
 import DarkestMod.DefaultMod;
 import DarkestMod.characters.TheDefault;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -45,9 +44,6 @@ public class attackAddersKiss extends AbstractDynamicCard {
 
     private static final int COST = 2;
     private static final int UPGRADED_COST = 1;
-
-    private static final int DAMAGE = 5;
-    private static final int UPGRADE_PLUS_DMG = 2;
     private static final int UPGRADE_PLUS_BLIGHT = 4;
 
 
@@ -55,7 +51,6 @@ public class attackAddersKiss extends AbstractDynamicCard {
 
     public attackAddersKiss() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        baseDamage = DAMAGE;
         baseMagicNumber = 3;
         magicNumber = baseMagicNumber;
 
@@ -64,12 +59,11 @@ public class attackAddersKiss extends AbstractDynamicCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+        AbstractDungeon.actionManager.addToBottom(
+                new BlightTriggerAction(m, p));
 
         AbstractDungeon.actionManager.addToBottom(
                 new ApplyPowerAction(m, p, new powerBlight(m, p, this.magicNumber), this.magicNumber));
-
-        AbstractDungeon.actionManager.addToBottom(
-                new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.POISON));
     }
 
     // Upgraded stats.
@@ -77,7 +71,6 @@ public class attackAddersKiss extends AbstractDynamicCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            this.upgradeDamage(UPGRADE_PLUS_DMG);
             this.upgradeBaseCost(UPGRADED_COST);
             this.upgradeMagicNumber(UPGRADE_PLUS_BLIGHT);
             this.initializeDescription();

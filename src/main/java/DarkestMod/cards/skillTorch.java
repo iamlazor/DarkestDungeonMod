@@ -16,15 +16,15 @@ public class skillTorch extends AbstractDynamicCard {
         public static final String ID = DefaultMod.makeID("Torch");
         public static final String IMG = makeCardPath("skillTorch.png");
 
-        private static final CardRarity RARITY = CardRarity.BASIC;
+        private static final CardRarity RARITY = CardRarity.COMMON;
         private static final CardTarget TARGET = CardTarget.SELF;
         private static final CardType TYPE = CardType.SKILL;
         public static final CardColor COLOR = TheDefault.Enums.COLOR_GRAY;
 
         private static final int COST = 1;
 
-        private static final int BLOCK = 2;
-        private static final int UPGRADE_PLUS_BLOCK = 4;
+        private static final int BLOCK = 3;
+        private static final int UPGRADE_PLUS_BLOCK = 3;
 
         private static final int LIGHT = 2;
         private static final int UPGRADE_PLUS_Light = 2;
