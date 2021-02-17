@@ -51,8 +51,7 @@ public class skillPlagueGrenade extends AbstractDynamicCard {
     private static final CardType TYPE = CardType.SKILL;
     public static final CardColor COLOR = TheDefault.Enums.COLOR_GRAY;
 
-    private static final int COST = 1;
-    private static final int UPGRADED_COST = 0;
+    private static final int COST = 0;
 
 
     // STAT DECLARATION
@@ -75,7 +74,6 @@ public class skillPlagueGrenade extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeBaseCost(UPGRADED_COST);
             initializeDescription();
         }
     }

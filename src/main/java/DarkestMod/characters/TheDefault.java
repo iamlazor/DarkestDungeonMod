@@ -131,6 +131,8 @@ public class TheDefault extends CustomPlayer {
         //retVal.add(powerAntiquarian.ID);
         //retVal.add(powerHighwayman.ID);
         //retVal.add(powerJester.ID);
+        retVal.add(powerPlagueDoctor.ID);
+
 
         //retVal.add(AfflictionTemp.ID);
         //retVal.add(attackPunish.ID);
@@ -148,13 +150,14 @@ public class TheDefault extends CustomPlayer {
         //retVal.add(attackHoundsHarry.ID);
         //retVal.add(attackPointBlankShot.ID);
         //retVal.add(attackFinale.ID);
+
         //retVal.add(skillBeastBile.ID);
         //retVal.add(skillInspiringCry.ID);
         //retVal.add(skillNoxiousBlast.ID);
         //retVal.add(skillWyrdReconstruction.ID);
-
         //retVal.add(skillIllumination.ID);
-        retVal.add(skillFesteringVapours.ID);
+        //retVal.add(skillFesteringVapours.ID);
+
         //retVal.add(skillGetDown.ID);
         //retVal.add(skillProtectMe.ID);
         //retVal.add(skillPlagueGrenade.ID);
@@ -165,9 +168,15 @@ public class TheDefault extends CustomPlayer {
         //retVal.add(skillRainOfSorrows.ID);
         //retVal.add(skillFlashingDaggers.ID);
         //retVal.add(skillSerpentSway.ID);
+        //retVal.add(skillSnipersMark.ID);
         //retVal.add(skillRedeem.ID);
+
+        //retVal.add(skillPurge.ID);
         //retVal.add(skillDivineComfort.ID);
         //retVal.add(skillInvigoratingVapours.ID);
+        //retVal.add(skillWithstand.ID);
+        //retVal.add(skillSolemnity.ID);
+
 
        //retVal.add(attackPoisonTest.ID);
        //retVal.add(DefaultSecondMagicNumberSkill.ID);

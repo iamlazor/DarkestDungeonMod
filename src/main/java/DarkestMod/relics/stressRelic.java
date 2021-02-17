@@ -32,6 +32,7 @@ public class stressRelic extends CustomRelic {
     public stressRelic() {
         super(ID, IMG, OUTLINE, RelicTier.COMMON, LandingSound.FLAT);
         this.counter = 1;
+
     }
 
     @Override
@@ -77,7 +78,7 @@ public class stressRelic extends CustomRelic {
          this.counter += 5;
         }
      else if (card.cardID.equals(skillBeastBile.ID)) {
-         this.counter += 8;
+         this.counter += 4;
         }
      // stress relief
      else if (card.cardID.equals(afflictFearful.ID)) {
@@ -86,9 +87,15 @@ public class stressRelic extends CustomRelic {
      else if (card.cardID.equals(powerJester.ID)) {
          this.counter -= 8;
         }
-     else if (card.cardID.equals(skillAbsolution.ID)) {
+     else if (!card.upgraded && card.cardID.equals(skillAbsolution.ID)) {
          this.counter -= 8;
         }
+     else if (card.upgraded && card.cardID.equals(skillAbsolution.ID)) {
+         this.counter -= 12;
+     }
+     else if (card.cardID.equals(skillSolemnity.ID)) {
+         this.counter -= 3;
+     }
      else if (!card.upgraded && card.cardID.equals(skillInspiringCry.ID)) {
          this.counter -= 5;
         }

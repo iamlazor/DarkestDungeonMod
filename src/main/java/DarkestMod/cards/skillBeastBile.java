@@ -1,5 +1,6 @@
 package DarkestMod.cards;
 
+import DarkestMod.actions.BlightTriggerAction;
 import DarkestMod.powers.powerBlight;
 import DarkestMod.powers.powerStress;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -54,7 +55,7 @@ public class skillBeastBile extends AbstractDynamicCard {
     public static final CardColor COLOR = TheDefault.Enums.COLOR_GRAY;
 
     private static final int COST = 1;
-    private static final int STRESS_GEN = 8;
+
     private static final int BLIGHT= 8;
     private static final int UPGRADE_PLUS_BLIGHT = 4;
 
@@ -66,20 +67,30 @@ public class skillBeastBile extends AbstractDynamicCard {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseMagicNumber = 3;
         magicNumber = baseMagicNumber = BLIGHT;
-        defaultSecondMagicNumber = defaultBaseSecondMagicNumber = STRESS_GEN;
+
 
     }
 
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+        if (!this.upgraded) {
+            AbstractDungeon.actionManager.addToBottom(
+                    new ApplyPowerAction(m, p, new powerBlight(m, p, this.magicNumber), this.magicNumber));
 
-        AbstractDungeon.actionManager.addToBottom(
-                new ApplyPowerAction(m, p, new powerBlight(m, p, this.magicNumber), this.magicNumber));
+            AbstractDungeon.actionManager.addToBottom(
+                    new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new powerStress(AbstractDungeon.player, 4), 4));
 
-        AbstractDungeon.actionManager.addToBottom(
-                new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new powerStress(AbstractDungeon.player, defaultSecondMagicNumber),defaultSecondMagicNumber));
+        } else {
+            AbstractDungeon.actionManager.addToBottom(
+                    new ApplyPowerAction(m, p, new powerBlight(m, p, this.magicNumber), this.magicNumber));
 
+            AbstractDungeon.actionManager.addToBottom(
+                    new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new powerStress(AbstractDungeon.player, 4), 4));
+            AbstractDungeon.actionManager.addToBottom(
+                    new BlightTriggerAction(m, p));
+
+        }
     }
 
 

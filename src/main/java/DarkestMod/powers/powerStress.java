@@ -47,6 +47,7 @@ public class powerStress extends AbstractPower implements CloneablePowerInterfac
         }
         this.type = PowerType.BUFF;
         this.isTurnBased = false;
+        this.canGoNegative = false;
 
 
         this.region128 = new TextureAtlas.AtlasRegion(tex84, 0, 0, 84, 84);

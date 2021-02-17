@@ -440,6 +440,7 @@ public class DefaultMod implements
         BaseMod.addCard(new powerJester());
         BaseMod.addCard(new powerLeper());
         BaseMod.addCard(new powerManAtArms());
+        BaseMod.addCard(new powerPlagueDoctor());
 
         //Attack
         BaseMod.addCard(new attackAbyssalArtillery());
@@ -486,6 +487,7 @@ public class DefaultMod implements
         BaseMod.addCard(new skillNoxiousBlast());
         BaseMod.addCard(new skillPlagueGrenade());
         BaseMod.addCard(new skillProtectMe());
+        BaseMod.addCard(new skillPurge());
         BaseMod.addCard(new skillRainOfSorrows());
         BaseMod.addCard(new skillRedeem());
         BaseMod.addCard(new skillSerpentSway());
@@ -548,6 +550,7 @@ public class DefaultMod implements
         UnlockTracker.unlockCard(powerJester.ID);
         UnlockTracker.unlockCard(powerLeper.ID);
         UnlockTracker.unlockCard(powerManAtArms.ID);
+        UnlockTracker.unlockCard(powerPlagueDoctor.ID);
 
         //Attacks
         UnlockTracker.unlockCard(attackAbyssalArtillery.ID);
@@ -593,6 +596,7 @@ public class DefaultMod implements
         UnlockTracker.unlockCard(skillMarkForDeath.ID);
         UnlockTracker.unlockCard(skillNoxiousBlast.ID);
         UnlockTracker.unlockCard(skillPlagueGrenade.ID);
+        UnlockTracker.unlockCard(skillPurge.ID);
         UnlockTracker.unlockCard(skillProtectMe.ID);
         UnlockTracker.unlockCard(skillRainOfSorrows.ID);
         UnlockTracker.unlockCard(skillRedeem.ID);

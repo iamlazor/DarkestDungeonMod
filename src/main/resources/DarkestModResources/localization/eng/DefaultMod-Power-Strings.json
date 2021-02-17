@@ -72,6 +72,15 @@
                 ]
         },
 
+        "DarkestMod:PlagueDoctor": {
+                "NAME": "Plague Doctor",
+                "DESCRIPTIONS": [
+                        "At the start of your turn, apply !M! darkestmod:Blight to ALL enemies.",
+                        " keyword."
+                ]
+        },
+
+
 
         "DarkestMod:RarePower": {
                 "NAME": "Placeholder Power",

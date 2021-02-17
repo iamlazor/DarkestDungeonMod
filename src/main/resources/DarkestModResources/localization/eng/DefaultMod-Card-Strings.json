@@ -16,7 +16,7 @@
 
   "DarkestMod:Beast Bile": {
     "NAME": "Beast Bile",
-    "DESCRIPTION": "Apply !M! darkestmod:Blight and take !M! darkestmod:Stress"
+    "DESCRIPTION": "Apply !M! darkestmod:Blight and take 4 darkestmod:Stress"
   },
 
   "DarkestMod:Bolster": {
@@ -99,6 +99,10 @@
     "DESCRIPTION": "Apply !B! block and take !M! darkestmod:Stress "
   },
 
+  "DarkestMod:Purge": {
+    "NAME": "Purge",
+    "DESCRIPTION": " darkestmod:Light -3 and draw !M! cards "
+  },
 
   "DarkestMod:Provisions": {
     "NAME": "Provisions",
@@ -127,7 +131,7 @@
 
   "DarkestMod:Solemnity": {
     "NAME": "Solemnity",
-    "DESCRIPTION": "Apply !B! block"
+    "DESCRIPTION": "Apply !B! block and heal 3 darkestmod:Stress"
   },
 
   "DarkestMod:Target Whistle": {
@@ -153,7 +157,7 @@
 
   "DarkestMod:Withstand": {
     "NAME": "Withstand",
-    "DESCRIPTION": "Apply !B! block"
+    "DESCRIPTION": "Apply 2 Vulnerable to yourself and gain !M! Dexterity"
   },
 
   "DarkestMod:Wyrd Reconstruction": {
@@ -334,6 +338,10 @@
   "DarkestMod:ManAtArms": {
     "NAME": "Man at Arms",
     "DESCRIPTION": "Gain !M!  Plated Armor & !M! Counter."
+  },
+  "DarkestMod:PlagueDoctor": {
+    "NAME": "Plague Doctor",
+    "DESCRIPTION": "Trigger darkestmod:Blight .And at the start of your turn, apply !M! darkestmod:Blight to ALL enemies."
   },
 
   "DarkestMod:AfflictionTemp": {

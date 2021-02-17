@@ -37,14 +37,13 @@ public class attackAddersKiss extends AbstractDynamicCard {
     public static final String ID = DefaultMod.makeID("Adders Kiss"); // DefaultMod.makeID("attackNailStrike");
     public static final String IMG = makeCardPath("attackAdderskiss.png");// "public static final String IMG = makeCardPath("attackNailStrike.png");
 
-    private static final CardRarity RARITY = CardRarity.UNCOMMON;
+    private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final CardType TYPE = CardType.ATTACK;
     public static final CardColor COLOR = TheDefault.Enums.COLOR_GRAY;
 
-    private static final int COST = 2;
-    private static final int UPGRADED_COST = 1;
-    private static final int UPGRADE_PLUS_BLIGHT = 4;
+    private static final int COST = 1;
+    private static final int UPGRADE_PLUS_BLIGHT = 3;
 
 
     // STAT DECLARATION
@@ -71,7 +70,6 @@ public class attackAddersKiss extends AbstractDynamicCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            this.upgradeBaseCost(UPGRADED_COST);
             this.upgradeMagicNumber(UPGRADE_PLUS_BLIGHT);
             this.initializeDescription();
         }
