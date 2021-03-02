@@ -39,10 +39,10 @@ public class skillInspiringCry extends AbstractDynamicCard {
 
     public static final String ID = DefaultMod.makeID("Inspiring Cry"); // DefaultMod.makeID("attackNailStrike");
 
-    public static final String IMG = makeCardPath("Skill.png");// "public static final String IMG = makeCardPath("attackNailStrike.png");
+    public static final String IMG = makeCardPath("skillInspiringCry.png");// "public static final String IMG = makeCardPath("attackNailStrike.png");
     // This does mean that you will need to have an image with the same NAME as the card in your image folder for it to run correctly.
 
-    private static final CardRarity RARITY = CardRarity.UNCOMMON;
+    private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
 
     // /TEXT DECLARATION/
@@ -54,6 +54,8 @@ public class skillInspiringCry extends AbstractDynamicCard {
     public static final CardColor COLOR = TheDefault.Enums.COLOR_GRAY;
 
     private static final int COST = 1;
+    private static final int UPGRADED_COST = 0;
+
 
     private static final int STRESS = -5;
     private static final int UPGRADE_STRESS = -3;
@@ -82,6 +84,7 @@ public class skillInspiringCry extends AbstractDynamicCard {
         if (!upgraded) {
             upgradeName();
             upgradeMagicNumber(UPGRADE_STRESS);
+            upgradeBaseCost(UPGRADED_COST);
             initializeDescription();
         }
     }

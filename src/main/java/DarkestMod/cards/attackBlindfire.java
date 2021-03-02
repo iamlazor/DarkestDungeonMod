@@ -36,7 +36,7 @@ public class attackBlindfire extends AbstractDynamicCard {
 
     public static final String ID = DefaultMod.makeID("Blindfire"); // DefaultMod.makeID("attackNailStrike");
 
-    public static final String IMG = makeCardPath("Attack.png");// "public static final String IMG = makeCardPath("attackNailStrike.png");
+    public static final String IMG = makeCardPath("attackBlindfire.png");// "public static final String IMG = makeCardPath("attackNailStrike.png");
     // This does mean that you will need to have an image with the same NAME as the card in your image folder for it to run correctly.
 
     private static final CardRarity RARITY = CardRarity.COMMON;
@@ -57,7 +57,7 @@ public class attackBlindfire extends AbstractDynamicCard {
 
     public attackBlindfire() { // public attackNailStrike() - This one and the one right under the imports are the most important ones, don't forget them
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        this.baseDamage = 2;
+        this.baseDamage = 3;
         this.baseMagicNumber = 3;
         this.magicNumber = this.baseMagicNumber;
         this.tags.add(CardTags.STRIKE); //for strikes only. Tags for other grouped cards

@@ -2,6 +2,7 @@ package DarkestMod.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -36,10 +37,10 @@ public class skillGuardDog extends AbstractDynamicCard {
 
     public static final String ID = DefaultMod.makeID("Guard Dog"); // DefaultMod.makeID("attackNailStrike");
 
-    public static final String IMG = makeCardPath("Skill.png");// "public static final String IMG = makeCardPath("attackNailStrike.png");
+    public static final String IMG = makeCardPath("skillGuardDog.png");// "public static final String IMG = makeCardPath("attackNailStrike.png");
     // This does mean that you will need to have an image with the same NAME as the card in your image folder for it to run correctly.
 
-    private static final CardRarity RARITY = CardRarity.BASIC;
+    private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
 
     // /TEXT DECLARATION/
@@ -50,10 +51,9 @@ public class skillGuardDog extends AbstractDynamicCard {
     private static final CardType TYPE = CardType.SKILL;
     public static final CardColor COLOR = TheDefault.Enums.COLOR_GRAY;
 
-    private static final int COST = 1;
-    private static final int UPGRADED_COST = 0;
+    private static final int COST = 0;
 
-    private static final int BLOCK = 7;
+    private static final int BLOCK = 5;
     private static final int UPGRADE_PLUS_DMG = 2;
 
     // STAT DECLARATION
@@ -69,6 +69,9 @@ public class skillGuardDog extends AbstractDynamicCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(
                 new GainBlockAction(p, p, this.block));
+
+        AbstractDungeon.actionManager.addToBottom(
+                new DrawCardAction(p,1));
     }
 
     // Upgraded stats.
@@ -77,7 +80,6 @@ public class skillGuardDog extends AbstractDynamicCard {
         if (!upgraded) {
             upgradeName();
             upgradeDamage(UPGRADE_PLUS_DMG);
-            upgradeBaseCost(UPGRADED_COST);
             initializeDescription();
         }
     }

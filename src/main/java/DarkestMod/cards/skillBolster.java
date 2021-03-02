@@ -36,10 +36,10 @@ public class skillBolster extends AbstractDynamicCard {
 
     public static final String ID = DefaultMod.makeID("Bolster"); // DefaultMod.makeID("attackNailStrike");
 
-    public static final String IMG = makeCardPath("Skill.png");// "public static final String IMG = makeCardPath("attackNailStrike.png");
+    public static final String IMG = makeCardPath("skillBolster.png");// "public static final String IMG = makeCardPath("attackNailStrike.png");
     // This does mean that you will need to have an image with the same NAME as the card in your image folder for it to run correctly.
 
-    private static final CardRarity RARITY = CardRarity.BASIC;
+    private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
 
     // /TEXT DECLARATION/
@@ -51,10 +51,9 @@ public class skillBolster extends AbstractDynamicCard {
     public static final CardColor COLOR = TheDefault.Enums.COLOR_GRAY;
 
     private static final int COST = 1;
-    private static final int UPGRADED_COST = 0;
 
-    private static final int BLOCK = 7;
-    private static final int UPGRADE_PLUS_DMG = 2;
+    private static final int BLOCK = 1;
+    private static final int UPGRADE_PLUS_DMG = 1;
 
     // STAT DECLARATION
 
@@ -69,6 +68,12 @@ public class skillBolster extends AbstractDynamicCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(
                 new GainBlockAction(p, p, this.block));
+        AbstractDungeon.actionManager.addToBottom(
+                new GainBlockAction(p, p, this.block));
+        AbstractDungeon.actionManager.addToBottom(
+                new GainBlockAction(p, p, this.block));
+        AbstractDungeon.actionManager.addToBottom(
+                new GainBlockAction(p, p, this.block));
     }
 
     // Upgraded stats.
@@ -77,7 +82,6 @@ public class skillBolster extends AbstractDynamicCard {
         if (!upgraded) {
             upgradeName();
             upgradeDamage(UPGRADE_PLUS_DMG);
-            upgradeBaseCost(UPGRADED_COST);
             initializeDescription();
         }
     }

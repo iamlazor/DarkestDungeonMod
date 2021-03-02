@@ -131,12 +131,14 @@ public class TheDefault extends CustomPlayer {
         //retVal.add(powerAntiquarian.ID);
         //retVal.add(powerHighwayman.ID);
         //retVal.add(powerJester.ID);
-        retVal.add(powerPlagueDoctor.ID);
+        //retVal.add(powerPlagueDoctor.ID);
 
 
         //retVal.add(AfflictionTemp.ID);
         //retVal.add(attackPunish.ID);
         //retVal.add(attackAddersKiss.ID);
+        //retVal.add(attackDirkStab.ID);
+        //retVal.add(attackPierce.ID);
         //retVal.add(attackPoisonDart.ID);
         //retVal.add(attackRake.ID);
         //retVal.add(attackCollectBounty.ID);
@@ -150,6 +152,8 @@ public class TheDefault extends CustomPlayer {
         //retVal.add(attackHoundsHarry.ID);
         //retVal.add(attackPointBlankShot.ID);
         //retVal.add(attackFinale.ID);
+        //retVal.add(attackFinishHim.ID);
+        //retVal.add(attackOpenVein.ID);
 
         //retVal.add(skillBeastBile.ID);
         //retVal.add(skillInspiringCry.ID);
@@ -157,11 +161,16 @@ public class TheDefault extends CustomPlayer {
         //retVal.add(skillWyrdReconstruction.ID);
         //retVal.add(skillIllumination.ID);
         //retVal.add(skillFesteringVapours.ID);
+        //retVal.add(skillDuelistsAdvance.ID);
+        //retVal.add(skillBolster.ID);
+        //retVal.add(skillBulwarkOfFaith.ID);
+        //retVal.add(skillGuardDog.ID);
 
         //retVal.add(skillGetDown.ID);
         //retVal.add(skillProtectMe.ID);
         //retVal.add(skillPlagueGrenade.ID);
         //retVal.add(skillDefender.ID);
+        //retVal.add(skillShadowFade.ID);
         //retVal.add(attackIncision.ID);
         //retVal.add(skillWeakeningCurse.ID);
         //retVal.add(skillTargetWhistle.ID);
@@ -194,7 +203,7 @@ public class TheDefault extends CustomPlayer {
         //retVal.add(DefaultClickableRelic.ID);
         retVal.add(LightRelic.ID);
         retVal.add(stressRelic.ID);
-        
+
         //UnlockTracker.markRelicAsSeen(PlaceholderRelic.ID);
         //UnlockTracker.markRelicAsSeen(PlaceholderRelic2.ID);
         //UnlockTracker.markRelicAsSeen(DefaultClickableRelic.ID);

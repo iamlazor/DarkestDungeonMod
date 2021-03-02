@@ -15,17 +15,17 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 
 import static DarkestMod.DefaultMod.makePowerPath;
 
-public class Manpower extends AbstractPower implements CloneablePowerInterface {
+public class powerRiposte extends AbstractPower implements CloneablePowerInterface {
 
-        public static final String POWER_ID = DefaultMod.makeID("ManPower");
+        public static final String POWER_ID = DefaultMod.makeID("Riposte");
         private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
         public static final String NAME = powerStrings.NAME;
         public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
-        private static final Texture tex84 = TextureLoader.getTexture(makePowerPath("man_power84.png"));
-        private static final Texture tex32 = TextureLoader.getTexture(makePowerPath("man_power32.png"));
+        private static final Texture tex84 = TextureLoader.getTexture(makePowerPath("riposte_power84.png"));
+        private static final Texture tex32 = TextureLoader.getTexture(makePowerPath("riposte_power32.png"));
 
-        public Manpower(AbstractCreature owner, int thornsDamage) {
+        public powerRiposte(AbstractCreature owner, int thornsDamage) {
             this.name = NAME;
             this.ID = POWER_ID;
 
@@ -67,7 +67,7 @@ public class Manpower extends AbstractPower implements CloneablePowerInterface {
 
         @Override
         public AbstractPower makeCopy() {
-            return new DarkestMod.powers.Manpower(owner, amount);
+            return new powerRiposte(owner, amount);
         }
 
     }

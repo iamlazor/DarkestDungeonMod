@@ -1,5 +1,7 @@
 package DarkestMod.cards;
 
+import DarkestMod.actions.CollectBountyAction;
+import DarkestMod.actions.FinishHimAction;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -38,7 +40,7 @@ public class attackFinishHim extends AbstractDynamicCard {
 
     public static final String ID = DefaultMod.makeID("Finish Him"); // DefaultMod.makeID("attackNailStrike");
 
-    public static final String IMG = makeCardPath("Attack.png");// "public static final String IMG = makeCardPath("attackNailStrike.png");
+    public static final String IMG = makeCardPath("attackFinishHim.png");// "public static final String IMG = makeCardPath("attackNailStrike.png");
     // This does mean that you will need to have an image with the same NAME as the card in your image folder for it to run correctly.
 
     private static final CardRarity RARITY = CardRarity.RARE;
@@ -53,9 +55,8 @@ public class attackFinishHim extends AbstractDynamicCard {
     public static final CardColor COLOR = TheDefault.Enums.COLOR_GRAY;
 
     private static final int COST = 1;
-    private static final int UPGRADED_COST = 0;
 
-    private static final int DAMAGE = 7;
+    private static final int DAMAGE = 8;
     private static final int UPGRADE_PLUS_DMG = 2;
 
     // STAT DECLARATION
@@ -71,7 +72,7 @@ public class attackFinishHim extends AbstractDynamicCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(
-                new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
+                new FinishHimAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn)));
     }
 
     public void triggerOnGlowCheck() {
@@ -85,7 +86,6 @@ public class attackFinishHim extends AbstractDynamicCard {
                 break;
             }
         }
-
     }
 
     // Upgraded stats.
@@ -94,7 +94,6 @@ public class attackFinishHim extends AbstractDynamicCard {
         if (!upgraded) {
             upgradeName();
             upgradeDamage(UPGRADE_PLUS_DMG);
-            upgradeBaseCost(UPGRADED_COST);
             initializeDescription();
         }
     }

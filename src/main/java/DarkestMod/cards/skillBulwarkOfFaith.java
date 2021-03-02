@@ -1,19 +1,21 @@
 package DarkestMod.cards;
 
-import DarkestMod.powers.powerBlight;
+import DarkestMod.powers.powerLight;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import DarkestMod.DefaultMod;
 import DarkestMod.characters.TheDefault;
+import com.megacrit.cardcrawl.powers.NextTurnBlockPower;
 
 import static DarkestMod.DefaultMod.makeCardPath;
 
-public class attackPoisonDart extends AbstractDynamicCard {
+public class skillBulwarkOfFaith extends AbstractDynamicCard {
 
     /*
      * "Hey, I wanna make a bunch of cards now." - You, probably.
@@ -35,45 +37,43 @@ public class attackPoisonDart extends AbstractDynamicCard {
 
     // TEXT DECLARATION
 
-    public static final String ID = DefaultMod.makeID("PoisonDart"); // DefaultMod.makeID("attackNailStrike");
+    public static final String ID = DefaultMod.makeID("BulwarkSkill"); // DefaultMod.makeID("attackNailStrike");
 
-    public static final String IMG = makeCardPath("Attack.png");// "public static final String IMG = makeCardPath("attackNailStrike.png");
+    public static final String IMG = makeCardPath("skillBulwark.png");// "public static final String IMG = makeCardPath("attackNailStrike.png");
     // This does mean that you will need to have an image with the same NAME as the card in your image folder for it to run correctly.
-
     private static final CardRarity RARITY = CardRarity.COMMON;
-    private static final CardTarget TARGET = CardTarget.ENEMY;
+    private static final CardTarget TARGET = CardTarget.SELF;
 
     // /TEXT DECLARATION/
 
 
     // STAT DECLARATION
 
-    private static final CardType TYPE = CardType.ATTACK;
+    private static final CardType TYPE = CardType.SKILL;
     public static final CardColor COLOR = TheDefault.Enums.COLOR_GRAY;
 
     private static final int COST = 1;
 
-    private static final int DAMAGE = 4;
-    private static final int UPGRADE_PLUS_DMG = 2;
-    private static final int UPGRADE_PLUS_BLIGHT = 2;
-
+    private static final int BLOCK = 7;
+    private static final int SECONDBLOCK = 3;
     // STAT DECLARATION
 
-    public attackPoisonDart() { // public attackNailStrike() - This one and the one right under the imports are the most important ones, don't forget them
+    public skillBulwarkOfFaith() { // public attackNailStrike() - This one and the one right under the imports are the most important ones, don't forget them
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        baseDamage = DAMAGE;
-        baseMagicNumber = 3;
-        magicNumber = baseMagicNumber;
+        baseBlock = BLOCK;
+        magicNumber = baseMagicNumber = SECONDBLOCK;
+
     }
 
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(
-                new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.POISON));
-
+                new GainBlockAction(p, p, this.block));
         AbstractDungeon.actionManager.addToBottom(
-                new ApplyPowerAction(m, p, new powerBlight(m, p, this.magicNumber), this.magicNumber));
+                new ApplyPowerAction(p, p, new NextTurnBlockPower(p, this.SECONDBLOCK), this.SECONDBLOCK));
+        AbstractDungeon.actionManager.addToBottom(
+                new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new powerLight(AbstractDungeon.player, this.SECONDBLOCK), this.SECONDBLOCK));
     }
 
     // Upgraded stats.
@@ -81,8 +81,7 @@ public class attackPoisonDart extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeDamage(UPGRADE_PLUS_DMG);
-            this.upgradeMagicNumber(UPGRADE_PLUS_BLIGHT);
+            this.upgradeMagicNumber(2);
             initializeDescription();
         }
     }

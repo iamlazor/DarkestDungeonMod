@@ -38,7 +38,7 @@ public class skillSerpentSway extends AbstractDynamicCard {
 
     public static final String ID = DefaultMod.makeID("Serpent Sway"); // DefaultMod.makeID("attackNailStrike");
 
-    public static final String IMG = makeCardPath("Skill.png");// "public static final String IMG = makeCardPath("attackNailStrike.png");
+    public static final String IMG = makeCardPath("skillSerpentSway.png");// "public static final String IMG = makeCardPath("attackNailStrike.png");
     // This does mean that you will need to have an image with the same NAME as the card in your image folder for it to run correctly.
 
     private static final CardRarity RARITY = CardRarity.RARE;

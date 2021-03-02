@@ -64,13 +64,22 @@
                 ]
         },
 
-        "DarkestMod:ManPower": {
-                "NAME": "Man at Arms",
+        "DarkestMod:Riposte": {
+                "NAME": "Riposte",
                 "DESCRIPTIONS": [
-                        "Counter, whenever attacked deal damage back.",
+                        "Riposte, whenever attacked deal damage back.",
                         " keyword."
                 ]
         },
+
+        "DarkestMod:OpenVein": {
+                "NAME": "Open Vein",
+                "DESCRIPTIONS": [
+                        "All attacks do an additional !M! darkestmod:Bleed .",
+                        " keyword."
+                ]
+        },
+
 
         "DarkestMod:PlagueDoctor": {
                 "NAME": "Plague Doctor",

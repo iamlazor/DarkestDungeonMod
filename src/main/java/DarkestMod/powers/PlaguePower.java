@@ -6,6 +6,7 @@ import basemod.interfaces.CloneablePowerInterface;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -44,8 +45,8 @@ public class PlaguePower extends AbstractPower implements CloneablePowerInterfac
         this.updateDescription();
     }
 
-    public void atStartOfTurnPostDraw() {
-        if (!AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
+    public int onAttacked(DamageInfo info, int damageAmount) {
+        if (damageAmount > 0 && info.type == DamageInfo.DamageType.NORMAL) {
             this.flash();
             Iterator var3 = AbstractDungeon.getMonsters().monsters.iterator();
 
@@ -53,10 +54,11 @@ public class PlaguePower extends AbstractPower implements CloneablePowerInterfac
                 AbstractMonster monster = (AbstractMonster) var3.next();
                 if (!monster.isDead && !monster.isDying) {
                     AbstractDungeon.actionManager.addToBottom(
-                            new ApplyPowerAction(monster, this.owner, new powerBlight(monster, this.owner, this.amount), this.amount));
+                            new ApplyPowerAction(monster, AbstractDungeon.player, new powerBlight(monster, AbstractDungeon.player, this.amount), this.amount));
                 }
             }
         }
+        return damageAmount;
     }
 
     @Override

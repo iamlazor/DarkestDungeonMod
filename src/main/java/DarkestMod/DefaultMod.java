@@ -391,6 +391,7 @@ public class DefaultMod implements
         BaseMod.addRelicToCustomPool(new PlaceholderRelic(), TheDefault.Enums.COLOR_GRAY);
         BaseMod.addRelicToCustomPool(new BottledPlaceholderRelic(), TheDefault.Enums.COLOR_GRAY);
         BaseMod.addRelicToCustomPool(new DefaultClickableRelic(), TheDefault.Enums.COLOR_GRAY);
+
         BaseMod.addRelicToCustomPool(new LightRelic(), TheDefault.Enums.COLOR_GRAY);
         BaseMod.addRelicToCustomPool(new stressRelic(), TheDefault.Enums.COLOR_GRAY);
 
@@ -433,14 +434,20 @@ public class DefaultMod implements
         //power
         BaseMod.addCard(new powerAbomination());
         BaseMod.addCard(new powerAntiquarian());
+        BaseMod.addCard(new powerArbalest());
+        BaseMod.addCard(new powerBountyHunter());
         BaseMod.addCard(new powerCrusader());
         BaseMod.addCard(new powerFlagellant());
         BaseMod.addCard(new powerGraveRobber());
+        BaseMod.addCard(new powerHellion());
         BaseMod.addCard(new powerHighwayman());
         BaseMod.addCard(new powerJester());
         BaseMod.addCard(new powerLeper());
         BaseMod.addCard(new powerManAtArms());
+        BaseMod.addCard(new powerOccultist());
         BaseMod.addCard(new powerPlagueDoctor());
+        BaseMod.addCard(new powerSheildbreaker());
+        BaseMod.addCard(new powerVestal());
 
         //Attack
         BaseMod.addCard(new attackAbyssalArtillery());
@@ -450,6 +457,7 @@ public class DefaultMod implements
         BaseMod.addCard(new attackChop());
         BaseMod.addCard(new attackCollectBounty());
         BaseMod.addCard(new attackDazzlingLight());
+        BaseMod.addCard(new attackDirkStab());
         BaseMod.addCard(new attackFinale());
         BaseMod.addCard(new attackFinishHim());
         BaseMod.addCard(new attackHoundsHarry());
@@ -458,7 +466,8 @@ public class DefaultMod implements
         BaseMod.addCard(new attackPierce());
         BaseMod.addCard(new attackPistolShot());
         BaseMod.addCard(new attackPointBlankShot());
-        BaseMod.addCard(new attackPoisonDart());
+        BaseMod.addCard(new attackImpale());
+        BaseMod.addCard(new attackOpenVein());
         BaseMod.addCard(new attackPunish());
         BaseMod.addCard(new attackRake());
         BaseMod.addCard(new attackSacrificialStab());
@@ -472,9 +481,11 @@ public class DefaultMod implements
         BaseMod.addCard(new skillBarbaricYawp());
         BaseMod.addCard(new skillBeastBile());
         BaseMod.addCard(new skillBolster());
+        BaseMod.addCard(new skillBulwarkOfFaith());
         BaseMod.addCard(new skillDefender());
         BaseMod.addCard(new skillDivineComfort());
         BaseMod.addCard(new skillDuelistsAdvance());
+        BaseMod.addCard(new skillEndure());
         BaseMod.addCard(new skillFesteringVapours());
         BaseMod.addCard(new skillFlashingDaggers());
         BaseMod.addCard(new skillGetDown());
@@ -490,9 +501,9 @@ public class DefaultMod implements
         BaseMod.addCard(new skillPurge());
         BaseMod.addCard(new skillRainOfSorrows());
         BaseMod.addCard(new skillRedeem());
+        BaseMod.addCard(new skillShadowFade());
         BaseMod.addCard(new skillSerpentSway());
         BaseMod.addCard(new skillSnipersMark());
-        BaseMod.addCard(new skillSolemnity());
         BaseMod.addCard(new skillTargetWhistle());
         BaseMod.addCard(new skillTrackingShot());
         BaseMod.addCard(new skillWeakeningCurse());
@@ -542,15 +553,21 @@ public class DefaultMod implements
 
         //Power
         UnlockTracker.unlockCard(powerAbomination.ID);
+        UnlockTracker.unlockCard(powerArbalest.ID);
+        UnlockTracker.unlockCard(powerBountyHunter.ID);
         UnlockTracker.unlockCard(powerAntiquarian.ID);
         UnlockTracker.unlockCard(powerCrusader.ID);
         UnlockTracker.unlockCard(powerFlagellant.ID);
         UnlockTracker.unlockCard(powerGraveRobber.ID);
+        UnlockTracker.unlockCard(powerHellion.ID);
         UnlockTracker.unlockCard(powerHighwayman.ID);
         UnlockTracker.unlockCard(powerJester.ID);
         UnlockTracker.unlockCard(powerLeper.ID);
         UnlockTracker.unlockCard(powerManAtArms.ID);
+        UnlockTracker.unlockCard(powerOccultist.ID);
         UnlockTracker.unlockCard(powerPlagueDoctor.ID);
+        UnlockTracker.unlockCard(powerSheildbreaker.ID);
+        UnlockTracker.unlockCard(powerVestal.ID);
 
         //Attacks
         UnlockTracker.unlockCard(attackAbyssalArtillery.ID);
@@ -560,6 +577,7 @@ public class DefaultMod implements
         UnlockTracker.unlockCard(attackChop.ID);
         UnlockTracker.unlockCard(attackCollectBounty.ID);
         UnlockTracker.unlockCard(attackDazzlingLight.ID);
+        UnlockTracker.unlockCard(attackDirkStab.ID);
         UnlockTracker.unlockCard(attackFinale.ID);
         UnlockTracker.unlockCard(attackFinishHim.ID);
         UnlockTracker.unlockCard(attackHoundsHarry.ID);
@@ -568,7 +586,8 @@ public class DefaultMod implements
         UnlockTracker.unlockCard(attackPierce.ID);
         UnlockTracker.unlockCard(attackPistolShot.ID);
         UnlockTracker.unlockCard(attackPointBlankShot.ID);
-        UnlockTracker.unlockCard(attackPoisonDart.ID);
+        UnlockTracker.unlockCard(attackImpale.ID);
+        UnlockTracker.unlockCard(attackOpenVein.ID);
         UnlockTracker.unlockCard(attackPunish.ID);
         UnlockTracker.unlockCard(attackRake.ID);
         UnlockTracker.unlockCard(attackSacrificialStab.ID);
@@ -582,9 +601,11 @@ public class DefaultMod implements
         UnlockTracker.unlockCard(skillBarbaricYawp.ID);
         UnlockTracker.unlockCard(skillBeastBile.ID);
         UnlockTracker.unlockCard(skillBolster.ID);
+        UnlockTracker.unlockCard(skillBulwarkOfFaith.ID);
         UnlockTracker.unlockCard(skillDefender.ID);
         UnlockTracker.unlockCard(skillDivineComfort.ID);
         UnlockTracker.unlockCard(skillDuelistsAdvance.ID);
+        UnlockTracker.unlockCard(skillEndure.ID);
         UnlockTracker.unlockCard(skillFesteringVapours.ID);
         UnlockTracker.unlockCard(skillFlashingDaggers.ID);
         UnlockTracker.unlockCard(skillGetDown.ID);
@@ -600,9 +621,9 @@ public class DefaultMod implements
         UnlockTracker.unlockCard(skillProtectMe.ID);
         UnlockTracker.unlockCard(skillRainOfSorrows.ID);
         UnlockTracker.unlockCard(skillRedeem.ID);
+        UnlockTracker.unlockCard(skillShadowFade.ID);
         UnlockTracker.unlockCard(skillSerpentSway.ID);
         UnlockTracker.unlockCard(skillSnipersMark.ID);
-        UnlockTracker.unlockCard(skillSolemnity.ID);
         UnlockTracker.unlockCard(skillTargetWhistle.ID);
         UnlockTracker.unlockCard(skillTrackingShot.ID);
         UnlockTracker.unlockCard(skillWeakeningCurse.ID);

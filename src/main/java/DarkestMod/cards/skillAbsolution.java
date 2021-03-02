@@ -53,8 +53,7 @@ public class skillAbsolution extends AbstractDynamicCard {
     private static final CardType TYPE = CardType.SKILL;
     public static final CardColor COLOR = TheDefault.Enums.COLOR_GRAY;
 
-    private static final int COST = 2;
-    private static final int UPGRADED_COST = 1;
+    private static final int COST = 1;
 
     private static final int STRESS_GEN = -8;
     private static final int HEAL= 5;
@@ -88,7 +87,6 @@ public class skillAbsolution extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeBaseCost(UPGRADED_COST);
             this.upgradeDefaultSecondMagicNumber(UPGRADE_PLUS_STRESS);
             initializeDescription();
         }

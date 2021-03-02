@@ -26,7 +26,7 @@ public class skillTorch extends AbstractDynamicCard {
         private static final int BLOCK = 3;
         private static final int UPGRADE_PLUS_BLOCK = 3;
 
-        private static final int LIGHT = 2;
+        private static final int LIGHT = 3;
         private static final int UPGRADE_PLUS_Light = 2;
 
 

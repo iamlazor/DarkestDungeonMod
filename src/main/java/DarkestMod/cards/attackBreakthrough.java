@@ -42,7 +42,7 @@ public class attackBreakthrough extends AbstractDynamicCard {
 
     public static final String ID = DefaultMod.makeID("Breakthrough"); // DefaultMod.makeID("attackNailStrike");
 
-    public static final String IMG = makeCardPath("Attack.png");// "public static final String IMG = makeCardPath("attackNailStrike.png");
+    public static final String IMG = makeCardPath("attackBreakthrough.png");// "public static final String IMG = makeCardPath("attackNailStrike.png");
     // This does mean that you will need to have an image with the same NAME as the card in your image folder for it to run correctly.
 
     private static final CardRarity RARITY = CardRarity.RARE;

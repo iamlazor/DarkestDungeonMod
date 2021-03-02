@@ -93,7 +93,7 @@ public class stressRelic extends CustomRelic {
      else if (card.upgraded && card.cardID.equals(skillAbsolution.ID)) {
          this.counter -= 12;
      }
-     else if (card.cardID.equals(skillSolemnity.ID)) {
+     else if (card.cardID.equals(skillEndure.ID)) {
          this.counter -= 3;
      }
      else if (!card.upgraded && card.cardID.equals(skillInspiringCry.ID)) {

@@ -21,12 +21,16 @@
 
   "DarkestMod:Bolster": {
     "NAME": "Bolster",
-    "DESCRIPTION": "Apply !B! block"
+    "DESCRIPTION": "Apply !B! block 4 times"
+  },
+  "DarkestMod:BulwarkSkill": {
+    "NAME": "Bulwark of Faith",
+    "DESCRIPTION": "Apply !B! block this turn and !M! block next turn. Also gain !M! darkestmod:Light"
   },
 
   "DarkestMod:Defender": {
     "NAME": "Defender",
-    "DESCRIPTION": "Apply !B! block this turn and !M! block next turn"
+    "DESCRIPTION": "Apply !M! Plated Armour and !M! Riposte"
   },
   "DarkestMod:Divine Comfort": {
     "NAME": "Divine Comfort",
@@ -35,7 +39,7 @@
 
   "DarkestMod:Duelists Advance": {
     "NAME": "Duelists Advance",
-    "DESCRIPTION": "Apply !B! block"
+    "DESCRIPTION": "Draw !D! cards and !M! Riposte"
   },
 
   "DarkestMod:Festering Vapours": {
@@ -55,7 +59,7 @@
 
   "DarkestMod:Guard Dog": {
     "NAME": "Guard Dog",
-    "DESCRIPTION": "Apply !B! block"
+    "DESCRIPTION": "Apply !B! block and draw a card"
   },
 
   "DarkestMod:Illumination": {
@@ -119,6 +123,11 @@
     "DESCRIPTION": "Can only be played when below 40% Max HP. Heal for 25% of Max HP "
   },
 
+  "DarkestMod:ShadowFade": {
+    "NAME": "Shadow Fade",
+    "DESCRIPTION": "Gain !B! Block and apply !M! weak to all enemies "
+  },
+
   "DarkestMod:Serpent Sway": {
     "NAME": "Serpent Sway",
     "DESCRIPTION": "Apply !M! Buffer. Exhaust."
@@ -129,9 +138,9 @@
     "DESCRIPTION": "Apply darkestmod:Marked to an enemy"
   },
 
-  "DarkestMod:Solemnity": {
-    "NAME": "Solemnity",
-    "DESCRIPTION": "Apply !B! block and heal 3 darkestmod:Stress"
+  "DarkestMod:Endure": {
+    "NAME": "Endure",
+    "DESCRIPTION": "Gain !B! block and heal 3 darkestmod:Stress"
   },
 
   "DarkestMod:Target Whistle": {
@@ -210,6 +219,10 @@
     "DESCRIPTION": "Deal !D! damage and gain !M! Light."
   },
 
+  "DarkestMod:Dirk Stab": {
+    "NAME": "Dirk Stab",
+    "DESCRIPTION": "Deal !D! damage this ignores Block."
+  },
   "DarkestMod:Finale": {
     "NAME": "Finale",
     "DESCRIPTION": "Deal !D! damage. And Exhaust your hand"
@@ -217,7 +230,7 @@
 
   "DarkestMod:Finish Him": {
     "NAME": "Finish Him",
-    "DESCRIPTION": "Deal !D! damage."
+    "DESCRIPTION":  "Deal !D! damage. If the enemy is darkestmod:Marked, gain 3 Energy."
   },
 
   "DarkestMod:GrapeshotBlast": {
@@ -240,9 +253,14 @@
     "DESCRIPTION": "Deal !D! damage."
   },
 
+  "DarkestMod:OpenVein": {
+    "NAME": "Open Vein",
+    "DESCRIPTION": "Deal !D! damage, and all attacks that deal damage apply 3 darkestmod:Bleed this turn."
+  },
+
   "DarkestMod:Pierce": {
     "NAME": "Pierce",
-    "DESCRIPTION": "Deal !D! damage."
+    "DESCRIPTION": "Remove all Block from the enemy and Deal !D! damage."
   },
 
     "DarkestMod:Pistol Shot": {
@@ -256,8 +274,8 @@
     "DESCRIPTION": "Deal !D! damage. Exhaust."
   },
 
-  "DarkestMod:PoisonDart": {
-    "NAME": "Poison Dart",
+  "DarkestMod:Impale": {
+    "NAME": "Impale",
     "DESCRIPTION": "Deal !D! damage and apply !M! darkestmod:Blight."
 
   },
@@ -300,10 +318,21 @@
     "NAME": "Abomination",
     "DESCRIPTION": "Even Turns gain 2 Temporary Strength. Odd Turns gain 2 Temporary Dexterity. And gain 2 stress each turn"
   },
+  "DarkestMod:Arbalest": {
+    "NAME": "Arbalest",
+    "DESCRIPTION": "Power Temp Text, Smile"
+  },
+
   "DarkestMod:Antiquarian": {
     "NAME": "Antiquarian",
     "DESCRIPTION": "Gain 3 Frail and at the end of each turn add 1 Antique to your discard pile."
   },
+
+  "DarkestMod:BountyHunter": {
+    "NAME": "Bounty Hunter",
+    "DESCRIPTION": "Power Temp Text, Smile"
+  },
+
 
   "DarkestMod:Crusader": {
     "NAME": "Crusader",
@@ -318,6 +347,11 @@
   "DarkestMod:GraveRobber": {
     "NAME": "Grave Robber",
     "DESCRIPTION": "Add a Thrown Dagger to the hand each turn"
+  },
+
+  "DarkestMod:Hellion": {
+    "NAME": "Hellion",
+    "DESCRIPTION": "Power Temp Text, Smile"
   },
 
   "DarkestMod:Highwayman": {
@@ -337,11 +371,27 @@
 
   "DarkestMod:ManAtArms": {
     "NAME": "Man at Arms",
-    "DESCRIPTION": "Gain !M!  Plated Armor & !M! Counter."
+    "DESCRIPTION": "Gain !M!  Plated Armor & !M! Riposte."
   },
+
+  "DarkestMod:Occultist": {
+    "NAME": "Occultist",
+    "DESCRIPTION": "Power Temp Text, Smile"
+  },
+
   "DarkestMod:PlagueDoctor": {
     "NAME": "Plague Doctor",
-    "DESCRIPTION": "Trigger darkestmod:Blight .And at the start of your turn, apply !M! darkestmod:Blight to ALL enemies."
+    "DESCRIPTION": "Trigger darkestmod:Blight . Whenever attacked, apply !M! darkestmod:Blight to ALL enemies."
+  },
+
+  "DarkestMod:Sheildbreaker": {
+  "NAME": "Sheildbreaker",
+  "DESCRIPTION": "Power Temp Text, Smile"
+},
+
+  "DarkestMod:Vestal": {
+    "NAME": "Vestal",
+    "DESCRIPTION": "Power Temp Text, Smile"
   },
 
   "DarkestMod:AfflictionTemp": {
@@ -408,63 +458,6 @@
   "DarkestMod:Vigorous": {
     "NAME": "Vigorous",
     "DESCRIPTION": "Unplayable.  At the end of turn Heal for 50 and then Exhaust."
-  },
-
-  "DarkestMod:attackStrike_s": {
-    "NAME": "Jester",
-    "DESCRIPTION": "Reduce current stress by 8 and all incoming stress is reduced by 1."
-  },
-
-
-  "DarkestMod:DefaultCommonAttack": {
-    "NAME": "Strike",
-    "DESCRIPTION": "Deal !D! Damage. NL [#0000ff]This[] [#ff0000]Is[] [#ffff00]How[] [#88888]color[] [#ff00ff]works.[]"
-  },
-  "DarkestMod:DefaultCommonSkill": {
-    "NAME": "Defend",
-    "DESCRIPTION": "Gain !B! Block. NL darkestmod:Multiword_Keyword."
-  },
-  "DarkestMod:DefaultCommonPower": {
-    "NAME": "Hold Place",
-    "DESCRIPTION": "Gain !M! darkestmod:Keyword.",
-    "UPGRADE_DESCRIPTION": "Gain !M! darkestmod:Keywords."
-  },
-  "DarkestMod:DefaultUncommonAttack": {
-    "NAME": "Big slap",
-    "DESCRIPTION": "Deal !D! Damage."
-  },
-  "DarkestMod:DefaultUncommonSkill": {
-    "NAME": "A Better Defend",
-    "DESCRIPTION": "Gain !B! Plated Armor. Affected by Dexterity."
-  },
-  "DarkestMod:DefaultUncommonPower": {
-    "NAME": "Weirdness",
-    "DESCRIPTION": "Gain X darkestmod:Keywords.",
-    "UPGRADE_DESCRIPTION": "Gain X +1 darkestmod:Keywords."
-  },
-  "DarkestMod:DefaultRareAttack": {
-    "NAME": "TOUCH",
-    "DESCRIPTION": "Deal !D! Damage."
-  },
-  "DarkestMod:DefaultRareSkill": {
-    "NAME": "For Each Loop x2",
-    "DESCRIPTION": "Apply !M! vulnerable to all enemies, 2 times.",
-    "UPGRADE_DESCRIPTION": "Apply !M! vulnerable to all enemies, 3 times."
-  },
-  "DarkestMod:DefaultRarePower": {
-    "NAME": "In-Progress Form",
-    "DESCRIPTION": "At the start of your turn, play a TOUCH."
-  },
-  "DarkestMod:DefaultAttackWithVariable": {
-    "NAME": "Special Strike",
-    "DESCRIPTION": "Deal !D! Damage [E] times. NL (Deal !darkestmod:ENERGY_DAMAGE! damage total.)"
-  },
-  "DarkestMod:DefaultSecondMagicNumberSkill": {
-    "NAME": "Cool 2 Number Card",
-    "DESCRIPTION": "Apply !M! vulnerable and !darkestmod:SecondMagic! poison to an enemy."
-  },
-  "DarkestMod:OrbSkill": {
-    "NAME": "Get Orb",
-    "DESCRIPTION": "Channel 1 Default Orb."
   }
+
 }

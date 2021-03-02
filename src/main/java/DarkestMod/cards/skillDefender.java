@@ -1,5 +1,6 @@
 package DarkestMod.cards;
 
+import DarkestMod.powers.powerRiposte;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
@@ -11,6 +12,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import DarkestMod.DefaultMod;
 import DarkestMod.characters.TheDefault;
 import com.megacrit.cardcrawl.powers.NextTurnBlockPower;
+import com.megacrit.cardcrawl.powers.PlatedArmorPower;
 
 import static DarkestMod.DefaultMod.makeCardPath;
 
@@ -41,7 +43,7 @@ public class skillDefender extends AbstractDynamicCard {
     public static final String IMG = makeCardPath("skillDefender.png");// "public static final String IMG = makeCardPath("attackNailStrike.png");
     // This does mean that you will need to have an image with the same NAME as the card in your image folder for it to run correctly.
 
-    private static final CardRarity RARITY = CardRarity.COMMON;
+    private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
 
     // /TEXT DECLARATION/
@@ -54,14 +56,13 @@ public class skillDefender extends AbstractDynamicCard {
 
     private static final int COST = 1;
 
-    private static final int BLOCK = 7;
-    private static final int SECONDBLOCK = 3;
+    private static final int UPGRADE_PLUS_DMG = 2;
+    private static final int COUNTER = 3;
     // STAT DECLARATION
 
     public skillDefender() { // public attackNailStrike() - This one and the one right under the imports are the most important ones, don't forget them
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        baseBlock = BLOCK;
-        magicNumber = baseMagicNumber = SECONDBLOCK;
+        magicNumber = baseMagicNumber = COUNTER;
 
     }
 
@@ -69,9 +70,9 @@ public class skillDefender extends AbstractDynamicCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(
-                new GainBlockAction(p, p, this.block));
+                new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new powerRiposte(AbstractDungeon.player, COUNTER), COUNTER));
         AbstractDungeon.actionManager.addToBottom(
-                new ApplyPowerAction(p, p, new NextTurnBlockPower(p, this.SECONDBLOCK), this.SECONDBLOCK));
+                new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new PlatedArmorPower(AbstractDungeon.player, COUNTER), COUNTER));
     }
 
     // Upgraded stats.
@@ -79,7 +80,7 @@ public class skillDefender extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            this.upgradeMagicNumber(2);
+            upgradeMagicNumber(UPGRADE_PLUS_DMG);
             initializeDescription();
         }
     }
