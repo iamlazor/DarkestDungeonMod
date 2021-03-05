@@ -1,6 +1,8 @@
 package DarkestMod.cards;
 
 import DarkestMod.actions.PunishAction;
+import DarkestMod.powers.powerBleed;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -52,17 +54,21 @@ public class attackPunish extends AbstractDynamicCard {
     private static final CardType TYPE = CardType.ATTACK;
     public static final CardColor COLOR = TheDefault.Enums.COLOR_GRAY;
 
-    private static final int COST = 2;
-    private static final int UPGRADED_COST = 1;
+    private static final int COST = 1;
+    private static final int UPGRADED_COST = 0;
 
-    private static final int DAMAGE = 15;
-    private static final int UPGRADE_PLUS_DMG = 3;
+    private static final int DAMAGE = 8;
+    private static final int UPGRADE_PLUS_DMG = 4;
+    private static final int BLEED = 8;
+    private static final int UPGRADEBLEED = 3;
 
     // STAT DECLARATION
 
     public attackPunish() { // public attackNailStrike() - This one and the one right under the imports are the most important ones, don't forget them
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseDamage = DAMAGE;
+        baseMagicNumber = BLEED;
+        magicNumber = baseMagicNumber;
 
     }
 
@@ -72,24 +78,12 @@ public class attackPunish extends AbstractDynamicCard {
         AbstractDungeon.actionManager.addToBottom(
                 new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn) ));
         AbstractDungeon.actionManager.addToBottom(
-                new PunishAction(m, p));
+                new ApplyPowerAction(m, p, new powerBleed(m, p, this.magicNumber), this.magicNumber));
+
+        AbstractDungeon.actionManager.addToBottom(
+                new ApplyPowerAction(p, p, new powerBleed(p, p, 3), 3));
 
     }
-
-    public void triggerOnGlowCheck() {
-        this.glowColor = AbstractCard.BLUE_BORDER_GLOW_COLOR.cpy();
-        Iterator var1 = AbstractDungeon.getCurrRoom().monsters.monsters.iterator();
-
-        while(var1.hasNext()) {
-            AbstractMonster m = (AbstractMonster)var1.next();
-            if (!m.isDeadOrEscaped() && m.hasPower("PowerBleed")) {
-                this.glowColor = AbstractCard.GOLD_BORDER_GLOW_COLOR.cpy();
-                break;
-            }
-        }
-
-    }
-
 
     // Upgraded stats.
     @Override
@@ -98,6 +92,7 @@ public class attackPunish extends AbstractDynamicCard {
             upgradeName();
             upgradeDamage(UPGRADE_PLUS_DMG);
             upgradeBaseCost(UPGRADED_COST);
+            upgradeMagicNumber(UPGRADEBLEED);
             initializeDescription();
         }
     }

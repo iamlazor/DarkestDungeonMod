@@ -3,7 +3,6 @@ package DarkestMod.characters;
 import DarkestMod.relics.*;
 import basemod.abstracts.CustomPlayer;
 import basemod.animations.SpineAnimation;
-import basemod.animations.SpriterAnimation;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.math.MathUtils;
@@ -30,7 +29,6 @@ import java.util.ArrayList;
 
 import static DarkestMod.DefaultMod.*;
 import static DarkestMod.characters.TheDefault.Enums.COLOR_GRAY;
-import static DarkestMod.relics.stressRelic.*;
 
 public class TheDefault extends CustomPlayer {
     public static final Logger logger = LogManager.getLogger(DefaultMod.class.getName());
@@ -119,6 +117,7 @@ public class TheDefault extends CustomPlayer {
         retVal.add(attackShovel.ID);
         retVal.add(attackShovel.ID);
 
+        retVal.add(attackAbyssalArtillery.ID);
         retVal.add(skillTorch.ID);
 
         //tests
@@ -135,7 +134,12 @@ public class TheDefault extends CustomPlayer {
 
 
         //retVal.add(AfflictionTemp.ID);
+        //retVal.add(attackChop.ID);
+        //retVal.add(attackPickToTheFace.ID);
+       // retVal.add(attackRampart.ID);
         //retVal.add(attackPunish.ID);
+        //retVal.add(attackHarvest.ID);
+        // retVal.add(attackHoundsHarry.ID);
         //retVal.add(attackAddersKiss.ID);
         //retVal.add(attackDirkStab.ID);
         //retVal.add(attackPierce.ID);
@@ -154,7 +158,11 @@ public class TheDefault extends CustomPlayer {
         //retVal.add(attackFinale.ID);
         //retVal.add(attackFinishHim.ID);
         //retVal.add(attackOpenVein.ID);
+        //retVal.add(attackSmite.ID);
 
+        //retVal.add(skillTrackingShot.ID);
+        //retVal.add(skillBarbaricYawp.ID);
+        //retVal.add(skillZealousAccusation.ID);
         //retVal.add(skillBeastBile.ID);
         //retVal.add(skillInspiringCry.ID);
         //retVal.add(skillNoxiousBlast.ID);

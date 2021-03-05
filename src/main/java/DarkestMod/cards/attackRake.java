@@ -53,7 +53,7 @@ public class attackRake extends AbstractDynamicCard {
 
     private static final int COST = 1;
 
-    private static final int DAMAGE = 8;
+    private static final int DAMAGE = 10;
     private static final int UPGRADE_PLUS_DMG = 4;
 
     private static final int STRESS_GEN = 8;

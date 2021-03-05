@@ -1,5 +1,7 @@
 package DarkestMod.cards;
 
+import DarkestMod.actions.CollectBountyAction;
+import DarkestMod.actions.HoundAction;
 import DarkestMod.patches.CardTagEnum;
 import DarkestMod.powers.powerBleed;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -7,6 +9,7 @@ import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -14,6 +17,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import DarkestMod.DefaultMod;
 import DarkestMod.characters.TheDefault;
 import com.megacrit.cardcrawl.vfx.combat.BiteEffect;
+import com.megacrit.cardcrawl.vfx.combat.DaggerSprayEffect;
 import com.megacrit.cardcrawl.vfx.combat.LightningEffect;
 
 import java.util.Iterator;
@@ -48,7 +52,7 @@ public class attackHoundsHarry extends AbstractDynamicCard {
     // This does mean that you will need to have an image with the same NAME as the card in your image folder for it to run correctly.
 
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
-    private static final CardTarget TARGET = CardTarget.ALL_ENEMY;
+    private static final CardTarget TARGET = CardTarget.ENEMY;
 
     // /TEXT DECLARATION/
 
@@ -60,7 +64,7 @@ public class attackHoundsHarry extends AbstractDynamicCard {
 
     private static final int COST = 1;
 
-    private static final int DAMAGE = 5;
+    private static final int DAMAGE = 8;
     private static final int UPGRADE_PLUS_DMG = 2;
     private static final int UPGRADE_PLUS_BLEED = 2;
 
@@ -71,34 +75,33 @@ public class attackHoundsHarry extends AbstractDynamicCard {
         baseDamage = DAMAGE;
         baseMagicNumber = 3;
         magicNumber = baseMagicNumber;
-
-        this.tags.add(CardTagEnum.AFFLICTION);
     }
 
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+        if (!m.isDeadOrEscaped()) {
+            this.addToBot(new VFXAction(new BiteEffect(m.drawX, m.drawY), 0.0F));
 
-        Iterator var3 = AbstractDungeon.getCurrRoom().monsters.monsters.iterator();
-
-        AbstractMonster mo;
-        while (var3.hasNext()) {
-            mo = (AbstractMonster) var3.next();
-            if (!mo.isDeadOrEscaped()) {
-                this.addToBot(new VFXAction(new BiteEffect(mo.drawX, mo.drawY), 0.05F));
-            }
-        }
-
-        AbstractDungeon.actionManager.addToBottom(
-                new DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
-        var3 = AbstractDungeon.getCurrRoom().monsters.monsters.iterator();
-
-        while (var3.hasNext()) {
-            mo = (AbstractMonster) var3.next();
             AbstractDungeon.actionManager.addToBottom(
-                    new ApplyPowerAction(mo, p, new powerBleed(mo, p, this.magicNumber), this.magicNumber));
+                    new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn)));
+
+            AbstractDungeon.actionManager.addToBottom(
+                    new HoundAction(m));
         }
     }
+
+        public void triggerOnGlowCheck() {
+            this.glowColor = AbstractCard.BLUE_BORDER_GLOW_COLOR.cpy();
+            Iterator var1 = AbstractDungeon.getCurrRoom().monsters.monsters.iterator();
+            while(var1.hasNext()) {
+                AbstractMonster m = (AbstractMonster)var1.next();
+                if (!m.isDeadOrEscaped() && m.hasPower("PowerBleed")) {
+                    this.glowColor = AbstractCard.GOLD_BORDER_GLOW_COLOR.cpy();
+                    break;
+                }
+            }
+        }
 
         // Upgraded stats.
         @Override

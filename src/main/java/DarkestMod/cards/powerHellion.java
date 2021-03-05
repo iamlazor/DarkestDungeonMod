@@ -14,8 +14,8 @@ import static DarkestMod.DefaultMod.makeCardPath;
 
 public class powerHellion extends AbstractDynamicCard {
 
-    public static final String ID = DefaultMod.makeID("Helllion");
-    public static final String IMG = makeCardPath("Power.png");
+    public static final String ID = DefaultMod.makeID("Hellion");
+    public static final String IMG = makeCardPath("powerTheHellion.png");
 
 
     private static final CardRarity RARITY = CardRarity.UNCOMMON;

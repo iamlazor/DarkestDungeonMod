@@ -2,11 +2,8 @@ package DarkestMod.cards;
 
 import DarkestMod.actions.StunnedAction;
 import DarkestMod.actions.YawpAction;
-import com.evacipated.cardcrawl.mod.stslib.powers.StunMonsterPower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -16,7 +13,7 @@ import DarkestMod.characters.TheDefault;
 
 import static DarkestMod.DefaultMod.makeCardPath;
 
-public class skillBarbaricYawp extends AbstractDynamicCard {
+public class attackStunningBlow extends AbstractDynamicCard {
 
     /*
      * "Hey, I wanna make a bunch of cards now." - You, probably.
@@ -38,12 +35,12 @@ public class skillBarbaricYawp extends AbstractDynamicCard {
 
     // TEXT DECLARATION
 
-    public static final String ID = DefaultMod.makeID("Barbaric YAWP"); // DefaultMod.makeID("attackNailStrike");
+    public static final String ID = DefaultMod.makeID("Stunning Blow"); // DefaultMod.makeID("attackNailStrike");
 
-    public static final String IMG = makeCardPath("skillYawp.png");// "public static final String IMG = makeCardPath("attackNailStrike.png");
+    public static final String IMG = makeCardPath("attackstunning.png");// "public static final String IMG = makeCardPath("attackNailStrike.png");
     // This does mean that you will need to have an image with the same NAME as the card in your image folder for it to run correctly.
 
-    private static final CardRarity RARITY = CardRarity.UNCOMMON;
+    private static final CardRarity RARITY = CardRarity. UNCOMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;
 
     // /TEXT DECLARATION/
@@ -51,24 +48,29 @@ public class skillBarbaricYawp extends AbstractDynamicCard {
 
     // STAT DECLARATION
 
-    private static final CardType TYPE = CardType.SKILL;
+    private static final CardType TYPE = CardType.ATTACK;
     public static final CardColor COLOR = TheDefault.Enums.COLOR_GRAY;
+
     private static final int COST = 1;
 
+    private static final int DAMAGE = 6;
+    private static final int UPGRADE_PLUS_DMG = 3;
 
     // STAT DECLARATION
 
-    public skillBarbaricYawp() { // public attackNailStrike() - This one and the one right under the imports are the most important ones, don't forget them
+    public attackStunningBlow() { // public attackNailStrike() - This one and the one right under the imports are the most important ones, don't forget them
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        this.exhaust = true;
-
+        baseDamage = DAMAGE;
+        this.tags.add(CardTags.STRIKE); //for strikes only. Tags for other grouped cards
     }
 
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(
-                new YawpAction( m));
+                new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
+        AbstractDungeon.actionManager.addToBottom(
+                new StunnedAction(m));
     }
 
     // Upgraded stats.
@@ -76,7 +78,7 @@ public class skillBarbaricYawp extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-                       this.exhaust = false;
+            upgradeDamage(UPGRADE_PLUS_DMG);
             initializeDescription();
         }
     }

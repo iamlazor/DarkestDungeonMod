@@ -150,6 +150,24 @@
                 ". Become Afflcited at 100 and suffer a Heart attack at 200."
         ]
 },
+        "DarkestMod:StunnedPower": {
+        "NAME": "Stunned",
+        "DESCRIPTIONS": [
+                "If the enemy intends to attack Stun them",
+                ". Stunned enemies skip their action.",
+                "keyword"
+        ]
+},
+
+        "DarkestMod:Tracking": {
+                "NAME": "Tracking",
+                "DESCRIPTIONS": [
+                        "Whenever you play an Attack card this turn, the targeted enemy loses HP.",
+                        "keyword",
+                        "keyword"
+                ]
+        },
+
         "DarkestMod:PowerLight": {
                 "NAME": "Torch Light",
                 "DESCRIPTIONS": [

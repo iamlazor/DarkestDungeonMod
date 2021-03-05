@@ -1,6 +1,8 @@
 package DarkestMod.cards;
 
+import DarkestMod.powers.powerTracking;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -9,6 +11,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import DarkestMod.DefaultMod;
 import DarkestMod.characters.TheDefault;
+import com.megacrit.cardcrawl.powers.ChokePower;
 
 import static DarkestMod.DefaultMod.makeCardPath;
 
@@ -39,8 +42,8 @@ public class skillTrackingShot extends AbstractDynamicCard {
     public static final String IMG = makeCardPath("skillTrackingshot.png");// "public static final String IMG = makeCardPath("attackNailStrike.png");
     // This does mean that you will need to have an image with the same NAME as the card in your image folder for it to run correctly.
 
-    private static final CardRarity RARITY = CardRarity.BASIC;
-    private static final CardTarget TARGET = CardTarget.SELF;
+    private static final CardRarity RARITY = CardRarity.UNCOMMON;
+    private static final CardTarget TARGET = CardTarget.ENEMY;
 
     // /TEXT DECLARATION/
 
@@ -53,22 +56,21 @@ public class skillTrackingShot extends AbstractDynamicCard {
     private static final int COST = 1;
     private static final int UPGRADED_COST = 0;
 
-    private static final int BLOCK = 7;
-    private static final int UPGRADE_PLUS_DMG = 2;
+    private static final int EXTRADAMAGE = 4;
+
 
     // STAT DECLARATION
 
     public skillTrackingShot() { // public attackNailStrike() - This one and the one right under the imports are the most important ones, don't forget them
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        baseBlock = BLOCK;
-
+        baseMagicNumber = EXTRADAMAGE;
     }
 
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(
-                new GainBlockAction(p, p, this.block));
+                new ApplyPowerAction(m, p, new powerTracking(m, this.magicNumber), this.magicNumber));
     }
 
     // Upgraded stats.
@@ -76,7 +78,6 @@ public class skillTrackingShot extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeDamage(UPGRADE_PLUS_DMG);
             upgradeBaseCost(UPGRADED_COST);
             initializeDescription();
         }

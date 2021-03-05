@@ -9,6 +9,14 @@
     ],
     "DESCRIPTION": "[#800080]Marked Enemies take double damage from the next attack."
   },
+  {
+  "PROPER_NAME":"[#d3af47]Stunned",
+  "NAMES": [
+  "Stunned",
+  "stun"
+],
+  "DESCRIPTION": "[#d3af47]Stunned Enemies skip their action."
+  },
 
   {
     "PROPER_NAME":"Debuff",

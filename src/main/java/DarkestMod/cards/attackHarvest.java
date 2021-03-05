@@ -1,22 +1,25 @@
 package DarkestMod.cards;
 
-import DarkestMod.actions.StunnedAction;
-import DarkestMod.actions.YawpAction;
-import com.evacipated.cardcrawl.mod.stslib.powers.StunMonsterPower;
+import DarkestMod.powers.powerBleed;
+import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.actions.common.GainBlockAction;
+import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import DarkestMod.DefaultMod;
 import DarkestMod.characters.TheDefault;
+import com.megacrit.cardcrawl.vfx.combat.*;
+
+import java.util.Iterator;
 
 import static DarkestMod.DefaultMod.makeCardPath;
 
-public class skillBarbaricYawp extends AbstractDynamicCard {
+public class attackHarvest extends AbstractDynamicCard {
 
     /*
      * "Hey, I wanna make a bunch of cards now." - You, probably.
@@ -38,37 +41,61 @@ public class skillBarbaricYawp extends AbstractDynamicCard {
 
     // TEXT DECLARATION
 
-    public static final String ID = DefaultMod.makeID("Barbaric YAWP"); // DefaultMod.makeID("attackNailStrike");
+    public static final String ID = DefaultMod.makeID("Harvest"); // DefaultMod.makeID("attackNailStrike");
 
-    public static final String IMG = makeCardPath("skillYawp.png");// "public static final String IMG = makeCardPath("attackNailStrike.png");
+    public static final String IMG = makeCardPath("attackHarvest.png");// "public static final String IMG = makeCardPath("attackNailStrike.png");
     // This does mean that you will need to have an image with the same NAME as the card in your image folder for it to run correctly.
 
-    private static final CardRarity RARITY = CardRarity.UNCOMMON;
-    private static final CardTarget TARGET = CardTarget.ENEMY;
+    private static final CardRarity RARITY = CardRarity.COMMON;
+    private static final CardTarget TARGET = CardTarget.ALL_ENEMY;
 
     // /TEXT DECLARATION/
 
 
     // STAT DECLARATION
 
-    private static final CardType TYPE = CardType.SKILL;
+    private static final CardType TYPE = CardType.ATTACK;
     public static final CardColor COLOR = TheDefault.Enums.COLOR_GRAY;
+
     private static final int COST = 1;
 
+    private static final int DAMAGE = 3;
+    private static final int UPGRADE_PLUS_DMG = 2;
+    private static final int BLEED = 7;
+    private static final int UPGRADEBLEED = 5;
 
     // STAT DECLARATION
 
-    public skillBarbaricYawp() { // public attackNailStrike() - This one and the one right under the imports are the most important ones, don't forget them
+    public attackHarvest() { // public attackNailStrike() - This one and the one right under the imports are the most important ones, don't forget them
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        this.exhaust = true;
-
+        baseDamage = DAMAGE;
+        baseMagicNumber = BLEED;
+        magicNumber = baseMagicNumber;
     }
 
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+
+        Iterator var3 = AbstractDungeon.getCurrRoom().monsters.monsters.iterator();
+
+        AbstractMonster mo;
+        while (var3.hasNext()) {
+            mo = (AbstractMonster) var3.next();
+            if (!mo.isDeadOrEscaped()) {
+                this.addToBot(new VFXAction(new DaggerSprayEffect(AbstractDungeon.getMonsters().shouldFlipVfx()), 0.0F));
+            }
+        }
+
         AbstractDungeon.actionManager.addToBottom(
-                new YawpAction( m));
+                new DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
+        var3 = AbstractDungeon.getCurrRoom().monsters.monsters.iterator();
+
+        while (var3.hasNext()) {
+            mo = (AbstractMonster) var3.next();
+            AbstractDungeon.actionManager.addToBottom(
+                    new ApplyPowerAction(mo, p, new powerBleed(mo, p, this.magicNumber), this.magicNumber));
+        }
     }
 
     // Upgraded stats.
@@ -76,7 +103,8 @@ public class skillBarbaricYawp extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-                       this.exhaust = false;
+            upgradeDamage(UPGRADE_PLUS_DMG);
+            upgradeMagicNumber(UPGRADEBLEED);
             initializeDescription();
         }
     }

@@ -11,7 +11,7 @@
 
   "DarkestMod:Barbaric YAWP": {
     "NAME": "Barbaric YAWP",
-    "DESCRIPTION": "Apply !B! block"
+    "DESCRIPTION": "If the target intends to attack apply darkestmod:Stunned else gain 2 Strength. Exhaust."
   },
 
   "DarkestMod:Beast Bile": {
@@ -78,10 +78,7 @@
   },
 
 
-  "DarkestMod:Judgement": {
-    "NAME": "Judgement",
-    "DESCRIPTION": "Apply !B! block"
-  },
+
 
   "DarkestMod:Noxious Blast": {
     "NAME": "Noxious Blast",
@@ -155,7 +152,7 @@
 
   "DarkestMod:Tracking Shot": {
     "NAME": "Tracking Shot",
-    "DESCRIPTION": "Apply !B! block"
+    "DESCRIPTION": "Whenever you play an Attack card this turn, the targeted enemy loses !M! HP."
   },
 
 
@@ -176,7 +173,7 @@
 
   "DarkestMod:Zealous Accusation": {
     "NAME": "Zealous Accusation",
-    "DESCRIPTION": "Apply !B! block"
+    "DESCRIPTION": "darkestmod:Stun all enemies. Exhaust."
   },
 
   "DarkestMod:attackPoisonTest": {
@@ -206,7 +203,7 @@
 
   "DarkestMod:Chop": {
     "NAME": "Chop",
-    "DESCRIPTION": "Deal !D! damage."
+    "DESCRIPTION": "Deal !D! damage. Shuffle a Doubt into your discard pile."
   },
 
   "DarkestMod:Collect Bounty": {
@@ -237,9 +234,13 @@
     "NAME": "Grapeshot Blast",
     "DESCRIPTION": "Deal !D! damage to all enemies. Exhaust"
   },
-
   "DarkestMod:Hound's Harry": {
     "NAME": "Hound's Harry",
+    "DESCRIPTION": "Deal !D! damage. If the enemy has darkestmod:Bleed apply 2 Vulnerable, else apply 5 darkestmod:Bleed ."
+  },
+
+  "DarkestMod:Harvest": {
+    "NAME": "Harvest",
     "DESCRIPTION": "Deal !D! damage. And apply !M! darkestmod:Bleed to all enemies"
   },
 
@@ -248,14 +249,14 @@
     "DESCRIPTION": "Deal !D! damage. And apply !M! darkestmod:Bleed to the enemy"
   },
 
-  "DarkestMod:Lunge": {
-    "NAME": "Lunge",
-    "DESCRIPTION": "Deal !D! damage."
-  },
-
   "DarkestMod:OpenVein": {
     "NAME": "Open Vein",
     "DESCRIPTION": "Deal !D! damage, and all attacks that deal damage apply 3 darkestmod:Bleed this turn."
+  },
+
+  "DarkestMod:PickToTheFace": {
+    "NAME": "PickToTheFace",
+    "DESCRIPTION": "Deal !D! damage. Put a card from your deck into your hand."
   },
 
   "DarkestMod:Pierce": {
@@ -281,12 +282,17 @@
   },
   "DarkestMod:Punish": {
     "NAME": "Punish",
-    "DESCRIPTION": "Deal !D! damage. And trigger the darkestmod:Bleed effect on the enemy"
+    "DESCRIPTION": "Deal !D! damage. Apply 3 darkestmod:Bleed to yourself and !M! darkestmod:Bleed to the enemy"
   },
 
   "DarkestMod:Rake": {
     "NAME": "Rake",
     "DESCRIPTION": "Deal !D! damage. Gain !M! darkestmod:Stress"
+  },
+
+  "DarkestMod:Rampart": {
+    "NAME": "Rampart",
+    "DESCRIPTION": "Deal !D! damage. Gain !B! Block"
   },
 
   "DarkestMod:Sacrificial Stab": {
@@ -297,6 +303,10 @@
   "DarkestMod:Shovel": {
     "NAME": "Shovel",
     "DESCRIPTION": "Deal !D! damage."
+  },
+  "DarkestMod:Stunning Blow": {
+    "NAME": "Stunning Blow",
+    "DESCRIPTION": "Deal !D! damage and if the enemy intended to attack darkestmod:Stun ."
   },
 
   "DarkestMod:Sniper Shot": {

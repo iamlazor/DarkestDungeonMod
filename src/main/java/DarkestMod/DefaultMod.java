@@ -460,17 +460,19 @@ public class DefaultMod implements
         BaseMod.addCard(new attackDirkStab());
         BaseMod.addCard(new attackFinale());
         BaseMod.addCard(new attackFinishHim());
+        BaseMod.addCard(new attackHarvest());
         BaseMod.addCard(new attackHoundsHarry());
         BaseMod.addCard(new attackIncision());
-        BaseMod.addCard(new attackLunge());
+        BaseMod.addCard(new attackPickToTheFace());
         BaseMod.addCard(new attackPierce());
-        BaseMod.addCard(new attackPistolShot());
         BaseMod.addCard(new attackPointBlankShot());
         BaseMod.addCard(new attackImpale());
         BaseMod.addCard(new attackOpenVein());
         BaseMod.addCard(new attackPunish());
         BaseMod.addCard(new attackRake());
+        BaseMod.addCard(new attackRampart());
         BaseMod.addCard(new attackSacrificialStab());
+        BaseMod.addCard(new attackStunningBlow());
         BaseMod.addCard(new attackSniperShot());
         BaseMod.addCard(new attackWickedHack());
 
@@ -493,7 +495,6 @@ public class DefaultMod implements
         BaseMod.addCard(new skillIllumination());
         BaseMod.addCard(new skillInvigoratingVapours());
         BaseMod.addCard(new skillInspiringCry());
-        BaseMod.addCard(new skillJudgement());
         BaseMod.addCard(new skillMarkForDeath());
         BaseMod.addCard(new skillNoxiousBlast());
         BaseMod.addCard(new skillPlagueGrenade());
@@ -580,17 +581,19 @@ public class DefaultMod implements
         UnlockTracker.unlockCard(attackDirkStab.ID);
         UnlockTracker.unlockCard(attackFinale.ID);
         UnlockTracker.unlockCard(attackFinishHim.ID);
+        UnlockTracker.unlockCard(attackHarvest.ID);
         UnlockTracker.unlockCard(attackHoundsHarry.ID);
         UnlockTracker.unlockCard(attackIncision.ID);
-        UnlockTracker.unlockCard(attackLunge.ID);
+        UnlockTracker.unlockCard(attackPickToTheFace.ID);
         UnlockTracker.unlockCard(attackPierce.ID);
-        UnlockTracker.unlockCard(attackPistolShot.ID);
         UnlockTracker.unlockCard(attackPointBlankShot.ID);
         UnlockTracker.unlockCard(attackImpale.ID);
         UnlockTracker.unlockCard(attackOpenVein.ID);
         UnlockTracker.unlockCard(attackPunish.ID);
         UnlockTracker.unlockCard(attackRake.ID);
+        UnlockTracker.unlockCard(attackRampart.ID);
         UnlockTracker.unlockCard(attackSacrificialStab.ID);
+        UnlockTracker.unlockCard(attackStunningBlow.ID);
         UnlockTracker.unlockCard(attackSniperShot.ID);
         UnlockTracker.unlockCard(attackWickedHack.ID);
 
@@ -613,7 +616,6 @@ public class DefaultMod implements
         UnlockTracker.unlockCard(skillIllumination.ID);
         UnlockTracker.unlockCard(skillInvigoratingVapours.ID);
         UnlockTracker.unlockCard(skillInspiringCry.ID);
-        UnlockTracker.unlockCard(skillJudgement.ID);
         UnlockTracker.unlockCard(skillMarkForDeath.ID);
         UnlockTracker.unlockCard(skillNoxiousBlast.ID);
         UnlockTracker.unlockCard(skillPlagueGrenade.ID);
