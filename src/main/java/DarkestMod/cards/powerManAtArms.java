@@ -1,5 +1,6 @@
 package DarkestMod.cards;
 
+import DarkestMod.powers.ManPower;
 import DarkestMod.powers.powerRiposte;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -26,8 +27,6 @@ public class powerManAtArms extends AbstractDynamicCard {
     private static final int COUNTER = 3;
     private static final int UPGRADE_COUNTER = 2;
 
-
-
     public powerManAtArms() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         magicNumber = baseMagicNumber = COUNTER;
@@ -36,9 +35,7 @@ public class powerManAtArms extends AbstractDynamicCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(
-                new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new powerRiposte(AbstractDungeon.player, COUNTER), COUNTER));
-        AbstractDungeon.actionManager.addToBottom(
-                new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new PlatedArmorPower(AbstractDungeon.player, COUNTER), COUNTER));
+                new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new ManPower(AbstractDungeon.player, COUNTER), COUNTER));
     }
 
     @Override

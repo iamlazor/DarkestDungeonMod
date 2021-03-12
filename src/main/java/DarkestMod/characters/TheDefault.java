@@ -108,14 +108,17 @@ public class TheDefault extends CustomPlayer {
         
         logger.info("Begin loading starter Deck Strings");
         //starters
+
+        retVal.add(powerVestal.ID);
+
         retVal.add(skillProvisions.ID);
         retVal.add(skillProvisions.ID);
-        retVal.add(skillProvisions.ID);
-        retVal.add(skillProvisions.ID);
+        //retVal.add(skillProvisions.ID);
+        //retVal.add(skillProvisions.ID);
         retVal.add(attackShovel.ID);
         retVal.add(attackShovel.ID);
-        retVal.add(attackShovel.ID);
-        retVal.add(attackShovel.ID);
+        //retVal.add(attackShovel.ID);
+        //retVal.add(attackShovel.ID);
 
         retVal.add(attackAbyssalArtillery.ID);
         retVal.add(skillTorch.ID);
@@ -128,13 +131,17 @@ public class TheDefault extends CustomPlayer {
         //retVal.add(powerCrusader.ID);
         //retVal.add(powerAbomination.ID);
         //retVal.add(powerAntiquarian.ID);
+        //retVal.add(powerHoundmaster.ID);
+        //retVal.add(powerArbalest.ID);
+        //retVal.add(powerBountyHunter.ID);
         //retVal.add(powerHighwayman.ID);
         //retVal.add(powerJester.ID);
+        //retVal.add(powerHellion.ID);
         //retVal.add(powerPlagueDoctor.ID);
 
 
         //retVal.add(AfflictionTemp.ID);
-        //retVal.add(attackChop.ID);
+        //retVal.add(attackChop.ID);|
         //retVal.add(attackPickToTheFace.ID);
        // retVal.add(attackRampart.ID);
         //retVal.add(attackPunish.ID);
@@ -149,7 +156,7 @@ public class TheDefault extends CustomPlayer {
         //retVal.add(attackBlindfire.ID);
         //retVal.add(attackFinishHim.ID);
         //retVal.add(skillSnipersMark.ID);
-        //retVal.add(attackBreakthrough.ID);
+        //retVal.add(attackBreakthrough.ID);v
         //retVal.add(attackAbyssalArtillery.ID);
         //retVal.add(attackSacrificialStab.ID);
         //retVal.add(attackDazzlingLight.ID);
@@ -158,7 +165,7 @@ public class TheDefault extends CustomPlayer {
         //retVal.add(attackFinale.ID);
         //retVal.add(attackFinishHim.ID);
         //retVal.add(attackOpenVein.ID);
-        //retVal.add(attackSmite.ID);
+        //retVal.add(attackStunningBlow.ID);
 
         //retVal.add(skillTrackingShot.ID);
         //retVal.add(skillBarbaricYawp.ID);
@@ -173,7 +180,6 @@ public class TheDefault extends CustomPlayer {
         //retVal.add(skillBolster.ID);
         //retVal.add(skillBulwarkOfFaith.ID);
         //retVal.add(skillGuardDog.ID);
-
         //retVal.add(skillGetDown.ID);
         //retVal.add(skillProtectMe.ID);
         //retVal.add(skillPlagueGrenade.ID);
@@ -187,7 +193,6 @@ public class TheDefault extends CustomPlayer {
         //retVal.add(skillSerpentSway.ID);
         //retVal.add(skillSnipersMark.ID);
         //retVal.add(skillRedeem.ID);
-
         //retVal.add(skillPurge.ID);
         //retVal.add(skillDivineComfort.ID);
         //retVal.add(skillInvigoratingVapours.ID);

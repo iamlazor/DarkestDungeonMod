@@ -1,5 +1,6 @@
 package DarkestMod.cards;
 
+import DarkestMod.powers.BountyPower;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -36,7 +37,7 @@ public class powerBountyHunter extends AbstractDynamicCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,
-                new CommonPower(p, p, magicNumber), magicNumber));
+                new BountyPower(p,  magicNumber), magicNumber));
     }
 
     @Override

@@ -163,7 +163,7 @@
 
   "DarkestMod:Withstand": {
     "NAME": "Withstand",
-    "DESCRIPTION": "Apply 2 Vulnerable to yourself and gain !M! Dexterity"
+    "DESCRIPTION": "Apply 2 darkestmod:Marked to yourself and gain !M! Dexterity. Exhaust."
   },
 
   "DarkestMod:Wyrd Reconstruction": {
@@ -219,6 +219,11 @@
   "DarkestMod:Dirk Stab": {
     "NAME": "Dirk Stab",
     "DESCRIPTION": "Deal !D! damage this ignores Block."
+  },
+
+  "DarkestMod:DogBiscuit": {
+    "NAME": "Dog Biscuit",
+    "DESCRIPTION": "!M! stress and gain 3 temporary HP."
   },
   "DarkestMod:Finale": {
     "NAME": "Finale",
@@ -330,7 +335,7 @@
   },
   "DarkestMod:Arbalest": {
     "NAME": "Arbalest",
-    "DESCRIPTION": "Power Temp Text, Smile"
+    "DESCRIPTION": "Whenever darkestmod:Marked is applied also apply Weak"
   },
 
   "DarkestMod:Antiquarian": {
@@ -340,7 +345,7 @@
 
   "DarkestMod:BountyHunter": {
     "NAME": "Bounty Hunter",
-    "DESCRIPTION": "Power Temp Text, Smile"
+    "DESCRIPTION": "At the start of each turn apply darkestmod:Marked to a random enemy."
   },
 
 
@@ -361,12 +366,17 @@
 
   "DarkestMod:Hellion": {
     "NAME": "Hellion",
-    "DESCRIPTION": "Power Temp Text, Smile"
+    "DESCRIPTION": "whenever you gain Strength add a random Attack card to your hand, it costs 0 this turn."
   },
 
   "DarkestMod:Highwayman": {
     "NAME": "Highwayman",
     "DESCRIPTION": "At the start of each turn add !M! Grapeshot Blasts into your hand."
+  },
+
+  "DarkestMod:Houndmaster": {
+    "NAME": "Houndmaster",
+    "DESCRIPTION": "Gain 8 temporary health and shuffle a Dog Biscuit into the deck each turn."
   },
 
   "DarkestMod:Jester": {
@@ -381,12 +391,12 @@
 
   "DarkestMod:ManAtArms": {
     "NAME": "Man at Arms",
-    "DESCRIPTION": "Gain !M!  Plated Armor & !M! Riposte."
+    "DESCRIPTION": "Damage from attacks is halved for the next !M! turns."
   },
 
   "DarkestMod:Occultist": {
     "NAME": "Occultist",
-    "DESCRIPTION": "Power Temp Text, Smile"
+    "DESCRIPTION": "Apply 3 Bleed, -5 Light, draw 1 more cards a turn "
   },
 
   "DarkestMod:PlagueDoctor": {
@@ -401,7 +411,7 @@
 
   "DarkestMod:Vestal": {
     "NAME": "Vestal",
-    "DESCRIPTION": "Power Temp Text, Smile"
+    "DESCRIPTION": "Can only be played when Light is !M! or higher. Upgrade all cards in the deck and Light no longer decays."
   },
 
   "DarkestMod:AfflictionTemp": {

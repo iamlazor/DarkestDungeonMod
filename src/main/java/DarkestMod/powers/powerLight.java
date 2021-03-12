@@ -7,6 +7,7 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
+import com.megacrit.cardcrawl.actions.unique.ApotheosisAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -70,8 +71,8 @@ public class powerLight extends AbstractPower implements CloneablePowerInterface
         }
     }
 
-    public void atEndOfTurn( final boolean isPlayer) {
-        if (this.owner.isPlayer && this.amount > -10) {
+    public void atEndOfTurn(final boolean isPlayer) {
+        if (this.owner.isPlayer && this.amount > -10 && !owner.hasPower(VestalPower.POWER_ID)) {
             this.flash();
             this.amount-= 1;
             this.updateDescription();
@@ -86,6 +87,8 @@ public class powerLight extends AbstractPower implements CloneablePowerInterface
                 this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
             }
         }
+
+
 
     @Override
     public AbstractPower makeCopy() {

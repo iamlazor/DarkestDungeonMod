@@ -441,6 +441,7 @@ public class DefaultMod implements
         BaseMod.addCard(new powerGraveRobber());
         BaseMod.addCard(new powerHellion());
         BaseMod.addCard(new powerHighwayman());
+        BaseMod.addCard(new powerHoundmaster());
         BaseMod.addCard(new powerJester());
         BaseMod.addCard(new powerLeper());
         BaseMod.addCard(new powerManAtArms());
@@ -562,6 +563,7 @@ public class DefaultMod implements
         UnlockTracker.unlockCard(powerGraveRobber.ID);
         UnlockTracker.unlockCard(powerHellion.ID);
         UnlockTracker.unlockCard(powerHighwayman.ID);
+        UnlockTracker.unlockCard(powerHoundmaster.ID);
         UnlockTracker.unlockCard(powerJester.ID);
         UnlockTracker.unlockCard(powerLeper.ID);
         UnlockTracker.unlockCard(powerManAtArms.ID);

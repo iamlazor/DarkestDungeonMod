@@ -1,6 +1,7 @@
 package DarkestMod.actions;
 
 import DarkestMod.powers.powerStunned;
+import com.evacipated.cardcrawl.mod.stslib.powers.StunMonsterPower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -19,7 +20,7 @@ public class YawpAction extends AbstractGameAction {
     public void update() {
         if (this.targetMonster != null && this.targetMonster.getIntentBaseDmg() >= 0) {
             AbstractDungeon.actionManager.addToBottom(
-                    new ApplyPowerAction(this.targetMonster, AbstractDungeon.player, new powerStunned(this.targetMonster,1),1));
+                    new ApplyPowerAction(this.targetMonster, AbstractDungeon.player, new StunMonsterPower(this.targetMonster,1),1));
         } else {
             AbstractDungeon.actionManager.addToBottom(
                     new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new StrengthPower(AbstractDungeon.player,2),2 ));

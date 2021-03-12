@@ -1,43 +1,49 @@
 package DarkestMod.powers;
 
 import DarkestMod.DefaultMod;
+import DarkestMod.cards.afflictFearful;
+import DarkestMod.cards.attackThrowndagger;
 import DarkestMod.util.TextureLoader;
 import basemod.interfaces.CloneablePowerInterface;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
-import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
-import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
-import com.megacrit.cardcrawl.actions.utility.UseCardAction;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.powers.DexterityPower;
+import com.megacrit.cardcrawl.powers.EnergizedPower;
+import com.megacrit.cardcrawl.powers.WeakPower;
 
 import static DarkestMod.DefaultMod.makePowerPath;
 
-public class powerMarked extends AbstractPower implements CloneablePowerInterface {
-    public AbstractCreature source;
+public class ArbalestPower extends AbstractPower implements CloneablePowerInterface {
 
-    public static final String POWER_ID = DefaultMod.makeID("PowerMarked");
+    public static final String POWER_ID = DefaultMod.makeID("JesterPower");
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
-    private static final Texture tex84 = TextureLoader.getTexture(makePowerPath("marked_power84.png"));
-    private static final Texture tex32 = TextureLoader.getTexture(makePowerPath("marked_power32.png"));
+    private static final Texture tex84 = TextureLoader.getTexture(makePowerPath("arbalest_power84.png"));
+    private static final Texture tex32 = TextureLoader.getTexture(makePowerPath("arbalest_power32.png"));
 
-    public powerMarked(AbstractCreature owner, AbstractCreature source, int amount){
+    public ArbalestPower(AbstractCreature owner, int amount) {
         this.name = NAME;
-        this.ID = "PowerMarked";
+        this.ID = POWER_ID;
 
         this.owner = owner;
-        this.source = source;
         this.amount = amount;
-        this.type = PowerType.DEBUFF;
+        this.type = PowerType.BUFF;
         this.isTurnBased = false;
+
 
         this.region128 = new TextureAtlas.AtlasRegion(tex84, 0, 0, 84, 84);
         this.region48 = new TextureAtlas.AtlasRegion(tex32, 0, 0, 32, 32);
@@ -45,23 +51,15 @@ public class powerMarked extends AbstractPower implements CloneablePowerInterfac
         this.updateDescription();
     }
 
-
-    public float atDamageReceive(float damage, DamageInfo.DamageType type) {
-        if (type == DamageInfo.DamageType.NORMAL) {
-         return this.owner != null && !this.owner.isPlayer ? damage * 2.0F : damage * 2.0F;
-            }
-            return damage;
+    public void onApplyPower(AbstractPower power, AbstractCreature target, AbstractCreature source) {
+        if (power.ID.equals("PowerMarked") && source == this.owner) {
+            this.flash();
+            AbstractDungeon.actionManager.addToBottom(
+                    new ApplyPowerAction(target, this.owner, new WeakPower(target, this.amount, false), this.amount, true, AbstractGameAction.AttackEffect.SLASH_VERTICAL));
         }
 
-    public int onAttacked(DamageInfo info, int damageAmount) {
-
-      if(this.owner.currentHealth >0  && damageAmount > 0 && info.owner != null && this.amount>=0){
-          this.flash();
-          AbstractDungeon.actionManager.addToBottom(
-                  new ReducePowerAction(this.owner, this.owner, "PowerMarked", 1));
-      }
-        return damageAmount;
     }
+
 
     @Override
     public void updateDescription() {
@@ -72,9 +70,8 @@ public class powerMarked extends AbstractPower implements CloneablePowerInterfac
         }
     }
 
-
     @Override
     public AbstractPower makeCopy() {
-        return new powerMarked(owner,source, amount);
+        return new ArbalestPower(owner, amount);
     }
 }

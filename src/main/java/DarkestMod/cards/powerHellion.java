@@ -1,5 +1,6 @@
 package DarkestMod.cards;
 
+import DarkestMod.powers.HellionPower;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -23,7 +24,7 @@ public class powerHellion extends AbstractDynamicCard {
     private static final CardType TYPE = CardType.POWER;
     public static final CardColor COLOR = TheDefault.Enums.COLOR_GRAY;
 
-    private static final int COST = 1;
+    private static final int COST = 2;
     private static final int MAGIC = 1;
     private static final int UPGRADE_MAGIC = 1;
 
@@ -35,7 +36,7 @@ public class powerHellion extends AbstractDynamicCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,
-                new CommonPower(p, p, magicNumber), magicNumber));
+                new HellionPower(p, magicNumber), magicNumber));
     }
 
     @Override

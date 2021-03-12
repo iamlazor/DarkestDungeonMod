@@ -69,8 +69,9 @@ public class skillWithstand extends AbstractDynamicCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(
-                new ApplyPowerAction(p, AbstractDungeon.player, new VulnerablePower(p,2,false),2));
+        //AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, AbstractDungeon.player, new VulnerablePower(p,2,false),2));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, AbstractDungeon.player, new powerMarked(p,p,2),2));
+
         AbstractDungeon.actionManager.addToBottom(
                 new ApplyPowerAction(p, AbstractDungeon.player, new DexterityPower(p,magicNumber),magicNumber));
     }

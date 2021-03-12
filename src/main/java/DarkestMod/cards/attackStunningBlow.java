@@ -53,7 +53,7 @@ public class attackStunningBlow extends AbstractDynamicCard {
 
     private static final int COST = 1;
 
-    private static final int DAMAGE = 6;
+    private static final int DAMAGE = 5;
     private static final int UPGRADE_PLUS_DMG = 3;
 
     // STAT DECLARATION
@@ -62,6 +62,7 @@ public class attackStunningBlow extends AbstractDynamicCard {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseDamage = DAMAGE;
         this.tags.add(CardTags.STRIKE); //for strikes only. Tags for other grouped cards
+        this.isEthereal = true;
     }
 
     // Actions the card should do.
@@ -80,6 +81,7 @@ public class attackStunningBlow extends AbstractDynamicCard {
             upgradeName();
             upgradeDamage(UPGRADE_PLUS_DMG);
             initializeDescription();
+            this.isEthereal = false;
         }
     }
 }

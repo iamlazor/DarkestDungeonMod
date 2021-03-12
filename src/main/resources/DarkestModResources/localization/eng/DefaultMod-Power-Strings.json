@@ -49,7 +49,7 @@
         },
 
         "DarkestMod:HighwayPower": {
-                "NAME": "Highway Power",
+                "NAME": "Highwayman",
                 "DESCRIPTIONS": [
                         "At the start of turn add a Grapeshot to the hand.",
                         " keyword."
@@ -60,6 +60,14 @@
                 "NAME": "Jester",
                 "DESCRIPTIONS": [
                         "All incoming stress is reduced by 1.",
+                        " keyword."
+                ]
+        },
+
+        "DarkestMod:VestalPower": {
+                "NAME": "Vestal",
+                "DESCRIPTIONS": [
+                        "Light is no longer reduced each turn.",
                         " keyword."
                 ]
         },

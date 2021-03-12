@@ -1,43 +1,43 @@
 package DarkestMod.powers;
 
 import DarkestMod.DefaultMod;
+import DarkestMod.cards.afflictFearful;
+import DarkestMod.cards.attackThrowndagger;
 import DarkestMod.util.TextureLoader;
 import basemod.interfaces.CloneablePowerInterface;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
-import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
-import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
-import com.megacrit.cardcrawl.actions.utility.UseCardAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerToRandomEnemyAction;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 
 import static DarkestMod.DefaultMod.makePowerPath;
 
-public class powerMarked extends AbstractPower implements CloneablePowerInterface {
-    public AbstractCreature source;
+public class BountyPower extends AbstractPower implements CloneablePowerInterface {
 
-    public static final String POWER_ID = DefaultMod.makeID("PowerMarked");
+    public static final String POWER_ID = DefaultMod.makeID("BountyPower");
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
-    private static final Texture tex84 = TextureLoader.getTexture(makePowerPath("marked_power84.png"));
-    private static final Texture tex32 = TextureLoader.getTexture(makePowerPath("marked_power32.png"));
+    private static final Texture tex84 = TextureLoader.getTexture(makePowerPath("bounty_power84.png"));
+    private static final Texture tex32 = TextureLoader.getTexture(makePowerPath("bounty_power32.png"));
 
-    public powerMarked(AbstractCreature owner, AbstractCreature source, int amount){
+    public BountyPower(AbstractCreature owner, int afflictionAmount) {
         this.name = NAME;
-        this.ID = "PowerMarked";
+        this.ID = "BountyPower";
 
         this.owner = owner;
-        this.source = source;
-        this.amount = amount;
-        this.type = PowerType.DEBUFF;
+        this.amount = afflictionAmount;
+        this.type = PowerType.BUFF;
         this.isTurnBased = false;
+
 
         this.region128 = new TextureAtlas.AtlasRegion(tex84, 0, 0, 84, 84);
         this.region48 = new TextureAtlas.AtlasRegion(tex32, 0, 0, 32, 32);
@@ -45,23 +45,21 @@ public class powerMarked extends AbstractPower implements CloneablePowerInterfac
         this.updateDescription();
     }
 
-
-    public float atDamageReceive(float damage, DamageInfo.DamageType type) {
-        if (type == DamageInfo.DamageType.NORMAL) {
-         return this.owner != null && !this.owner.isPlayer ? damage * 2.0F : damage * 2.0F;
+    public void atStartOfTurn() {
+        if (!AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
+            this.flash();
+            for (int i = 0; i < this.amount; ++i) {
+                AbstractDungeon.actionManager.addToBottom(
+                        new ApplyPowerToRandomEnemyAction(AbstractDungeon.player, new powerMarked(AbstractDungeon.player,AbstractDungeon.player,1)));
             }
-            return damage;
         }
-
-    public int onAttacked(DamageInfo info, int damageAmount) {
-
-      if(this.owner.currentHealth >0  && damageAmount > 0 && info.owner != null && this.amount>=0){
-          this.flash();
-          AbstractDungeon.actionManager.addToBottom(
-                  new ReducePowerAction(this.owner, this.owner, "PowerMarked", 1));
-      }
-        return damageAmount;
     }
+
+    public void stackPower(int stackAmount) {
+        this.fontScale = 8.0F;
+        this.amount += stackAmount;
+    }
+
 
     @Override
     public void updateDescription() {
@@ -72,9 +70,8 @@ public class powerMarked extends AbstractPower implements CloneablePowerInterfac
         }
     }
 
-
     @Override
     public AbstractPower makeCopy() {
-        return new powerMarked(owner,source, amount);
+        return new BountyPower(owner, amount);
     }
 }

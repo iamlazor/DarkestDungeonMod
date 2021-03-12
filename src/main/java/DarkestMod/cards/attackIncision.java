@@ -62,7 +62,7 @@ public class attackIncision extends AbstractDynamicCard {
     public attackIncision() { // public attackNailStrike() - This one and the one right under the imports are the most important ones, don't forget them
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseDamage = DAMAGE;
-        baseMagicNumber = 10;
+        baseMagicNumber = 8;
         magicNumber = baseMagicNumber;
     }
 

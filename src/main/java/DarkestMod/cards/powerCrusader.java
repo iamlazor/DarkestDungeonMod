@@ -24,24 +24,25 @@ public class powerCrusader extends AbstractDynamicCard {
     public static final CardColor COLOR = TheDefault.Enums.COLOR_GRAY;
 
     private static final int COST = 1;
-    private static final int UPGRADE_MAGIC = 1;
+    private static final int BlockAMT = 3;
+    private static final int UPGRADE_BlockAMT = 1;
 
     public powerCrusader() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-
+        magicNumber = baseMagicNumber = BlockAMT;
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom
-                (new ApplyPowerAction(p, p, new CrusaderPower(p,3), 1));
+                (new ApplyPowerAction(p, p, new CrusaderPower(p,this.BlockAMT), this.BlockAMT));
     }
 
     @Override
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeMagicNumber(UPGRADE_MAGIC);
+            upgradeMagicNumber(UPGRADE_BlockAMT);
             initializeDescription();
         }
     }
