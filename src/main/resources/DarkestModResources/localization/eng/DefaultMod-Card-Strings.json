@@ -11,7 +11,8 @@
 
   "DarkestMod:Barbaric YAWP": {
     "NAME": "Barbaric YAWP",
-    "DESCRIPTION": "If the target intends to attack apply darkestmod:Stunned else gain 2 Strength. Exhaust."
+    "DESCRIPTION": "If the target intends to attack apply Stunned else gain 2 Strength. Exhaust.",
+    "UPGRADE_DESCRIPTION": "If the target intends to attack apply Stunned else gain 2 Strength. "
   },
 
   "DarkestMod:Beast Bile": {
@@ -77,9 +78,6 @@
     "DESCRIPTION": "Remove !M! Stress and +5 darkestmod:Light."
   },
 
-
-
-
   "DarkestMod:Noxious Blast": {
     "NAME": "Noxious Blast",
     "DESCRIPTION": "Trigger darkestmod:Blight !M! times"
@@ -92,7 +90,8 @@
 
   "DarkestMod:Plague Grenade": {
     "NAME": "Plague Grenade",
-    "DESCRIPTION": "Trigger darkestmod:Blight"
+    "DESCRIPTION": "Trigger darkestmod:Blight",
+    "UPGRADE_DESCRIPTION":"Trigger darkestmod:Blight and draw a card"
   },
 
   "DarkestMod:Protect Me": {
@@ -158,7 +157,8 @@
 
   "DarkestMod:Weakening Curse": {
     "NAME": "Weakening Curse",
-    "DESCRIPTION": "Gain 5 stress and target enemy loses 2 Strength and is darkestmod:Marked. Exhaust. "
+    "DESCRIPTION": "Gain 5 stress and target enemy loses 2 Strength and is darkestmod:Marked. Exhaust. ",
+    "UPGRADE_DESCRIPTION":"Gain 5 stress and target enemy loses 2 Strength and is darkestmod:Marked."
   },
 
   "DarkestMod:Withstand": {
@@ -222,8 +222,8 @@
   },
 
   "DarkestMod:DogBiscuit": {
-    "NAME": "Dog Biscuit",
-    "DESCRIPTION": "!M! stress and gain 3 temporary HP."
+    "NAME": "Dog Treat",
+    "DESCRIPTION": "!M! stress and gain 3 temporary Health. Exhaust."
   },
   "DarkestMod:Finale": {
     "NAME": "Finale",
@@ -277,7 +277,8 @@
 
   "DarkestMod:Point Blank Shot": {
     "NAME": "Point Blank Shot",
-    "DESCRIPTION": "Deal !D! damage. Exhaust."
+    "DESCRIPTION": "Deal !D! damage. Exhaust.",
+    "UPGRADE_DESCRIPTION":"Deal !D! damage."
   },
 
   "DarkestMod:Impale": {
@@ -311,7 +312,8 @@
   },
   "DarkestMod:Stunning Blow": {
     "NAME": "Stunning Blow",
-    "DESCRIPTION": "Deal !D! damage and if the enemy intended to attack darkestmod:Stun ."
+    "DESCRIPTION": "Deal !D! damage and if the enemy intended to attack darkestmod:Stun . Ethereal.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage and if the enemy intended to attack darkestmod:Stun."
   },
 
   "DarkestMod:Sniper Shot": {
@@ -376,7 +378,7 @@
 
   "DarkestMod:Houndmaster": {
     "NAME": "Houndmaster",
-    "DESCRIPTION": "Gain 8 temporary health and shuffle a Dog Biscuit into the deck each turn."
+    "DESCRIPTION": "Gain 8 temporary health and shuffle a Dog Treat into the deck each turn."
   },
 
   "DarkestMod:Jester": {
@@ -406,7 +408,7 @@
 
   "DarkestMod:Sheildbreaker": {
   "NAME": "Sheildbreaker",
-  "DESCRIPTION": "Power Temp Text, Smile"
+  "DESCRIPTION": "Apply !M! Buffer."
 },
 
   "DarkestMod:Vestal": {

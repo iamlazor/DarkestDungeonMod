@@ -22,8 +22,8 @@ public class powerAntiquarian  extends AbstractDynamicCard{
     private static final CardType TYPE = CardType.POWER;
     public static final CardColor COLOR = TheDefault.Enums.COLOR_GRAY;
 
-    private static final int COST = 2;
-
+    private static final int COST = 1;
+    private static final int UPGRADED_COST = 0;
     public powerAntiquarian(){
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         this.cardsToPreview = new skillAntiques();
@@ -42,6 +42,7 @@ public class powerAntiquarian  extends AbstractDynamicCard{
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
+            upgradeBaseCost(UPGRADED_COST);
             initializeDescription();
         }
     }

@@ -53,8 +53,8 @@ public class skillGuardDog extends AbstractDynamicCard {
 
     private static final int COST = 0;
 
-    private static final int BLOCK = 5;
-    private static final int UPGRADE_PLUS_DMG = 2;
+    private static final int BLOCK = 4;
+    private static final int UPGRADE_BLOCK = 2;
 
     // STAT DECLARATION
 
@@ -79,7 +79,7 @@ public class skillGuardDog extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeDamage(UPGRADE_PLUS_DMG);
+            upgradeBlock(UPGRADE_BLOCK);
             initializeDescription();
         }
     }

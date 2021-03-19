@@ -109,16 +109,16 @@ public class TheDefault extends CustomPlayer {
         logger.info("Begin loading starter Deck Strings");
         //starters
 
-        retVal.add(powerVestal.ID);
+
 
         retVal.add(skillProvisions.ID);
         retVal.add(skillProvisions.ID);
-        //retVal.add(skillProvisions.ID);
-        //retVal.add(skillProvisions.ID);
+        retVal.add(skillProvisions.ID);
+        retVal.add(skillProvisions.ID);
         retVal.add(attackShovel.ID);
         retVal.add(attackShovel.ID);
-        //retVal.add(attackShovel.ID);
-        //retVal.add(attackShovel.ID);
+        retVal.add(attackShovel.ID);
+        retVal.add(attackShovel.ID);
 
         retVal.add(attackAbyssalArtillery.ID);
         retVal.add(skillTorch.ID);
@@ -132,6 +132,7 @@ public class TheDefault extends CustomPlayer {
         //retVal.add(powerAbomination.ID);
         //retVal.add(powerAntiquarian.ID);
         //retVal.add(powerHoundmaster.ID);
+        //retVal.add(powerVestal.ID);
         //retVal.add(powerArbalest.ID);
         //retVal.add(powerBountyHunter.ID);
         //retVal.add(powerHighwayman.ID);

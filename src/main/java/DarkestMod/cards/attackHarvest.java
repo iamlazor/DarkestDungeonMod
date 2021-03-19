@@ -9,7 +9,9 @@ import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import DarkestMod.DefaultMod;
 import DarkestMod.characters.TheDefault;
@@ -49,6 +51,9 @@ public class attackHarvest extends AbstractDynamicCard {
     private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.ALL_ENEMY;
 
+    private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
+    public static final String NAME = cardStrings.NAME;
+    public static final String DESCRIPTION = cardStrings.DESCRIPTION;
     // /TEXT DECLARATION/
 
 
@@ -61,8 +66,8 @@ public class attackHarvest extends AbstractDynamicCard {
 
     private static final int DAMAGE = 3;
     private static final int UPGRADE_PLUS_DMG = 2;
-    private static final int BLEED = 7;
-    private static final int UPGRADEBLEED = 5;
+    private static final int BLEED = 5;
+    private static final int UPGRADEBLEED = 3;
 
     // STAT DECLARATION
 

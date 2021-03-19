@@ -7,12 +7,15 @@ import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.*;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import DarkestMod.DefaultMod;
 import DarkestMod.characters.TheDefault;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
 import com.megacrit.cardcrawl.vfx.combat.BiteEffect;
+import com.megacrit.cardcrawl.vfx.combat.HealEffect;
 
 import java.util.Iterator;
 
@@ -47,6 +50,9 @@ public class skillDivineComfort extends AbstractDynamicCard {
 
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.ALL;
+    private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
+    public static final String NAME = cardStrings.NAME;
+    public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 
     // /TEXT DECLARATION/
 
@@ -82,7 +88,7 @@ public class skillDivineComfort extends AbstractDynamicCard {
         while (var3.hasNext()) {
             mo = (AbstractMonster) var3.next();
             if (!mo.isDeadOrEscaped()) {
-                this.addToBot(new VFXAction(new BiteEffect(mo.drawX, mo.drawY), 0.05F));
+                this.addToBot(new VFXAction(new HealEffect(1,1,1), 0.05F));
             }
         }
         var3 = AbstractDungeon.getCurrRoom().monsters.monsters.iterator();

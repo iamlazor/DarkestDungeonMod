@@ -504,7 +504,7 @@ public class DefaultMod implements
         BaseMod.addCard(new skillRainOfSorrows());
         BaseMod.addCard(new skillRedeem());
         BaseMod.addCard(new skillShadowFade());
-        BaseMod.addCard(new skillSerpentSway());
+
         BaseMod.addCard(new skillSnipersMark());
         BaseMod.addCard(new skillTargetWhistle());
         BaseMod.addCard(new skillTrackingShot());
@@ -626,7 +626,6 @@ public class DefaultMod implements
         UnlockTracker.unlockCard(skillRainOfSorrows.ID);
         UnlockTracker.unlockCard(skillRedeem.ID);
         UnlockTracker.unlockCard(skillShadowFade.ID);
-        UnlockTracker.unlockCard(skillSerpentSway.ID);
         UnlockTracker.unlockCard(skillSnipersMark.ID);
         UnlockTracker.unlockCard(skillTargetWhistle.ID);
         UnlockTracker.unlockCard(skillTrackingShot.ID);

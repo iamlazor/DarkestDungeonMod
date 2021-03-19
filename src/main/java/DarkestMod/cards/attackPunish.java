@@ -7,7 +7,9 @@ import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import DarkestMod.DefaultMod;
 import DarkestMod.characters.TheDefault;
@@ -45,7 +47,9 @@ public class attackPunish extends AbstractDynamicCard {
 
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;
-
+    private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
+    public static final String NAME = cardStrings.NAME;
+    public static final String DESCRIPTION = cardStrings.DESCRIPTION;
     // /TEXT DECLARATION/
 
 
@@ -55,12 +59,12 @@ public class attackPunish extends AbstractDynamicCard {
     public static final CardColor COLOR = TheDefault.Enums.COLOR_GRAY;
 
     private static final int COST = 1;
-    private static final int UPGRADED_COST = 0;
+
 
     private static final int DAMAGE = 8;
     private static final int UPGRADE_PLUS_DMG = 4;
-    private static final int BLEED = 8;
-    private static final int UPGRADEBLEED = 3;
+    private static final int BLEED = 3;
+    private static final int UPGRADEBLEED = -1;
 
     // STAT DECLARATION
 
@@ -78,10 +82,10 @@ public class attackPunish extends AbstractDynamicCard {
         AbstractDungeon.actionManager.addToBottom(
                 new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn) ));
         AbstractDungeon.actionManager.addToBottom(
-                new ApplyPowerAction(m, p, new powerBleed(m, p, this.magicNumber), this.magicNumber));
+                new ApplyPowerAction(m, p, new powerBleed(m, p, 8), 8));
 
         AbstractDungeon.actionManager.addToBottom(
-                new ApplyPowerAction(p, p, new powerBleed(p, p, 3), 3));
+                new ApplyPowerAction(p, p, new powerBleed(p, p, this.magicNumber), this.magicNumber));
 
     }
 
@@ -91,7 +95,6 @@ public class attackPunish extends AbstractDynamicCard {
         if (!upgraded) {
             upgradeName();
             upgradeDamage(UPGRADE_PLUS_DMG);
-            upgradeBaseCost(UPGRADED_COST);
             upgradeMagicNumber(UPGRADEBLEED);
             initializeDescription();
         }

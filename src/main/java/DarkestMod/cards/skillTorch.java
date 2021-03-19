@@ -6,7 +6,9 @@ import DarkestMod.powers.powerLight;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static DarkestMod.DefaultMod.makeCardPath;
@@ -18,6 +20,10 @@ public class skillTorch extends AbstractDynamicCard {
 
         private static final CardRarity RARITY = CardRarity.COMMON;
         private static final CardTarget TARGET = CardTarget.SELF;
+    private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
+    public static final String NAME = cardStrings.NAME;
+    public static final String DESCRIPTION = cardStrings.DESCRIPTION;
+
         private static final CardType TYPE = CardType.SKILL;
         public static final CardColor COLOR = TheDefault.Enums.COLOR_GRAY;
 
