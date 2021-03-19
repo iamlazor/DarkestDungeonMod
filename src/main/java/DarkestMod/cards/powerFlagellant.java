@@ -25,8 +25,8 @@ public class powerFlagellant extends AbstractDynamicCard {
     public static final CardColor COLOR = TheDefault.Enums.COLOR_GRAY;
 
     private static final int COST = 1;
-    private static final int MAGIC = 1;
-    private static final int UPGRADE_MAGIC = 1;
+    private static final int MAGIC = 2;
+    private static final int UPGRADE_MAGIC = 2;
 
     public powerFlagellant() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
@@ -36,7 +36,7 @@ public class powerFlagellant extends AbstractDynamicCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(
-                new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new FlagPower(AbstractDungeon.player, 1), 1));
+                new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new FlagPower(AbstractDungeon.player, magicNumber), magicNumber));
     }
 
     @Override

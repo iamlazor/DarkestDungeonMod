@@ -40,7 +40,7 @@
 
   "DarkestMod:Duelists Advance": {
     "NAME": "Duelists Advance",
-    "DESCRIPTION": "Draw !D! cards and !M! Riposte"
+    "DESCRIPTION": "Draw 2 cards and !M! Riposte"
   },
 
   "DarkestMod:Festering Vapours": {
@@ -131,7 +131,8 @@
 
   "DarkestMod:Snipers Mark": {
     "NAME": "Snipers Mark",
-    "DESCRIPTION": "Apply darkestmod:Marked to an enemy"
+    "DESCRIPTION": "Apply darkestmod:Marked to an enemy",
+    "UPGRADE_DESCRIPTION": " Innate. Apply darkestmod:Marked to an enemy. "
   },
 
   "DarkestMod:Endure": {
@@ -141,7 +142,7 @@
 
   "DarkestMod:Target Whistle": {
     "NAME": "Target Whistle",
-    "DESCRIPTION": "Apply darkestmod:Marked to an enemy, next turn draw 2 more cards"
+    "DESCRIPTION": "Apply darkestmod:Marked to an enemy, next turn draw !M! more cards"
   },
 
   "DarkestMod:Torch": {
@@ -333,11 +334,12 @@
 
   "DarkestMod:Abomination": {
     "NAME": "Abomination",
-    "DESCRIPTION": "Even Turns gain 2 Temporary Strength. Odd Turns gain 2 Temporary Dexterity. And gain 2 stress each turn"
+    "DESCRIPTION": "Even Turns gain 2 Temporary Strength. Odd Turns gain 2 Temporary Dexterity. And gain 2 stress each turn",
+    "UPGRADE_DESCRIPTION": "Innate. Even Turns gain 2 Temporary Strength. Odd Turns gain 2 Temporary Dexterity. And gain 2 stress each turn."
   },
   "DarkestMod:Arbalest": {
     "NAME": "Arbalest",
-    "DESCRIPTION": "Whenever darkestmod:Marked is applied also apply Weak"
+    "DESCRIPTION": "Whenever darkestmod:Marked is applied also apply !M! Weak"
   },
 
   "DarkestMod:Antiquarian": {
@@ -353,22 +355,23 @@
 
   "DarkestMod:Crusader": {
     "NAME": "Crusader",
-    "DESCRIPTION": "Every time you play and Attack, gain 3 Block"
+    "DESCRIPTION": "Every time you play and Attack, gain !M! Block"
   },
 
   "DarkestMod:Flagellant": {
     "NAME": "Flagellant",
-    "DESCRIPTION": "Gain 3 Temporary Strength when below 50% HP"
+    "DESCRIPTION": "Gain !M! Temporary Strength when below 50% HP"
   },
 
   "DarkestMod:GraveRobber": {
     "NAME": "Grave Robber",
-    "DESCRIPTION": "Add a Thrown Dagger to the hand each turn"
+    "DESCRIPTION": "At the start of your turn add !M! Thrown Daggers into your hand."
   },
 
   "DarkestMod:Hellion": {
     "NAME": "Hellion",
-    "DESCRIPTION": "whenever you gain Strength add a random Attack card to your hand, it costs 0 this turn."
+    "DESCRIPTION": "Whenever you gain Strength add a random Attack card to your hand, it costs 0.",
+    "UPGRADE_DESCRIPTION":"whenever you gain Strength add 2 random Attack cards to your hand, it costs 0."
   },
 
   "DarkestMod:Highwayman": {
@@ -378,17 +381,17 @@
 
   "DarkestMod:Houndmaster": {
     "NAME": "Houndmaster",
-    "DESCRIPTION": "Gain 8 temporary health and shuffle a Dog Treat into the deck each turn."
+    "DESCRIPTION": "Gain !M! temporary health and shuffle a Dog Treat into the deck each turn."
   },
 
   "DarkestMod:Jester": {
       "NAME": "Jester",
-      "DESCRIPTION": "Reduce stress by 8 and all incoming stress is reduced by 1."
+      "DESCRIPTION": "Reduce stress by !M! and all incoming stress is reduced by 1."
   },
 
   "DarkestMod:Leper": {
     "NAME": "Leper",
-    "DESCRIPTION": "At the start of turn gain 1 Strength for each darkestmod:Debuff ."
+    "DESCRIPTION": "At the start of turn gain !M! Strength for each darkestmod:Debuff ."
   },
 
   "DarkestMod:ManAtArms": {
@@ -398,7 +401,7 @@
 
   "DarkestMod:Occultist": {
     "NAME": "Occultist",
-    "DESCRIPTION": "Apply 3 Bleed, -5 Light, draw 1 more cards a turn "
+    "DESCRIPTION": "Apply 3 Bleed, -5 Light, draw !M! more cards per turn "
   },
 
   "DarkestMod:PlagueDoctor": {

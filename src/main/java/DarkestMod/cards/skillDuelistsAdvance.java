@@ -64,7 +64,7 @@ public class skillDuelistsAdvance extends AbstractDynamicCard {
     private static final int COST = 1;
 
     private static final int DRAW = 2;
-    private static final int UPGRADE_PLUS_DMG = 2;
+    private static final int UPGRADE_COUNTER = 2;
     private static final int COUNTER = 2;
     // STAT DECLARATION
 
@@ -81,7 +81,7 @@ public class skillDuelistsAdvance extends AbstractDynamicCard {
                 new DrawCardAction(p, DRAW));
 
             AbstractDungeon.actionManager.addToBottom(
-                    new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new powerRiposte(AbstractDungeon.player, COUNTER), COUNTER));
+                    new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new powerRiposte(AbstractDungeon.player, magicNumber), magicNumber));
     }
 
     // Upgraded stats.
@@ -89,7 +89,7 @@ public class skillDuelistsAdvance extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeDamage(UPGRADE_PLUS_DMG);
+            upgradeMagicNumber(UPGRADE_COUNTER);
             initializeDescription();
         }
     }

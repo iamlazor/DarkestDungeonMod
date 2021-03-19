@@ -37,7 +37,7 @@ public class powerGraveRobber extends AbstractDynamicCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(
-                new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new GRobberPower(AbstractDungeon.player, 1), 1));
+                new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new GRobberPower(AbstractDungeon.player, magicNumber), magicNumber));
     }
 
     @Override

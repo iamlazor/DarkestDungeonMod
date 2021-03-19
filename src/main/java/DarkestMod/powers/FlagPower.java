@@ -47,9 +47,9 @@ public class FlagPower extends AbstractPower implements CloneablePowerInterface 
         if ((float)AbstractDungeon.player.currentHealth <= (float)AbstractDungeon.player.maxHealth * 0.5F && AbstractDungeon.player.currentHealth > 0) {
             this.flash();
             AbstractDungeon.actionManager.addToBottom(
-                    new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new StrengthPower(AbstractDungeon.player, 3), 3));
+                    new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new StrengthPower(AbstractDungeon.player, this.amount), this.amount));
             AbstractDungeon.actionManager.addToBottom(
-                    new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new LoseStrengthPower(AbstractDungeon.player, 3), 3));
+                    new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new LoseStrengthPower(AbstractDungeon.player, this.amount), this.amount));
         }
     }
 

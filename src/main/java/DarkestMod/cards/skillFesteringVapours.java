@@ -96,7 +96,7 @@ public class skillFesteringVapours extends AbstractDynamicCard {
    public void upgrade () {
          if (!upgraded) {
             upgradeName();
-            this.upgradeDefaultSecondMagicNumber(UPGRADE_PLUS_BLIGHT);
+            upgradeMagicNumber(UPGRADE_PLUS_BLIGHT);
             initializeDescription();
          }
     }

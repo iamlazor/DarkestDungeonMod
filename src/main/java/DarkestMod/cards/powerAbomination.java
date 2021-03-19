@@ -20,8 +20,15 @@ public class powerAbomination extends AbstractDynamicCard {
     public static final String ID =  DefaultMod.makeID("Abomination");
     public static final String IMG = makeCardPath("powerTheAbomination.png");
 
+
     private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.SELF;
+
+    private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
+    public static final String NAME = cardStrings.NAME;
+    public static final String DESCRIPTION = cardStrings.DESCRIPTION;
+    public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
+
     private static final CardType TYPE = CardType.POWER;
     public static final CardColor COLOR = TheDefault.Enums.COLOR_GRAY;
 
@@ -42,6 +49,8 @@ public class powerAbomination extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
+            this.isInnate = true;
+            rawDescription = (UPGRADE_DESCRIPTION);
             initializeDescription();
         }
     }

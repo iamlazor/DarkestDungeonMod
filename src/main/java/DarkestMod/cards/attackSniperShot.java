@@ -58,8 +58,8 @@ public class attackSniperShot extends AbstractDynamicCard {
 
     private static final int COST = 1;
 
-    private static final int UPGRADE_PLUS = 2;
-
+    private static final int UPGRADE_DAMAGE = 3;
+    private static final int MARKED = 1;
     private static final int DAMAGE = 4;
 
 
@@ -68,7 +68,7 @@ public class attackSniperShot extends AbstractDynamicCard {
     public attackSniperShot() { // public attackNailStrike() - This one and the one right under the imports are the most important ones, don't forget them
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseDamage = DAMAGE;
-        magicNumber = 1;
+        magicNumber = baseMagicNumber = MARKED;
     }
 
     // Actions the card should do.
@@ -85,7 +85,7 @@ public class attackSniperShot extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeMagicNumber(UPGRADE_PLUS);
+            upgradeDamage(UPGRADE_DAMAGE);
             initializeDescription();
         }
     }

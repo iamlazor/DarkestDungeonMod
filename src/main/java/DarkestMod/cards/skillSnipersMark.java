@@ -49,6 +49,7 @@ public class skillSnipersMark extends AbstractDynamicCard {
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
+    public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
 
     // /TEXT DECLARATION/
 
@@ -60,7 +61,6 @@ public class skillSnipersMark extends AbstractDynamicCard {
 
     private static final int COST = 0;
     private static final int MARKED = 1;
-
 
 
     public skillSnipersMark() { // public attackNailStrike() - This one and the one right under the imports are the most important ones, don't forget them
@@ -82,6 +82,7 @@ public class skillSnipersMark extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
+            rawDescription = (UPGRADE_DESCRIPTION);
             this.isInnate = true;
             initializeDescription();
         }

@@ -24,7 +24,9 @@ public class powerJester extends AbstractDynamicCard{
     public static final CardColor COLOR = TheDefault.Enums.COLOR_GRAY;
 
     private static final int COST = 1;
+    private static final int UPGRADEDCOST = 0;
     private static final int STRESS_GEN = -8;
+    private static final int UPGRADE_STRESS = -4;
 
     public powerJester(){
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
@@ -38,13 +40,15 @@ public class powerJester extends AbstractDynamicCard{
         AbstractDungeon.actionManager.addToBottom(
                 new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new powerStress(AbstractDungeon.player,magicNumber),magicNumber));
         AbstractDungeon.actionManager.addToBottom(
-                new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new JesterPower(AbstractDungeon.player, 0), 0));
+                new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new JesterPower(AbstractDungeon.player, 1), 1));
     }
 
     @Override
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
+            upgradeBaseCost(UPGRADEDCOST);
+            upgradeMagicNumber(UPGRADE_STRESS);
             initializeDescription();
         }
     }

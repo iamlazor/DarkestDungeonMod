@@ -30,8 +30,8 @@ public class powerHoundmaster extends AbstractDynamicCard {
     public static final CardColor COLOR = TheDefault.Enums.COLOR_GRAY;
 
     private static final int COST = 1;
-    private static final int MAGIC = 1;
-    private static final int UPGRADE_MAGIC = 1;
+    private static final int MAGIC = 8;
+    private static final int UPGRADE_MAGIC = 4;
 
     public powerHoundmaster() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
@@ -44,7 +44,7 @@ public class powerHoundmaster extends AbstractDynamicCard {
         AbstractDungeon.actionManager.addToBottom(
                 new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new HoundPower(AbstractDungeon.player, 1), 1));
         AbstractDungeon.actionManager.addToBottom(
-                new AddTemporaryHPAction(AbstractDungeon.player, AbstractDungeon.player, 8));
+                new AddTemporaryHPAction(AbstractDungeon.player, AbstractDungeon.player, magicNumber));
     }
 
     @Override
