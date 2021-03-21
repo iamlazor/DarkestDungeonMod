@@ -1,23 +1,24 @@
 package DarkestMod.cards;
 
-import DarkestMod.patches.CardTagEnum;
+import DarkestMod.powers.powerBleed;
+import DarkestMod.powers.powerRabies;
+import DarkestMod.powers.powerRedPlague;
+import DarkestMod.powers.powerStress;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
+import com.megacrit.cardcrawl.actions.common.GainBlockAction;
+import com.megacrit.cardcrawl.cards.CardQueueItem;
 import com.megacrit.cardcrawl.cards.DamageInfo;
-import com.megacrit.cardcrawl.cards.curses.Doubt;
-import com.megacrit.cardcrawl.cards.status.Wound;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import DarkestMod.DefaultMod;
 import DarkestMod.characters.TheDefault;
 
 import static DarkestMod.DefaultMod.makeCardPath;
 
-public class attackChop extends AbstractDynamicCard {
+public class curseRedPlague extends AbstractDynamicCard {
 
     /*
      * "Hey, I wanna make a bunch of cards now." - You, probably.
@@ -39,56 +40,52 @@ public class attackChop extends AbstractDynamicCard {
 
     // TEXT DECLARATION
 
-    public static final String ID = DefaultMod.makeID("Chop"); // DefaultMod.makeID("attackNailStrike");
+    public static final String ID = DefaultMod.makeID("CurseRedPlague"); // DefaultMod.makeID("attackNailStrike");
 
-    public static final String IMG = makeCardPath("attackChop.png");// "public static final String IMG = makeCardPath("attackNailStrike.png");
+    public static final String IMG = makeCardPath("curseTheRedPlague.png");// "public static final String IMG = makeCardPath("attackNailStrike.png");
     // This does mean that you will need to have an image with the same NAME as the card in your image folder for it to run correctly.
 
-    private static final CardRarity RARITY = CardRarity.COMMON;
-    private static final CardTarget TARGET = CardTarget.ENEMY;
+    private static final CardRarity RARITY = CardRarity.CURSE;
+    private static final CardTarget TARGET = CardTarget.NONE;
 
-    private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-    public static final String NAME = cardStrings.NAME;
-    public static final String DESCRIPTION = cardStrings.DESCRIPTION;
     // /TEXT DECLARATION/
 
 
     // STAT DECLARATION
 
-    private static final CardType TYPE = CardType.ATTACK;
-    public static final CardColor COLOR = TheDefault.Enums.COLOR_GRAY;
+    private static final CardType TYPE = CardType.CURSE;
+    public static final CardColor COLOR = CardColor.CURSE;
+    private static final int COST = -2;
 
-    private static final int COST = 1;
-
-
-    private static final int DAMAGE = 12;
-    private static final int UPGRADE_PLUS_DMG = 4;
 
     // STAT DECLARATION
 
-    public attackChop() { // public attackNailStrike() - This one and the one right under the imports are the most important ones, don't forget them
+    public curseRedPlague() { // public attackNailStrike() - This one and the one right under the imports are the most important ones, don't forget them
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        baseDamage = DAMAGE;
-        this.cardsToPreview = new curseCreepingCough();
-        //for strikes only. Tags for other grouped cards
+
+
     }
 
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(
-                new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
-        AbstractDungeon.actionManager.addToBottom(
-        new MakeTempCardInDrawPileAction(new curseCreepingCough(), 1, true, true));
+        if (this.dontTriggerOnUseCard) {
+            AbstractDungeon.actionManager.addToBottom(
+                    new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new powerStress(AbstractDungeon.player, 4), 4));
+            AbstractDungeon.actionManager.addToBottom(
+                    new ApplyPowerAction(p, p, new powerBleed(p, p, 3), 3));
+            AbstractDungeon.actionManager.addToBottom(
+                    new ApplyPowerAction(p, p, new powerRedPlague(p)));
+        }
+    }
+
+    public void triggerOnEndOfTurnForPlayingCard() {
+        this.dontTriggerOnUseCard = true;
+        AbstractDungeon.actionManager.cardQueue.add(new CardQueueItem(this, true));
     }
 
     // Upgraded stats.
     @Override
     public void upgrade() {
-        if (!upgraded) {
-            upgradeName();
-            upgradeDamage(UPGRADE_PLUS_DMG);
-            initializeDescription();
-        }
     }
 }

@@ -434,7 +434,14 @@ public class DefaultMod implements
         // Don't delete these default cards yet. You need 1 of each type and rarity (technically) for your game not to crash
         // when generating card rewards/shop screen items.
 
+        //Curses
+        BaseMod.addCard(new curseRabies());
+        BaseMod.addCard(new curseKleptomaniac());
+        BaseMod.addCard(new curseCreepingCough());
+        BaseMod.addCard(new curseRedPlague());
+        BaseMod.addCard(new curseTheRuns());
         //Starters
+
         BaseMod.addCard(new attackShovel());
         BaseMod.addCard(new skillProvisions());
         BaseMod.addCard(new skillTorch());

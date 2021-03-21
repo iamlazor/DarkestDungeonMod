@@ -144,7 +144,7 @@ public class TheDefault extends CustomPlayer {
 
 
         //retVal.add(AfflictionTemp.ID);
-        //retVal.add(attackChop.ID);|
+        retVal.add(attackChop.ID);
         //retVal.add(attackPickToTheFace.ID);
        // retVal.add(attackRampart.ID);
         //retVal.add(attackPunish.ID);

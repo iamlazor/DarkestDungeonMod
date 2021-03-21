@@ -199,6 +199,29 @@
                         " NL At -7  gain +1 Strength & +1 Vulnerable per turn."
 
                 ]
+        },
+        "DarkestMod:CoughPower": {
+                "NAME": "Creeping Cough",
+                "DESCRIPTIONS": [
+                        "Your next attack does 4 less damage."
+                ]
+        },
+        "DarkestMod:RunsPower": {
+                "NAME": "The Runs",
+                "DESCRIPTIONS": [
+                        "You lose 3 Max HP."
+                ]
+        },
+        "DarkestMod:RabiesPower": {
+                "NAME": "Rabies",
+                "DESCRIPTIONS": [
+                        "When applied gain 2 Strength and lose 2 Dexterity."
+                ]
+        },
+        "DarkestMod:RedPlaguePower": {
+                "NAME": "The Red Plague",
+                "DESCRIPTIONS": [
+                        "When applied gain 3 Bleed and 4 Stress."
+                ]
         }
-
 }

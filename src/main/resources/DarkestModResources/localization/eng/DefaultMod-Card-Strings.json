@@ -205,7 +205,7 @@
 
   "DarkestMod:Chop": {
     "NAME": "Chop",
-    "DESCRIPTION": "Deal !D! damage. Shuffle a Doubt into your discard pile."
+    "DESCRIPTION": "Deal !D! damage. Shuffle a Creeping Cough into your discard pile."
   },
 
   "DarkestMod:Collect Bounty": {
@@ -484,6 +484,31 @@
   "DarkestMod:Vigorous": {
     "NAME": "Vigorous",
     "DESCRIPTION": "Unplayable. NL At the end of turn Heal for 50 and then Exhaust."
+  },
+
+
+  "DarkestMod:CurseRabies": {
+    "NAME": "Rabies",
+    "DESCRIPTION": "Unplayable. NL At the end of turn become diseased with Rabies."
+  },
+  "DarkestMod:CurseKleptomaniac": {
+    "NAME": "Kleptomaniac",
+    "DESCRIPTION": "Unplayable. NL At the end of turn Exhaust a random card from your hand and Lose 20 Gold."
+  },
+
+  "DarkestMod:CurseCreepingCough": {
+  "NAME": "Creeping Cough",
+  "DESCRIPTION": "Unplayable. NL At the end of turn become diseased with the Creeping Cough."
+},
+
+  "DarkestMod:CurseRedPlague": {
+    "NAME": "The Red Plague",
+    "DESCRIPTION": "Unplayable. NL At the end of turn become diseased with The Red Plague."
+  },
+
+  "DarkestMod:CurseTheRuns": {
+    "NAME": "The Runs",
+    "DESCRIPTION": "Unplayable. NL At the end of turn become diseased with The Runs."
   }
 
 }
