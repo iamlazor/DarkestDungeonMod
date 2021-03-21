@@ -27,12 +27,12 @@ public class powerTracking extends AbstractPower implements CloneablePowerInterf
     private static final Texture tex84 = TextureLoader.getTexture(makePowerPath("tracking_power84.png"));
     private static final Texture tex32 = TextureLoader.getTexture(makePowerPath("tracking_power32.png"));
 
-    public powerTracking(AbstractCreature owner, int afflictionAmount) {
+    public powerTracking(AbstractCreature owner, int amount) {
         this.name = NAME;
         this.ID = "Tracking";
 
         this.owner = owner;
-        this.amount = afflictionAmount;
+        this.amount = amount;
         this.type = PowerType.BUFF;
         this.isTurnBased = false;
 
@@ -52,17 +52,13 @@ public class powerTracking extends AbstractPower implements CloneablePowerInterf
     public void onUseCard(AbstractCard card, UseCardAction action) {
         if (card.type == AbstractCard.CardType.ATTACK) {
             this.flash();
-            this.addToBot(new LoseHPAction(this.owner, (AbstractCreature) null, this.amount));
+            this.addToBot(new LoseHPAction(this.owner, null, this.amount));
         }
     }
 
     @Override
     public void updateDescription() {
-        if (this.owner != null && !this.owner.isPlayer) {
-            this.description = DESCRIPTIONS[2] + this.amount + DESCRIPTIONS[1];
-        } else {
-            this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
-        }
+        this.description = (DESCRIPTIONS[0]);
     }
 
     @Override

@@ -42,8 +42,6 @@ public class AbomPower extends AbstractPower implements CloneablePowerInterface 
 
     public void atStartOfTurn() {
         super.atStartOfTurn();
-        AbstractDungeon.actionManager.addToBottom(
-                new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new powerStress(AbstractDungeon.player, 2), 2));
         if (this.amount == 1) {
             AbstractDungeon.actionManager.addToBottom(
                     new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new StrengthPower(AbstractDungeon.player, 2), 2));
@@ -62,11 +60,7 @@ public class AbomPower extends AbstractPower implements CloneablePowerInterface 
 
     @Override
     public void updateDescription() {
-        if (this.owner != null && !this.owner.isPlayer) {
-            this.description = DESCRIPTIONS[2] + this.amount + DESCRIPTIONS[1];
-        } else {
-            this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
-        }
+        this.description = (DESCRIPTIONS[0]);
     }
 
     @Override

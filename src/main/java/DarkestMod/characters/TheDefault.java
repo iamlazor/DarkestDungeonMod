@@ -124,6 +124,8 @@ public class TheDefault extends CustomPlayer {
         retVal.add(skillTorch.ID);
 
         //tests
+        //retVal.add(afflictFearful.ID);
+
         //retVal.add(powerManAtArms.ID);
         //retVal.add(powerLeper.ID);
         //retVal.add(powerGraveRobber.ID);
@@ -215,13 +217,13 @@ public class TheDefault extends CustomPlayer {
         //retVal.add(PlaceholderRelic.ID);
         //retVal.add(PlaceholderRelic2.ID);
         //retVal.add(DefaultClickableRelic.ID);
-        retVal.add(LightRelic.ID);
+        //retVal.add(LightRelic.ID);
         retVal.add(stressRelic.ID);
 
         //UnlockTracker.markRelicAsSeen(PlaceholderRelic.ID);
         //UnlockTracker.markRelicAsSeen(PlaceholderRelic2.ID);
         //UnlockTracker.markRelicAsSeen(DefaultClickableRelic.ID);
-        UnlockTracker.markRelicAsSeen(LightRelic.ID);
+        //UnlockTracker.markRelicAsSeen(LightRelic.ID);
         UnlockTracker.markRelicAsSeen(stressRelic.ID);
 
         return retVal;

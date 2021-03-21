@@ -9,7 +9,9 @@ import basemod.interfaces.CloneablePowerInterface;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.evacipated.cardcrawl.mod.stslib.actions.tempHp.AddTemporaryHPAction;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
+import com.megacrit.cardcrawl.actions.unique.AddCardToDeckAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -51,7 +53,7 @@ public class HoundPower extends AbstractPower implements CloneablePowerInterface
             this.flash();
             for (int i = 0; i < this.amount; ++i) {
                 AbstractDungeon.actionManager.addToBottom(
-                        new MakeTempCardInHandAction(new skillDogBiscuit(), 1));
+                        new MakeTempCardInDrawPileAction(new skillDogBiscuit(), 1, true, true));
             }
         }
     }
@@ -64,13 +66,8 @@ public class HoundPower extends AbstractPower implements CloneablePowerInterface
 
     @Override
     public void updateDescription() {
-        if (this.owner != null && !this.owner.isPlayer) {
-            this.description = DESCRIPTIONS[2] + this.amount + DESCRIPTIONS[1];
-        } else {
-            this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
-        }
+        this.description = (DESCRIPTIONS[0]);
     }
-
     @Override
     public AbstractPower makeCopy() {
         return new HoundPower(owner, amount);

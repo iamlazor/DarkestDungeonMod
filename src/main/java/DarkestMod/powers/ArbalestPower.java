@@ -27,7 +27,7 @@ import static DarkestMod.DefaultMod.makePowerPath;
 
 public class ArbalestPower extends AbstractPower implements CloneablePowerInterface {
 
-    public static final String POWER_ID = DefaultMod.makeID("JesterPower");
+    public static final String POWER_ID = DefaultMod.makeID("ArbalestPower");
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
@@ -63,11 +63,7 @@ public class ArbalestPower extends AbstractPower implements CloneablePowerInterf
 
     @Override
     public void updateDescription() {
-        if (this.owner != null && !this.owner.isPlayer) {
-            this.description = DESCRIPTIONS[2] + this.amount + DESCRIPTIONS[1];
-        } else {
-            this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
-        }
+        description = (DESCRIPTIONS[0] + amount + DESCRIPTIONS[1]);
     }
 
     @Override

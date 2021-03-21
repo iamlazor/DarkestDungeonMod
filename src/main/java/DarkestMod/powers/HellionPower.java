@@ -29,7 +29,7 @@ import static DarkestMod.DefaultMod.makePowerPath;
 
 public class HellionPower extends AbstractPower implements CloneablePowerInterface {
 
-    public static final String POWER_ID = DefaultMod.makeID("JesterPower");
+    public static final String POWER_ID = DefaultMod.makeID("HellionPower");
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
@@ -39,7 +39,7 @@ public class HellionPower extends AbstractPower implements CloneablePowerInterfa
 
     public HellionPower(AbstractCreature owner, int afflictionAmount) {
         this.name = NAME;
-        this.ID = POWER_ID;
+        this.ID = "HellionPower";
 
         this.owner = owner;
         this.amount = afflictionAmount;
@@ -71,14 +71,9 @@ public class HellionPower extends AbstractPower implements CloneablePowerInterfa
         this.amount += stackAmount;
     }
 
-
     @Override
     public void updateDescription() {
-        if (this.owner != null && !this.owner.isPlayer) {
-            this.description = DESCRIPTIONS[2] + this.amount + DESCRIPTIONS[1];
-        } else {
-            this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
-        }
+        this.description = (DESCRIPTIONS[0]);
     }
 
     @Override

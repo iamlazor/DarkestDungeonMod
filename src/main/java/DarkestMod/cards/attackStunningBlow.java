@@ -86,10 +86,9 @@ public class attackStunningBlow extends AbstractDynamicCard {
         if (!upgraded) {
             upgradeName();
             upgradeDamage(UPGRADE_PLUS_DMG);
-            initializeDescription();
             rawDescription = (UPGRADE_DESCRIPTION);
             this.isEthereal = false;
-
+            initializeDescription();
         }
     }
 }

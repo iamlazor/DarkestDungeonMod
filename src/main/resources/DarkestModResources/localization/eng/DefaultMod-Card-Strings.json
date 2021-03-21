@@ -1,17 +1,18 @@
 {
   "DarkestMod:Absolution": {
     "NAME": "Absolution",
-    "DESCRIPTION": "Heal for !M! and remove 8 darkestmod:Stress. Exhaust."
+    "DESCRIPTION": "Heal for !M! and remove 8 darkestmod:Stress. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Heal for !M! and remove 12 darkestmod:Stress. NL Exhaust."
   },
 
   "DarkestMod:Antiques": {
     "NAME": "Antiques",
-    "DESCRIPTION": "Gain 10 Gold. Exhaust"
+    "DESCRIPTION": "Gain 10 Gold. NL Exhaust"
   },
 
   "DarkestMod:Barbaric YAWP": {
     "NAME": "Barbaric YAWP",
-    "DESCRIPTION": "If the target intends to attack apply Stunned else gain 2 Strength. Exhaust.",
+    "DESCRIPTION": "If the target intends to attack apply Stunned else gain 2 Strength. Nl Exhaust.",
     "UPGRADE_DESCRIPTION": "If the target intends to attack apply Stunned else gain 2 Strength. "
   },
 
@@ -26,12 +27,12 @@
   },
   "DarkestMod:BulwarkSkill": {
     "NAME": "Bulwark of Faith",
-    "DESCRIPTION": "Apply !B! block this turn and !M! block next turn. Also gain !M! darkestmod:Light"
+    "DESCRIPTION": "Apply !B! block this turn and !M! block next turn."
   },
 
   "DarkestMod:Defender": {
     "NAME": "Defender",
-    "DESCRIPTION": "Apply !M! Plated Armour and !M! Riposte"
+    "DESCRIPTION": "Apply !M! Plated Armour and !M! darkestmod:Riposte "
   },
   "DarkestMod:Divine Comfort": {
     "NAME": "Divine Comfort",
@@ -40,7 +41,7 @@
 
   "DarkestMod:Duelists Advance": {
     "NAME": "Duelists Advance",
-    "DESCRIPTION": "Draw 2 cards and !M! Riposte"
+    "DESCRIPTION": "Draw 2 cards and !M! darkestmod:Riposte "
   },
 
   "DarkestMod:Festering Vapours": {
@@ -126,13 +127,13 @@
 
   "DarkestMod:Serpent Sway": {
     "NAME": "Serpent Sway",
-    "DESCRIPTION": "Apply !M! Buffer. Exhaust."
+    "DESCRIPTION": "Apply !M! darkestmod:Buffer. NL Exhaust."
   },
 
   "DarkestMod:Snipers Mark": {
     "NAME": "Snipers Mark",
     "DESCRIPTION": "Apply darkestmod:Marked to an enemy",
-    "UPGRADE_DESCRIPTION": " Innate. Apply darkestmod:Marked to an enemy. "
+    "UPGRADE_DESCRIPTION": " Innate. NL Apply darkestmod:Marked to an enemy. "
   },
 
   "DarkestMod:Endure": {
@@ -158,23 +159,23 @@
 
   "DarkestMod:Weakening Curse": {
     "NAME": "Weakening Curse",
-    "DESCRIPTION": "Gain 5 stress and target enemy loses 2 Strength and is darkestmod:Marked. Exhaust. ",
+    "DESCRIPTION": "Gain 5 stress and target enemy loses 2 Strength and is darkestmod:Marked. NL Exhaust. ",
     "UPGRADE_DESCRIPTION":"Gain 5 stress and target enemy loses 2 Strength and is darkestmod:Marked."
   },
 
   "DarkestMod:Withstand": {
     "NAME": "Withstand",
-    "DESCRIPTION": "Apply 2 darkestmod:Marked to yourself and gain !M! Dexterity. Exhaust."
+    "DESCRIPTION": "Apply 2 darkestmod:Marked to yourself and gain !M! Dexterity. NL Exhaust."
   },
 
   "DarkestMod:Wyrd Reconstruction": {
     "NAME": "Wyrd Reconstruction",
-    "DESCRIPTION": "Gain 3 darkestmod:Bleed and Heal between 0 & 12. Exhaust"
+    "DESCRIPTION": "Gain 3 darkestmod:Bleed and Heal between 0 & 12. NL Exhaust"
   },
 
   "DarkestMod:Zealous Accusation": {
     "NAME": "Zealous Accusation",
-    "DESCRIPTION": "darkestmod:Stun all enemies. Exhaust."
+    "DESCRIPTION": "darkestmod:Stun all enemies. NL Exhaust."
   },
 
   "DarkestMod:attackPoisonTest": {
@@ -224,7 +225,7 @@
 
   "DarkestMod:DogBiscuit": {
     "NAME": "Dog Treat",
-    "DESCRIPTION": "!M! stress and gain 3 temporary Health. Exhaust."
+    "DESCRIPTION": "!M! stress and gain 3 temporary Health. NL Exhaust."
   },
   "DarkestMod:Finale": {
     "NAME": "Finale",
@@ -238,7 +239,7 @@
 
   "DarkestMod:GrapeshotBlast": {
     "NAME": "Grapeshot Blast",
-    "DESCRIPTION": "Deal !D! damage to all enemies. Exhaust"
+    "DESCRIPTION": "Deal !D! damage to all enemies. NL Exhaust"
   },
   "DarkestMod:Hound's Harry": {
     "NAME": "Hound's Harry",
@@ -278,7 +279,7 @@
 
   "DarkestMod:Point Blank Shot": {
     "NAME": "Point Blank Shot",
-    "DESCRIPTION": "Deal !D! damage. Exhaust.",
+    "DESCRIPTION": "Deal !D! damage. NL Exhaust.",
     "UPGRADE_DESCRIPTION":"Deal !D! damage."
   },
 
@@ -313,7 +314,7 @@
   },
   "DarkestMod:Stunning Blow": {
     "NAME": "Stunning Blow",
-    "DESCRIPTION": "Deal !D! damage and if the enemy intended to attack darkestmod:Stun . Ethereal.",
+    "DESCRIPTION": "Deal !D! damage and if the enemy intended to attack darkestmod:Stun. NL Ethereal.",
     "UPGRADE_DESCRIPTION": "Deal !D! damage and if the enemy intended to attack darkestmod:Stun."
   },
 
@@ -324,7 +325,7 @@
 
   "DarkestMod:ThrownDagger": {
     "NAME": "Thrown Dagger",
-    "DESCRIPTION": "Deal !D! damage and !M! darkestmod:Bleed to the enemy. Exhaust"
+    "DESCRIPTION": "Deal !D! damage and !M! darkestmod:Bleed to the enemy. NL Exhaust"
   },
 
   "DarkestMod:WickedHack": {
@@ -334,8 +335,8 @@
 
   "DarkestMod:Abomination": {
     "NAME": "Abomination",
-    "DESCRIPTION": "Even Turns gain 2 Temporary Strength. Odd Turns gain 2 Temporary Dexterity. And gain 2 stress each turn",
-    "UPGRADE_DESCRIPTION": "Innate. Even Turns gain 2 Temporary Strength. Odd Turns gain 2 Temporary Dexterity. And gain 2 stress each turn."
+    "DESCRIPTION": "Even Turns gain 2 Temporary Strength. NL Odd Turns gain 2 Temporary Dexterity.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Even Turns gain 2 Temporary Strength. NL Odd Turns gain 2 Temporary Dexterity."
   },
   "DarkestMod:Arbalest": {
     "NAME": "Arbalest",
@@ -344,7 +345,7 @@
 
   "DarkestMod:Antiquarian": {
     "NAME": "Antiquarian",
-    "DESCRIPTION": "Gain 3 Frail and at the end of each turn add 1 Antique to your discard pile."
+    "DESCRIPTION": "Gain !M! Frail and at the end of each turn add 1 Antique to your discard pile."
   },
 
   "DarkestMod:BountyHunter": {
@@ -370,8 +371,8 @@
 
   "DarkestMod:Hellion": {
     "NAME": "Hellion",
-    "DESCRIPTION": "Whenever you gain Strength add a random Attack card to your hand, it costs 0.",
-    "UPGRADE_DESCRIPTION":"whenever you gain Strength add 2 random Attack cards to your hand, it costs 0."
+    "DESCRIPTION": "Whenever you gain Strength add a random Attack card to your hand, it costs 0 until the end of combat.",
+    "UPGRADE_DESCRIPTION":"Whenever you gain Strength add 2 random Attack cards to your hand, it costs 0 until the end of combat."
   },
 
   "DarkestMod:Highwayman": {
@@ -391,7 +392,7 @@
 
   "DarkestMod:Leper": {
     "NAME": "Leper",
-    "DESCRIPTION": "At the start of turn gain !M! Strength for each darkestmod:Debuff ."
+    "DESCRIPTION": "At the start of turn gain !M! Strength if you have a darkestmod:Debuff ."
   },
 
   "DarkestMod:ManAtArms": {
@@ -406,12 +407,12 @@
 
   "DarkestMod:PlagueDoctor": {
     "NAME": "Plague Doctor",
-    "DESCRIPTION": "Trigger darkestmod:Blight . Whenever attacked, apply !M! darkestmod:Blight to ALL enemies."
+    "DESCRIPTION": "Trigger darkestmod:Blight. Whenever attacked, apply !M! darkestmod:Blight to ALL enemies."
   },
 
   "DarkestMod:Sheildbreaker": {
   "NAME": "Sheildbreaker",
-  "DESCRIPTION": "Apply !M! Buffer."
+  "DESCRIPTION": "Apply !M! darkestmod:Buffer "
 },
 
   "DarkestMod:Vestal": {
@@ -421,17 +422,17 @@
 
   "DarkestMod:AfflictionTemp": {
     "NAME": "Afflict Test card",
-    "DESCRIPTION": "Unplayable.  At the end of turn Gain !B! block and then Exhaust."
+    "DESCRIPTION": "Unplayable. NL At the end of turn Gain !B! block and then Exhaust."
   },
 
   "DarkestMod:Abusive": {
     "NAME": "Abusive",
-    "DESCRIPTION": "Unplayable.  You cannot gain Block from cards for 3 turns.Exhaust."
+    "DESCRIPTION": "Unplayable. NL You cannot gain Block from cards for 3 turns.Exhaust."
   },
 
   "DarkestMod:Fearful": {
     "NAME": "Fearful",
-    "DESCRIPTION": "Unplayable.  At the end of turn get 3 Bleed, 3 Blight. Exhaust."
+    "DESCRIPTION": "Unplayable. NL At the end of turn Lose 2 Strength and 2 Dexterity. NL Exhaust."
   },
 
 
@@ -442,7 +443,7 @@
 
   "DarkestMod:Irrational": {
     "NAME": "Irrational",
-    "DESCRIPTION": "Unplayable. Become Hexed. Exhaust."
+    "DESCRIPTION": "Unplayable. NL Become darkestmod:Hexed. NL Exhaust."
   },
 
   "DarkestMod:Paranoid": {
@@ -452,37 +453,37 @@
 
   "DarkestMod:Masochistic": {
     "NAME": "Masochistic",
-    "DESCRIPTION": "Unplayable. Gain 99 vulnerable. Exhaust."
+    "DESCRIPTION": "Unplayable. NL Gain 99 vulnerable. NL Exhaust."
   },
 
   "DarkestMod:Selfish": {
     "NAME": "Selfish",
-    "DESCRIPTION": "Unplayable. Lose 100 Gold. Exhaust."
+    "DESCRIPTION": "Unplayable. NL Lose 100 Gold. NL Exhaust."
   },
 
   "DarkestMod:Courageous": {
     "NAME": "Courageous",
-    "DESCRIPTION": "Unplayable. Gain 3 Dexterity and 3 Artifact. Exhaust."
+    "DESCRIPTION": "Unplayable. NL Gain 3 Dexterity and 3 Artifact. NL Exhaust."
   },
 
   "DarkestMod:Focused": {
     "NAME": "Focused",
-    "DESCRIPTION": "Unplayable. Gain 3 Intangible and then Exhaust."
+    "DESCRIPTION": "Unplayable. NL Gain 3 Intangible and then Exhaust."
   },
 
   "DarkestMod:Powerful": {
     "NAME": "Powerful",
-    "DESCRIPTION": "Unplayable.  At the end of turn become Gain 5 Strength and then Exhaust."
+    "DESCRIPTION": "Unplayable. NL At the end of turn gain 5 Strength and then Exhaust."
   },
 
   "DarkestMod:Stalwart": {
     "NAME": "Stalwart",
-    "DESCRIPTION": "Unplayable.  At the end of turn heal 100 stress and gain 20 Block. Exhaust."
+    "DESCRIPTION": "Unplayable. NL At the end of turn heal 100 stress and gain 20 Block. NL Exhaust."
   },
 
   "DarkestMod:Vigorous": {
     "NAME": "Vigorous",
-    "DESCRIPTION": "Unplayable.  At the end of turn Heal for 50 and then Exhaust."
+    "DESCRIPTION": "Unplayable. NL At the end of turn Heal for 50 and then Exhaust."
   }
 
 }

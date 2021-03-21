@@ -7,10 +7,13 @@ import DarkestMod.util.TextureLoader;
 import basemod.interfaces.CloneablePowerInterface;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -34,10 +37,10 @@ public class LeperPower extends AbstractPower implements CloneablePowerInterface
     private static final Texture tex84 = TextureLoader.getTexture(makePowerPath("leper_power84.png"));
     private static final Texture tex32 = TextureLoader.getTexture(makePowerPath("leper_power32.png"));
 
-    public LeperPower(AbstractCreature owner) {
+    public LeperPower(AbstractCreature owner, int amount) {
         this.name = NAME;
         this.ID = POWER_ID;
-
+        this.amount = amount;
         this.owner = owner;
         this.type = AbstractPower.PowerType.BUFF;
         this.isTurnBased = false;
@@ -49,52 +52,51 @@ public class LeperPower extends AbstractPower implements CloneablePowerInterface
         this.updateDescription();
     }
 
+
+
     @Override
     public void atStartOfTurn(){
         if (AbstractDungeon.player.hasPower("Frail")) {
             this.flash();
             AbstractDungeon.actionManager.addToBottom(
-                    new ApplyPowerAction(this.owner,this.owner,new StrengthPower(this.owner,1),1));
+                    new ApplyPowerAction(this.owner,this.owner,new StrengthPower(this.owner,this.amount),this.amount));
         }
-        if (AbstractDungeon.player.hasPower("Weak")) {
+        else if (AbstractDungeon.player.hasPower("Weakened")) {
             this.flash();
             AbstractDungeon.actionManager.addToBottom(
-                    new ApplyPowerAction(this.owner,this.owner,new StrengthPower(this.owner,1),1));
+                    new ApplyPowerAction(this.owner,this.owner,new StrengthPower(this.owner,this.amount),this.amount));
         }
-        if (AbstractDungeon.player.hasPower("Vulnerable")) {
+        else if (AbstractDungeon.player.hasPower("Vulnerable")) {
             this.flash();
             AbstractDungeon.actionManager.addToBottom(
-                    new ApplyPowerAction(this.owner,this.owner,new StrengthPower(this.owner,1),1));
+                    new ApplyPowerAction(this.owner,this.owner,new StrengthPower(this.owner,this.amount),this.amount));
         }
-        if (AbstractDungeon.player.hasPower("Confusion")) {
+        else if (AbstractDungeon.player.hasPower("Confusion")) {
             this.flash();
             AbstractDungeon.actionManager.addToBottom(
-                    new ApplyPowerAction(this.owner,this.owner,new StrengthPower(this.owner,1),1));
+                    new ApplyPowerAction(this.owner,this.owner,new StrengthPower(this.owner,this.amount),1));
         }
-        if (AbstractDungeon.player.hasPower("PowerBlight")) {
+        
+        else if (AbstractDungeon.player.hasPower("PowerBlight")) {
             this.flash();
             AbstractDungeon.actionManager.addToBottom(
-                    new ApplyPowerAction(this.owner,this.owner,new StrengthPower(this.owner,1),1));
+                    new ApplyPowerAction(this.owner,this.owner,new StrengthPower(this.owner,this.amount),this.amount));
         }
-        if (AbstractDungeon.player.hasPower("PowerBleed")) {
+         else if (AbstractDungeon.player.hasPower("PowerBleed")) {
             this.flash();
             AbstractDungeon.actionManager.addToBottom(
-                    new ApplyPowerAction(this.owner,this.owner,new StrengthPower(this.owner,1),1));
+                    new ApplyPowerAction(this.owner,this.owner,new StrengthPower(this.owner,this.amount),this.amount));
         }
-        if (AbstractDungeon.player.hasPower("PowerMarked")) {
+        else if (AbstractDungeon.player.hasPower("PowerMarked")) {
             this.flash();
             AbstractDungeon.actionManager.addToBottom(
-                    new ApplyPowerAction(this.owner,this.owner,new StrengthPower(this.owner,1),1));
+                    new ApplyPowerAction(this.owner,this.owner,new StrengthPower(this.owner,this.amount),this.amount));
         }
     }
 
     @Override
     public void updateDescription() {
-        if (this.owner != null && !this.owner.isPlayer) {
-            this.description = DESCRIPTIONS[2] + this.amount + DESCRIPTIONS[1];
-        } else {
-            this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
-        }
+        description = (DESCRIPTIONS[0] + amount + DESCRIPTIONS[1]);
     }
 
     @Override

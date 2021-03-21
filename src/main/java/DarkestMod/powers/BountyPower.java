@@ -60,16 +60,10 @@ public class BountyPower extends AbstractPower implements CloneablePowerInterfac
         this.amount += stackAmount;
     }
 
-
     @Override
     public void updateDescription() {
-        if (this.owner != null && !this.owner.isPlayer) {
-            this.description = DESCRIPTIONS[2] + this.amount + DESCRIPTIONS[1];
-        } else {
-            this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
-        }
+        this.description = (DESCRIPTIONS[0]);
     }
-
     @Override
     public AbstractPower makeCopy() {
         return new BountyPower(owner, amount);

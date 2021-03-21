@@ -62,13 +62,8 @@ public class HighwayPower extends AbstractPower implements CloneablePowerInterfa
 
     @Override
     public void updateDescription() {
-        if (this.owner != null && !this.owner.isPlayer) {
-            this.description = DESCRIPTIONS[2] + this.amount + DESCRIPTIONS[1];
-        } else {
-            this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
-        }
+        this.description = (DESCRIPTIONS[0]);
     }
-
     @Override
     public AbstractPower makeCopy() {
         return new HighwayPower(owner, amount);

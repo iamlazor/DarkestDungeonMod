@@ -57,12 +57,12 @@ public class powerLight extends AbstractPower implements CloneablePowerInterface
     }
 
     public void atStartOfTurn (){
-        if (this.amount >= 5) {
+        if (this.amount >= 7) {
             this.flash();
             AbstractDungeon.actionManager.addToBottom(
                     new ApplyPowerAction(this.owner,this.owner,new DexterityPower(this.owner,DEXTERITYAMT),DEXTERITYAMT));
         }
-        if (this.amount <= -5) {
+        if (this.amount <= -7) {
             this.flash();
             AbstractDungeon.actionManager.addToBottom(
                     new ApplyPowerAction(this.owner,this.owner,new VulnerablePower(this.owner,VULNERABLE,false),VULNERABLE));
@@ -71,24 +71,11 @@ public class powerLight extends AbstractPower implements CloneablePowerInterface
         }
     }
 
-    public void atEndOfTurn(final boolean isPlayer) {
-        if (this.owner.isPlayer && this.amount > -10 && !owner.hasPower(VestalPower.POWER_ID)) {
-            this.flash();
-            this.amount-= 1;
-            this.updateDescription();
-        }
-      }
 
-        @Override
-        public void updateDescription() {
-            if (this.owner != null && !this.owner.isPlayer) {
-                this.description = DESCRIPTIONS[2] + this.amount + DESCRIPTIONS[1];
-            } else {
-                this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
-            }
-        }
-
-
+    @Override
+    public void updateDescription() {
+        this.description = (DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1] + DESCRIPTIONS[2]);;
+    }
 
     @Override
     public AbstractPower makeCopy() {

@@ -23,17 +23,20 @@ public class powerAntiquarian  extends AbstractDynamicCard{
     public static final CardColor COLOR = TheDefault.Enums.COLOR_GRAY;
 
     private static final int COST = 1;
-    private static final int UPGRADED_COST = 0;
+    private static final int FRAILCOUNT = 3;
+    private static final int UPGRADE_FRAILCOUNT= -2;
+
     public powerAntiquarian(){
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         this.cardsToPreview = new skillAntiques();
+        magicNumber = baseMagicNumber = FRAILCOUNT;
 
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(
-                new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new FrailPower(AbstractDungeon.player, 3, true), 1));
+                new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new FrailPower(AbstractDungeon.player, magicNumber, true), 1));
         AbstractDungeon.actionManager.addToBottom(
                 new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new AntiquarianPower(AbstractDungeon.player, 1), 1));
     }
@@ -42,7 +45,7 @@ public class powerAntiquarian  extends AbstractDynamicCard{
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeBaseCost(UPGRADED_COST);
+            upgradeMagicNumber(UPGRADE_FRAILCOUNT);
             initializeDescription();
         }
     }

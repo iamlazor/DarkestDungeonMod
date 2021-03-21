@@ -8,83 +8,109 @@
                 ]
         },
 
-        "DarkestMod:AbomPower": {
-                "NAME": "Abomination",
+        "DarkestMod:ArbalestPower": {
+                "NAME": "Arbalest",
                 "DESCRIPTIONS": [
-                        "Even Turns gain 2 Temporary Strength. Odd Turns gain 2 Temporary Dexterity. And gain 2 stress each turn.",
-                        " keyword."
+                        "Wehenever you apply Marked also apply #b",
+                        " Weak."
                 ]
         },
 
         "DarkestMod:AntiqPower": {
                 "NAME": "Antiquarian",
                 "DESCRIPTIONS": [
-                        "At the end of each turn add 1 Antique to your discard pile.",
-                        " keyword."
+                        "At the end of each turn add 1 Antique to your discard pile."
                 ]
         },
 
+        "DarkestMod:AbomPower": {
+                "NAME": "Abomination",
+                "DESCRIPTIONS": [
+                        "Even Turns gain 2 Temporary Strength. NL Odd Turns gain 2 Temporary Dexterity."
+                ]
+        },
+
+        "DarkestMod:BountyPower": {
+                "NAME": "Bounty Hunter",
+                "DESCRIPTIONS": [
+                        "At the start of each turn apply Marked to a random enemy."
+                ]
+        },
         "DarkestMod:CrusaderPower": {
                 "NAME": "Crusader",
                 "DESCRIPTIONS": [
-                        "Every time you play and Attack, gain 3 Block.",
-                        " keyword."
+                        "Every time you play and Attack, gain 3 Block."
                 ]
         },
 
         "DarkestMod:FlagPower": {
                 "NAME": "Flagellant",
                 "DESCRIPTIONS": [
-                        "Gain 3 Temporary Strength when below 50% HP.",
-                        " keyword."
+                        "Gain #b",
+                        " temporary Strength when below 50% HP."
                 ]
         },
 
         "DarkestMod:GrobberPower": {
                 "NAME": "Grave Robber",
                 "DESCRIPTIONS": [
-                        "At the start of turn add a Thrown Dagger to the hand",
-                        " keyword."
+                        "At the start of turn add a Thrown Dagger to the hand"
+                ]
+        },
+        "DarkestMod:HellionPower": {
+                "NAME": "Hellion",
+                "DESCRIPTIONS": [
+                        "Whenever you gain Strength add random Attack cards to your hand, they cost 0 "
                 ]
         },
 
         "DarkestMod:HighwayPower": {
                 "NAME": "Highwayman",
                 "DESCRIPTIONS": [
-                        "At the start of turn add a Grapeshot to the hand.",
-                        " keyword."
+                        "At the start of turn add a Grapeshot to the hand."
+                ]
+        },
+
+        "DarkestMod:LeperPower": {
+                "NAME": "Leper",
+                "DESCRIPTIONS": [
+                        "Each turn gain #b",
+                        " Strength if you have a Debuff."
                 ]
         },
 
         "DarkestMod:JesterPower": {
                 "NAME": "Jester",
                 "DESCRIPTIONS": [
-                        "All incoming stress is reduced by 1.",
-                        " keyword."
+                        "All incoming stress is reduced by 1."
+                ]
+        },
+        "DarkestMod:ManPower": {
+                "NAME": "Man At Arms",
+                "DESCRIPTIONS": [
+                        "Damage from attacks is halved",
+                        "for the next #b turns."
                 ]
         },
 
         "DarkestMod:VestalPower": {
                 "NAME": "Vestal",
                 "DESCRIPTIONS": [
-                        "Light is no longer reduced each turn.",
-                        " keyword."
+                        "All cards in the deck are upgraded."
                 ]
         },
 
         "DarkestMod:Riposte": {
                 "NAME": "Riposte",
                 "DESCRIPTIONS": [
-                        "Riposte, whenever attacked deal damage back.",
-                        " keyword."
+                        "Riposte, whenever attacked deal damage back."
                 ]
         },
 
         "DarkestMod:OpenVein": {
                 "NAME": "Open Vein",
                 "DESCRIPTIONS": [
-                        "All attacks do an additional !M! darkestmod:Bleed .",
-                        " keyword."
+                        "All attacks do an additional !M! darkestmod:Bleed ."
                 ]
         },
 
@@ -92,8 +118,7 @@
         "DarkestMod:PlagueDoctor": {
                 "NAME": "Plague Doctor",
                 "DESCRIPTIONS": [
-                        "At the start of your turn, apply !M! darkestmod:Blight to ALL enemies.",
-                        " keyword."
+                        "At the start of your turn, apply !M! darkestmod:Blight to ALL enemies."
                 ]
         },
 
@@ -110,44 +135,37 @@
         "DarkestMod:PowerAffliction": {
                 "NAME": "Afflicted",
                 "DESCRIPTIONS": [
-                        "No chance for egress - will this be a massacre?",
-                        " keyword."
+                        "No chance for egress - will this be a massacre?"
                 ]
         },
 
         "DarkestMod:HeartAttack": {
                 "NAME": "Deaths Door",
                 "DESCRIPTIONS": [
-                        "Stress Causes an Heart Attack and fall to 1 health",
-                        " keyword."
+                        "Stress Causes an Heart Attack and fall to 1 health"
                 ]
         },
-
 
 
         "DarkestMod:PowerBleed": {
                 "NAME": "Bleed",
                 "DESCRIPTIONS": [
-                        "At the Start of your turn, Bleed #b",
-                        " At the Start of your turn, Bleed #b",
-                        " Bleed is reduced by 1 each turn."
+                        "At the Start of your turn, lose #b",
+                        "HP NL Bleed is reduced by 1 each turn."
                 ]
         },
 
         "DarkestMod:PowerBlight": {
                 "NAME": "Blight",
                 "DESCRIPTIONS": [
-                        "[#a0c704]Blighted targets lose HP when triggered.",
-                        "[#a0c704]Blighted targets lose HP when triggered.",
-                        " enemies."
+                        "[#a0c704]Blighted targets lose #b",
+                        "HP when triggered."
                 ]
         },
         "DarkestMod:PowerMarked": {
                 "NAME": "Marked",
                 "DESCRIPTIONS": [
-                        "[#550a8a]Marked Enemies take double damage from the next attack.",
-                        "keyword",
-                        "keyword"
+                        "[#550a8a]Marked Enemies take double damage from the next attack."
                 ]
         },
 
@@ -155,24 +173,21 @@
         "NAME": "Stress",
         "DESCRIPTIONS": [
                 "Current stress level is #b",
-                ". Become Afflcited at 100 and suffer a Heart attack at 200."
+                " NL Become Afflcited at 100 Stress",
+                " NL Suffer a Heart attack at 200 Stress."
         ]
 },
         "DarkestMod:StunnedPower": {
         "NAME": "Stunned",
         "DESCRIPTIONS": [
-                "If the enemy intends to attack Stun them",
-                ". Stunned enemies skip their action.",
-                "keyword"
+                "If the enemy intends to attack Stun them NL Stunned enemies skip their action."
         ]
 },
 
         "DarkestMod:Tracking": {
                 "NAME": "Tracking",
                 "DESCRIPTIONS": [
-                        "Whenever you play an Attack card this turn, the targeted enemy loses HP.",
-                        "keyword",
-                        "keyword"
+                        "Whenever you play an Attack card this turn, the targeted enemy loses HP."
                 ]
         },
 
@@ -180,7 +195,8 @@
                 "NAME": "Torch Light",
                 "DESCRIPTIONS": [
                         "Current Light level is #b",
-                        ". At + 7 gain + 1 Dexterity and at -7 1 Strength Vulnerable per turn."
+                        " NL At + 7 gain + 1 Dexterity",
+                        " NL At -7  gain +1 Strength & +1 Vulnerable per turn."
 
                 ]
         }

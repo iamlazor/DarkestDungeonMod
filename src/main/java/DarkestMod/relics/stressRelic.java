@@ -53,12 +53,6 @@ public class stressRelic extends CustomRelic {
         return damageAmount;
     }
 
-    public void atTurnStart() {
-        if (AbstractDungeon.player.hasPower(AbomPower.POWER_ID)) {
-            this.counter += 2;
-        }
-    }
-
 
     @Override
     public void onVictory() {

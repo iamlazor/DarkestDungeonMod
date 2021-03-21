@@ -44,13 +44,10 @@ public class powerStunned extends AbstractPower {
 
         this.updateDescription();
     }
+
+    @Override
     public void updateDescription() {
-        this.description = DESCRIPTIONS[0] + this.amount;
-        if (this.amount == 1) {
-            this.description = this.description + DESCRIPTIONS[1];
-        } else {
-            this.description = this.description + DESCRIPTIONS[2];
-        }
+        this.description = (DESCRIPTIONS[0]);
     }
 
 

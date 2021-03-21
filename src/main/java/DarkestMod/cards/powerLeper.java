@@ -2,6 +2,7 @@ package DarkestMod.cards;
 
 import DarkestMod.powers.CrusaderPower;
 import DarkestMod.powers.LeperPower;
+import DarkestMod.powers.ManPower;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -36,7 +37,7 @@ public class powerLeper extends AbstractDynamicCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom
-                (new ApplyPowerAction(p, p, new LeperPower(p), MAGIC));
+                (new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new LeperPower(AbstractDungeon.player, magicNumber), magicNumber));
     }
 
     @Override

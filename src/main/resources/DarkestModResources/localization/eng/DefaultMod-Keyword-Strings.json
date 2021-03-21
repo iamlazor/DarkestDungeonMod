@@ -57,6 +57,16 @@
     ],
     "DESCRIPTION": "[#b20000]Bleeding targets lose HP at the end of their turn. Bleed is reduced by 1 after."
   },
+
+  {
+    "PROPER_NAME":"Buffer",
+    "NAMES": [
+      "Buffer",
+      "buffer"
+    ],
+    "DESCRIPTION": "Prevent the next time you would lose HP."
+  },
+
   {
     "PROPER_NAME":"Stress",
     "NAMES": [
@@ -68,12 +78,30 @@
     "DESCRIPTION": "Stress is another form of health, at 100 stress the player will become afflicted, at 200 they will suffer a heart attack."
   },
   {
+    "PROPER_NAME":"Riposte",
+    "NAMES": [
+    "Riposte", "riposte", "Counter"
+    ],
+    "DESCRIPTION": "When attacked, deal damage back."
+  },
+
+  {
+    "PROPER_NAME":"Hexed",
+    "NAMES": [
+      "Hexed"
+    ],
+    "DESCRIPTION": "Whenever you play a skill shuffle a Dazed into your deck."
+  },
+
+  {
     "NAMES": [
       "keyword",
       "keywords"
     ],
     "DESCRIPTION": "Whenever you play a card, gain 1 dexterity this turn only."
   },
+
+
   {
     "PROPER_NAME": "Multiword Keyword",
     "NAMES": [
