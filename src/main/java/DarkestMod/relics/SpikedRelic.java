@@ -1,6 +1,6 @@
 package DarkestMod.relics;
 
-import DarkestMod.DefaultMod;
+import DarkestMod.DarkestMod;
 import DarkestMod.powers.powerRiposte;
 import DarkestMod.util.TextureLoader;
 import basemod.abstracts.CustomRelic;
@@ -8,14 +8,14 @@ import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
-import static DarkestMod.DefaultMod.makeRelicOutlinePath;
-import static DarkestMod.DefaultMod.makeRelicPath;
+import static DarkestMod.DarkestMod.makeRelicOutlinePath;
+import static DarkestMod.DarkestMod.makeRelicPath;
 
 
 
     public class SpikedRelic extends CustomRelic {
 
-        public static final String ID = DefaultMod.makeID("SpikedRelic");
+        public static final String ID = DarkestMod.makeID("SpikedRelic");
 
         private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("CollarRelic.png"));
         private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("Outline_CollarRelic.png"));

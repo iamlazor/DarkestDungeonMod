@@ -7,10 +7,10 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import DarkestMod.DefaultMod;
-import DarkestMod.characters.TheDefault;
+import DarkestMod.DarkestMod;
+import DarkestMod.characters.TheDarkest;
 
-import static DarkestMod.DefaultMod.makeCardPath;
+import static DarkestMod.DarkestMod.makeCardPath;
 
 public class skillInvigoratingVapours extends AbstractDynamicCard {
 
@@ -34,7 +34,7 @@ public class skillInvigoratingVapours extends AbstractDynamicCard {
 
     // TEXT DECLARATION
 
-    public static final String ID = DefaultMod.makeID("Invigorating Vapours"); // DefaultMod.makeID("attackNailStrike");
+    public static final String ID = DarkestMod.makeID("Invigorating Vapours"); // DefaultMod.makeID("attackNailStrike");
 
     public static final String IMG = makeCardPath("skillInvigoratingVapours.png");// "public static final String IMG = makeCardPath("attackNailStrike.png");
     // This does mean that you will need to have an image with the same NAME as the card in your image folder for it to run correctly.
@@ -51,7 +51,7 @@ public class skillInvigoratingVapours extends AbstractDynamicCard {
     // STAT DECLARATION
 
     private static final CardType TYPE = CardType.SKILL;
-    public static final CardColor COLOR = TheDefault.Enums.COLOR_GRAY;
+    public static final CardColor COLOR = TheDarkest.Enums.DARKEST_COLOR;
 
     private static final int COST = 1;
     private static final int UPGRADED_COST = 0;

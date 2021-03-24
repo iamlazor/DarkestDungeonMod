@@ -1,16 +1,14 @@
 package DarkestMod.powers;
 
 
-import DarkestMod.DefaultMod;
+import DarkestMod.DarkestMod;
 import DarkestMod.actions.BleedLoseHPAction;
 import DarkestMod.util.TextureLoader;
 import basemod.interfaces.CloneablePowerInterface;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
-import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -18,12 +16,12 @@ import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 
-import static DarkestMod.DefaultMod.makePowerPath;
+import static DarkestMod.DarkestMod.makePowerPath;
 
 public class powerBleed extends AbstractPower implements CloneablePowerInterface {
     public AbstractCreature source;
 
-    public static final String Power_ID = DefaultMod.makeID("PowerBleed");
+    public static final String Power_ID = DarkestMod.makeID("PowerBleed");
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(Power_ID);
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;

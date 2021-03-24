@@ -1,6 +1,6 @@
 package DarkestMod.relics;
 
-import DarkestMod.DefaultMod;
+import DarkestMod.DarkestMod;
 import DarkestMod.util.TextureLoader;
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
@@ -10,12 +10,12 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.LoseStrengthPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 
-import static DarkestMod.DefaultMod.makeRelicOutlinePath;
-import static DarkestMod.DefaultMod.makeRelicPath;
+import static DarkestMod.DarkestMod.makeRelicOutlinePath;
+import static DarkestMod.DarkestMod.makeRelicPath;
 
     public class RestrainingRelic extends CustomRelic {
 
-        public static final String ID = DefaultMod.makeID("RestrainingRelic");
+        public static final String ID = DarkestMod.makeID("RestrainingRelic");
 
         private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("PadlockRelic.png"));
         private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("Outline_PadlockRelic.png"));

@@ -11,15 +11,15 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.vfx.CollectorCurseEffect;
-import DarkestMod.DefaultMod;
+import DarkestMod.DarkestMod;
 import DarkestMod.util.TextureLoader;
 
-import static DarkestMod.DefaultMod.makeRelicOutlinePath;
-import static DarkestMod.DefaultMod.makeRelicPath;
+import static DarkestMod.DarkestMod.makeRelicOutlinePath;
+import static DarkestMod.DarkestMod.makeRelicPath;
 
 public class DefaultClickableRelic extends CustomRelic implements ClickableRelic {
     
-    public static final String ID = DefaultMod.makeID("DefaultClickableRelic");
+    public static final String ID = DarkestMod.makeID("DefaultClickableRelic");
     
     private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("default_clickable_relic.png"));
     private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("default_clickable_relic.png"));

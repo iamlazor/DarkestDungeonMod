@@ -1,24 +1,23 @@
 package DarkestMod.relics;
 
-import DarkestMod.DefaultMod;
+import DarkestMod.DarkestMod;
 import DarkestMod.util.TextureLoader;
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
 import com.evacipated.cardcrawl.mod.stslib.relics.ClickableRelic;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
-import com.megacrit.cardcrawl.actions.unique.GamblingChipAction;
 import com.megacrit.cardcrawl.actions.unique.RemoveDebuffsAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 
-import static DarkestMod.DefaultMod.makeRelicOutlinePath;
-import static DarkestMod.DefaultMod.makeRelicPath;
+import static DarkestMod.DarkestMod.makeRelicOutlinePath;
+import static DarkestMod.DarkestMod.makeRelicPath;
 
 
 public class HolyRelic extends CustomRelic implements ClickableRelic {
 
-    public static final String ID = DefaultMod.makeID("HolyRelic");
+    public static final String ID = DarkestMod.makeID("HolyRelic");
 
     private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("HolyOrdersRelic.png"));
     private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("Outline_HolyOrdersRelic.png"));
@@ -27,7 +26,7 @@ public class HolyRelic extends CustomRelic implements ClickableRelic {
     private boolean usedThisTurn = false;
 
     public HolyRelic() {
-        super(ID, IMG, OUTLINE, RelicTier.COMMON, LandingSound.FLAT);
+        super(ID, IMG, OUTLINE, RelicTier.UNCOMMON, LandingSound.FLAT);
         tips.clear();
         tips.add(new PowerTip(name, description));
     }

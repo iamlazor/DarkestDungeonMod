@@ -1,6 +1,6 @@
 package DarkestMod.powers;
 
-import DarkestMod.DefaultMod;
+import DarkestMod.DarkestMod;
 import DarkestMod.util.TextureLoader;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
@@ -16,10 +16,10 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 
 import java.lang.reflect.Field;
 
-import static DarkestMod.DefaultMod.makePowerPath;
+import static DarkestMod.DarkestMod.makePowerPath;
 
 public class powerStunned extends AbstractPower {
-    public static final String POWER_ID = DefaultMod.makeID("StunnedPower");
+    public static final String POWER_ID = DarkestMod.makeID("StunnedPower");
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;

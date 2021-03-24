@@ -1,22 +1,16 @@
 package DarkestMod.cards;
 
 import DarkestMod.powers.powerBleed;
-import DarkestMod.powers.powerRabies;
 import DarkestMod.powers.powerRedPlague;
 import DarkestMod.powers.powerStress;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.CardQueueItem;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import DarkestMod.DefaultMod;
-import DarkestMod.characters.TheDefault;
+import DarkestMod.DarkestMod;
 
-import static DarkestMod.DefaultMod.makeCardPath;
+import static DarkestMod.DarkestMod.makeCardPath;
 
 public class curseRedPlague extends AbstractDynamicCard {
 
@@ -40,7 +34,7 @@ public class curseRedPlague extends AbstractDynamicCard {
 
     // TEXT DECLARATION
 
-    public static final String ID = DefaultMod.makeID("CurseRedPlague"); // DefaultMod.makeID("attackNailStrike");
+    public static final String ID = DarkestMod.makeID("CurseRedPlague"); // DefaultMod.makeID("attackNailStrike");
 
     public static final String IMG = makeCardPath("curseTheRedPlague.png");// "public static final String IMG = makeCardPath("attackNailStrike.png");
     // This does mean that you will need to have an image with the same NAME as the card in your image folder for it to run correctly.

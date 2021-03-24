@@ -1,7 +1,6 @@
 package DarkestMod.powers;
 
-import DarkestMod.DefaultMod;
-import DarkestMod.relics.DemonsCauldronRelic;
+import DarkestMod.DarkestMod;
 import DarkestMod.relics.HairpinRelic;
 import DarkestMod.util.TextureLoader;
 import basemod.interfaces.CloneablePowerInterface;
@@ -9,21 +8,18 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
-import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
-import com.megacrit.cardcrawl.actions.unique.ApotheosisAction;
-import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.*;
 
-import static DarkestMod.DefaultMod.makePowerPath;
+import static DarkestMod.DarkestMod.makePowerPath;
 
 
 public class powerLight extends AbstractPower implements CloneablePowerInterface {
 
-    public static final String POWER_ID = DefaultMod.makeID("PowerLight");
+    public static final String POWER_ID = DarkestMod.makeID("PowerLight");
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;

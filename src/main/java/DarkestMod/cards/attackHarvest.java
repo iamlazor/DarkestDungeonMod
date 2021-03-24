@@ -1,25 +1,22 @@
 package DarkestMod.cards;
 
 import DarkestMod.powers.powerBleed;
-import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import DarkestMod.DefaultMod;
-import DarkestMod.characters.TheDefault;
+import DarkestMod.DarkestMod;
+import DarkestMod.characters.TheDarkest;
 import com.megacrit.cardcrawl.vfx.combat.*;
 
 import java.util.Iterator;
 
-import static DarkestMod.DefaultMod.makeCardPath;
+import static DarkestMod.DarkestMod.makeCardPath;
 
 public class attackHarvest extends AbstractDynamicCard {
 
@@ -43,7 +40,7 @@ public class attackHarvest extends AbstractDynamicCard {
 
     // TEXT DECLARATION
 
-    public static final String ID = DefaultMod.makeID("Harvest"); // DefaultMod.makeID("attackNailStrike");
+    public static final String ID = DarkestMod.makeID("Harvest"); // DefaultMod.makeID("attackNailStrike");
 
     public static final String IMG = makeCardPath("attackHarvest.png");// "public static final String IMG = makeCardPath("attackNailStrike.png");
     // This does mean that you will need to have an image with the same NAME as the card in your image folder for it to run correctly.
@@ -60,7 +57,7 @@ public class attackHarvest extends AbstractDynamicCard {
     // STAT DECLARATION
 
     private static final CardType TYPE = CardType.ATTACK;
-    public static final CardColor COLOR = TheDefault.Enums.COLOR_GRAY;
+    public static final CardColor COLOR = TheDarkest.Enums.DARKEST_COLOR;
 
     private static final int COST = 1;
 

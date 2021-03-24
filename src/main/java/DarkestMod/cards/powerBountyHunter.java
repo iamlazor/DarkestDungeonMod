@@ -7,15 +7,14 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import DarkestMod.DefaultMod;
-import DarkestMod.characters.TheDefault;
-import DarkestMod.powers.CommonPower;
+import DarkestMod.DarkestMod;
+import DarkestMod.characters.TheDarkest;
 
-import static DarkestMod.DefaultMod.makeCardPath;
+import static DarkestMod.DarkestMod.makeCardPath;
 
 public class powerBountyHunter extends AbstractDynamicCard {
 
-    public static final String ID = DefaultMod.makeID("BountyHunter");
+    public static final String ID = DarkestMod.makeID("BountyHunter");
     public static final String IMG = makeCardPath("powerTheBountyHunter.png");
 
 
@@ -28,7 +27,7 @@ public class powerBountyHunter extends AbstractDynamicCard {
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
 
     private static final CardType TYPE = CardType.POWER;
-    public static final CardColor COLOR = TheDefault.Enums.COLOR_GRAY;
+    public static final CardColor COLOR = TheDarkest.Enums.DARKEST_COLOR;
 
     private static final int COST = 2;
     private static final int UPGRADE_COST = 1;

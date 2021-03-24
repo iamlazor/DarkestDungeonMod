@@ -1,6 +1,5 @@
 package DarkestMod.cards;
 
-import DarkestMod.powers.GRobberPower;
 import DarkestMod.powers.HoundPower;
 import com.evacipated.cardcrawl.mod.stslib.actions.tempHp.AddTemporaryHPAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -9,15 +8,14 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import DarkestMod.DefaultMod;
-import DarkestMod.characters.TheDefault;
-import DarkestMod.powers.CommonPower;
+import DarkestMod.DarkestMod;
+import DarkestMod.characters.TheDarkest;
 
-import static DarkestMod.DefaultMod.makeCardPath;
+import static DarkestMod.DarkestMod.makeCardPath;
 
 public class powerHoundmaster extends AbstractDynamicCard {
 
-    public static final String ID = DefaultMod.makeID("Houndmaster");
+    public static final String ID = DarkestMod.makeID("Houndmaster");
     public static final String IMG = makeCardPath("powerTheHoundmaster.png");
 
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -27,7 +25,7 @@ public class powerHoundmaster extends AbstractDynamicCard {
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardType TYPE = CardType.POWER;
-    public static final CardColor COLOR = TheDefault.Enums.COLOR_GRAY;
+    public static final CardColor COLOR = TheDarkest.Enums.DARKEST_COLOR;
 
     private static final int COST = 1;
     private static final int MAGIC = 8;

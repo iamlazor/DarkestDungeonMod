@@ -6,20 +6,20 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import DarkestMod.DefaultMod;
-import DarkestMod.characters.TheDefault;
+import DarkestMod.DarkestMod;
+import DarkestMod.characters.TheDarkest;
 
-import static DarkestMod.DefaultMod.makeCardPath;
+import static DarkestMod.DarkestMod.makeCardPath;
 
 public class DefaultUncommonAttack extends AbstractDynamicCard {
     
-    public static final String ID = DefaultMod.makeID(DefaultUncommonAttack.class.getSimpleName());
+    public static final String ID = DarkestMod.makeID(DefaultUncommonAttack.class.getSimpleName());
     public static final String IMG = makeCardPath("Attack.png");
     
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final CardType TYPE = CardType.ATTACK;
-    public static final CardColor COLOR = TheDefault.Enums.COLOR_GRAY;
+    public static final CardColor COLOR = TheDarkest.Enums.DARKEST_COLOR;
     
     private static final int COST = 1;
     private static final int DAMAGE = 10;

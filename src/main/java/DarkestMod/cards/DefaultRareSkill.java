@@ -7,14 +7,14 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
-import DarkestMod.DefaultMod;
-import DarkestMod.characters.TheDefault;
+import DarkestMod.DarkestMod;
+import DarkestMod.characters.TheDarkest;
 
-import static DarkestMod.DefaultMod.makeCardPath;
+import static DarkestMod.DarkestMod.makeCardPath;
 
 public class DefaultRareSkill extends AbstractDynamicCard {
     
-    public static final String ID = DefaultMod.makeID(DefaultRareSkill.class.getSimpleName());
+    public static final String ID = DarkestMod.makeID(DefaultRareSkill.class.getSimpleName());
     public static final String IMG = makeCardPath("Skill.png");
     
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
@@ -23,7 +23,7 @@ public class DefaultRareSkill extends AbstractDynamicCard {
     private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.ALL_ENEMY;
     private static final CardType TYPE = CardType.SKILL;
-    public static final CardColor COLOR = TheDefault.Enums.COLOR_GRAY;
+    public static final CardColor COLOR = TheDarkest.Enums.DARKEST_COLOR;
     
     private static final int COST = 1;
     

@@ -1,16 +1,16 @@
 package DarkestMod.relics;
 
-import DarkestMod.DefaultMod;
+import DarkestMod.DarkestMod;
 import DarkestMod.util.TextureLoader;
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
 
-import static DarkestMod.DefaultMod.makeRelicOutlinePath;
-import static DarkestMod.DefaultMod.makeRelicPath;
+import static DarkestMod.DarkestMod.makeRelicOutlinePath;
+import static DarkestMod.DarkestMod.makeRelicPath;
 
     public class BeserkRelic extends CustomRelic {
 
-        public static final String ID = DefaultMod.makeID("BeserkRelic");
+        public static final String ID = DarkestMod.makeID("BeserkRelic");
 
         private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("Berserkrelic.png"));
         private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("Outline_Berserkrelic.png"));

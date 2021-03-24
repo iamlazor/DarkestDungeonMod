@@ -1,22 +1,20 @@
 package DarkestMod.relics;
 
-import DarkestMod.DefaultMod;
+import DarkestMod.DarkestMod;
 import DarkestMod.powers.powerLight;
-import DarkestMod.powers.powerStress;
 import DarkestMod.util.TextureLoader;
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.powers.StrengthPower;
 
-import static DarkestMod.DefaultMod.makeRelicOutlinePath;
-import static DarkestMod.DefaultMod.makeRelicPath;
+import static DarkestMod.DarkestMod.makeRelicOutlinePath;
+import static DarkestMod.DarkestMod.makeRelicPath;
 
 public class TomeOfHealingRelic extends CustomRelic {
 
-    public static final String ID = DefaultMod.makeID("TomeRelic");
+    public static final String ID = DarkestMod.makeID("TomeRelic");
 
     private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("HolyHealingRelic.png"));
     private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("Outline_HolyHealingRelic.png"));

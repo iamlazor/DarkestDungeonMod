@@ -9,9 +9,16 @@
 
   "DarkestMod:BeserkRelic": {
     "NAME": "Berserk Mask.",
-    "FLAVOR": "Injury and despondence set the stage for heroism... or cowardice..",
+    "FLAVOR": "This man understands that adversity and existence are one and the same.",
     "DESCRIPTIONS": [
       "20% Increased Virtue chance when afflicted."
+    ]
+  },
+  "DarkestMod:BossStressUpgradeRelic": {
+    "NAME": "Stressed Meter.",
+    "FLAVOR": "The human mind - fragile like a robin's egg.",
+    "DESCRIPTIONS": [
+      "15 Stress reduced when entering a rest site.Tracks Stress between rounds."
     ]
   },
 
@@ -41,21 +48,21 @@
 
   "DarkestMod:GuardianRelic": {
     "NAME": "Guardian's Shield.",
-    "FLAVOR": "Injury and despondence set the stage for heroism... or cowardice..",
+    "FLAVOR": "The raw strength of youth may be spent, but his eyes hold the secrets of a hundred campaigns.",
     "DESCRIPTIONS": [
       "At the start of your 3rd turn Gain 5 Plated Armour."
     ]
   },
   "DarkestMod:GunslingerRelic": {
     "NAME": "Gunslinger's Buckle.",
-    "FLAVOR": "Injury and despondence set the stage for heroism... or cowardice..",
+    "FLAVOR": "Elusive, evasive, persistent. Righteous traits for a rogue.",
     "DESCRIPTIONS": [
       "At the start of each combat, add a Tracking Shot into your hand."
     ]
   },
   "DarkestMod:HairpinRelic": {
     "NAME": "Hell's Hairpin.",
-    "FLAVOR": "Injury and despondence set the stage for heroism... or cowardice..",
+    "FLAVOR": "Barbaric rage and unrelenting savagery make for a powerful ally.",
     "DESCRIPTIONS": [
       "When the Light Level is -5 or less Gain 1 energy."
     ]
@@ -86,7 +93,7 @@
 
   "DarkestMod:RaiderRelic": {
     "NAME": "Raider's Talisman.",
-    "FLAVOR": "Injury and despondence set the stage for heroism... or cowardice..",
+    "FLAVOR": "To those with a keen eye, gold gleams like a dagger's point.",
     "DESCRIPTIONS": [
       "The 2nd time you play an attack card remove Block from ALL enemies."
     ]
@@ -102,7 +109,7 @@
 
   "DarkestMod:SpikedRelic": {
     "NAME": "Spiked Collar.",
-    "FLAVOR": "Injury and despondence set the stage for heroism... or cowardice..",
+    "FLAVOR": "A lawman and his faithful beast. A bond forged by battle and bloodshed.",
     "DESCRIPTIONS": [
       "At the start of each combat, gain 1 Riposte."
     ]
@@ -133,7 +140,7 @@
 
   "DarkestMod:VenomousRelic": {
     "NAME": "Venomous Vial.",
-    "FLAVOR": "Injury and despondence set the stage for heroism... or cowardice..",
+    "FLAVOR": "A sharper sword, a stronger shield. Anything to prolong a soldier's life.",
     "DESCRIPTIONS": [
       "At the start of each combat, apply 3 Blight to ALL enemies."
     ]
@@ -146,8 +153,6 @@
       "Shovels do 4 more damage"
     ]
   },
-
-
 
   "DarkestMod:PlaceholderRelic": {
     "NAME": "Placeholder Energy Relic",

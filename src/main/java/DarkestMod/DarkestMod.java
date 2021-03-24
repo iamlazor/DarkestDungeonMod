@@ -21,7 +21,7 @@ import com.megacrit.cardcrawl.localization.*;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import DarkestMod.characters.TheDefault;
+import DarkestMod.characters.TheDarkest;
 import DarkestMod.events.IdentityCrisisEvent;
 import DarkestMod.util.IDCheckDontTouchPls;
 import DarkestMod.util.TextureLoader;
@@ -63,7 +63,7 @@ import java.util.Properties;
  */
 
 @SpireInitializer
-public class DefaultMod implements
+public class DarkestMod implements
         EditCardsSubscriber,
         EditRelicsSubscriber,
         EditStringsSubscriber,
@@ -72,7 +72,7 @@ public class DefaultMod implements
         PostInitializeSubscriber {
     // Make sure to implement the subscribers *you* are using (read basemod wiki). Editing cards? EditCardsSubscriber.
     // Making relics? EditRelicsSubscriber. etc., etc., for a full list and how to make your own, visit the basemod wiki.
-    public static final Logger logger = LogManager.getLogger(DefaultMod.class.getName());
+    public static final Logger logger = LogManager.getLogger(DarkestMod.class.getName());
     private static String modID;
 
     // Mod-settings settings. This is if you want an on/off savable button
@@ -89,7 +89,7 @@ public class DefaultMod implements
 
     // Colors (RGB)
     // Character Color
-    public static final Color DEFAULT_GRAY = CardHelper.getColor(64.0f, 70.0f, 70.0f);
+    public static final Color DARKEST_BLACK = CardHelper.getColor(64.0f, 70.0f, 70.0f);
 
     // Potion Colors in RGB
     public static final Color PLACEHOLDER_POTION_LIQUID = CardHelper.getColor(209.0f, 53.0f, 18.0f); // Orange-ish Red
@@ -104,23 +104,23 @@ public class DefaultMod implements
     // ONCE YOU CHANGE YOUR MOD ID (BELOW, YOU CAN'T MISS IT) CHANGE THESE PATHS!!!!!!!!!!!
 
     // Card backgrounds - The actual rectangular card.
-    private static final String ATTACK_DEFAULT_GRAY = "DarkestModResources/images/512/bg_attack_default_gray.png";
-    private static final String SKILL_DEFAULT_GRAY = "DarkestModResources/images/512/bg_skill_default_gray.png";
-    private static final String POWER_DEFAULT_GRAY = "DarkestModResources/images/512/bg_power_default_gray.png";
+    private static final String ATTACK_DARKEST_BLACK = "DarkestModResources/images/512/bg_attack_darkest_black.png";
+    private static final String SKILL_DARKEST_BLACK = "DarkestModResources/images/512/bg_skill_darkest_black.png";
+    private static final String POWER_DARKEST_BLACK = "DarkestModResources/images/512/bg_power_darkest_black.png";
 
-    private static final String ENERGY_ORB_DEFAULT_GRAY = "DarkestModResources/images/512/card_default_gray_orb.png";
-    private static final String CARD_ENERGY_ORB = "DarkestModResources/images/512/card_small_orb.png";
+    private static final String ENERGY_ORB_DARKEST_BLACK = "DarkestModResources/images/512/card_darkest_black_orb.png";
+    private static final String CARD_ENERGY_ORB = "DarkestModResources/images/512/card_darkest_black_orb.png";
 
-    private static final String ATTACK_DEFAULT_GRAY_PORTRAIT = "DarkestModResources/images/1024/bg_attack_default_gray.png";
-    private static final String SKILL_DEFAULT_GRAY_PORTRAIT = "DarkestModResources/images/1024/bg_skill_default_gray.png";
-    private static final String POWER_DEFAULT_GRAY_PORTRAIT = "DarkestModResources/images/1024/bg_power_default_gray.png";
-    private static final String ENERGY_ORB_DEFAULT_GRAY_PORTRAIT = "DarkestModResources/images/1024/card_default_gray_orb.png";
+    private static final String ATTACK_DARKEST_BLACK_PORTRAIT = "DarkestModResources/images/1024/bg_attack_darkest_black.png";
+    private static final String SKILL_DARKEST_BLACK_PORTRAIT = "DarkestModResources/images/1024/bg_skill_darkest_black.png";
+    private static final String POWER_DARKEST_BLACK_PORTRAIT = "DarkestModResources/images/1024/bg_power_darkest_black.png";
+    private static final String ENERGY_ORB_DARKEST_BLACK_PORTRAIT = "DarkestModResources/images/1024/card_darkest_black_orb.png";
     // Character assets
-    private static final String THE_DEFAULT_BUTTON = "DarkestModResources/images/charSelect/DDcharacterButton.png";
-    private static final String THE_DEFAULT_PORTRAIT = "DarkestModResources/images/charSelect/DDCharacterPortraitBG.jpg";
-    public static final String THE_DEFAULT_SHOULDER_1 = "DarkestModResources/images/char/defaultCharacter/shoulder.png";
-    public static final String THE_DEFAULT_SHOULDER_2 = "DarkestModResources/images/char/defaultCharacter/shoulder2.png";
-    public static final String THE_DEFAULT_CORPSE = "DarkestModResources/images/char/defaultCharacter/corpse.png";
+    private static final String THE_DARKEST_BUTTON = "DarkestModResources/images/charSelect/DDcharacterButton.png";
+    private static final String THE_DARKEST_PORTRAIT = "DarkestModResources/images/charSelect/DDCharacterPortraitBG.jpg";
+    public static final String THE_DARKEST_SHOULDER_1 = "DarkestModResources/images/char/defaultCharacter/shoulder.png";
+    public static final String THE_DARKEST_SHOULDER_2 = "DarkestModResources/images/char/defaultCharacter/shoulder2.png";
+    public static final String THE_DARKEST_CORPSE = "DarkestModResources/images/char/defaultCharacter/corpse.png";
 
     //Mod Badge - A small icon that appears in the mod settings menu next to your mod.
     public static final String BADGE_IMAGE = "DarkestModResources/images/Badge.png";
@@ -162,7 +162,7 @@ public class DefaultMod implements
 
     // =============== SUBSCRIBE, CREATE THE COLOR_GRAY, INITIALIZE =================
 
-    public DefaultMod() {
+    public DarkestMod() {
         logger.info("Subscribe to BaseMod hooks");
 
         BaseMod.subscribe(this);
@@ -196,13 +196,13 @@ public class DefaultMod implements
 
         logger.info("Done subscribing");
 
-        logger.info("Creating the color " + TheDefault.Enums.COLOR_GRAY.toString());
+        logger.info("Creating the color " + TheDarkest.Enums.DARKEST_COLOR.toString());
 
-        BaseMod.addColor(TheDefault.Enums.COLOR_GRAY, DEFAULT_GRAY, DEFAULT_GRAY, DEFAULT_GRAY,
-                DEFAULT_GRAY, DEFAULT_GRAY, DEFAULT_GRAY, DEFAULT_GRAY,
-                ATTACK_DEFAULT_GRAY, SKILL_DEFAULT_GRAY, POWER_DEFAULT_GRAY, ENERGY_ORB_DEFAULT_GRAY,
-                ATTACK_DEFAULT_GRAY_PORTRAIT, SKILL_DEFAULT_GRAY_PORTRAIT, POWER_DEFAULT_GRAY_PORTRAIT,
-                ENERGY_ORB_DEFAULT_GRAY_PORTRAIT, CARD_ENERGY_ORB);
+        BaseMod.addColor(TheDarkest.Enums.DARKEST_COLOR, DARKEST_BLACK, DARKEST_BLACK, DARKEST_BLACK,
+                DARKEST_BLACK, DARKEST_BLACK, DARKEST_BLACK, DARKEST_BLACK,
+                ATTACK_DARKEST_BLACK, SKILL_DARKEST_BLACK, POWER_DARKEST_BLACK, ENERGY_ORB_DARKEST_BLACK,
+                ATTACK_DARKEST_BLACK_PORTRAIT, SKILL_DARKEST_BLACK_PORTRAIT, POWER_DARKEST_BLACK_PORTRAIT,
+                ENERGY_ORB_DARKEST_BLACK_PORTRAIT, CARD_ENERGY_ORB);
 
         logger.info("Done creating the color");
 
@@ -230,7 +230,7 @@ public class DefaultMod implements
     public static void setModID(String ID) { // DON'T EDIT
         Gson coolG = new Gson(); // EY DON'T EDIT THIS
         //   String IDjson = Gdx.files.internal("IDCheckStringsDONT-EDIT-AT-ALL.json").readString(String.valueOf(StandardCharsets.UTF_8)); // i hate u Gdx.files
-        InputStream in = DefaultMod.class.getResourceAsStream("/IDCheckStringsDONT-EDIT-AT-ALL.json"); // DON'T EDIT THIS ETHER
+        InputStream in = DarkestMod.class.getResourceAsStream("/IDCheckStringsDONT-EDIT-AT-ALL.json"); // DON'T EDIT THIS ETHER
         IDCheckDontTouchPls EXCEPTION_STRINGS = coolG.fromJson(new InputStreamReader(in, StandardCharsets.UTF_8), IDCheckDontTouchPls.class); // OR THIS, DON'T EDIT IT
         logger.info("You are attempting to set your mod ID as: " + ID); // NO WHY
         if (ID.equals(EXCEPTION_STRINGS.DEFAULTID)) { // DO *NOT* CHANGE THIS ESPECIALLY, TO EDIT YOUR MOD ID, SCROLL UP JUST A LITTLE, IT'S JUST ABOVE
@@ -250,9 +250,9 @@ public class DefaultMod implements
     private static void pathCheck() { // ALSO NO
         Gson coolG = new Gson(); // NOPE DON'T EDIT THIS
         //   String IDjson = Gdx.files.internal("IDCheckStringsDONT-EDIT-AT-ALL.json").readString(String.valueOf(StandardCharsets.UTF_8)); // i still hate u btw Gdx.files
-        InputStream in = DefaultMod.class.getResourceAsStream("/IDCheckStringsDONT-EDIT-AT-ALL.json"); // DON'T EDIT THISSSSS
+        InputStream in = DarkestMod.class.getResourceAsStream("/IDCheckStringsDONT-EDIT-AT-ALL.json"); // DON'T EDIT THISSSSS
         IDCheckDontTouchPls EXCEPTION_STRINGS = coolG.fromJson(new InputStreamReader(in, StandardCharsets.UTF_8), IDCheckDontTouchPls.class); // NAH, NO EDIT
-        String packageName = DefaultMod.class.getPackage().getName(); // STILL NO EDIT ZONE
+        String packageName = DarkestMod.class.getPackage().getName(); // STILL NO EDIT ZONE
         FileHandle resourcePathExists = Gdx.files.internal(getModID() + "Resources"); // PLEASE DON'T EDIT THINGS HERE, THANKS
         if (!modID.equals(EXCEPTION_STRINGS.DEVID)) { // LEAVE THIS EDIT-LESS
             if (!packageName.equals(getModID())) { // NOT HERE ETHER
@@ -269,7 +269,7 @@ public class DefaultMod implements
 
     public static void initialize() {
         logger.info("========================= Initializing Default Mod. Hi. =========================");
-        DefaultMod defaultmod = new DefaultMod();
+        DarkestMod defaultmod = new DarkestMod();
         logger.info("========================= /Default Mod Initialized. Hello World./ =========================");
     }
 
@@ -280,13 +280,13 @@ public class DefaultMod implements
 
     @Override
     public void receiveEditCharacters() {
-        logger.info("Beginning to edit characters. " + "Add " + TheDefault.Enums.THE_DEFAULT.toString());
+        logger.info("Beginning to edit characters. " + "Add " + TheDarkest.Enums.THE_DARKEST.toString());
 
-        BaseMod.addCharacter(new TheDefault("the Default", TheDefault.Enums.THE_DEFAULT),
-                THE_DEFAULT_BUTTON, THE_DEFAULT_PORTRAIT, TheDefault.Enums.THE_DEFAULT);
+        BaseMod.addCharacter(new TheDarkest("the Default", TheDarkest.Enums.THE_DARKEST),
+                THE_DARKEST_BUTTON, THE_DARKEST_PORTRAIT, TheDarkest.Enums.THE_DARKEST);
 
         receiveEditPotions();
-        logger.info("Added " + TheDefault.Enums.THE_DEFAULT.toString());
+        logger.info("Added " + TheDarkest.Enums.THE_DARKEST.toString());
     }
 
     // =============== /LOAD THE CHARACTER/ =================
@@ -344,7 +344,7 @@ public class DefaultMod implements
         // Since this is a builder these method calls (outside of create()) can be skipped/added as necessary
         AddEventParams eventParams = new AddEventParams.Builder(IdentityCrisisEvent.ID, IdentityCrisisEvent.class) // for this specific event
                 .dungeonID(TheCity.ID) // The dungeon (act) this event will appear in
-                .playerClass(TheDefault.Enums.THE_DEFAULT) // Character specific event
+                .playerClass(TheDarkest.Enums.THE_DARKEST) // Character specific event
                 .create();
 
         // Add the event
@@ -392,24 +392,25 @@ public class DefaultMod implements
 
         //BaseMod.addRelicToCustomPool(new LightRelic(), TheDefault.Enums.COLOR_GRAY);
 
-        BaseMod.addRelicToCustomPool(new BleedRelic(), TheDefault.Enums.COLOR_GRAY);
-        BaseMod.addRelicToCustomPool(new BlightRelic(), TheDefault.Enums.COLOR_GRAY);
-        BaseMod.addRelicToCustomPool(new BandanaRelic(), TheDefault.Enums.COLOR_GRAY);
-        BaseMod.addRelicToCustomPool(new BeserkRelic(), TheDefault.Enums.COLOR_GRAY);
-        BaseMod.addRelicToCustomPool(new CandleRelic(), TheDefault.Enums.COLOR_GRAY);
-        BaseMod.addRelicToCustomPool(new DemonsCauldronRelic(), TheDefault.Enums.COLOR_GRAY);
-        BaseMod.addRelicToCustomPool(new GuardianRelic(), TheDefault.Enums.COLOR_GRAY);
-        BaseMod.addRelicToCustomPool(new GunslingerRelic(), TheDefault.Enums.COLOR_GRAY);
-        BaseMod.addRelicToCustomPool(new HairpinRelic(), TheDefault.Enums.COLOR_GRAY);
-        BaseMod.addRelicToCustomPool(new HolyRelic(), TheDefault.Enums.COLOR_GRAY);
-        BaseMod.addRelicToCustomPool(new LuckyDiceRelic(), TheDefault.Enums.COLOR_GRAY);
-        BaseMod.addRelicToCustomPool(new RaiderRelic(), TheDefault.Enums.COLOR_GRAY);
-        BaseMod.addRelicToCustomPool(new RestrainingRelic(), TheDefault.Enums.COLOR_GRAY);
-        BaseMod.addRelicToCustomPool(new SpikedRelic(), TheDefault.Enums.COLOR_GRAY);
-        BaseMod.addRelicToCustomPool(new stressRelic(), TheDefault.Enums.COLOR_GRAY);
-        BaseMod.addRelicToCustomPool(new TomeOfHealingRelic(), TheDefault.Enums.COLOR_GRAY);
-        BaseMod.addRelicToCustomPool(new VenomousRelic(), TheDefault.Enums.COLOR_GRAY);
-        BaseMod.addRelicToCustomPool(new WoundingRelic(), TheDefault.Enums.COLOR_GRAY);
+        BaseMod.addRelicToCustomPool(new BleedRelic(), TheDarkest.Enums.DARKEST_COLOR);
+        BaseMod.addRelicToCustomPool(new BlightRelic(), TheDarkest.Enums.DARKEST_COLOR);
+        BaseMod.addRelicToCustomPool(new BandanaRelic(), TheDarkest.Enums.DARKEST_COLOR);
+        BaseMod.addRelicToCustomPool(new BeserkRelic(), TheDarkest.Enums.DARKEST_COLOR);
+        BaseMod.addRelicToCustomPool(new CandleRelic(), TheDarkest.Enums.DARKEST_COLOR);
+        BaseMod.addRelicToCustomPool(new DemonsCauldronRelic(), TheDarkest.Enums.DARKEST_COLOR);
+        BaseMod.addRelicToCustomPool(new GuardianRelic(), TheDarkest.Enums.DARKEST_COLOR);
+        BaseMod.addRelicToCustomPool(new GunslingerRelic(), TheDarkest.Enums.DARKEST_COLOR);
+        BaseMod.addRelicToCustomPool(new HairpinRelic(), TheDarkest.Enums.DARKEST_COLOR);
+        BaseMod.addRelicToCustomPool(new HolyRelic(), TheDarkest.Enums.DARKEST_COLOR);
+        BaseMod.addRelicToCustomPool(new LuckyDiceRelic(), TheDarkest.Enums.DARKEST_COLOR);
+        BaseMod.addRelicToCustomPool(new RaiderRelic(), TheDarkest.Enums.DARKEST_COLOR);
+        BaseMod.addRelicToCustomPool(new RestrainingRelic(), TheDarkest.Enums.DARKEST_COLOR);
+        BaseMod.addRelicToCustomPool(new SpikedRelic(), TheDarkest.Enums.DARKEST_COLOR);
+        BaseMod.addRelicToCustomPool(new stressRelic(), TheDarkest.Enums.DARKEST_COLOR);
+        BaseMod.addRelicToCustomPool(new BossStressUpgradeRelic(), TheDarkest.Enums.DARKEST_COLOR);
+        BaseMod.addRelicToCustomPool(new TomeOfHealingRelic(), TheDarkest.Enums.DARKEST_COLOR);
+        BaseMod.addRelicToCustomPool(new VenomousRelic(), TheDarkest.Enums.DARKEST_COLOR);
+        BaseMod.addRelicToCustomPool(new WoundingRelic(), TheDarkest.Enums.DARKEST_COLOR);
 
 
         // This adds a relic to the Shared pool. Every character can find this relic.

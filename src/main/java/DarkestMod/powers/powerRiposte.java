@@ -1,6 +1,6 @@
 package DarkestMod.powers;
 
-import DarkestMod.DefaultMod;
+import DarkestMod.DarkestMod;
 import DarkestMod.util.TextureLoader;
 import basemod.interfaces.CloneablePowerInterface;
 import com.badlogic.gdx.graphics.Texture;
@@ -13,11 +13,11 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 
-import static DarkestMod.DefaultMod.makePowerPath;
+import static DarkestMod.DarkestMod.makePowerPath;
 
 public class powerRiposte extends AbstractPower implements CloneablePowerInterface {
 
-        public static final String POWER_ID = DefaultMod.makeID("Riposte");
+        public static final String POWER_ID = DarkestMod.makeID("Riposte");
         private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
         public static final String NAME = powerStrings.NAME;
         public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;

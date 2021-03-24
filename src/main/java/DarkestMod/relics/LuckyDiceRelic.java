@@ -1,26 +1,23 @@
 package DarkestMod.relics;
 
-import DarkestMod.DefaultMod;
-import DarkestMod.powers.powerStress;
+import DarkestMod.DarkestMod;
 import DarkestMod.util.TextureLoader;
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
 import com.evacipated.cardcrawl.mod.stslib.relics.ClickableRelic;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.actions.unique.GamblingChipAction;
-import com.megacrit.cardcrawl.actions.unique.RemoveDebuffsAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 
 
-import static DarkestMod.DefaultMod.makeRelicOutlinePath;
-import static DarkestMod.DefaultMod.makeRelicPath;
+import static DarkestMod.DarkestMod.makeRelicOutlinePath;
+import static DarkestMod.DarkestMod.makeRelicPath;
 
 public class LuckyDiceRelic  extends CustomRelic implements ClickableRelic {
 
-    public static final String ID = DefaultMod.makeID("LuckyDiceRelic");
+    public static final String ID = DarkestMod.makeID("LuckyDiceRelic");
 
     private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("DiceRelic.png"));
     private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("Outline_DiceRelic.png"));

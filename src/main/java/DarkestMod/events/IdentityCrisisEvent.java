@@ -13,13 +13,13 @@ import com.megacrit.cardcrawl.localization.EventStrings;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.vfx.cardManip.PurgeCardEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
-import DarkestMod.DefaultMod;
+import DarkestMod.DarkestMod;
 
-import static DarkestMod.DefaultMod.makeEventPath;
+import static DarkestMod.DarkestMod.makeEventPath;
 
 public class IdentityCrisisEvent extends AbstractImageEvent {
     
-    public static final String ID = DefaultMod.makeID("IdentityCrisisEvent");
+    public static final String ID = DarkestMod.makeID("IdentityCrisisEvent");
     private static final EventStrings eventStrings = CardCrawlGame.languagePack.getEventString(ID);
     
     private static final String NAME = eventStrings.NAME;

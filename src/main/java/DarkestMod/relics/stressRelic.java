@@ -1,6 +1,6 @@
 package DarkestMod.relics;
 
-import DarkestMod.DefaultMod;
+import DarkestMod.DarkestMod;
 import DarkestMod.cards.*;
 import DarkestMod.powers.JesterPower;
 import DarkestMod.powers.powerStress;
@@ -14,15 +14,14 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.rooms.MonsterRoomBoss;
 
-import static DarkestMod.DefaultMod.makeRelicOutlinePath;
-import static DarkestMod.DefaultMod.makeRelicPath;
+import static DarkestMod.DarkestMod.makeRelicOutlinePath;
+import static DarkestMod.DarkestMod.makeRelicPath;
 
 public class stressRelic extends CustomRelic {
 
-    public static final String ID = DefaultMod.makeID("StressRelic");
+    public static final String ID = DarkestMod.makeID("StressRelic");
 
     private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("StressRelic.png"));
     private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("Outline_StressRelic.png"));
@@ -30,7 +29,7 @@ public class stressRelic extends CustomRelic {
 
 
     public stressRelic() {
-        super(ID, IMG, OUTLINE, RelicTier.COMMON, LandingSound.FLAT);
+        super(ID, IMG, OUTLINE, RelicTier.STARTER, LandingSound.FLAT);
         this.counter = 1;}
 
     @Override

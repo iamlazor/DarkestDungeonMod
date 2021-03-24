@@ -15,22 +15,22 @@ import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
-import DarkestMod.DefaultMod;
+import DarkestMod.DarkestMod;
 import DarkestMod.patches.relics.BottledPlaceholderField;
 import DarkestMod.util.TextureLoader;
 
 import java.util.Iterator;
 import java.util.function.Predicate;
 
-import static DarkestMod.DefaultMod.makeRelicOutlinePath;
-import static DarkestMod.DefaultMod.makeRelicPath;
+import static DarkestMod.DarkestMod.makeRelicOutlinePath;
+import static DarkestMod.DarkestMod.makeRelicPath;
 
 public class BottledPlaceholderRelic extends CustomRelic implements CustomBottleRelic, CustomSavable<Integer> {
     
     private static AbstractCard card;
     private boolean cardSelected = true;
     
-    public static final String ID = DefaultMod.makeID("BottledPlaceholderRelic");
+    public static final String ID = DarkestMod.makeID("BottledPlaceholderRelic");
     private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("BottledPlaceholder.png"));
     private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("BottledPlaceholder.png"));
     

@@ -1,16 +1,13 @@
 package DarkestMod.cards;
 
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import DarkestMod.DefaultMod;
-import DarkestMod.characters.TheDefault;
+import DarkestMod.DarkestMod;
+import DarkestMod.characters.TheDarkest;
 
-import static DarkestMod.DefaultMod.makeCardPath;
+import static DarkestMod.DarkestMod.makeCardPath;
 
 public class SkillTemplate extends AbstractDynamicCard {
 
@@ -34,7 +31,7 @@ public class SkillTemplate extends AbstractDynamicCard {
 
     // TEXT DECLARATION
 
-    public static final String ID = DefaultMod.makeID("DefaultCommonSkill"); // DefaultMod.makeID("attackNailStrike");
+    public static final String ID = DarkestMod.makeID("DefaultCommonSkill"); // DefaultMod.makeID("attackNailStrike");
 
     public static final String IMG = makeCardPath("Skill.png");// "public static final String IMG = makeCardPath("attackNailStrike.png");
     // This does mean that you will need to have an image with the same NAME as the card in your image folder for it to run correctly.
@@ -48,7 +45,7 @@ public class SkillTemplate extends AbstractDynamicCard {
     // STAT DECLARATION
 
     private static final CardType TYPE = CardType.SKILL;
-    public static final CardColor COLOR = TheDefault.Enums.COLOR_GRAY;
+    public static final CardColor COLOR = TheDarkest.Enums.DARKEST_COLOR;
 
     private static final int COST = 1;
     private static final int UPGRADED_COST = 0;

@@ -22,23 +22,23 @@ import com.megacrit.cardcrawl.screens.CharSelectInfo;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import DarkestMod.DefaultMod;
+import DarkestMod.DarkestMod;
 import DarkestMod.cards.*;
 
 import java.util.ArrayList;
 
-import static DarkestMod.DefaultMod.*;
-import static DarkestMod.characters.TheDefault.Enums.COLOR_GRAY;
+import static DarkestMod.DarkestMod.*;
+import static DarkestMod.characters.TheDarkest.Enums.DARKEST_COLOR;
 
-public class TheDefault extends CustomPlayer {
-    public static final Logger logger = LogManager.getLogger(DefaultMod.class.getName());
+public class TheDarkest extends CustomPlayer {
+    public static final Logger logger = LogManager.getLogger(DarkestMod.class.getName());
     
     public static class Enums {
         @SpireEnum
-        public static AbstractPlayer.PlayerClass THE_DEFAULT;
-        @SpireEnum(name = "DEFAULT_GRAY_COLOR")
-        public static AbstractCard.CardColor COLOR_GRAY;
-        @SpireEnum(name = "DEFAULT_GRAY_COLOR")
+        public static AbstractPlayer.PlayerClass THE_DARKEST;
+        @SpireEnum(name = "DARKEST_BLACK_COLOR")
+        public static AbstractCard.CardColor DARKEST_COLOR;
+        @SpireEnum(name = "DARKEST_BLACK_COLOR")
         @SuppressWarnings("unused")
         public static CardLibrary.LibraryType LIBRARY_COLOR;
     }
@@ -68,7 +68,7 @@ public class TheDefault extends CustomPlayer {
             "DarkestModResources/images/char/defaultCharacter/orb/layer4d.png",
             "DarkestModResources/images/char/defaultCharacter/orb/layer5d.png",};
     
-    public TheDefault(String name, PlayerClass setClass) {
+    public TheDarkest(String name, PlayerClass setClass) {
         super(name, setClass, orbTextures,
                 "DarkestModResources/images/char/defaultCharacter/orb/vfx.png", null,
                 new SpineAnimation(
@@ -77,9 +77,9 @@ public class TheDefault extends CustomPlayer {
         
         initializeClass(null,
                 
-                THE_DEFAULT_SHOULDER_1,
-                THE_DEFAULT_SHOULDER_2,
-                THE_DEFAULT_CORPSE,
+                THE_DARKEST_SHOULDER_1,
+                THE_DARKEST_SHOULDER_2,
+                THE_DARKEST_CORPSE,
                 getLoadout(), 20.0F, -10.0F, 220.0F, 290.0F, new EnergyManager(ENERGY_PER_TURN));
         
         
@@ -215,9 +215,9 @@ public class TheDefault extends CustomPlayer {
         ArrayList<String> retVal = new ArrayList<>();
         
 
-        retVal.add(stressRelic.ID);
-
-        //retVal.add(BleedRelic.ID);
+       retVal.add(stressRelic.ID);
+       //retVal.add(BossStressUpgradeRelic.ID);
+       //retVal.add(BleedRelic.ID);
        //retVal.add(BlightRelic.ID);
 
         //retVal.add(TomeOfHealingRelic.ID);
@@ -260,12 +260,12 @@ public class TheDefault extends CustomPlayer {
     
     @Override
     public AbstractCard.CardColor getCardColor() {
-        return COLOR_GRAY;
+        return DARKEST_COLOR;
     }
     
     @Override
     public Color getCardTrailColor() {
-        return DarkestMod.DefaultMod.DEFAULT_GRAY;
+        return DarkestMod.DARKEST_BLACK;
     }
     
     @Override
@@ -290,17 +290,17 @@ public class TheDefault extends CustomPlayer {
     
     @Override
     public AbstractPlayer newInstance() {
-        return new TheDefault(name, chosenClass);
+        return new TheDarkest(name, chosenClass);
     }
     
     @Override
     public Color getCardRenderColor() {
-        return DarkestMod.DefaultMod.DEFAULT_GRAY;
+        return DarkestMod.DARKEST_BLACK;
     }
     
     @Override
     public Color getSlashAttackColor() {
-        return DarkestMod.DefaultMod.DEFAULT_GRAY;
+        return DarkestMod.DARKEST_BLACK;
     }
     
     @Override

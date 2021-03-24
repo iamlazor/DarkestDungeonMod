@@ -1,7 +1,6 @@
 package DarkestMod.relics;
 
-import DarkestMod.DefaultMod;
-import DarkestMod.powers.powerRiposte;
+import DarkestMod.DarkestMod;
 import DarkestMod.util.TextureLoader;
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
@@ -9,13 +8,13 @@ import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.PlatedArmorPower;
 
-import static DarkestMod.DefaultMod.makeRelicOutlinePath;
-import static DarkestMod.DefaultMod.makeRelicPath;
+import static DarkestMod.DarkestMod.makeRelicOutlinePath;
+import static DarkestMod.DarkestMod.makeRelicPath;
 
 
     public class GuardianRelic extends CustomRelic {
 
-        public static final String ID = DefaultMod.makeID("GuardianRelic");
+        public static final String ID = DarkestMod.makeID("GuardianRelic");
 
         private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("GuardianRelic.png"));
         private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("Outline_GuardianRelic.png"));

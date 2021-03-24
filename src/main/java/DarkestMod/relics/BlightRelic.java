@@ -1,6 +1,6 @@
 package DarkestMod.relics;
 
-import DarkestMod.DefaultMod;
+import DarkestMod.DarkestMod;
 import DarkestMod.powers.powerBlight;
 import DarkestMod.util.TextureLoader;
 import basemod.abstracts.CustomRelic;
@@ -9,17 +9,13 @@ import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.PoisonPower;
 
-import java.util.Iterator;
-
-import static DarkestMod.DefaultMod.makeRelicOutlinePath;
-import static DarkestMod.DefaultMod.makeRelicPath;
+import static DarkestMod.DarkestMod.makeRelicOutlinePath;
+import static DarkestMod.DarkestMod.makeRelicPath;
 
 public class BlightRelic extends CustomRelic {
 
-    public static final String ID = DefaultMod.makeID("BlasphemousVialRelic");
+    public static final String ID = DarkestMod.makeID("BlasphemousVialRelic");
 
     private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("Blightrelic.png"));
     private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("Outline_Blightrelic.png"));

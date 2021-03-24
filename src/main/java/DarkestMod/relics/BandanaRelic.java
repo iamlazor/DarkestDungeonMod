@@ -1,7 +1,6 @@
 package DarkestMod.relics;
 
-import DarkestMod.DefaultMod;
-import DarkestMod.powers.powerBleed;
+import DarkestMod.DarkestMod;
 import DarkestMod.powers.powerMarked;
 import DarkestMod.util.TextureLoader;
 import basemod.abstracts.CustomRelic;
@@ -13,13 +12,13 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import java.util.Iterator;
 
-import static DarkestMod.DefaultMod.makeRelicOutlinePath;
-import static DarkestMod.DefaultMod.makeRelicPath;
+import static DarkestMod.DarkestMod.makeRelicOutlinePath;
+import static DarkestMod.DarkestMod.makeRelicPath;
 
 
     public class BandanaRelic extends CustomRelic {
 
-        public static final String ID = DefaultMod.makeID("BandanaRelic");
+        public static final String ID = DarkestMod.makeID("BandanaRelic");
 
         private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("BandanaRelic.png"));
         private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("Outline_BandanaRelic.png"));

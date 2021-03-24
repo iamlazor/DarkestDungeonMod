@@ -1,6 +1,6 @@
 package DarkestMod.relics;
 
-import DarkestMod.DefaultMod;
+import DarkestMod.DarkestMod;
 import DarkestMod.util.TextureLoader;
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
@@ -13,18 +13,18 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import java.util.Iterator;
 
-import static DarkestMod.DefaultMod.makeRelicOutlinePath;
-import static DarkestMod.DefaultMod.makeRelicPath;
+import static DarkestMod.DarkestMod.makeRelicOutlinePath;
+import static DarkestMod.DarkestMod.makeRelicPath;
 
 
     public class RaiderRelic extends CustomRelic {
 
-        public static final String ID = DefaultMod.makeID("RaiderRelic");
+        public static final String ID = DarkestMod.makeID("RaiderRelic");
 
         private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("TalismanRelic.png"));
         private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("Outline_TalismanRelic.png"));
 
-        public RaiderRelic() {super(ID, IMG, OUTLINE, RelicTier.UNCOMMON, LandingSound.CLINK);}
+        public RaiderRelic() {super(ID, IMG, OUTLINE, RelicTier.SHOP, LandingSound.CLINK);}
 
         public void atBattleStart() {this.counter = 0;}
 
