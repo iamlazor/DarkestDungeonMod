@@ -3,6 +3,7 @@ package DarkestMod.powers;
 import DarkestMod.DefaultMod;
 import DarkestMod.cards.afflictFearful;
 import DarkestMod.cards.attackThrowndagger;
+import DarkestMod.cards.curseRedPlague;
 import DarkestMod.util.TextureLoader;
 import basemod.interfaces.CloneablePowerInterface;
 import com.badlogic.gdx.graphics.Texture;
@@ -48,7 +49,7 @@ public class AfflictionHopeless extends AbstractPower implements CloneablePowerI
     @Override
     public void onInitialApplication() {
         super.onInitialApplication();
-        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDrawPileAction(new Normality(), 5, true, true));
+        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDrawPileAction(new curseRedPlague(), 5, true, true));
     }
 
     public void stackPower(int stackAmount) {

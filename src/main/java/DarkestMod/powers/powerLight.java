@@ -2,6 +2,7 @@ package DarkestMod.powers;
 
 import DarkestMod.DefaultMod;
 import DarkestMod.relics.DemonsCauldronRelic;
+import DarkestMod.relics.HairpinRelic;
 import DarkestMod.util.TextureLoader;
 import basemod.interfaces.CloneablePowerInterface;
 import com.badlogic.gdx.graphics.Texture;
@@ -64,7 +65,7 @@ public class powerLight extends AbstractPower implements CloneablePowerInterface
             AbstractDungeon.actionManager.addToBottom(
                     new ApplyPowerAction(this.owner,this.owner,new DexterityPower(this.owner,DEXTERITYAMT),DEXTERITYAMT));
         }
-        if (this.amount <= -5 && AbstractDungeon.player.hasRelic(DemonsCauldronRelic.ID)) {
+        if (this.amount <= -5 && AbstractDungeon.player.hasRelic(HairpinRelic.ID)) {
             this.flash();
             AbstractDungeon.actionManager.addToBottom(
              new GainEnergyAction(1));

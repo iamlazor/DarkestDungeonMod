@@ -35,7 +35,7 @@
     "NAME": "Demons Cauldron",
     "FLAVOR": "To fight the abyss, one must know it..",
     "DESCRIPTIONS": [
-      "When the Light Level is -5 or less Gain 1 energy"
+      "Every 2 times you shuffle your draw pile, gain 1 Strength and add a Curse: The Runs into the deck."
     ]
   },
 
@@ -57,7 +57,7 @@
     "NAME": "Hell's Hairpin.",
     "FLAVOR": "Injury and despondence set the stage for heroism... or cowardice..",
     "DESCRIPTIONS": [
-      "Tracks Stress between rounds."
+      "When the Light Level is -5 or less Gain 1 energy."
     ]
   },
   "DarkestMod:HolyRelic": {
