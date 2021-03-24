@@ -2,7 +2,6 @@ package DarkestMod.relics;
 
 import DarkestMod.DefaultMod;
 import DarkestMod.cards.*;
-import DarkestMod.powers.AbomPower;
 import DarkestMod.powers.JesterPower;
 import DarkestMod.powers.powerStress;
 import DarkestMod.util.TextureLoader;
@@ -15,6 +14,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.rooms.MonsterRoomBoss;
 
 import static DarkestMod.DefaultMod.makeRelicOutlinePath;
@@ -31,9 +31,7 @@ public class stressRelic extends CustomRelic {
 
     public stressRelic() {
         super(ID, IMG, OUTLINE, RelicTier.COMMON, LandingSound.FLAT);
-        this.counter = 1;
-
-    }
+        this.counter = 1;}
 
     @Override
     public void atBattleStart() {
@@ -51,6 +49,16 @@ public class stressRelic extends CustomRelic {
             this.counter += damageAmount;
          }
         return damageAmount;
+    }
+
+    @Override
+    public void atTurnStart() {
+        super.atTurnStart();
+        if (!this.grayscale && AbstractDungeon.player.hasPower("Stalwart")) {
+            this.flash();
+            this.counter -= 100;
+            this.grayscale = true;
+        }
     }
 
 

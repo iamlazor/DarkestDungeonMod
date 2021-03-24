@@ -144,9 +144,9 @@ public class TheDefault extends CustomPlayer {
 
 
         //retVal.add(AfflictionTemp.ID);
-        retVal.add(attackChop.ID);
+        //retVal.add(attackChop.ID);
         //retVal.add(attackPickToTheFace.ID);
-       // retVal.add(attackRampart.ID);
+       //retVal.add(attackRampart.ID);
         //retVal.add(attackPunish.ID);
         //retVal.add(attackHarvest.ID);
         // retVal.add(attackHoundsHarry.ID);
@@ -214,17 +214,29 @@ public class TheDefault extends CustomPlayer {
     public ArrayList<String> getStartingRelics() {
         ArrayList<String> retVal = new ArrayList<>();
         
-        //retVal.add(PlaceholderRelic.ID);
-        //retVal.add(PlaceholderRelic2.ID);
-        //retVal.add(DefaultClickableRelic.ID);
-        //retVal.add(LightRelic.ID);
+
         retVal.add(stressRelic.ID);
 
-        //UnlockTracker.markRelicAsSeen(PlaceholderRelic.ID);
-        //UnlockTracker.markRelicAsSeen(PlaceholderRelic2.ID);
-        //UnlockTracker.markRelicAsSeen(DefaultClickableRelic.ID);
-        //UnlockTracker.markRelicAsSeen(LightRelic.ID);
+        //retVal.add(BleedRelic.ID);
+       //retVal.add(BlightRelic.ID);
+
+        //retVal.add(TomeOfHealingRelic.ID);
+        //retVal.add(DemonsCauldronRelic.ID);
+        //retVal.add(LuckyDiceRelic.ID);
+        //retVal.add(RestrainingRelic.ID);
+        //retVal.add(CandleRelic.ID);
+        //retVal.add(WoundingRelic.ID);
+        //retVal.add(HolyRelic.ID);
+        //retVal.add(RaiderRelic.ID);
+        //retVal.add(GunslingerRelic.ID);
+        //retVal.add(SpikedRelic.ID);
+        //retVal.add(GuardianRelic.ID);
+        //retVal.add(VenomousRelic.ID);
+        //retVal.add(BeserkRelic.ID);
+
+
         UnlockTracker.markRelicAsSeen(stressRelic.ID);
+
 
         return retVal;
     }

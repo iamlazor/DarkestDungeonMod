@@ -2,7 +2,7 @@ package DarkestMod.cards;
 
 import DarkestMod.DefaultMod;
 import DarkestMod.characters.TheDefault;
-import DarkestMod.powers.powerLight;
+import DarkestMod.powers.*;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -45,11 +45,9 @@ public class skillTorch extends AbstractDynamicCard {
 
         @Override
         public void use(AbstractPlayer p, AbstractMonster m) {
-            AbstractDungeon.actionManager.addToBottom(
-                    new GainBlockAction(p, p, this.block));
+            AbstractDungeon.actionManager.addToBottom( new GainBlockAction(p, p, this.block));
 
-            AbstractDungeon.actionManager.addToBottom(
-                    new ApplyPowerAction(AbstractDungeon.player,AbstractDungeon.player,new powerLight(AbstractDungeon.player, magicNumber), this.magicNumber));
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player,AbstractDungeon.player,new powerLight(AbstractDungeon.player, magicNumber), this.magicNumber));
 
         }
             @Override

@@ -6,6 +6,6 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 public class CardTagEnum
 {
     @SpireEnum
-    public static AbstractCard.CardTags AFFLICTION;
+    public static AbstractCard.CardTags SHOVEL;
 
 }

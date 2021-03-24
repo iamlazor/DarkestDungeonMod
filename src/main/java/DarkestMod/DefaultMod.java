@@ -4,7 +4,6 @@ import DarkestMod.cards.*;
 import DarkestMod.relics.*;
 import basemod.*;
 import basemod.eventUtil.AddEventParams;
-import basemod.helpers.RelicType;
 import basemod.interfaces.*;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.files.FileHandle;
@@ -24,7 +23,6 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import DarkestMod.characters.TheDefault;
 import DarkestMod.events.IdentityCrisisEvent;
-import DarkestMod.potions.PlaceholderPotion;
 import DarkestMod.util.IDCheckDontTouchPls;
 import DarkestMod.util.TextureLoader;
 import DarkestMod.variables.DefaultCustomVariable;
@@ -387,20 +385,32 @@ public class DefaultMod implements
         // Of note is that the bard mod uses it's own custom relic class (not dissimilar to our AbstractDefaultCard class for cards) that adds the 'color' field,
         // in order to automatically differentiate which pool to add the relic too.
 
-
-
-
-
-
-
-
         // This adds a character specific relic. Only when you play with the mentioned color, will you get this relic.
         //BaseMod.addRelicToCustomPool(new PlaceholderRelic(), TheDefault.Enums.COLOR_GRAY);
        // BaseMod.addRelicToCustomPool(new BottledPlaceholderRelic(), TheDefault.Enums.COLOR_GRAY);
         //BaseMod.addRelicToCustomPool(new DefaultClickableRelic(), TheDefault.Enums.COLOR_GRAY);
 
         //BaseMod.addRelicToCustomPool(new LightRelic(), TheDefault.Enums.COLOR_GRAY);
+
+        BaseMod.addRelicToCustomPool(new BleedRelic(), TheDefault.Enums.COLOR_GRAY);
+        BaseMod.addRelicToCustomPool(new BlightRelic(), TheDefault.Enums.COLOR_GRAY);
+        BaseMod.addRelicToCustomPool(new BandanaRelic(), TheDefault.Enums.COLOR_GRAY);
+        BaseMod.addRelicToCustomPool(new BeserkRelic(), TheDefault.Enums.COLOR_GRAY);
+        BaseMod.addRelicToCustomPool(new CandleRelic(), TheDefault.Enums.COLOR_GRAY);
+        BaseMod.addRelicToCustomPool(new DemonsCauldronRelic(), TheDefault.Enums.COLOR_GRAY);
+        BaseMod.addRelicToCustomPool(new GuardianRelic(), TheDefault.Enums.COLOR_GRAY);
+        BaseMod.addRelicToCustomPool(new GunslingerRelic(), TheDefault.Enums.COLOR_GRAY);
+        BaseMod.addRelicToCustomPool(new HairpinRelic(), TheDefault.Enums.COLOR_GRAY);
+        BaseMod.addRelicToCustomPool(new HolyRelic(), TheDefault.Enums.COLOR_GRAY);
+        BaseMod.addRelicToCustomPool(new LuckyDiceRelic(), TheDefault.Enums.COLOR_GRAY);
+        BaseMod.addRelicToCustomPool(new RaiderRelic(), TheDefault.Enums.COLOR_GRAY);
+        BaseMod.addRelicToCustomPool(new RestrainingRelic(), TheDefault.Enums.COLOR_GRAY);
+        BaseMod.addRelicToCustomPool(new SpikedRelic(), TheDefault.Enums.COLOR_GRAY);
         BaseMod.addRelicToCustomPool(new stressRelic(), TheDefault.Enums.COLOR_GRAY);
+        BaseMod.addRelicToCustomPool(new TomeOfHealingRelic(), TheDefault.Enums.COLOR_GRAY);
+        BaseMod.addRelicToCustomPool(new VenomousRelic(), TheDefault.Enums.COLOR_GRAY);
+        BaseMod.addRelicToCustomPool(new WoundingRelic(), TheDefault.Enums.COLOR_GRAY);
+
 
         // This adds a relic to the Shared pool. Every character can find this relic.
         //BaseMod.addRelic(new PlaceholderRelic2(), RelicType.SHARED);
@@ -409,7 +419,24 @@ public class DefaultMod implements
         // If you don't have this it won't be visible in the compendium until you see them in game
         // (the others are all starters so they're marked as seen in the character file)
         //UnlockTracker.markRelicAsSeen(BottledPlaceholderRelic.ID);
-        UnlockTracker.markRelicAsSeen(stressRelic.ID);
+        UnlockTracker.markRelicAsSeen(BleedRelic.ID);
+        UnlockTracker.markRelicAsSeen(BlightRelic.ID);
+        UnlockTracker.markRelicAsSeen(BandanaRelic.ID);
+        UnlockTracker.markRelicAsSeen(BeserkRelic.ID);
+        UnlockTracker.markRelicAsSeen(CandleRelic.ID);
+        UnlockTracker.markRelicAsSeen(DemonsCauldronRelic.ID);
+        UnlockTracker.markRelicAsSeen(GuardianRelic.ID);
+        UnlockTracker.markRelicAsSeen(GunslingerRelic.ID);
+        UnlockTracker.markRelicAsSeen(HairpinRelic.ID);
+        UnlockTracker.markRelicAsSeen(HolyRelic.ID);
+        UnlockTracker.markRelicAsSeen(LuckyDiceRelic.ID);
+        UnlockTracker.markRelicAsSeen(RaiderRelic.ID);
+        UnlockTracker.markRelicAsSeen(RestrainingRelic.ID);
+        UnlockTracker.markRelicAsSeen(SpikedRelic.ID);
+        UnlockTracker.markRelicAsSeen(TomeOfHealingRelic.ID);
+        UnlockTracker.markRelicAsSeen(VenomousRelic.ID);
+        UnlockTracker.markRelicAsSeen(WoundingRelic.ID);
+
         logger.info("========================= /Relics Added/ =========================");
     }
 

@@ -75,6 +75,7 @@ public class skillFlashingDaggers extends AbstractDynamicCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+
         AbstractDungeon.actionManager.addToBottom(
                 new MakeTempCardInHandAction(new attackThrowndagger(), CARD));
     }

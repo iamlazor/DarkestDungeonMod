@@ -1,5 +1,6 @@
 package DarkestMod.cards;
 
+import DarkestMod.patches.CardTagEnum;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -64,7 +65,7 @@ public class attackShovel extends AbstractDynamicCard {
     public attackShovel() { // public attackNailStrike() - This one and the one right under the imports are the most important ones, don't forget them
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseDamage = DAMAGE;
-        this.tags.add(CardTags.STRIKE); //for strikes only. Tags for other grouped cards
+        tags.add(CardTagEnum.SHOVEL);; //for strikes only. Tags for other grouped cards
     }
 
     // Actions the card should do.

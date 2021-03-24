@@ -21,10 +21,10 @@ public class BleedRelic extends CustomRelic {
 
     public static final String ID = DefaultMod.makeID("PunishmentsHoodRelic");
 
-    private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("TorchRelic.png"));
-    private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("Outline_TorchRelic.png"));
+    private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("PunishmentRelic.png"));
+    private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("Outline_PunishmentRelic.png"));
     public BleedRelic() {
-        super(ID, IMG, OUTLINE, RelicTier.COMMON, LandingSound.FLAT);
+        super(ID, IMG, OUTLINE, RelicTier.RARE, LandingSound.FLAT);
     }
 
 

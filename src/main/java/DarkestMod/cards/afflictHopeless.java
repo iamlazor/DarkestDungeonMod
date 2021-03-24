@@ -37,10 +37,11 @@ public class afflictHopeless extends AbstractDynamicCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         if (this.dontTriggerOnUseCard) {
-            AbstractDungeon.actionManager.addToBottom(
-                    new MakeTempCardInDrawPileAction(new Normality(), 5,true, true));
+            AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDrawPileAction(new Normality(), 5,true, true));
         }
     }
+
+
 
     public void triggerOnEndOfTurnForPlayingCard() {
         this.dontTriggerOnUseCard = true;

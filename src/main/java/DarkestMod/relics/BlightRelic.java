@@ -21,28 +21,19 @@ public class BlightRelic extends CustomRelic {
 
     public static final String ID = DefaultMod.makeID("BlasphemousVialRelic");
 
-    private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("TorchRelic.png"));
-    private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("Outline_TorchRelic.png"));
+    private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("Blightrelic.png"));
+    private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("Outline_Blightrelic.png"));
     public BlightRelic() {
-        super(ID, IMG, OUTLINE, RelicTier.COMMON, LandingSound.FLAT);
+        super(ID, IMG, OUTLINE, RelicTier.RARE, LandingSound.FLAT);
     }
 
     public void onAttack(DamageInfo info, int damageAmount, AbstractCreature target) {
         if (damageAmount > 0 && target != AbstractDungeon.player && info.type == DamageInfo.DamageType.NORMAL) {
             this.flash();
-            Iterator var3 = AbstractDungeon.getMonsters().monsters.iterator();
-
-            while (var3.hasNext()) {
-                AbstractMonster monster = (AbstractMonster) var3.next();
-                if (!monster.isDead && !monster.isDying) {
                     AbstractDungeon.actionManager.addToBottom(
-                            new ApplyPowerAction(monster, AbstractDungeon.player, new powerBlight(monster, AbstractDungeon.player, 1), 1));
+                            new ApplyPowerAction(target, AbstractDungeon.player, new powerBlight(target, AbstractDungeon.player, 1), 1));
                 }
             }
-        }
-    }
-
-
 
     @Override
     public String getUpdatedDescription() {

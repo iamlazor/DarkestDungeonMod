@@ -1,11 +1,13 @@
 package DarkestMod.powers;
 
 import DarkestMod.DefaultMod;
+import DarkestMod.relics.DemonsCauldronRelic;
 import DarkestMod.util.TextureLoader;
 import basemod.interfaces.CloneablePowerInterface;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.actions.unique.ApotheosisAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -62,6 +64,12 @@ public class powerLight extends AbstractPower implements CloneablePowerInterface
             AbstractDungeon.actionManager.addToBottom(
                     new ApplyPowerAction(this.owner,this.owner,new DexterityPower(this.owner,DEXTERITYAMT),DEXTERITYAMT));
         }
+        if (this.amount <= -5 && AbstractDungeon.player.hasRelic(DemonsCauldronRelic.ID)) {
+            this.flash();
+            AbstractDungeon.actionManager.addToBottom(
+             new GainEnergyAction(1));
+        }
+
         if (this.amount <= -7) {
             this.flash();
             AbstractDungeon.actionManager.addToBottom(

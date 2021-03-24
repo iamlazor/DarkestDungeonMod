@@ -1,6 +1,115 @@
 {
+  "DarkestMod:BandanaRelic": {
+    "NAME": "Bull's Eye Bandana.",
+    "FLAVOR": "Shoot, bandage and pillage: the dancing steps of war.",
+    "DESCRIPTIONS": [
+      "At the start of your 4th turn apply Marked to ALL enemies."
+    ]
+  },
+
+  "DarkestMod:BeserkRelic": {
+    "NAME": "Berserk Mask.",
+    "FLAVOR": "Injury and despondence set the stage for heroism... or cowardice..",
+    "DESCRIPTIONS": [
+      "20% Increased Virtue chance when afflicted."
+    ]
+  },
+
+  "DarkestMod:BlasphemousVialRelic": {
+    "NAME": "Blasphemous Vial",
+    "FLAVOR": "The slow death - unforeseen, unforgiving.",
+    "DESCRIPTIONS": [
+      "When attacks deal damage also apply 1 Blight to that enemy."
+    ]
+  },
+
+  "DarkestMod:CandleRelic": {
+    "NAME": "Candle of Life.",
+    "FLAVOR": "She searches where others will not go... and sees what others will not see.",
+    "DESCRIPTIONS": [
+      "At the start of your 2nd turn Gain 10 Block and 2 max HP."
+    ]
+  },
+
+  "DarkestMod:DemonsRelic": {
+    "NAME": "Demons Cauldron",
+    "FLAVOR": "To fight the abyss, one must know it..",
+    "DESCRIPTIONS": [
+      "When the Light Level is -5 or less Gain 1 energy"
+    ]
+  },
+
+  "DarkestMod:GuardianRelic": {
+    "NAME": "Guardian's Shield.",
+    "FLAVOR": "Injury and despondence set the stage for heroism... or cowardice..",
+    "DESCRIPTIONS": [
+      "At the start of your 3rd turn Gain 5 Plated Armour."
+    ]
+  },
+  "DarkestMod:GunslingerRelic": {
+    "NAME": "Gunslinger's Buckle.",
+    "FLAVOR": "Injury and despondence set the stage for heroism... or cowardice..",
+    "DESCRIPTIONS": [
+      "At the start of each combat, add a Tracking Shot into your hand."
+    ]
+  },
+  "DarkestMod:HairpinRelic": {
+    "NAME": "Hell's Hairpin.",
+    "FLAVOR": "Injury and despondence set the stage for heroism... or cowardice..",
+    "DESCRIPTIONS": [
+      "Tracks Stress between rounds."
+    ]
+  },
+  "DarkestMod:HolyRelic": {
+    "NAME": "Holy Orders.",
+    "FLAVOR": "A mighty sword-arm anchored by a holy purpose. A zealous warrior.",
+    "DESCRIPTIONS": [
+      "Once per combat right click to remove all debuffs."
+    ]
+  },
+
+  "DarkestMod:LuckyDiceRelic": {
+    "NAME": "Critical Dice",
+    "FLAVOR": "He will be laughing still... at the end.",
+    "DESCRIPTIONS": [
+      "Once per combat right click to discard any number of cards then draw that many."
+    ]
+  },
+
+  "DarkestMod:PunishmentsHoodRelic": {
+    "NAME": "Punishment's Hood",
+    "FLAVOR": "Great is the weapon that cuts on its own!",
+    "DESCRIPTIONS": [
+      "Whenever attacked apply 1 bleed to ALL enemies ."
+    ]
+  },
+
+  "DarkestMod:RaiderRelic": {
+    "NAME": "Raider's Talisman.",
+    "FLAVOR": "Injury and despondence set the stage for heroism... or cowardice..",
+    "DESCRIPTIONS": [
+      "The 2nd time you play an attack card remove Block from ALL enemies."
+    ]
+  },
+
+  "DarkestMod:RestrainingRelic": {
+    "NAME": "Restraining Padlock.",
+    "FLAVOR": "Tortured and reclusive... this man is more dangerous than he seems...",
+    "DESCRIPTIONS": [
+      "At the start of your 2nd turn gain 2 temporary Strength."
+    ]
+  },
+
+  "DarkestMod:SpikedRelic": {
+    "NAME": "Spiked Collar.",
+    "FLAVOR": "Injury and despondence set the stage for heroism... or cowardice..",
+    "DESCRIPTIONS": [
+      "At the start of each combat, gain 1 Riposte."
+    ]
+  },
+
   "DarkestMod:StressRelic": {
-    "NAME": "Junia's Head.",
+    "NAME": "Stress Meter.",
     "FLAVOR": "Injury and despondence set the stage for heroism... or cowardice..",
     "DESCRIPTIONS": [
       "Tracks Stress between rounds."
@@ -13,6 +122,31 @@
       "At the beginning of combat gain #b1 Light ."
     ]
   },
+
+  "DarkestMod:TomeRelic": {
+    "NAME": "Tome of Holy Healing",
+    "FLAVOR": "The wounds of war can be healed, but never hidden.",
+    "DESCRIPTIONS": [
+      "Heal for 15 upon pickup. Start each combat with +2 Light."
+    ]
+  },
+
+  "DarkestMod:VenomousRelic": {
+    "NAME": "Venomous Vial.",
+    "FLAVOR": "Injury and despondence set the stage for heroism... or cowardice..",
+    "DESCRIPTIONS": [
+      "At the start of each combat, apply 3 Blight to ALL enemies."
+    ]
+  },
+
+  "DarkestMod:WoundingRelic": {
+    "NAME": "Wounding Helmet.",
+    "FLAVOR": "Surgical precision!",
+    "DESCRIPTIONS": [
+      "Shovels do 4 more damage"
+    ]
+  },
+
 
 
   "DarkestMod:PlaceholderRelic": {

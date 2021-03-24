@@ -1,4 +1,98 @@
 {
+        "DarkestMod:AfflictPower": {
+                "NAME": "AFFLICTION",
+                "DESCRIPTIONS": [
+                        "You applied AFF"
+                ]
+        },
+
+        "DarkestMod:Abusive": {
+                "NAME": "ABUSIVE",
+                "DESCRIPTIONS": [
+                        "AFFLICTION: NL You can not apply Block for 3 turns."
+                ]
+        },
+        "DarkestMod:Fearful": {
+                "NAME": "FEARFUL",
+                "DESCRIPTIONS": [
+                        "AFFLICTION: NL Lose 2 Strength and Dexterity "
+                ]
+        },
+        "DarkestMod:Hopeless": {
+                "NAME": "HOPELESS",
+                "DESCRIPTIONS": [
+                        "AFFLICTION: NL Shuffle 5 Normalities into your deck"
+                ]
+        },
+        "DarkestMod:Irrational": {
+                "NAME": "IRRATIONAL",
+                "DESCRIPTIONS": [
+                        "AFFLICTION: NL Become Hexed until the end of Combat."
+                ]
+        },
+        "DarkestMod:Masochistic": {
+                "NAME": "MASOCHISTIC",
+                "DESCRIPTIONS": [
+                        "AFFLICTION: NL Apply 99 Vulnerable"
+                ]
+        },
+
+
+        "DarkestMod:Paranoid": {
+                "NAME": "PARANOID",
+                "DESCRIPTIONS": [
+                        "AFFLICTION: NL Become Confused for the rest of Combat"
+                ]
+        },
+
+        "DarkestMod:Selfish": {
+                "NAME": "SELFISH",
+                "DESCRIPTIONS": [
+                        "AFFLICTION: NL Lose 100 gold and shuffle 2 Kleptomaniac Curses into your deck"
+                ]
+        },
+
+        "DarkestMod:Courageous": {
+                "NAME": "COURAGEOUS",
+                "DESCRIPTIONS": [
+                        "VIRTUE: NL Gain 3 Artifact and 3 Dexterity "
+                ]
+        },
+
+        "DarkestMod:Focused": {
+                "NAME": "FOCUSED",
+                "DESCRIPTIONS": [
+                        "VIRTUE: NL Gain 3 turns of Intangible"
+                ]
+        },
+
+        "DarkestMod:Powerful": {
+                "NAME": "POWERFUL",
+                "DESCRIPTIONS": [
+                        "VIRTUE: NL Gain 5 Strength."
+                ]
+        },
+        "DarkestMod:Stalwart": {
+                "NAME": "STALWART",
+                "DESCRIPTIONS": [
+                        "VIRTUE: NL Heal for 100 Stress."
+                ]
+        },
+        "DarkestMod:Vigorous": {
+                "NAME": "VIGOROUS",
+                "DESCRIPTIONS": [
+                        "VIRTUE: NL Heal for 50 Health."
+                ]
+        },
+
+        "DarkestMod:DeathsDoor": {
+                "NAME": "HEART ATTACK",
+                "DESCRIPTIONS": [
+                        "Health is reduced to 1."
+                ]
+        },
+
+
         "DarkestMod:CommonPower": {
                 "NAME": "Placeholder Power",
                 "DESCRIPTIONS": [

@@ -1,11 +1,14 @@
 package DarkestMod.powers;
 
 import DarkestMod.DefaultMod;
+import DarkestMod.cards.*;
+import DarkestMod.relics.BeserkRelic;
 import DarkestMod.util.TextureLoader;
 import basemod.interfaces.CloneablePowerInterface;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -56,23 +59,110 @@ public class powerStress extends AbstractPower implements CloneablePowerInterfac
         this.updateDescription();
 
     }
+
     public void atEndOfTurn(final boolean isPlayer) {
+        int random = AbstractDungeon.miscRng.random(0, 99);
 
+         if (this.amount >= 100 && this.amount <= 200 && !owner.hasPower(AfflictionAbusive.POWER_ID) && !owner.hasPower(AfflictionDeathsDoor.POWER_ID) && !owner.hasPower(AfflictionFearful.POWER_ID) && !owner.hasPower(AfflictionHopeless.POWER_ID) && !owner.hasPower(AfflictionIrrational.POWER_ID)  && !owner.hasPower(AfflictionMasochistic.POWER_ID) && !owner.hasPower(AfflictionParanoid.POWER_ID)  && !owner.hasPower(AfflictionSelfish.POWER_ID) && !owner.hasPower(VirtueCourageous.POWER_ID) && !owner.hasPower(VirtueFocused.POWER_ID)&& !owner.hasPower(VirtuePowerful.POWER_ID)&& !owner.hasPower(VirtueStalwart.POWER_ID) && !owner.hasPower(VirtueVigorous.POWER_ID)) { //makes it a do once
+            if (AbstractDungeon.player.hasRelic(BeserkRelic.ID)) {
+                 if (random <= 9) {
+                     this.flash();
+                     AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new AfflictionFearful(AbstractDungeon.player, 1), 1));
+                 } else if (random <= 18) {
+                     this.flash();
+                     AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new AfflictionParanoid(AbstractDungeon.player, 1), 1));
+                 } else if (random <= 27) {
+                     this.flash();
+                     AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new AfflictionSelfish(AbstractDungeon.player, 1), 1));
 
-        if (this.amount >= 100 && this.amount <= 200 && !owner.hasPower(powerAffliction.POWER_ID)) { //makes it a do once
-            this.flash();
-            AbstractDungeon.actionManager.addToBottom(
-                    new ApplyPowerAction(this.owner,this.owner,new powerAffliction(this.owner,1),1));
-        }
-        if (this.amount >= 200 && !owner.hasPower(powerHeartAttack.POWER_ID)) {
-            this.flash();
-            AbstractDungeon.actionManager.addToBottom(
-                    new ApplyPowerAction(this.owner,this.owner,new powerHeartAttack(this.owner, this.owner, amount),1));
+                 } else if (random <= 36) {
+                     this.flash();
+                     AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new AfflictionMasochistic(AbstractDungeon.player, 1), 1));
+                 } else if (random <= 45) {
+                     this.flash();
+                     AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new AfflictionAbusive(AbstractDungeon.player, 1), 1));
+
+                 } else if (random <= 54) {
+                     this.flash();
+                     AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new AfflictionHopeless(AbstractDungeon.player, 1), 1));
+
+                 } else if (random <= 64) {
+                     this.flash();
+                     AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new AfflictionIrrational(AbstractDungeon.player, 1), 1));
+                 }
+                 // Virtues
+                 else if (random <= 70) {
+                     this.flash();
+                     AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new VirtueStalwart(AbstractDungeon.player, 1), 1));
+
+                 } else if (random <= 77) {
+                     this.flash();
+                     AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new VirtueCourageous(AbstractDungeon.player, 1), 1));
+                 } else if (random <= 84) {
+                     this.flash();
+                     AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new VirtueFocused(AbstractDungeon.player, 1), 1));
+                 } else if (random <= 91) {
+                     this.flash();
+                     AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new VirtuePowerful(AbstractDungeon.player, 1), 1));
+                 } else if (random <= 99) {
+                     this.flash();
+                     AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new VirtueVigorous(AbstractDungeon.player, 1), 1));
+                 }
+             } else {
+                 if (random <= 11) {
+                     this.flash();
+                     AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new AfflictionFearful(AbstractDungeon.player, 1), 1));
+                 } else if (random <= 23) {
+                     this.flash();
+                     AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new AfflictionParanoid(AbstractDungeon.player, 1), 1));
+                 } else if (random <= 35) {
+                     this.flash();
+                     AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new AfflictionSelfish(AbstractDungeon.player, 1), 1));
+
+                 } else if (random <= 47) {
+                     this.flash();
+                     AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new AfflictionMasochistic(AbstractDungeon.player, 1), 1));
+                 } else if (random <= 59) {
+                     this.flash();
+                     AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new AfflictionAbusive(AbstractDungeon.player, 1), 1));
+
+                 } else if (random <= 70) {
+                     this.flash();
+                     AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new AfflictionHopeless(AbstractDungeon.player, 1), 1));
+
+                 } else if (random <= 84) {
+                     this.flash();
+                     AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new AfflictionIrrational(AbstractDungeon.player, 1), 1));
+                 }
+                 // Virtues
+                 else if (random <= 87) {
+                     this.flash();
+                     AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new VirtueStalwart(AbstractDungeon.player, 1), 1));
+
+                 } else if (random <= 90) {
+                     this.flash();
+                     AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new VirtueCourageous(AbstractDungeon.player, 1), 1));
+                 } else if (random <= 93                 ) {
+                     this.flash();
+                     AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new VirtueFocused(AbstractDungeon.player, 1), 1));
+                 } else if (random <= 96) {
+                     this.flash();
+                     AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new VirtuePowerful(AbstractDungeon.player, 1), 1));
+                 } else if (random <= 99) {
+                     this.flash();
+                     AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new VirtueVigorous(AbstractDungeon.player, 1), 1));
+                 }
+             }
         }
     }
 
-    public void atStartOfTurn() {
 
+
+    public void atStartOfTurn() {
+    if (this.amount >= 200 && !owner.hasPower(AfflictionDeathsDoor.POWER_ID)) {
+        this.flash();
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new AfflictionDeathsDoor(AbstractDungeon.player, 1)));
+    }
     }
 
 
