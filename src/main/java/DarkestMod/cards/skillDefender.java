@@ -63,6 +63,7 @@ public class skillDefender extends AbstractDynamicCard {
     public skillDefender() { // public attackNailStrike() - This one and the one right under the imports are the most important ones, don't forget them
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         magicNumber = baseMagicNumber = COUNTER;
+        this.exhaust = true;
 
     }
 

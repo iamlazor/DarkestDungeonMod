@@ -109,7 +109,7 @@ public class DarkestMod implements
     private static final String POWER_DARKEST_BLACK = "DarkestModResources/images/512/bg_power_darkest_black.png";
 
     private static final String ENERGY_ORB_DARKEST_BLACK = "DarkestModResources/images/512/card_darkest_black_orb.png";
-    private static final String CARD_ENERGY_ORB = "DarkestModResources/images/512/card_darkest_black_orb.png";
+    private static final String CARD_ENERGY_ORB = "DarkestModResources/images/512/card_small_orb.png";
 
     private static final String ATTACK_DARKEST_BLACK_PORTRAIT = "DarkestModResources/images/1024/bg_attack_darkest_black.png";
     private static final String SKILL_DARKEST_BLACK_PORTRAIT = "DarkestModResources/images/1024/bg_skill_darkest_black.png";
