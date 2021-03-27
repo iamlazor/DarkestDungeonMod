@@ -63,7 +63,7 @@ public class PlaguePower extends AbstractPower implements CloneablePowerInterfac
 
     @Override
     public void updateDescription() {
-        this.description = (DESCRIPTIONS[0]);
+        description = (DESCRIPTIONS[0] + amount + DESCRIPTIONS[1]);
     }
 
     @Override

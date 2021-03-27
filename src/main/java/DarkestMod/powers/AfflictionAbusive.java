@@ -45,7 +45,7 @@ public class AfflictionAbusive extends AbstractPower implements CloneablePowerIn
     public void onInitialApplication() {
         super.onInitialApplication();
         AbstractDungeon.actionManager.addToBottom(
-                new ApplyPowerAction(AbstractDungeon.player,AbstractDungeon.player,new NoBlockPower(AbstractDungeon.player,3,false),3));
+                new ApplyPowerAction(AbstractDungeon.player,AbstractDungeon.player,new NoBlockPower(AbstractDungeon.player,2,false),2));
     }
 
     public void stackPower(int stackAmount) {

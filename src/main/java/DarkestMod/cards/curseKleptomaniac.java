@@ -62,7 +62,7 @@ public class curseKleptomaniac extends AbstractDynamicCard {
         if (this.dontTriggerOnUseCard) {
             AbstractDungeon.actionManager.addToBottom(
                     new ExhaustAction(1, true, false, false));
-            AbstractDungeon.player.gold -= 20;
+            AbstractDungeon.player.gold -= 10;
         }
     }
 

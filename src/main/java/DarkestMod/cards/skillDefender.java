@@ -56,7 +56,7 @@ public class skillDefender extends AbstractDynamicCard {
 
     private static final int COST = 1;
 
-    private static final int UPGRADE_PLUS_DMG = 2;
+    private static final int UPGRADE_PLUS_COUNTER = 2;
     private static final int COUNTER = 3;
     // STAT DECLARATION
 
@@ -71,9 +71,9 @@ public class skillDefender extends AbstractDynamicCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(
-                new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new powerRiposte(AbstractDungeon.player, COUNTER), COUNTER));
+                new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new powerRiposte(AbstractDungeon.player, baseMagicNumber), baseMagicNumber));
         AbstractDungeon.actionManager.addToBottom(
-                new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new PlatedArmorPower(AbstractDungeon.player, COUNTER), COUNTER));
+                new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new PlatedArmorPower(AbstractDungeon.player, baseMagicNumber), baseMagicNumber));
     }
 
     // Upgraded stats.
@@ -81,7 +81,7 @@ public class skillDefender extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeMagicNumber(UPGRADE_PLUS_DMG);
+            upgradeMagicNumber(UPGRADE_PLUS_COUNTER);
             initializeDescription();
         }
     }

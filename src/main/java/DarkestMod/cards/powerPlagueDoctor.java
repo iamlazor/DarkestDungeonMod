@@ -37,20 +37,9 @@ public class powerPlagueDoctor extends AbstractDynamicCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(
                 new ApplyPowerAction(p, p, new PlaguePower(p, this.magicNumber), this.magicNumber));
-        if (!AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
-            this.flash();
-            Iterator var3 = AbstractDungeon.getMonsters().monsters.iterator();
 
-            while (var3.hasNext()) {
-                AbstractMonster monster = (AbstractMonster) var3.next();
-                if (!monster.isDead && !monster.isDying) {
-                    AbstractDungeon.actionManager.addToBottom(
-                            new BlightTriggerAction(monster, p));
-
-                }
-            }
         }
-}
+
     @Override
     public void upgrade() {
         if (!upgraded) {

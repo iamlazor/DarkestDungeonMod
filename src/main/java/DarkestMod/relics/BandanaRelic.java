@@ -28,6 +28,7 @@ import static DarkestMod.DarkestMod.makeRelicPath;
 
         public void atBattleStart() {
             this.counter = 0;
+            this.grayscale = false;
         }
         public void atTurnStart() {
                 if (!this.grayscale) {

@@ -54,7 +54,7 @@ public class skillBolster extends AbstractDynamicCard {
     private static final int COST = 1;
 
     private static final int BLOCK = 1;
-    private static final int UPGRADE_PLUS_DMG = 1;
+    private static final int UPGRADE_PLUS_BLOCK = 1;
 
     // STAT DECLARATION
 
@@ -82,7 +82,7 @@ public class skillBolster extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeDamage(UPGRADE_PLUS_DMG);
+            upgradeBlock(UPGRADE_PLUS_BLOCK);
             initializeDescription();
         }
     }

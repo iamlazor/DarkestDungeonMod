@@ -9,7 +9,7 @@
         "DarkestMod:Abusive": {
                 "NAME": "ABUSIVE",
                 "DESCRIPTIONS": [
-                        "AFFLICTION: NL You can not apply Block for 3 turns."
+                        "AFFLICTION: NL You can not apply Block for 1 turn."
                 ]
         },
         "DarkestMod:Fearful": {
@@ -148,7 +148,7 @@
         "DarkestMod:GrobberPower": {
                 "NAME": "Grave Robber",
                 "DESCRIPTIONS": [
-                        "At the start of turn add a Thrown Dagger to the hand"
+                        "At the start of turn add #b Thrown Daggers to the hand"
                 ]
         },
         "DarkestMod:HellionPower": {
@@ -204,15 +204,17 @@
         "DarkestMod:OpenVein": {
                 "NAME": "Open Vein",
                 "DESCRIPTIONS": [
-                        "All attacks do an additional !M! darkestmod:Bleed ."
+                        "All attacks apply an additional #b",
+                        " Bleed."
                 ]
         },
 
 
-        "DarkestMod:PlagueDoctor": {
+        "DarkestMod:PlaguePower": {
                 "NAME": "Plague Doctor",
                 "DESCRIPTIONS": [
-                        "At the start of your turn, apply !M! darkestmod:Blight to ALL enemies."
+                        "When attacked and dealt damage, apply #b",
+                        " Blight to ALL enemies."
                 ]
         },
 
@@ -244,7 +246,7 @@
         "DarkestMod:PowerBleed": {
                 "NAME": "Bleed",
                 "DESCRIPTIONS": [
-                        "At the Start of your turn, lose #b",
+                        "At the end of the bleeding  of your turn, enemies lose #b",
                         "HP NL Bleed is reduced by 1 each turn."
                 ]
         },
@@ -253,7 +255,7 @@
                 "NAME": "Blight",
                 "DESCRIPTIONS": [
                         "[#a0c704]Blighted targets lose #b",
-                        "HP when triggered."
+                        "HP when cards with Trigger are played."
                 ]
         },
         "DarkestMod:PowerMarked": {

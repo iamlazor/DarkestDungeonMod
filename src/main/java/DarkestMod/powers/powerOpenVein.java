@@ -43,7 +43,7 @@ public class powerOpenVein extends AbstractPower implements CloneablePowerInterf
 
     @Override
     public void updateDescription() {
-        this.description = (DESCRIPTIONS[0]);
+        description = (DESCRIPTIONS[0] + amount + DESCRIPTIONS[1]);
     }
 
     public void onAttack(DamageInfo info, int damageAmount, AbstractCreature target) {

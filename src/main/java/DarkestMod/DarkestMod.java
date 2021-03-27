@@ -407,7 +407,7 @@ public class DarkestMod implements
         BaseMod.addRelicToCustomPool(new RestrainingRelic(), TheDarkest.Enums.DARKEST_COLOR);
         BaseMod.addRelicToCustomPool(new SpikedRelic(), TheDarkest.Enums.DARKEST_COLOR);
         BaseMod.addRelicToCustomPool(new stressRelic(), TheDarkest.Enums.DARKEST_COLOR);
-        BaseMod.addRelicToCustomPool(new BossStressUpgradeRelic(), TheDarkest.Enums.DARKEST_COLOR);
+        //BaseMod.addRelicToCustomPool(new BossStressUpgradeRelic(), TheDarkest.Enums.DARKEST_COLOR);
         BaseMod.addRelicToCustomPool(new TomeOfHealingRelic(), TheDarkest.Enums.DARKEST_COLOR);
         BaseMod.addRelicToCustomPool(new VenomousRelic(), TheDarkest.Enums.DARKEST_COLOR);
         BaseMod.addRelicToCustomPool(new WoundingRelic(), TheDarkest.Enums.DARKEST_COLOR);

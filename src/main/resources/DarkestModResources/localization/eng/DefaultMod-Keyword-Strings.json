@@ -36,7 +36,17 @@
       "lit",
       "Light Meter"
     ],
-    "DESCRIPTION": "At the start of turn if the [#FF7F50]Light meter is +5 or greater gain 1 dexterity, if it is -5 or less gain 1 strength and 1 vulnerable. Each turn, [#FF7F50]Light is reduced by 1."
+    "DESCRIPTION": "At the start of turn if the [#FF7F50]Light meter is +5 or greater gain 1 dexterity, if it is -5 or less gain 1 strength and 1 vulnerable."
+  },
+
+  {
+    "PROPER_NAME":"Trigger",
+    "NAMES": [
+      "Trigger",
+      "trigger",
+      "triggered"
+    ],
+    "DESCRIPTION": "Trigger causes Blighted targets lose HP equal to the amount of blight they have when triggered."
   },
 
   {
@@ -46,7 +56,7 @@
         "blighted",
         "blight"
       ],
-      "DESCRIPTION": "[#a0c704]Blighted targets lose HP when triggered."
+      "DESCRIPTION": "[#a0c704]Blighted targets lose HP when cards with Trigger are played."
     },
   {
     "PROPER_NAME":"[#b20000]Bleed",

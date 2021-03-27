@@ -74,7 +74,7 @@ public class skillBulwarkOfFaith extends AbstractDynamicCard {
         AbstractDungeon.actionManager.addToBottom(
                 new GainBlockAction(p, p, this.block));
         AbstractDungeon.actionManager.addToBottom(
-                new ApplyPowerAction(p, p, new NextTurnBlockPower(p, this.SECONDBLOCK), this.SECONDBLOCK));
+                new ApplyPowerAction(p, p, new NextTurnBlockPower(p, baseMagicNumber), baseMagicNumber));
            }
 
     // Upgraded stats.

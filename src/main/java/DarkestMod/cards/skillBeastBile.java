@@ -47,6 +47,7 @@ public class skillBeastBile extends AbstractDynamicCard {
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     public static final String NAME = cardStrings.NAME;
     public static final String DESCRIPTION = cardStrings.DESCRIPTION;
+    public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
 
     // /TEXT DECLARATION/
 
@@ -103,6 +104,7 @@ public class skillBeastBile extends AbstractDynamicCard {
         if (!upgraded) {
             upgradeName();
             this.upgradeDefaultSecondMagicNumber(UPGRADE_PLUS_BLIGHT);
+            rawDescription = (UPGRADE_DESCRIPTION);
             initializeDescription();
         }
     }

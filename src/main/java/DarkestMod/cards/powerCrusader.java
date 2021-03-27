@@ -32,7 +32,7 @@ public class powerCrusader extends AbstractDynamicCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom
-                (new ApplyPowerAction(p, p, new CrusaderPower(p,this.BlockAMT), this.BlockAMT));
+                (new ApplyPowerAction(p, p, new CrusaderPower(p,baseMagicNumber), baseMagicNumber));
     }
 
     @Override

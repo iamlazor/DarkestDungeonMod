@@ -194,13 +194,14 @@ public class TheDarkest extends CustomPlayer {
         //retVal.add(skillRainOfSorrows.ID);
         //retVal.add(skillFlashingDaggers.ID);
         //retVal.add(skillSerpentSway.ID);
-        //retVal.add(skillSnipersMark.ID);
+       // retVal.add(skillSnipersMark.ID);
         //retVal.add(skillRedeem.ID);
         //retVal.add(skillPurge.ID);
         //retVal.add(skillDivineComfort.ID);
         //retVal.add(skillInvigoratingVapours.ID);
         //retVal.add(skillWithstand.ID);
         //retVal.add(skillSolemnity.ID);
+
 
 
        //retVal.add(attackPoisonTest.ID);

@@ -25,6 +25,7 @@ import static DarkestMod.DarkestMod.makeRelicPath;
         }
 
         public void atBattleStart() {
+            this.grayscale = false;
             this.counter = 0;
         }
 

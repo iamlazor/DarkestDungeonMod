@@ -45,25 +45,6 @@ public class BossStressUpgradeRelic extends CustomRelic {
 
     }
 
-    public int onAttacked(DamageInfo info, int damageAmount) {
-        if (AbstractDungeon.player.hasPower(JesterPower.POWER_ID) && damageAmount < AbstractDungeon.player.currentHealth && damageAmount > 0 && info.owner != null && info.type == DamageInfo.DamageType.NORMAL){
-            this.counter += damageAmount --;
-
-        }   else if (damageAmount < AbstractDungeon.player.currentHealth && damageAmount > 0 && info.owner != null && info.type == DamageInfo.DamageType.NORMAL) {
-            this.counter += damageAmount;
-        }
-        return damageAmount;
-    }
-
-    @Override
-    public void atTurnStart() {
-        super.atTurnStart();
-        if (!this.grayscale && AbstractDungeon.player.hasPower("Stalwart")) {
-            this.flash();
-            this.counter -= 100;
-            this.grayscale = true;
-        }
-    }
 
 
     @Override
@@ -72,51 +53,6 @@ public class BossStressUpgradeRelic extends CustomRelic {
             this.counter = 1;
         }
     }
-
-    public void onUseCard(AbstractCard card, UseCardAction action) {
-        if (card.cardID.equals(skillProtectMe.ID)){
-            this.counter += 4;
-        }
-        else if (card.cardID.equals(attackRake.ID)) {
-            this.counter += 8;
-        }
-        else if (card.cardID.equals(skillWeakeningCurse.ID)) {
-            this.counter += 5;
-        }
-        else if (card.cardID.equals(skillBeastBile.ID)) {
-            this.counter += 4;
-        }
-        // stress relief
-        else if (card.cardID.equals(afflictFearful.ID)) {
-            this.counter += 20;
-        }
-        else if (card.cardID.equals(skillDogBiscuit.ID)) {
-            this.counter -= 5;
-        }
-
-        else if (card.cardID.equals(powerJester.ID)) {
-            this.counter -= 8;
-        }
-        else if (!card.upgraded && card.cardID.equals(skillAbsolution.ID)) {
-            this.counter -= 8;
-        }
-        else if (card.upgraded && card.cardID.equals(skillAbsolution.ID)) {
-            this.counter -= 12;
-        }
-        else if (card.cardID.equals(skillEndure.ID)) {
-            this.counter -= 3;
-        }
-        else if (!card.upgraded && card.cardID.equals(skillInspiringCry.ID)) {
-            this.counter -= 5;
-        }
-        else if (card.upgraded && card.cardID.equals(skillInspiringCry.ID)) {
-            this.counter -= 8;
-        }
-        else if (card.cardID.equals(afflictStalwart.ID)) {
-            this.counter -= 100;
-        }
-    }
-
 
     @Override
     public String getUpdatedDescription() {return DESCRIPTIONS[0];}
