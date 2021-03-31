@@ -72,7 +72,7 @@ public class skillProtectMe extends AbstractDynamicCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(
-                new GainBlockAction(p, p, this.block));
+                new GainBlockAction(p, p, baseBlock));
 
         AbstractDungeon.actionManager.addToBottom(
                 new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new powerStress(AbstractDungeon.player,magicNumber),magicNumber));

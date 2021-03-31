@@ -74,7 +74,7 @@ public class skillDivineComfort extends AbstractDynamicCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
 
         AbstractDungeon.actionManager.addToBottom(
-                new HealAction(AbstractDungeon.player, AbstractDungeon.player, HEAL));
+                new HealAction(AbstractDungeon.player, AbstractDungeon.player, magicNumber));
 
         Iterator var3 = AbstractDungeon.getCurrRoom().monsters.monsters.iterator();
 

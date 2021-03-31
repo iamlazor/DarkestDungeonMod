@@ -71,7 +71,7 @@ public class skillFlashingDaggers extends AbstractDynamicCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
 
         AbstractDungeon.actionManager.addToBottom(
-                new MakeTempCardInHandAction(new attackThrowndagger(), CARD));
+                new MakeTempCardInHandAction(new attackThrowndagger(), magicNumber));
     }
 
     // Upgraded stats.

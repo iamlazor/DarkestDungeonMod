@@ -57,7 +57,7 @@ public class skillEndure extends AbstractDynamicCard {
     private static final int COST = 1;
     private static final int UPGRADED_COST = 0;
 
-    private static final int BLOCK = 7;
+    private static final int BLOCK = 4;
     private static final int UPGRADE_PLUS_DMG = 2;
 
     // STAT DECLARATION

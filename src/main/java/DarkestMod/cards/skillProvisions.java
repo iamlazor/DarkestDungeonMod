@@ -61,6 +61,7 @@ public class skillProvisions extends AbstractDynamicCard {
     public skillProvisions() { // public attackNailStrike() - This one and the one right under the imports are the most important ones, don't forget them
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseBlock = BLOCK;
+        tags.add(CardTags.STARTER_DEFEND);
 
     }
 
@@ -68,7 +69,7 @@ public class skillProvisions extends AbstractDynamicCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(
-                new GainBlockAction(p, p, this.block));
+                new GainBlockAction(p, p, baseBlock));
     }
 
     // Upgraded stats.

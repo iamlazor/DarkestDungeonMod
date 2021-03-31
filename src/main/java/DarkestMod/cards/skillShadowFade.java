@@ -85,7 +85,7 @@ public class skillShadowFade extends AbstractDynamicCard {
         }
 
         AbstractDungeon.actionManager.addToBottom(
-                new GainBlockAction(p, p, this.block));
+                new GainBlockAction(p, p, baseBlock));
     }
 
     // Upgraded stats.
